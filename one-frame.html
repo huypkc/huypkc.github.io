@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="One Frame — engineering report. A local-first Android journal, encrypted on the device and verified on real hardware." />
+  <meta name="description" content="One Frame — case study. A private, local-first photo journal for Android: one photograph and one sentence a day, encrypted on the phone." />
   <meta name="theme-color" content="#ffffff" />
-  <meta property="og:title" content="One Frame — Engineering Report" />
-  <meta property="og:description" content="One photo. One sentence. One day. Verified by reading the bytes back." />
+  <meta property="og:title" content="One Frame — Case Study" />
+  <meta property="og:description" content="One photo. One sentence. One day. What the product refuses to do is the design." />
   <meta property="og:type" content="article" />
-  <title>One Frame — Engineering Report</title>
+  <title>One Frame — Case Study</title>
   <link rel="icon" href="assets/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,13 +17,17 @@
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
-  <a class="back" href="index.html">Huy Tran</a>
+
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <span><a href="index.html">Huy Tran</a></span>
+    <span aria-current="page">One Frame</span>
+  </nav>
 
   <main id="main">
 
-    <!-- 1 ─ hero ─────────────────────────────────────────────────── -->
+    <!-- 1 ─ the idea, at size ─────────────────────────────────────── -->
     <section class="frame frame--short">
-      <p class="mark">Engineering report</p>
+      <p class="mark">Case study · Android</p>
       <h1 class="statement">One photo. One sentence. One day.</h1>
       <p class="standing">
         <span>Verified on device</span><span>In release validation</span><span>Not published</span>
@@ -38,202 +42,266 @@
       </div>
     </section>
 
-    <!-- 2 ─ the idea ─────────────────────────────────────────────── -->
+    <!-- 2 ─ product idea ──────────────────────────────────────────── -->
     <section class="chapter rise">
       <h2>The constraint is the product.</h2>
       <div class="read">
         <p>
-          One Frame accepts one photograph and one sentence a day. You can rewrite
-          today as often as you like. You cannot fill in yesterday.
+          One Frame accepts one photograph and one sentence a day. About twenty
+          seconds. You can rewrite today as often as you like. You cannot fill
+          in yesterday.
         </p>
         <p>
           That refusal is the whole design. A journal you can backfill becomes a
-          backlog, and a backlog becomes homework. A day you missed stays empty,
-          and the calendar shows the gaps rather than hiding them.
+          backlog, and a backlog becomes homework — the reason most journalling
+          apps are abandoned in week three. A day you missed stays empty, and
+          the calendar shows the gap rather than inviting you to repair it.
         </p>
         <p>
-          <strong>Local-first is the second refusal.</strong> Most apps that call
-          themselves private still mean somebody else's server. There is no
-          account here, no upload, and no cloud backup — which also means
-          uninstalling loses everything, so the app says so before you start.
+          <strong>Local-first is the second refusal.</strong> Most apps that
+          call themselves private still mean somebody else's server. There is no
+          account here, no upload and no cloud backup — which also means
+          uninstalling loses everything, so the app says exactly that on the
+          first screen, before anyone has anything to lose.
         </p>
       </div>
     </section>
 
-    <!-- 3 ─ architecture ─────────────────────────────────────────── -->
+    <!-- 3 ─ user behaviour ────────────────────────────────────────── -->
     <section class="chapter chapter--grey rise">
-      <h2>Four decisions about storage.</h2>
-      <dl class="rows">
-        <div>
-          <dt>Journal</dt>
-          <dd>SQLite through SQLCipher, opened with a passphrase derived from a 256-bit key.</dd>
-        </div>
-        <div>
-          <dt>Photographs</dt>
-          <dd>Sealed individually with AES-256-GCM before they reach the disk, each file framed with its own nonce and authentication tag.</dd>
-        </div>
-        <div>
-          <dt>Keys</dt>
-          <dd>Generated from the platform CSPRNG and held by the Android Keystore — RSA-OAEP-SHA-256 wrapping an AES-GCM store. No key is compiled into the app.</dd>
-        </div>
-        <div>
-          <dt>Backup</dt>
-          <dd>One encrypted file. Envelope encryption: a random archive key wrapped twice, once by the device key and once by an Argon2id passphrase at 64&nbsp;MiB and 3 iterations.</dd>
-        </div>
-      </dl>
-    </section>
-
-    <!-- 4 ─ privacy ──────────────────────────────────────────────── -->
-    <section class="chapter rise">
-      <h2>What is protected, and what is not.</h2>
-      <div class="read">
-        <p>
-          The journal database, every photograph, and every exported backup are
-          encrypted with keys the operating system holds. That is app-level
-          encryption, and it is a different claim from the sandbox Android puts
-          around every app — a claim worth making only because it was checked.
-        </p>
-        <p>
-          <strong>Privacy Lock is not encryption.</strong> It is a screen in the
-          way, for the moment somebody else is holding your unlocked phone. The
-          app says exactly that where you turn it on, because a lock that people
-          mistake for encryption is worse than no lock.
-        </p>
-        <p>
-          <strong>The boundary is stated, not implied.</strong> An attacker who
-          has the running, authenticated app, or a rooted device, is not
-          protected against. Nothing here claims otherwise.
-        </p>
-      </div>
-    </section>
-
-    <!-- 5 ─ device verification ──────────────────────────────────── -->
-    <section class="chapter chapter--grey rise">
-      <h2 class="finding">Searching the database for the sentences it holds returns nothing.</h2>
+      <h2>What actually happens, in order.</h2>
       <div class="read" style="margin-bottom:clamp(32px,4vw,52px)">
         <p>
-          Not the captions, not the dates, not even the day keys. Every line
-          below was run against a Redmi Note 10 Pro holding a real install,
-          because a passing test suite cannot tell you what is on the disk.
+          The product is the sequence below, not the screens. Each row is
+          behaviour someone can walk through on a phone today.
         </p>
       </div>
-      <dl class="rows">
+      <dl class="beats">
         <div>
-          <dt>The journal database</dt>
-          <dd>Does not begin with SQLite's signature; the opening bytes are indistinguishable from noise. The whole file yields thirty-two printable fragments, and not one of them is content.</dd>
+          <dt>First launch</dt>
+          <dd>
+            Three cards, then <strong>Start</strong>. They say what the app is
+            (one frame a day, about twenty seconds), what it refuses (today
+            only — a passed day cannot be filled in, and that is deliberate),
+            and what the deal costs (no account, no server, no cloud backup;
+            uninstalling loses everything, so export a backup yourself). The
+            empty timeline then reads <em>Today is worth keeping</em> rather
+            than showing zero of anything.
+          </dd>
         </div>
         <div>
-          <dt>Photographs on disk</dt>
-          <dd>Each file opens with the <code>OF1</code> seal, the system reports it as data rather than an image, and a scan finds zero JPEG markers.</dd>
+          <dt>Creating today</dt>
+          <dd>
+            Choose a frame — camera or library — and answer one prompt:
+            <em>What made today worth keeping?</em> Both are required, and the
+            save button says <strong>Save today</strong> or <strong>Save
+            changes</strong> depending on which one you are doing. It stays
+            above the keyboard, and it is inert until there is something to
+            save. Leaving with unsaved work asks before discarding it.
+          </dd>
         </div>
         <div>
-          <dt>Exported backup</dt>
-          <dd>The envelope header carries two independent key wraps and records its own KDF parameters — Argon2id, 64&nbsp;MiB, 3 iterations.</dd>
+          <dt>Browsing back</dt>
+          <dd>
+            The timeline gives today's photograph the whole screen, with the
+            days gone by beneath it and a streak count. The archive is a grid of
+            every frame. The calendar marks the days that have one, locks the
+            future, and — every so often — the timeline surfaces one old day on
+            its own: <em>this day, a year ago</em>.
+          </dd>
         </div>
         <div>
-          <dt>Backup opened elsewhere</dt>
-          <dd>The exported file opened on a separate machine using the passphrase alone, with no access to the phone's Keystore. A wrong passphrase was refused.</dd>
+          <dt>Searching memory</dt>
+          <dd>
+            One field over sentences and dates, counted in days rather than
+            results. A new install that has never saved anything is told
+            <em>nothing to search yet</em>, not <em>nothing found</em> — those
+            are different facts, and only one of them is a failure.
+          </dd>
         </div>
         <div>
-          <dt>Restore onto a new key</dt>
-          <dd>The app's data was cleared, which destroys the device key, and the backup restored: ten days and all ten photographs came back.</dd>
+          <dt>Missing a day</dt>
+          <dd>
+            Nothing happens. The day stays empty, the calendar shows the gap,
+            and tapping it says so plainly: this day has passed and cannot be
+            filled in. When a streak breaks the app offers to
+            <strong>start again today</strong> instead of reporting a loss.
+          </dd>
         </div>
         <div>
-          <dt>Task switcher</dt>
-          <dd>Screen capture is refused while the app sits in the background, so the journal does not appear in the recents preview.</dd>
+          <dt>Reminders</dt>
+          <dd>
+            One optional notification at a time you pick. It asks for the
+            permission it needs, survives a reboot, and if the schedule cannot
+            be set it says so and keeps your setting rather than silently
+            reverting it.
+          </dd>
         </div>
         <div>
-          <dt>Biometric unlock</dt>
-          <dd>The system log records the prompt completing against this package — the feature was confirmed running, not assumed.</dd>
+          <dt>Backup and export</dt>
+          <dd>
+            One encrypted file through the system share sheet. You set a
+            password, and the app explains what it is for: on this phone the
+            backup restores without typing anything — the password is what opens
+            it after the phone is reset, lost or replaced. It also says the part
+            most apps leave out: <strong>forget it and nobody can recover
+            it.</strong> Importing takes the same file back.
+          </dd>
+        </div>
+        <div>
+          <dt>Background and privacy</dt>
+          <dd>
+            Sent to the background, the journal is kept out of the task switcher
+            — the app draws a photograph full bleed, so the recents snapshot
+            would otherwise be the entry itself. An optional Privacy Lock asks
+            for a fingerprint or the screen lock on the way in, and locks again
+            immediately by default. The screen where you turn it on states that
+            it is <strong>a screen in the way, not encryption</strong>.
+          </dd>
         </div>
       </dl>
     </section>
 
-    <!-- 6 ─ release ──────────────────────────────────────────────── -->
+    <!-- 4 ─ product decisions ─────────────────────────────────────── -->
     <section class="chapter rise">
-      <h2>Signed, and checked against the file itself.</h2>
+      <h2>Five decisions, and why.</h2>
+      <div class="whys">
+        <article>
+          <h3>No account</h3>
+          <p>
+            An account exists to identify you to a server. There is no server,
+            so an account would collect an email address in order to protect
+            nothing. <strong>The feature you do not ship cannot leak.</strong>
+          </p>
+        </article>
+        <article>
+          <h3>No server</h3>
+          <p>
+            A backend would add a breach surface, a subscription, a privacy
+            policy with real teeth and an operating cost — to a product whose
+            entire value is that today's photograph is on your phone and nowhere
+            else. It would also make <em>private</em> a promise about somebody
+            else's infrastructure rather than a fact about yours.
+          </p>
+        </article>
+        <article>
+          <h3>Local-first</h3>
+          <p>
+            Everything is on the device, which is a real trade and not a free
+            win: <strong>uninstalling loses everything.</strong> The app is
+            direct about that in onboarding and again in settings, and export
+            exists so the trade is survivable.
+          </p>
+        </article>
+        <article>
+          <h3>Encrypted storage</h3>
+          <p>
+            Android already sandboxes every app. Encrypting on top of that is a
+            second, narrower claim — that the journal database, each photograph
+            and every exported backup are unreadable as files, with the keys held
+            by the operating system rather than compiled into the app. It is
+            worth claiming only because it was checked by reading the bytes back
+            off a phone.
+          </p>
+        </article>
+        <article>
+          <h3>A deliberately small daily interaction</h3>
+          <p>
+            No streak pressure beyond a count, no prompts to catch up, no feed,
+            no AI writing the sentence for you. The product asks for twenty
+            seconds and then gets out of the way. <strong>Everything it refuses
+            is a decision, not a gap in the roadmap.</strong>
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 5 ─ lessons from real hardware ────────────────────────────── -->
+    <section class="chapter chapter--grey rise">
+      <h2 class="finding">141 tests pass. They could not see five of the defects that mattered.</h2>
       <div class="read">
         <p>
-          The release APK carries APK Signature Scheme v2, and its manifest is
-          read back out of the built file rather than trusted from source:
-          minimum SDK 24, target SDK 36. A hosted Android workflow builds and
-          gates the branch, and has run green against this repository.
-        </p>
-        <p>
-          <strong>The analyzer reports no issues.</strong> That is a gate, not a
-          summary. It saw none of the five defects below.
-        </p>
-      </div>
-    </section>
-
-    <!-- 7 ─ tests, and what they missed ──────────────────────────── -->
-    <section class="chapter chapter--grey rise">
-      <h2>140 tests. They missed five defects.</h2>
-      <div class="read" style="margin-bottom:clamp(44px,5vw,72px)">
-        <p>
           The suite covers the domain rules, the storage boundary, the cipher
-          framing, the backup envelope, migration ordering and the localisation
-          scan. Every one of them passes. None of them could see what follows —
-          which is the honest reading of the number, and the reason this section
-          exists.
+          framing, the backup envelope, migration ordering and a scan for
+          untranslated copy. Every one of them passes, and the analyser reports
+          nothing. Both are gates, not summaries.
+        </p>
+        <p>
+          <strong>A biometric prompt that never appeared.</strong> Authentication
+          was wired correctly but hosted by the wrong activity class, and the
+          platform declined to show anything at all. Nothing threw. Nothing
+          logged. A security feature nobody has watched run has not been
+          verified.
+        </p>
+        <p>
+          <strong>An archive of grey tiles.</strong> The photo loader was scoped
+          to one route, so the archive — reached by a push — never received it.
+          In a debug build that trips an assertion; in a release build the
+          assertion is stripped and each tile is a plain grey box. A dead
+          feature that looks like slow loading.
+        </p>
+        <p>
+          <strong>A backup that restored the words and lost the pictures.</strong>
+          Photographs were copied into the archive still sealed with the
+          exporting phone's key. On the phone that made the backup nothing looked
+          wrong — which is the only phone the round-trip test ever used. Anywhere
+          else, every restored photograph was a file nothing could open: exactly
+          the case a backup exists for.
+        </p>
+        <p>
+          <strong>Photographs written around the storage layer</strong>, leaving
+          plaintext files on the phone while every test stayed green — and
+          <strong>a settings toggle that would not move</strong>, the smallest
+          visible defect and the first one a person would have hit.
+        </p>
+        <p>
+          None of these were found by writing more tests. They were found by
+          running the app on a physical phone, reading the files it had written,
+          and watching a release build rather than a debug one. Emulators were
+          excluded on purpose; so was the Raspberry Pi used to make the
+          edit-and-look loop fast, because neither has a real Keystore or a real
+          fingerprint sensor.
         </p>
       </div>
-
-      <div class="lessons">
-        <article>
-          <h3>Photographs written around the storage layer</h3>
-          <p>A seeding path wrote image files directly instead of going through the encrypted library, leaving plaintext JPEGs on the phone while every test stayed green.</p>
-          <p class="took"><strong>The lesson:</strong> a storage boundary is only a boundary if nothing can reach past it. Found by reading bytes off the device, not by asserting on a mock.</p>
-        </article>
-        <article>
-          <h3>The biometric prompt never appeared</h3>
-          <p>Authentication was wired correctly but hosted by the wrong activity class, and the platform silently declined to show anything.</p>
-          <p class="took"><strong>The lesson:</strong> a security feature nobody has seen run has not been verified. The system log, not the code, settled it.</p>
-        </article>
-        <article>
-          <h3>A settings toggle that would not move</h3>
-          <p>The shell listened to one controller and not to the lock's own, so the switch showed a state the app was no longer in.</p>
-          <p class="took"><strong>The lesson:</strong> the smallest visible defect was the one a person would have hit first.</p>
-        </article>
-        <article>
-          <h3>The archive rendered grey tiles</h3>
-          <p>The photo loader was scoped to the home route, so the archive — reached by a push — never received it. In a release build the assertion is stripped, and each failed tile becomes a plain grey box: a dead feature that looks like slow loading.</p>
-          <p class="took"><strong>The lesson:</strong> nothing in the suite pushed a route. The regression test now does, and fails without the fix.</p>
-        </article>
-        <article>
-          <h3>A restored journal kept its sentences and lost every photograph</h3>
-          <p>Backups copied each photograph off disk still sealed with the exporting device's key. On the phone that made the backup, nothing looked wrong. Anywhere else — a new phone, or the same phone after a reinstall — every restored photograph was a file nothing could open. That is precisely the case the passphrase exists for.</p>
-          <p class="took"><strong>The lesson:</strong> the round-trip test exported and restored with one key, so it could never see this. Photographs now travel unsealed inside the envelope, which already encrypts the payload, and the restoring device seals them with its own key.</p>
-        </article>
-      </div>
+      <p class="note">
+        <b>Evidence</b> Each of the five is documented in the technical report
+        with how it was detected, the fix, and the check that now fails without
+        the fix.
+      </p>
     </section>
 
-    <!-- 8 ─ honest status ────────────────────────────────────────── -->
-    <section class="chapter chapter--grey rise">
+    <!-- 6 ─ honest status ─────────────────────────────────────────── -->
+    <section class="chapter rise">
       <h2>Where this actually stands.</h2>
       <dl class="verdict">
         <div>
           <dt>Verified on device</dt>
-          <dd>Encryption, backup, restore, privacy behaviour and biometric unlock all confirmed on real hardware.</dd>
+          <dd>Encryption at rest, backup, restore onto a new key, task-switcher privacy and biometric unlock, all confirmed on a physical Redmi Note 10 Pro.</dd>
         </div>
         <div>
           <dt>In release validation</dt>
-          <dd>Signed artifact builds and installs. Store metadata, version codes and a permission declaration remain open.</dd>
+          <dd>A signed release artifact builds and installs. Store metadata, the version code and a permission declaration remain open, and several flows have not been re-run against the release build.</dd>
         </div>
         <div>
           <dt>Not published</dt>
-          <dd>No Play Store listing, no store release, no production users, no uptime figure. There is no iOS build and no TestFlight.</dd>
+          <dd>No Play Store listing, no store release, no production users and no uptime figure. There is no iOS device build and no TestFlight.</dd>
         </div>
       </dl>
+      <p class="duo" style="margin-top:clamp(44px,5.5vw,72px)">
+        <a class="lead" href="one-frame-technical.html">Read the technical report</a>
+      </p>
     </section>
 
-    <!-- 9 ─ onward ──────────────────────────────────────────────── -->
+    <!-- 7 ─ onward ────────────────────────────────────────────────── -->
     <section class="frame frame--short rise">
       <h2 class="sendoff">Ask me anything about it.</h2>
       <p class="reach">
         <a href="mailto:huy.pkc@gmail.com">huy.pkc@gmail.com</a>
-        <a href="index.html">Back to portfolio</a>
         <a href="https://linkedin.com/in/huypkc" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="https://github.com/huypkc" target="_blank" rel="noreferrer">GitHub</a>
+      </p>
+      <p class="exits">
+        <a href="index.html">Back to portfolio</a>
       </p>
     </section>
   </main>
