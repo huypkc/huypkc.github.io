@@ -30,7 +30,7 @@
       </p>
     </section>
 
-    <section class="frame frame--grey showcase rise">
+    <section class="frame frame--grey frame--short showcase rise">
       <div class="strip">
         <img src="assets/one-frame-screens.jpg"
              alt="Three One Frame screens on Android: today's frame, the archive, and the calendar"
@@ -62,12 +62,8 @@
 
     <!-- 3 ─ architecture ─────────────────────────────────────────── -->
     <section class="chapter chapter--grey rise">
-      <h2>Architecture</h2>
+      <h2>Four decisions about storage.</h2>
       <dl class="rows">
-        <div>
-          <dt>Application</dt>
-          <dd>Flutter and Dart. Domain, storage and UI kept in separate layers, so no widget and no domain object knows that anything is encrypted.</dd>
-        </div>
         <div>
           <dt>Journal</dt>
           <dd>SQLite through SQLCipher, opened with a passphrase derived from a 256-bit key.</dd>
@@ -83,14 +79,6 @@
         <div>
           <dt>Backup</dt>
           <dd>One encrypted file. Envelope encryption: a random archive key wrapped twice, once by the device key and once by an Argon2id passphrase at 64&nbsp;MiB and 3 iterations.</dd>
-        </div>
-        <div>
-          <dt>Reminders</dt>
-          <dd>Local notifications only. Nothing is scheduled off the device.</dd>
-        </div>
-        <div>
-          <dt>Language</dt>
-          <dd>Vietnamese and English, 120 strings each, chosen by the device. Dates and plurals go through locale-aware formatters, never string concatenation.</dd>
         </div>
       </dl>
     </section>
@@ -121,22 +109,18 @@
 
     <!-- 5 ─ device verification ──────────────────────────────────── -->
     <section class="chapter chapter--grey rise">
-      <h2>Verified by reading the bytes back.</h2>
+      <h2 class="finding">Searching the database for the sentences it holds returns nothing.</h2>
       <div class="read" style="margin-bottom:clamp(32px,4vw,52px)">
         <p>
-          Every line below was run against a Redmi Note 10 Pro holding a real
-          install. A passing test suite cannot tell you what is actually on the
-          disk.
+          Not the captions, not the dates, not even the day keys. Every line
+          below was run against a Redmi Note 10 Pro holding a real install,
+          because a passing test suite cannot tell you what is on the disk.
         </p>
       </div>
       <dl class="rows">
         <div>
           <dt>The journal database</dt>
-          <dd>The file does not begin with SQLite's signature. Its opening bytes are indistinguishable from noise.</dd>
-        </div>
-        <div>
-          <dt>Sentences in that file</dt>
-          <dd>Searching the raw bytes for what it stores — the captions, the dates, even the day keys — returns nothing. The whole file yields thirty-two printable fragments, and not one of them is content.</dd>
+          <dd>Does not begin with SQLite's signature; the opening bytes are indistinguishable from noise. The whole file yields thirty-two printable fragments, and not one of them is content.</dd>
         </div>
         <div>
           <dt>Photographs on disk</dt>
@@ -167,48 +151,34 @@
 
     <!-- 6 ─ release ──────────────────────────────────────────────── -->
     <section class="chapter rise">
-      <h2>Release engineering</h2>
-      <dl class="rows">
-        <div>
-          <dt>Signed artifact</dt>
-          <dd>The release APK carries APK Signature Scheme v2, confirmed by reading the certificate out of the built file.</dd>
-        </div>
-        <div>
-          <dt>Artifact inspection</dt>
-          <dd>The manifest is read back out of the APK rather than trusted from source: minimum SDK 24, target SDK 36.</dd>
-        </div>
-        <div>
-          <dt>Continuous integration</dt>
-          <dd>A hosted Android release workflow builds and gates the branch, and has run green against this repository.</dd>
-        </div>
-        <div>
-          <dt>Static analysis</dt>
-          <dd>The analyzer reports no issues. It is a gate, not a summary — it saw none of the defects below.</dd>
-        </div>
-      </dl>
-    </section>
-
-    <!-- 7 ─ tests ────────────────────────────────────────────────── -->
-    <section class="chapter chapter--grey rise">
-      <h2>Tests</h2>
-      <dl class="numbers" style="max-width:40em">
-        <div><dt>140</dt><dd>Flutter tests passing</dd></div>
-      </dl>
-      <div class="read" style="margin-top:clamp(32px,4vw,48px)">
+      <h2>Signed, and checked against the file itself.</h2>
+      <div class="read">
         <p>
-          They cover the domain rules, the storage boundary, the cipher framing,
-          the backup envelope, migration ordering and the localisation scan.
+          The release APK carries APK Signature Scheme v2, and its manifest is
+          read back out of the built file rather than trusted from source:
+          minimum SDK 24, target SDK 36. A hosted Android workflow builds and
+          gates the branch, and has run green against this repository.
         </p>
         <p>
-          <strong>They also missed five real defects.</strong> That is the honest
-          reading of the number, and the reason the section below exists.
+          <strong>The analyzer reports no issues.</strong> That is a gate, not a
+          summary. It saw none of the five defects below.
         </p>
       </div>
     </section>
 
-    <!-- 8 ─ hardware-only bugs ───────────────────────────────────── -->
-    <section class="chapter rise">
-      <h2>Five defects only the hardware could show.</h2>
+    <!-- 7 ─ tests, and what they missed ──────────────────────────── -->
+    <section class="chapter chapter--grey rise">
+      <h2>140 tests. They missed five defects.</h2>
+      <div class="read" style="margin-bottom:clamp(44px,5vw,72px)">
+        <p>
+          The suite covers the domain rules, the storage boundary, the cipher
+          framing, the backup envelope, migration ordering and the localisation
+          scan. Every one of them passes. None of them could see what follows —
+          which is the honest reading of the number, and the reason this section
+          exists.
+        </p>
+      </div>
+
       <div class="lessons">
         <article>
           <h3>Photographs written around the storage layer</h3>
@@ -218,7 +188,7 @@
         <article>
           <h3>The biometric prompt never appeared</h3>
           <p>Authentication was wired correctly but hosted by the wrong activity class, and the platform silently declined to show anything.</p>
-          <p class="took"><strong>The lesson:</strong> a security feature that cannot be seen running has not been verified. The system log, not the code, settled it.</p>
+          <p class="took"><strong>The lesson:</strong> a security feature nobody has seen run has not been verified. The system log, not the code, settled it.</p>
         </article>
         <article>
           <h3>A settings toggle that would not move</h3>
@@ -238,7 +208,7 @@
       </div>
     </section>
 
-    <!-- 9 ─ honest status ────────────────────────────────────────── -->
+    <!-- 8 ─ honest status ────────────────────────────────────────── -->
     <section class="chapter chapter--grey rise">
       <h2>Where this actually stands.</h2>
       <dl class="verdict">
@@ -257,7 +227,7 @@
       </dl>
     </section>
 
-    <!-- 10 ─ onward ──────────────────────────────────────────────── -->
+    <!-- 9 ─ onward ──────────────────────────────────────────────── -->
     <section class="frame frame--short rise">
       <h2 class="sendoff">Ask me anything about it.</h2>
       <p class="reach">

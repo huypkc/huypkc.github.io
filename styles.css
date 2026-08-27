@@ -185,6 +185,12 @@ footer::before{
 .chapter h2{font-size:clamp(30px,4.6vw,60px);margin-bottom:clamp(28px,4vw,48px)}
 .chapter h3{font-size:clamp(19px,2vw,24px);letter-spacing:-.025em}
 
+/* The single strongest sentence on the page, set at the scale of a heading so
+   the chapter that proves the story stops looking like the datasheet above it. */
+/* This chapter's heading is the finding itself. A generic line above it would
+   only say the same thing twice, and neither would lead. */
+.finding{max-width:20ch}
+
 .read{max-width:34em}
 .read p{font-size:clamp(17px,1.7vw,20px);line-height:1.6;color:var(--muted)}
 .read p + p{margin-top:20px}
@@ -201,9 +207,11 @@ footer::before{
    not by a box — a terminal look would say the wrong thing about this app. */
 .rows code{font-family:inherit;font-weight:600;letter-spacing:.02em;color:var(--ink)}
 
-.lessons{display:flex;flex-direction:column;gap:clamp(32px,4vw,52px);max-width:40em}
-.lessons h3{margin-bottom:10px}
-.lessons p{font-size:16px;line-height:1.6;color:var(--muted)}
+/* These are the story, not an appendix. They were set smaller than the tables
+   they follow, which put the quietest type on the loudest content. */
+.lessons{display:flex;flex-direction:column;gap:clamp(44px,5.5vw,80px);max-width:36em}
+.lessons h3{font-size:clamp(21px,2.6vw,32px);margin-bottom:14px}
+.lessons p{font-size:clamp(16px,1.6vw,18px);line-height:1.6;color:var(--muted)}
 .lessons p + p{margin-top:10px}
 .lessons .took{color:var(--ink)}
 
