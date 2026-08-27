@@ -131,6 +131,14 @@
       </div>
       <dl class="rows">
         <div>
+          <dt>The journal database</dt>
+          <dd>The file does not begin with SQLite's signature. Its opening bytes are indistinguishable from noise.</dd>
+        </div>
+        <div>
+          <dt>Sentences in that file</dt>
+          <dd>Searching the raw bytes for what it stores — the captions, the dates, even the day keys — returns nothing. The whole file yields thirty-two printable fragments, and not one of them is content.</dd>
+        </div>
+        <div>
           <dt>Photographs on disk</dt>
           <dd>Each file opens with the <code>OF1</code> seal, the system reports it as data rather than an image, and a scan finds zero JPEG markers.</dd>
         </div>
