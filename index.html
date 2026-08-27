@@ -3,18 +3,21 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Huy Tran — Senior Software Engineer / Product Engineer. Web and mobile products from build to release." />
+  <meta name="description" content="Huy Tran — Senior Software Engineer and Product Engineer. Web and mobile products, from implementation to verification to release." />
+  <meta name="theme-color" content="#ffffff" />
   <meta property="og:title" content="Huy Tran — Product Engineer" />
-  <meta property="og:description" content="Web & mobile products. Build → Verify → Release." />
+  <meta property="og:description" content="I build products that are ready to ship." />
   <meta property="og:type" content="website" />
   <title>Huy Tran — Product Engineer</title>
   <link rel="icon" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="noise" aria-hidden="true"></div>
   <header class="topbar">
-    <a class="brand" href="#top">HUY TRAN</a>
+    <a class="brand" href="#top">Huy Tran</a>
     <nav aria-label="Primary">
       <a href="#work">Work</a>
       <a href="#experience">Experience</a>
@@ -24,269 +27,209 @@
   </header>
 
   <main id="top">
-    <section class="hero section">
-      <div class="hero-copy">
-        <p class="eyebrow">SENIOR SOFTWARE ENGINEER · PRODUCT ENGINEER</p>
-        <h1>I build products<br>and take them<br><span>to release.</span></h1>
-        <p class="lede">
-          10+ years in software engineering across web, mobile, e-commerce,
-          education and logistics. I care about the part between
-          “it works” and “it is actually ready to ship.”
-        </p>
-        <div class="hero-actions">
-          <a class="button primary" href="#work">View selected work</a>
-          <a class="button ghost" href="mailto:huy.pkc@gmail.com">Email me</a>
-        </div>
-        <div class="proof-strip" aria-label="Engineering proof">
-          <div><strong>137</strong><span>Flutter tests</span></div>
-          <div><strong>610</strong><span>TypeScript tests</span></div>
-          <div><strong>14</strong><span>API operations drift-checked</span></div>
-          <div><strong>0</strong><span>secrets committed</span></div>
-        </div>
+
+    <!-- Hero ─────────────────────────────────────────────────────── -->
+    <section class="section hero">
+      <img class="avatar" src="assets/profile.jpeg" alt="Portrait of Huy Tran" width="256" height="341" />
+      <p class="eyebrow">Huy Tran</p>
+      <h1>I build products<br>that are ready to ship.</h1>
+      <p class="lede">
+        Senior Software Engineer focused on web and mobile products —
+        from implementation to verification to release.
+      </p>
+      <div class="hero-actions">
+        <a class="button primary" href="#work">View work</a>
+        <a class="button ghost" href="#contact">Contact</a>
       </div>
 
-      <aside class="identity-card">
-        <img src="assets/profile.jpeg" alt="Portrait of Huy Tran" />
-        <div>
-          <p class="small-label">BASED IN</p>
-          <p>Ho Chi Minh City, Vietnam</p>
-        </div>
-        <div>
-          <p class="small-label">CURRENT FOCUS</p>
-          <p>Web & mobile product delivery</p>
-        </div>
-        <div>
-          <p class="small-label">STACK</p>
-          <p>React · Next.js · TypeScript · Node.js · Flutter</p>
-        </div>
-      </aside>
-    </section>
-
-    <section class="manifesto section">
-      <p class="section-kicker">HOW I THINK</p>
-      <div class="manifesto-grid">
-        <h2>Verification over<br>marketing claims.</h2>
-        <div class="manifesto-body">
-          <p>
-            I like software where the important claims can be checked:
-            tests pass, contracts match, artifacts are signed, storage is
-            actually encrypted, and unverified things are written down as unverified.
-          </p>
-          <p>
-            My work spans product implementation, architecture, API integration,
-            testing, CI, release signing and physical-device verification.
-          </p>
-        </div>
+      <div class="proof-strip" aria-label="Engineering evidence">
+        <div><strong>137</strong><span>Flutter tests</span></div>
+        <div><strong>610</strong><span>TypeScript tests</span></div>
+        <div><strong>v2</strong><span>Signed Android artifact</span></div>
+        <div><strong>14</strong><span>Contract-checked operations</span></div>
       </div>
     </section>
 
+    <!-- Philosophy ───────────────────────────────────────────────── -->
+    <section class="section section--alt philosophy rise">
+      <p class="eyebrow">How I work</p>
+      <h2>Build first.<br>Verify deeply.<br>Release honestly.</h2>
+      <p class="lede">
+        Release engineering is part of building, not the part that comes after.
+        I like products whose important claims can be checked — and I only claim
+        what has actually been verified.
+      </p>
+
+      <div class="steps">
+        <article>
+          <b>01 · SCOPE</b>
+          <p>Start with the constraint. What a product refuses to do is often the most important decision in it.</p>
+        </article>
+        <article>
+          <b>02 · BUILD</b>
+          <p>Keep boundaries narrow, so storage, cryptography, domain logic and UI never leak into one another.</p>
+        </article>
+        <article>
+          <b>03 · VERIFY</b>
+          <p>Tests first, then the artifact itself — and real hardware where only hardware tells the truth.</p>
+        </article>
+        <article>
+          <b>04 · RELEASE</b>
+          <p>Signed, gated, reproducible. Anything not verified yet is written down as not verified.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Work ─────────────────────────────────────────────────────── -->
     <section id="work" class="section">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">SELECTED WORK</p>
-          <h2>Products, not mockups.</h2>
-        </div>
-        <p class="section-note">Recent independent engineering work.</p>
+      <div class="section-head rise">
+        <p class="eyebrow">Selected work</p>
+        <h2>Products, not mockups.</h2>
       </div>
 
-      <article class="project project-mobile">
-        <div class="project-copy">
-          <div class="project-index">01</div>
-          <p class="project-status">VERIFIED ON DEVICE · RELEASE VALIDATION · NOT PUBLISHED</p>
-          <h3>One Frame</h3>
-          <p class="project-summary">
-            A local-first daily photo journal for Android. No account and no server:
-            photographs and sentences stay on the phone, encrypted, unless the user
-            explicitly exports a backup.
-          </p>
+      <article class="project rise">
+        <p class="project-status">Featured · Verified on device · In release validation</p>
+        <h3>One Frame</h3>
+        <p class="project-summary">
+          A private, local-first photo journal for Android. One photograph and one
+          sentence a day, encrypted on the phone. No account, no server, nothing
+          leaves the device unless you export a backup yourself.
+        </p>
 
-          <div class="project-facts">
-            <div>
-              <span>Problem</span>
-              <p>Journaling backlogs become homework; “private” often still means somebody else’s server.</p>
-            </div>
-            <div>
-              <span>Built</span>
-              <p>Domain/storage layers, UI, archive, encryption, bilingual copy, CI gates and Android release signing.</p>
-            </div>
-            <div>
-              <span>Technology</span>
-              <p>Flutter, Dart, SQLite, SQLCipher, AES-256-GCM, Android Keystore, local notifications.</p>
-            </div>
-            <div>
-              <span>Evidence</span>
-              <p>137 tests, clean static analysis, signed APK, device-level encrypted-storage verification.</p>
-            </div>
-          </div>
+        <div class="stage">
+          <img src="assets/one-frame-screens.png" alt="One Frame application screens" width="722" height="720" />
         </div>
-        <div class="project-visual phone-stage">
-          <img src="assets/one-frame-screens.png" alt="One Frame application screens" />
+
+        <div class="project-facts">
+          <div>
+            <span>Problem</span>
+            <p>Journaling backlogs turn into homework, and “private” usually still means somebody else’s server.</p>
+          </div>
+          <div>
+            <span>Built</span>
+            <p>Domain and storage layers, UI, archive, encryption, bilingual copy, CI gates and Android release signing.</p>
+          </div>
+          <div>
+            <span>Technology</span>
+            <p>Flutter, Dart, SQLite, SQLCipher, AES-256-GCM, Android Keystore, local notifications.</p>
+          </div>
+          <div>
+            <span>Evidence</span>
+            <p>137 tests, clean static analysis, a signed APK, and encrypted storage confirmed by reading bytes off the phone.</p>
+          </div>
         </div>
       </article>
 
-      <article class="project project-system">
-        <div class="system-diagram" aria-label="ThunViet V2 verification pipeline">
-          <div class="diagram-row">
-            <span>REQUIREMENT</span><i>→</i><span>AUTHORISE</span><i>→</i><span>ISOLATE</span>
+      <article class="project rise">
+        <p class="project-status">Verified in CI · Built · Not deployed</p>
+        <h3>ThunViet V2</h3>
+        <p class="project-summary">
+          A commerce system — and more importantly, a system for building one safely.
+          The interesting part is not the cart. It is stopping contracts and ownership
+          boundaries from silently drifting apart.
+        </p>
+
+        <div class="flow" aria-label="Verification pipeline">
+          <div class="flow-row">
+            <span>Requirement</span><i>→</i><span>Authorise</span><i>→</i><span>Isolate</span>
           </div>
-          <div class="diagram-row">
-            <span>BUILD</span><i>→</i><span>VERIFY</span><i>→</i><span>RELEASE</span>
+          <div class="flow-row">
+            <span>Build</span><i>→</i><span>Verify</span><i>→</i><span>Release</span>
           </div>
-          <div class="diagram-metrics">
-            <b>610 tests</b>
-            <b>OpenAPI 3.1</b>
-            <b>7 owned areas</b>
-            <b>boundary guard</b>
+          <div class="flow-note">
+            <span>610 tests</span><span>OpenAPI 3.1</span><span>7 owned areas</span><span>Boundary guard</span>
           </div>
         </div>
-        <div class="project-copy">
-          <div class="project-index">02</div>
-          <p class="project-status">VERIFIED IN CI · BUILT · NOT DEPLOYED</p>
-          <h3>ThunViet V2</h3>
-          <p class="project-summary">
-            A commerce system, and more importantly a system for building one safely.
-            The interesting part is not the cart — it is preventing contracts and
-            ownership boundaries from silently drifting apart.
-          </p>
 
-          <div class="project-facts">
-            <div>
-              <span>Built</span>
-              <p>API contract/checker, boundary guard, coordinator runtime, storefront/API surfaces and CI gate.</p>
-            </div>
-            <div>
-              <span>Technology</span>
-              <p>TypeScript, Node 22, Express, Supabase, Deno edge functions, Firestore rules, Playwright.</p>
-            </div>
-            <div>
-              <span>Evidence</span>
-              <p>610 passing tests, OpenAPI drift checking, owned-area enforcement and automated CI verification.</p>
-            </div>
+        <div class="project-facts">
+          <div>
+            <span>Problem</span>
+            <p>In a system with many owners, the API contract and the code drift apart quietly, then break loudly.</p>
+          </div>
+          <div>
+            <span>Built</span>
+            <p>API contract checker, boundary guard, coordinator runtime, storefront and API surfaces, and the CI gate.</p>
+          </div>
+          <div>
+            <span>Technology</span>
+            <p>TypeScript, Node 22, Express, Supabase, Deno edge functions, Firestore rules, Playwright.</p>
+          </div>
+          <div>
+            <span>Evidence</span>
+            <p>610 passing tests, OpenAPI drift checking, owned-area enforcement and automated CI verification.</p>
           </div>
         </div>
       </article>
     </section>
 
-    <section id="experience" class="section experience">
+    <!-- Experience ───────────────────────────────────────────────── -->
+    <section id="experience" class="section section--alt rise">
       <div class="section-head">
+        <p class="eyebrow">Experience</p>
+        <h2>Ten years, four teams.</h2>
+      </div>
+
+      <article class="job">
+        <div class="job-when"><b>2022 — Present</b>CBTW APAC · Positive Thinking Company</div>
         <div>
-          <p class="section-kicker">EXPERIENCE</p>
-          <h2>From frontend work<br>to product delivery.</h2>
+          <h3>Software Engineer · Frontend Developer</h3>
+          <p>Product work across internal administration, streaming and cross-platform applications, with React, TypeScript, Next.js, micro-frontends and React Native.</p>
         </div>
-      </div>
+      </article>
 
-      <div class="timeline">
-        <article>
-          <div class="timeline-meta">
-            <strong>2022 — Present</strong>
-            <span>CBTW APAC / Positive Thinking Company APAC</span>
-          </div>
-          <div class="timeline-content">
-            <h3>Software Engineer / Frontend Developer</h3>
-            <p>
-              Product work across internal administration, streaming and cross-platform applications.
-              React, TypeScript, Redux Toolkit, Next.js, micro-frontends, Tailwind and React Native / Expo.
-            </p>
-          </div>
-        </article>
+      <article class="job">
+        <div class="job-when"><b>2018 — 2022</b>CyberLogitec</div>
+        <div>
+          <h3>Frontend Developer</h3>
+          <p>Built and modernised React applications for logistics and shipping, including master-data and route-visualisation systems. Reviewed code and mentored junior developers.</p>
+        </div>
+      </article>
 
-        <article>
-          <div class="timeline-meta">
-            <strong>2018 — 2022</strong>
-            <span>CyberLogitec</span>
-          </div>
-          <div class="timeline-content">
-            <h3>Frontend Developer</h3>
-            <p>
-              Built and modernized React applications for logistics and shipping,
-              including master-data and route-visualisation systems; reviewed code
-              and mentored junior developers.
-            </p>
-          </div>
-        </article>
+      <article class="job">
+        <div class="job-when"><b>2016 — 2018</b>GO1</div>
+        <div>
+          <h3>Frontend Developer</h3>
+          <p>Implemented features for an online education platform and built responsive marketing pages, working in Angular, TypeScript and SCSS.</p>
+        </div>
+      </article>
 
-        <article>
-          <div class="timeline-meta">
-            <strong>2016 — 2018</strong>
-            <span>GO1</span>
-          </div>
-          <div class="timeline-content">
-            <h3>Frontend Developer</h3>
-            <p>
-              Implemented features for an online education platform, participated
-              in Scrum estimation and requirements discussions, built responsive
-              marketing pages and worked with Angular, TypeScript and SCSS.
-            </p>
-          </div>
-        </article>
-
-        <article>
-          <div class="timeline-meta">
-            <strong>2014 — 2016</strong>
-            <span>FPT Software</span>
-          </div>
-          <div class="timeline-content">
-            <h3>Developer</h3>
-            <p>
-              Early web work included converting Flash-based education content to
-              HTML/SVG experiences and fixing frontend issues for a movie platform.
-            </p>
-          </div>
-        </article>
-      </div>
+      <article class="job">
+        <div class="job-when"><b>2014 — 2016</b>FPT Software</div>
+        <div>
+          <h3>Developer</h3>
+          <p>Early web work: converting Flash-based education content into HTML and SVG experiences, and fixing frontend issues for a movie platform.</p>
+        </div>
+      </article>
     </section>
 
-    <section id="proof" class="section proof">
+    <!-- Proof ────────────────────────────────────────────────────── -->
+    <section id="proof" class="section rise">
       <div class="section-head">
-        <div>
-          <p class="section-kicker">ENGINEERING PROOF</p>
-          <h2>Numbers, with a reason<br>behind each one.</h2>
-        </div>
+        <p class="eyebrow">Engineering proof</p>
+        <h2>Built with evidence.</h2>
       </div>
 
-      <div class="metrics-grid">
+      <div class="metrics">
         <article><strong>137</strong><span>Flutter tests passing</span><small>One Frame</small></article>
         <article><strong>610</strong><span>TypeScript tests passing</span><small>ThunViet V2</small></article>
-        <article><strong>0</strong><span>Flutter analyzer issues</span><small>Release validation</small></article>
+        <article><strong>0</strong><span>Analyzer issues</span><small>Release validation</small></article>
         <article><strong>14</strong><span>Contract operations</span><small>OpenAPI drift-checked</small></article>
         <article><strong>v2</strong><span>APK signature scheme</span><small>Signed Android artifact</small></article>
         <article><strong>24→36</strong><span>Android SDK range</span><small>Artifact-inspected</small></article>
-        <article><strong>120</strong><span>Localized strings / language</span><small>Vietnamese + English</small></article>
+        <article><strong>120</strong><span>Localised strings per language</span><small>Vietnamese and English</small></article>
         <article><strong>7</strong><span>Owned engineering areas</span><small>Boundary guarded</small></article>
       </div>
     </section>
 
-    <section class="section process">
-      <p class="section-kicker">HOW I WORK</p>
-      <h2>Scope <span>→</span> Build <span>→</span> Verify <span>→</span> Release</h2>
-      <div class="process-grid">
-        <article>
-          <b>01 · SCOPE</b>
-          <p>Start with the constraint. What the product refuses to do is often the most important decision.</p>
-        </article>
-        <article>
-          <b>02 · BUILD</b>
-          <p>Keep boundaries narrow enough that storage, crypto, domain logic and UI do not leak into each other.</p>
-        </article>
-        <article>
-          <b>03 · VERIFY</b>
-          <p>Tests first, then inspect the artifact itself — and use real hardware where only hardware can tell the truth.</p>
-        </article>
-        <article>
-          <b>04 · RELEASE</b>
-          <p>Signed, gated and reproducible. Anything not verified yet is stated as not verified.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section stack">
-      <div>
-        <p class="section-kicker">TECHNOLOGY</p>
+    <!-- Technology ───────────────────────────────────────────────── -->
+    <section class="section section--alt rise">
+      <div class="section-head">
+        <p class="eyebrow">Technology</p>
         <h2>Used in actual work.</h2>
       </div>
       <div class="stack-columns">
         <div>
-          <h3>Web & Services</h3>
+          <h3>Web &amp; Services</h3>
           <p>TypeScript · JavaScript · React · Next.js · Node.js · Express · REST · OpenAPI · Supabase · Firebase</p>
         </div>
         <div>
@@ -304,18 +247,24 @@
       </div>
     </section>
 
-    <section id="contact" class="section contact">
-      <p class="section-kicker">CONTACT</p>
-      <h2>Open to product engineering work.</h2>
-      <p class="contact-copy">
-        Web and mobile, from the first constraint to a signed artifact.
-        Especially interested in products that need help moving from
-        prototype or unfinished codebase toward a reliable release.
+    <!-- Contact ──────────────────────────────────────────────────── -->
+    <section id="contact" class="section contact rise">
+      <p class="eyebrow">Contact</p>
+      <h2>Let’s build something real.</h2>
+      <p class="lede">
+        Open to product engineering work across web and mobile — especially products
+        that need to move from prototype toward a release you can trust.
       </p>
       <div class="contact-links">
         <a href="mailto:huy.pkc@gmail.com">huy.pkc@gmail.com</a>
         <a href="https://linkedin.com/in/huypkc" target="_blank" rel="noreferrer">LinkedIn</a>
         <a href="https://github.com/huypkc" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+
+      <div class="facts">
+        <div><span>Based in</span><p>Ho Chi Minh City, Vietnam</p></div>
+        <div><span>Current focus</span><p>Web &amp; mobile product delivery</p></div>
+        <div><span>Core stack</span><p>React · Next.js · TypeScript · Flutter</p></div>
       </div>
     </section>
   </main>

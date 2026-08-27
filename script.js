@@ -1,19 +1,19 @@
-
+// Year, and a reveal that is strictly opt-in: the class goes on <html> only
+// once this file runs, so with JavaScript off or blocked every section is
+// already visible rather than stuck at opacity 0.
 document.getElementById('year').textContent = new Date().getFullYear();
 
-const links = [...document.querySelectorAll('nav a')];
-const targets = links
-  .map(a => document.querySelector(a.getAttribute('href')))
-  .filter(Boolean);
+const rise = document.querySelectorAll('.rise');
+const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-if ('IntersectionObserver' in window) {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      links.forEach(a => a.removeAttribute('aria-current'));
-      const current = links.find(a => a.getAttribute('href') === '#' + entry.target.id);
-      if (current) current.setAttribute('aria-current', 'page');
-    });
-  }, { rootMargin: '-35% 0px -55% 0px', threshold: 0 });
-  targets.forEach(t => observer.observe(t));
+if (rise.length && 'IntersectionObserver' in window && !still) {
+  document.documentElement.classList.add('js-anim');
+  const seen = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      entry.target.classList.add('shown');
+      seen.unobserve(entry.target);
+    }
+  }, { rootMargin: '0px 0px -12% 0px' });
+  rise.forEach((el) => seen.observe(el));
 }
