@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="One Frame — engineering report. A local-first Android journal, encrypted on the device and verified on real hardware." />
+  <meta name="theme-color" content="#ffffff" />
+  <meta property="og:title" content="One Frame — Engineering Report" />
+  <meta property="og:description" content="One photo. One sentence. One day. Verified by reading the bytes back." />
+  <meta property="og:type" content="article" />
+  <title>One Frame — Engineering Report</title>
+  <link rel="icon" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <a class="back" href="index.html">Huy Tran</a>
+
+  <main id="main">
+
+    <!-- 1 ─ hero ─────────────────────────────────────────────────── -->
+    <section class="frame frame--short">
+      <p class="mark">Engineering report</p>
+      <h1 class="statement">One photo. One sentence. One day.</h1>
+      <p class="standing">
+        <span>Verified on device</span><span>In release validation</span><span>Not published</span>
+      </p>
+    </section>
+
+    <section class="frame frame--grey showcase rise">
+      <div class="strip">
+        <img src="assets/one-frame-screens.jpg"
+             alt="Three One Frame screens on Android: today's frame, the archive, and the calendar"
+             width="1408" height="709" />
+      </div>
+    </section>
+
+    <!-- 2 ─ the idea ─────────────────────────────────────────────── -->
+    <section class="chapter rise">
+      <h2>The constraint is the product.</h2>
+      <div class="read">
+        <p>
+          One Frame accepts one photograph and one sentence a day. You can rewrite
+          today as often as you like. You cannot fill in yesterday.
+        </p>
+        <p>
+          That refusal is the whole design. A journal you can backfill becomes a
+          backlog, and a backlog becomes homework. A day you missed stays empty,
+          and the calendar shows the gaps rather than hiding them.
+        </p>
+        <p>
+          <strong>Local-first is the second refusal.</strong> Most apps that call
+          themselves private still mean somebody else's server. There is no
+          account here, no upload, and no cloud backup — which also means
+          uninstalling loses everything, so the app says so before you start.
+        </p>
+      </div>
+    </section>
+
+    <!-- 3 ─ architecture ─────────────────────────────────────────── -->
+    <section class="chapter chapter--grey rise">
+      <h2>Architecture</h2>
+      <dl class="rows">
+        <div>
+          <dt>Application</dt>
+          <dd>Flutter and Dart. Domain, storage and UI kept in separate layers, so no widget and no domain object knows that anything is encrypted.</dd>
+        </div>
+        <div>
+          <dt>Journal</dt>
+          <dd>SQLite through SQLCipher, opened with a passphrase derived from a 256-bit key.</dd>
+        </div>
+        <div>
+          <dt>Photographs</dt>
+          <dd>Sealed individually with AES-256-GCM before they reach the disk, each file framed with its own nonce and authentication tag.</dd>
+        </div>
+        <div>
+          <dt>Keys</dt>
+          <dd>Generated from the platform CSPRNG and held by the Android Keystore — RSA-OAEP-SHA-256 wrapping an AES-GCM store. No key is compiled into the app.</dd>
+        </div>
+        <div>
+          <dt>Backup</dt>
+          <dd>One encrypted file. Envelope encryption: a random archive key wrapped twice, once by the device key and once by an Argon2id passphrase at 64&nbsp;MiB and 3 iterations.</dd>
+        </div>
+        <div>
+          <dt>Reminders</dt>
+          <dd>Local notifications only. Nothing is scheduled off the device.</dd>
+        </div>
+        <div>
+          <dt>Language</dt>
+          <dd>Vietnamese and English, 120 strings each, chosen by the device. Dates and plurals go through locale-aware formatters, never string concatenation.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- 4 ─ privacy ──────────────────────────────────────────────── -->
+    <section class="chapter rise">
+      <h2>What is protected, and what is not.</h2>
+      <div class="read">
+        <p>
+          The journal database, every photograph, and every exported backup are
+          encrypted with keys the operating system holds. That is app-level
+          encryption, and it is a different claim from the sandbox Android puts
+          around every app — a claim worth making only because it was checked.
+        </p>
+        <p>
+          <strong>Privacy Lock is not encryption.</strong> It is a screen in the
+          way, for the moment somebody else is holding your unlocked phone. The
+          app says exactly that where you turn it on, because a lock that people
+          mistake for encryption is worse than no lock.
+        </p>
+        <p>
+          <strong>The boundary is stated, not implied.</strong> An attacker who
+          has the running, authenticated app, or a rooted device, is not
+          protected against. Nothing here claims otherwise.
+        </p>
+      </div>
+    </section>
+
+    <!-- 5 ─ device verification ──────────────────────────────────── -->
+    <section class="chapter chapter--grey rise">
+      <h2>Verified by reading the bytes back.</h2>
+      <div class="read" style="margin-bottom:clamp(32px,4vw,52px)">
+        <p>
+          Every line below was run against a Redmi Note 10 Pro holding a real
+          install. A passing test suite cannot tell you what is actually on the
+          disk.
+        </p>
+      </div>
+      <dl class="rows">
+        <div>
+          <dt>Photographs on disk</dt>
+          <dd>Each file opens with the <code>OF1</code> seal, the system reports it as data rather than an image, and a scan finds zero JPEG markers.</dd>
+        </div>
+        <div>
+          <dt>Exported backup</dt>
+          <dd>The envelope header carries two independent key wraps and records its own KDF parameters — Argon2id, 64&nbsp;MiB, 3 iterations.</dd>
+        </div>
+        <div>
+          <dt>Backup opened elsewhere</dt>
+          <dd>The exported file opened on a separate machine using the passphrase alone, with no access to the phone's Keystore. A wrong passphrase was refused.</dd>
+        </div>
+        <div>
+          <dt>Restore onto a new key</dt>
+          <dd>The app's data was cleared, which destroys the device key, and the backup restored: ten days and all ten photographs came back.</dd>
+        </div>
+        <div>
+          <dt>Task switcher</dt>
+          <dd>Screen capture is refused while the app sits in the background, so the journal does not appear in the recents preview.</dd>
+        </div>
+        <div>
+          <dt>Biometric unlock</dt>
+          <dd>The system log records the prompt completing against this package — the feature was confirmed running, not assumed.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- 6 ─ release ──────────────────────────────────────────────── -->
+    <section class="chapter rise">
+      <h2>Release engineering</h2>
+      <dl class="rows">
+        <div>
+          <dt>Signed artifact</dt>
+          <dd>The release APK carries APK Signature Scheme v2, confirmed by reading the certificate out of the built file.</dd>
+        </div>
+        <div>
+          <dt>Artifact inspection</dt>
+          <dd>The manifest is read back out of the APK rather than trusted from source: minimum SDK 24, target SDK 36.</dd>
+        </div>
+        <div>
+          <dt>Continuous integration</dt>
+          <dd>A hosted Android release workflow builds and gates the branch, and has run green against this repository.</dd>
+        </div>
+        <div>
+          <dt>Static analysis</dt>
+          <dd>The analyzer reports no issues. It is a gate, not a summary — it saw none of the defects below.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- 7 ─ tests ────────────────────────────────────────────────── -->
+    <section class="chapter chapter--grey rise">
+      <h2>Tests</h2>
+      <dl class="numbers" style="max-width:40em">
+        <div><dt>140</dt><dd>Flutter tests passing</dd></div>
+      </dl>
+      <div class="read" style="margin-top:clamp(32px,4vw,48px)">
+        <p>
+          They cover the domain rules, the storage boundary, the cipher framing,
+          the backup envelope, migration ordering and the localisation scan.
+        </p>
+        <p>
+          <strong>They also missed five real defects.</strong> That is the honest
+          reading of the number, and the reason the section below exists.
+        </p>
+      </div>
+    </section>
+
+    <!-- 8 ─ hardware-only bugs ───────────────────────────────────── -->
+    <section class="chapter rise">
+      <h2>Five defects only the hardware could show.</h2>
+      <div class="lessons">
+        <article>
+          <h3>Photographs written around the storage layer</h3>
+          <p>A seeding path wrote image files directly instead of going through the encrypted library, leaving plaintext JPEGs on the phone while every test stayed green.</p>
+          <p class="took"><strong>The lesson:</strong> a storage boundary is only a boundary if nothing can reach past it. Found by reading bytes off the device, not by asserting on a mock.</p>
+        </article>
+        <article>
+          <h3>The biometric prompt never appeared</h3>
+          <p>Authentication was wired correctly but hosted by the wrong activity class, and the platform silently declined to show anything.</p>
+          <p class="took"><strong>The lesson:</strong> a security feature that cannot be seen running has not been verified. The system log, not the code, settled it.</p>
+        </article>
+        <article>
+          <h3>A settings toggle that would not move</h3>
+          <p>The shell listened to one controller and not to the lock's own, so the switch showed a state the app was no longer in.</p>
+          <p class="took"><strong>The lesson:</strong> the smallest visible defect was the one a person would have hit first.</p>
+        </article>
+        <article>
+          <h3>The archive rendered grey tiles</h3>
+          <p>The photo loader was scoped to the home route, so the archive — reached by a push — never received it. In a release build the assertion is stripped, and each failed tile becomes a plain grey box: a dead feature that looks like slow loading.</p>
+          <p class="took"><strong>The lesson:</strong> nothing in the suite pushed a route. The regression test now does, and fails without the fix.</p>
+        </article>
+        <article>
+          <h3>A restored journal kept its sentences and lost every photograph</h3>
+          <p>Backups copied each photograph off disk still sealed with the exporting device's key. On the phone that made the backup, nothing looked wrong. Anywhere else — a new phone, or the same phone after a reinstall — every restored photograph was a file nothing could open. That is precisely the case the passphrase exists for.</p>
+          <p class="took"><strong>The lesson:</strong> the round-trip test exported and restored with one key, so it could never see this. Photographs now travel unsealed inside the envelope, which already encrypts the payload, and the restoring device seals them with its own key.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 9 ─ honest status ────────────────────────────────────────── -->
+    <section class="chapter chapter--grey rise">
+      <h2>Where this actually stands.</h2>
+      <dl class="verdict">
+        <div>
+          <dt>Verified on device</dt>
+          <dd>Encryption, backup, restore, privacy behaviour and biometric unlock all confirmed on real hardware.</dd>
+        </div>
+        <div>
+          <dt>In release validation</dt>
+          <dd>Signed artifact builds and installs. Store metadata, version codes and a permission declaration remain open.</dd>
+        </div>
+        <div>
+          <dt>Not published</dt>
+          <dd>No Play Store listing, no store release, no production users, no uptime figure. There is no iOS build and no TestFlight.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- 10 ─ onward ──────────────────────────────────────────────── -->
+    <section class="frame frame--short rise">
+      <h2 class="sendoff">Ask me anything about it.</h2>
+      <p class="reach">
+        <a href="mailto:huy.pkc@gmail.com">huy.pkc@gmail.com</a>
+        <a href="index.html">Back to portfolio</a>
+        <a href="https://linkedin.com/in/huypkc" target="_blank" rel="noreferrer">LinkedIn</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year">2026</span> Huy Tran</span>
+    <span>No tracking. No cookies.</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
