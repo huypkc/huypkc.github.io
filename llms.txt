@@ -1,0 +1,63 @@
+# Huy Tran
+
+> Senior Software Engineer / Product Engineer. Systems-minded builder:
+> architecture, implementation, verification, release — with the evidence
+> attached. Based in Vietnam, working remote.
+
+Canonical: https://huypkc.github.io/
+Contact: huy.pkc@gmail.com
+GitHub: https://github.com/huypkc
+LinkedIn: https://www.linkedin.com/in/huypkc
+
+## Positioning
+
+Ten years of frontend and product work — FPT Software, GO1, CyberLogitec, and
+CBTW APAC since 2022 — now working across the whole line rather than one layer
+of it: why → system → architecture → implementation → proof.
+
+The working principle is on the site in one sentence: **claim only what
+survives verification**. Every number below is one a gate produces, not an
+estimate.
+
+## Capabilities
+
+- Product engineering and system architecture
+- API contracts as OpenAPI, gated in CI so the spec and the implementation
+  cannot drift apart silently
+- Reliability, security boundaries, threat-model-led design
+- CI/CD and release engineering, including signed Android artifacts
+- Flutter and Dart (mobile)
+- TypeScript, Next.js, Node.js (web)
+- Firebase, Supabase
+- Local-first software — data that stays on the device
+
+## Open to
+
+Senior and founding engineering roles. Product infrastructure. Backend
+architecture. Mobile platform and release. Reliability and security.
+Distributed and real-time systems. Remote, contract, or founding-team
+collaboration.
+
+Stated plainly so a machine does not have to infer it: distributed and
+real-time systems is a direction of interest, **not** a claim of prior
+production experience. There is no shipped RTB, HFT, high-event-throughput or
+sub-100ms latency work behind that line.
+
+## Evidence
+
+- **One Frame** — a private, local-first photo journal for Android. One
+  photograph and one sentence a day, encrypted before it touches disk, proven
+  by reading the bytes back. 141 Flutter tests. A signed v2 Android artifact.
+  Verified on device, in release validation, not published to any store.
+  https://huypkc.github.io/one-frame.html
+- **ThunViet V2** — contract-first delivery: requirement → authorise → isolate
+  → build → verify → release. 610 TypeScript tests, 14 contract operations
+  verified.
+
+What is deliberately not claimed: no Play Store listing, no store release, no
+production users, no uptime figure, no iOS build, no TestFlight.
+
+## Pages
+
+- https://huypkc.github.io/ — homepage
+- https://huypkc.github.io/one-frame.html — One Frame case study

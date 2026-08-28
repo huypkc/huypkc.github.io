@@ -248,8 +248,6 @@ html.js-anim .rise.shown{opacity:1;transform:none;transition:opacity .7s ease,tr
 .duo a::after{content:"\00a0\2192"}
 .duo a:hover{opacity:.7}
 .duo .lead{color:var(--accent)}
-.duo .aside{color:var(--muted);border-bottom-color:var(--hair);font-size:clamp(15px,1.4vw,17px)}
-.duo .aside:hover{color:var(--ink);border-bottom-color:currentColor}
 
 /* ── breadcrumbs ─────────────────────────────────────────────────── */
 

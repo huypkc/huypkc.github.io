@@ -1,0 +1,5 @@
+# huypkc.github.io — crawling is welcome, by people and by machines.
+User-agent: *
+Allow: /
+
+Sitemap: https://huypkc.github.io/sitemap.xml
