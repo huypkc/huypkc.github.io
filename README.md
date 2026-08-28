@@ -15,6 +15,7 @@ tracking, no cookies.
 | `robots.txt` | Crawling allowed, points at the sitemap |
 | `sitemap.xml` | The two pages that actually exist |
 | `llms.txt` | Machine-readable profile for agentic search |
+| `tool/discovery-check.py` | Gate: the three discovery surfaces must agree |
 
 ## Publish
 
@@ -32,7 +33,19 @@ as by people. Three surfaces carry that, and they must agree with each other:
 3. **`llms.txt`** — the same claims in prose a model can read end to end.
 
 If one changes, change all three. A machine-readable profile that outruns the
-visible page is the failure this setup exists to avoid.
+visible page is the failure this setup exists to avoid — so it is a gate, not a
+convention:
+
+```
+python3 tool/discovery-check.py
+```
+
+It runs on every push and pull request to `master` (`.github/workflows/discovery.yml`)
+and needs no install. It fails if a `knowsAbout` term or job title is missing
+from the visible copy or from `llms.txt`, if `sameAs` or the contact address
+disagree, if the sitemap and the files on disk drift apart, if a page loses its
+canonical or its `robots` directive, or if the real-time denial in `llms.txt`
+goes missing while the interest stays.
 
 ## The rule the copy follows
 

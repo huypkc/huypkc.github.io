@@ -24,7 +24,7 @@ estimate.
 - Product engineering and system architecture
 - API contracts as OpenAPI, gated in CI so the spec and the implementation
   cannot drift apart silently
-- Reliability, security boundaries, threat-model-led design
+- Reliability engineering, security boundaries, threat-model-led design
 - CI/CD and release engineering, including signed Android artifacts
 - Flutter and Dart (mobile)
 - TypeScript, Next.js, Node.js (web)
