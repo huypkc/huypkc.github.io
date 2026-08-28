@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "src-nttu-xacnhan",
+      "url": "https://ntt.edu.vn/thi-sinh-can-xac-nhan-nhap-hoc-truc-tuyen-truoc-17h-ngay-21-8-2026/",
+      "title": "Thí sinh cần xác nhận nhập học trực tuyến trước 17h ngày 21/8/2026",
+      "publisher": "Trường Đại học Nguyễn Tất Thành",
+      "retrievedAt": "2026-08-28",
+      "kind": "official",
+      "note": "Đăng 11/08/2026."
+    },
+    {
+      "id": "src-nttu-quytrinh",
+      "url": "https://tuyensinh.ntt.edu.vn/quy-trinh-nhap-hoc-tan-sinh-vien-k26-truong-dai-hoc-nguyen-tat-thanh-nam-2026-huong-dan-chi-tiet-tu-a-z-p944.html",
+      "title": "Quy trình nhập học Trường Đại học Nguyễn Tất Thành K26 năm 2026",
+      "publisher": "Trung tâm Tư vấn Tuyển sinh, Trường Đại học Nguyễn Tất Thành",
+      "retrievedAt": "2026-08-28",
+      "kind": "official",
+      "note": "Trang không ghi ngày đăng. Danh sách giấy tờ nằm trong ảnh, không đọc được thành chữ — không chép lại."
+    },
+    {
+      "id": "src-nttu-campus-apd",
+      "url": "https://ntt.edu.vn/en/about/facilities-infrastructure/campus-an-phu-dong-district-12/",
+      "title": "Campus An Phú Đông — District 12",
+      "publisher": "Trường Đại học Nguyễn Tất Thành",
+      "retrievedAt": "2026-08-28",
+      "kind": "official",
+      "note": "Trang tiếng Anh, không ghi ngày đăng, bản quyền ghi 2021. Ghi địa chỉ là '331 National Road 1A' trong khi trang tuyển sinh 2026 ghi '331 Đỗ Mười' — nhiều khả năng là đổi tên đường. Giữ nguyên cả hai, không tự chọn một."
+    }
+  ]
+}

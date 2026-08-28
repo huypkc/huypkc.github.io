@@ -1,0 +1,1908 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "api": "vi.wikipedia.org/w/api.php",
+    "page": "Danh sách trường đại học, học viện và cao đẳng tại Việt Nam",
+    "note": "Seed source only. Snapshotted here; never called at runtime."
+  },
+  "count": 271,
+  "universities": [
+    {
+      "id": "s001",
+      "name": "Học viện An ninh nhân dân",
+      "shortName": "HV An ninh nhân dân",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s002",
+      "name": "Học viện Biên phòng (Việt Nam)",
+      "shortName": "HV Biên phòng",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s003",
+      "name": "Học viện Báo chí và Tuyên truyền",
+      "shortName": "HV Báo chí và Tuyên truyền",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s004",
+      "name": "Học viện Chiến lược Khoa học và Công nghệ",
+      "shortName": "HV Chiến lược Khoa học và Công nghệ",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s005",
+      "name": "Học viện Chính sách và Phát triển",
+      "shortName": "HV Chính sách và Phát triển",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s006",
+      "name": "Học viện Chính trị",
+      "shortName": "HV Chính trị",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s007",
+      "name": "Học viện Chính trị (Quân đội nhân dân Việt Nam)",
+      "shortName": "HV Chính trị",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s008",
+      "name": "Học viện Chính trị Công an nhân dân (Việt Nam)",
+      "shortName": "HV Chính trị Công an nhân dân",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s009",
+      "name": "Học viện Chính trị Quốc gia Hồ Chí Minh",
+      "shortName": "HV Chính trị Quốc gia Hồ Chí Minh",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s010",
+      "name": "Học viện Cán bộ Thành phố Hồ Chí Minh",
+      "shortName": "HV Cán bộ Thành phố Hồ Chí Minh",
+      "parent": null,
+      "region": "TP. Hồ Chí Minh"
+    },
+    {
+      "id": "s011",
+      "name": "Học viện Công giáo Việt Nam",
+      "shortName": "HV Công giáo Việt Nam",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s012",
+      "name": "Học viện Công nghệ Bưu chính Viễn thông",
+      "shortName": "HV Công nghệ Bưu chính Viễn thông",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s013",
+      "name": "Học viện Cảnh sát nhân dân",
+      "shortName": "HV Cảnh sát nhân dân",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s014",
+      "name": "Học viện Dân tộc",
+      "shortName": "HV Dân tộc",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s015",
+      "name": "Học viện Hàng không Việt Nam",
+      "shortName": "HV Hàng không Việt Nam",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s016",
+      "name": "Học viện Hành chính và Quản trị công",
+      "shortName": "HV Hành chính và Quản trị công",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s017",
+      "name": "Học viện Hải quân (Việt Nam)",
+      "shortName": "HV Hải quân",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s018",
+      "name": "Học viện Hậu cần (Việt Nam)",
+      "shortName": "HV Hậu cần",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s019",
+      "name": "Học viện Khoa học Quân sự",
+      "shortName": "HV Khoa học Quân sự",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s020",
+      "name": "Học viện Khoa học Xã hội",
+      "shortName": "HV Khoa học Xã hội",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s021",
+      "name": "Học viện Khoa học và Công nghệ",
+      "shortName": "HV Khoa học và Công nghệ",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s022",
+      "name": "Học viện Kỹ thuật Mật mã (Việt Nam)",
+      "shortName": "HV Kỹ thuật Mật mã",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s023",
+      "name": "Học viện Kỹ thuật Quân sự",
+      "shortName": "HV Kỹ thuật Quân sự",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s024",
+      "name": "Học viện Lục quân (Việt Nam)",
+      "shortName": "HV Lục quân",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s025",
+      "name": "Học viện Múa Việt Nam",
+      "shortName": "HV Múa Việt Nam",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s026",
+      "name": "Học viện Ngoại giao (Việt Nam)",
+      "shortName": "HV Ngoại giao",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s027",
+      "name": "Học viện Ngân hàng (Việt Nam)",
+      "shortName": "HV Ngân hàng",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s028",
+      "name": "Học viện Nông nghiệp Việt Nam",
+      "shortName": "HV Nông nghiệp Việt Nam",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s029",
+      "name": "Học viện Phòng không – Không quân (Việt Nam)",
+      "shortName": "HV Phòng không – Không quân",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s030",
+      "name": "Học viện Phật giáo Việt Nam",
+      "shortName": "HV Phật giáo Việt Nam",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s031",
+      "name": "Học viện Phụ nữ Việt Nam",
+      "shortName": "HV Phụ nữ Việt Nam",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s032",
+      "name": "Học viện Quân y (Việt Nam)",
+      "shortName": "HV Quân y",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s033",
+      "name": "Học viện Quản lý giáo dục",
+      "shortName": "HV Quản lý giáo dục",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s034",
+      "name": "Học viện Quốc phòng (Việt Nam)",
+      "shortName": "HV Quốc phòng",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s035",
+      "name": "Học viện Quốc tế",
+      "shortName": "HV Quốc tế",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s036",
+      "name": "Học viện Thanh thiếu niên Việt Nam",
+      "shortName": "HV Thanh thiếu niên Việt Nam",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s037",
+      "name": "Học viện Tài chính (Việt Nam)",
+      "shortName": "HV Tài chính",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s038",
+      "name": "Học viện Tòa án",
+      "shortName": "HV Tòa án",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s039",
+      "name": "Học viện Y – Dược học cổ truyền Việt Nam",
+      "shortName": "HV Y – Dược học cổ truyền Việt Nam",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s040",
+      "name": "Học viện Âm nhạc Huế",
+      "shortName": "HV Âm nhạc Huế",
+      "parent": null,
+      "region": "Huế"
+    },
+    {
+      "id": "s041",
+      "name": "Học viện Âm nhạc Quốc gia Việt Nam",
+      "shortName": "HV Âm nhạc Quốc gia Việt Nam",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s042",
+      "name": "Phân hiệu Đại học Kinh tế Thành phố Hồ Chí Minh tại Vĩnh Long",
+      "shortName": "Phân hiệu Đại học Kinh tế Thành phố Hồ Chí Minh tại Vĩnh Long",
+      "parent": null,
+      "region": "TP. Hồ Chí Minh"
+    },
+    {
+      "id": "s043",
+      "name": "Phân hiệu Đại học Quốc gia TP.HCM tại Bến Tre",
+      "shortName": "Phân hiệu Đại học Quốc gia TP.HCM tại Bến Tre",
+      "parent": null,
+      "region": "TP. Hồ Chí Minh"
+    },
+    {
+      "id": "s044",
+      "name": "Phân hiệu Đại học Đà Nẵng tại Kon Tum",
+      "shortName": "Phân hiệu Đại học Đà Nẵng tại Kon Tum",
+      "parent": null,
+      "region": "Đà Nẵng"
+    },
+    {
+      "id": "s045",
+      "name": "Trường Bách khoa, Đại học Cần Thơ",
+      "shortName": "Bách khoa",
+      "parent": "Đại học Cần Thơ",
+      "region": "Cần Thơ"
+    },
+    {
+      "id": "s046",
+      "name": "Trường Công nghệ Thông tin và Truyền thông, Đại học Bách khoa Hà Nội",
+      "shortName": "Công nghệ Thông tin và Truyền thông",
+      "parent": "Đại học Bách khoa Hà Nội",
+      "region": "Hà Nội"
+    },
+    {
+      "id": "s047",
+      "name": "Trường Công nghệ Thông tin và Truyền thông, Đại học Cần Thơ",
+      "shortName": "Công nghệ Thông tin và Truyền thông",
+      "parent": "Đại học Cần Thơ",
+      "region": "Cần Thơ"
+    },
+    {
+      "id": "s048",
+      "name": "Trường Cơ khí, Đại học Bách khoa Hà Nội",
+      "shortName": "Cơ khí",
+      "parent": "Đại học Bách khoa Hà Nội",
+      "region": "Hà Nội"
+    },
+    {
+      "id": "s049",
+      "name": "Trường Du lịch, Đại học Huế",
+      "shortName": "Du lịch",
+      "parent": "Đại học Huế",
+      "region": "Huế"
+    },
+    {
+      "id": "s050",
+      "name": "Trường Khoa học Tự nhiên, Đại học Cần Thơ",
+      "shortName": "Khoa học Tự nhiên",
+      "parent": "Đại học Cần Thơ",
+      "region": "Cần Thơ"
+    },
+    {
+      "id": "s051",
+      "name": "Trường Kinh tế, Đại học Cần Thơ",
+      "shortName": "Kinh tế",
+      "parent": "Đại học Cần Thơ",
+      "region": "Cần Thơ"
+    },
+    {
+      "id": "s052",
+      "name": "Trường Nông nghiệp, Đại học Cần Thơ",
+      "shortName": "Nông nghiệp",
+      "parent": "Đại học Cần Thơ",
+      "region": "Cần Thơ"
+    },
+    {
+      "id": "s053",
+      "name": "Trường Quản trị và Kinh doanh, Đại học Quốc gia Hà Nội",
+      "shortName": "Quản trị và Kinh doanh",
+      "parent": "Đại học Quốc gia Hà Nội",
+      "region": "Hà Nội"
+    },
+    {
+      "id": "s054",
+      "name": "Trường Quốc tế, Đại học Quốc gia Hà Nội",
+      "shortName": "Quốc tế",
+      "parent": "Đại học Quốc gia Hà Nội",
+      "region": "Hà Nội"
+    },
+    {
+      "id": "s055",
+      "name": "Trường Sư phạm, Đại học Cần Thơ",
+      "shortName": "Sư phạm",
+      "parent": "Đại học Cần Thơ",
+      "region": "Cần Thơ"
+    },
+    {
+      "id": "s056",
+      "name": "Trường Thủy sản, Đại học Cần Thơ",
+      "shortName": "Thủy sản",
+      "parent": "Đại học Cần Thơ",
+      "region": "Cần Thơ"
+    },
+    {
+      "id": "s057",
+      "name": "Trường Đại học An Giang",
+      "shortName": "ĐH An Giang",
+      "parent": null,
+      "region": "TP. Hồ Chí Minh"
+    },
+    {
+      "id": "s058",
+      "name": "Trường Đại học An ninh nhân dân (Thành phố Hồ Chí Minh)",
+      "shortName": "ĐH An ninh nhân dân",
+      "parent": null,
+      "region": "TP. Hồ Chí Minh"
+    },
+    {
+      "id": "s059",
+      "name": "Trường Đại học Bà Rịa – Vũng Tàu",
+      "shortName": "ĐH Bà Rịa – Vũng Tàu",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s060",
+      "name": "Trường Đại học Bách khoa, Đại học Quốc gia Thành phố Hồ Chí Minh",
+      "shortName": "ĐH Bách khoa",
+      "parent": "Đại học Quốc gia Thành phố Hồ Chí Minh",
+      "region": "TP. Hồ Chí Minh"
+    },
+    {
+      "id": "s061",
+      "name": "Trường Đại học Bách khoa, Đại học Đà Nẵng",
+      "shortName": "ĐH Bách khoa",
+      "parent": "Đại học Đà Nẵng",
+      "region": "Đà Nẵng"
+    },
+    {
+      "id": "s062",
+      "name": "Trường Đại học Bình Dương",
+      "shortName": "ĐH Bình Dương",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s063",
+      "name": "Trường Đại học Bạc Liêu",
+      "shortName": "ĐH Bạc Liêu",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s064",
+      "name": "Trường Đại học Chính trị",
+      "shortName": "ĐH Chính trị",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s065",
+      "name": "Trường Đại học Công Thương Thành phố Hồ Chí Minh",
+      "shortName": "ĐH Công Thương Thành phố Hồ Chí Minh",
+      "parent": null,
+      "region": "TP. Hồ Chí Minh"
+    },
+    {
+      "id": "s066",
+      "name": "Trường Đại học Công nghiệp Quảng Ninh",
+      "shortName": "ĐH Công nghiệp Quảng Ninh",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s067",
+      "name": "Trường Đại học Công nghiệp Thành phố Hồ Chí Minh",
+      "shortName": "ĐH Công nghiệp Thành phố Hồ Chí Minh",
+      "parent": null,
+      "region": "TP. Hồ Chí Minh"
+    },
+    {
+      "id": "s068",
+      "name": "Trường Đại học Công nghiệp Vinh",
+      "shortName": "ĐH Công nghiệp Vinh",
+      "parent": null,
+      "region": "Vinh"
+    },
+    {
+      "id": "s069",
+      "name": "Trường Đại học Công nghiệp Việt Trì",
+      "shortName": "ĐH Công nghiệp Việt Trì",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s070",
+      "name": "Trường Đại học Công nghiệp Việt-Hung",
+      "shortName": "ĐH Công nghiệp Việt-Hung",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s071",
+      "name": "Trường Đại học Công nghiệp và Thương mại Hà Nội",
+      "shortName": "ĐH Công nghiệp và Thương mại Hà Nội",
+      "parent": null,
+      "region": "Hà Nội"
+    },
+    {
+      "id": "s072",
+      "name": "Trường Đại học Công nghệ Giao thông Vận tải",
+      "shortName": "ĐH Công nghệ Giao thông Vận tải",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s073",
+      "name": "Trường Đại học Công nghệ Sài Gòn",
+      "shortName": "ĐH Công nghệ Sài Gòn",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s074",
+      "name": "Trường Đại học Công nghệ Thành phố Hồ Chí Minh",
+      "shortName": "ĐH Công nghệ Thành phố Hồ Chí Minh",
+      "parent": null,
+      "region": "TP. Hồ Chí Minh"
+    },
+    {
+      "id": "s075",
+      "name": "Trường Đại học Công nghệ Thông tin và Truyền thông Việt – Hàn, Đại học Đà Nẵng",
+      "shortName": "ĐH Công nghệ Thông tin và Truyền thông Việt – Hàn",
+      "parent": "Đại học Đà Nẵng",
+      "region": "Đà Nẵng"
+    },
+    {
+      "id": "s076",
+      "name": "Trường Đại học Công nghệ Thông tin, Đại học Quốc gia Thành phố Hồ Chí Minh",
+      "shortName": "ĐH Công nghệ Thông tin",
+      "parent": "Đại học Quốc gia Thành phố Hồ Chí Minh",
+      "region": "TP. Hồ Chí Minh"
+    },
+    {
+      "id": "s077",
+      "name": "Trường Đại học Công nghệ Vạn Xuân",
+      "shortName": "ĐH Công nghệ Vạn Xuân",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s078",
+      "name": "Trường Đại học Công nghệ thông tin và Truyền thông, Đại học Thái Nguyên",
+      "shortName": "ĐH Công nghệ thông tin và Truyền thông",
+      "parent": "Đại học Thái Nguyên",
+      "region": "Thái Nguyên"
+    },
+    {
+      "id": "s079",
+      "name": "Trường Đại học Công nghệ Đồng Nai",
+      "shortName": "ĐH Công nghệ Đồng Nai",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s080",
+      "name": "Trường Đại học Công nghệ, Đại học Quốc gia Hà Nội",
+      "shortName": "ĐH Công nghệ",
+      "parent": "Đại học Quốc gia Hà Nội",
+      "region": "Hà Nội"
+    },
+    {
+      "id": "s081",
+      "name": "Trường Đại học Công đoàn",
+      "shortName": "ĐH Công đoàn",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s082",
+      "name": "Trường Đại học Cảnh sát nhân dân (Việt Nam)",
+      "shortName": "ĐH Cảnh sát nhân dân",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s083",
+      "name": "Trường Đại học Cửu Long",
+      "shortName": "ĐH Cửu Long",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s084",
+      "name": "Trường Đại học Dược Hà Nội",
+      "shortName": "ĐH Dược Hà Nội",
+      "parent": null,
+      "region": "Hà Nội"
+    },
+    {
+      "id": "s085",
+      "name": "Trường Đại học Dầu khí Việt Nam",
+      "shortName": "ĐH Dầu khí Việt Nam",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s086",
+      "name": "Trường Đại học FPT",
+      "shortName": "ĐH FPT",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s087",
+      "name": "Trường Đại học Fulbright Việt Nam",
+      "shortName": "ĐH Fulbright Việt Nam",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s088",
+      "name": "Trường Đại học Gia Định",
+      "shortName": "ĐH Gia Định",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s089",
+      "name": "Trường Đại học Giao thông Vận tải",
+      "shortName": "ĐH Giao thông Vận tải",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s090",
+      "name": "Trường Đại học Giao thông vận tải Thành phố Hồ Chí Minh",
+      "shortName": "ĐH Giao thông vận tải Thành phố Hồ Chí Minh",
+      "parent": null,
+      "region": "TP. Hồ Chí Minh"
+    },
+    {
+      "id": "s091",
+      "name": "Trường Đại học Giáo dục, Đại học Quốc gia Hà Nội",
+      "shortName": "ĐH Giáo dục",
+      "parent": "Đại học Quốc gia Hà Nội",
+      "region": "Hà Nội"
+    },
+    {
+      "id": "s092",
+      "name": "Trường Đại học Hoa Lư",
+      "shortName": "ĐH Hoa Lư",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s093",
+      "name": "Trường Đại học Hoa Sen",
+      "shortName": "ĐH Hoa Sen",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s094",
+      "name": "Trường Đại học Hà Hoa Tiên",
+      "shortName": "ĐH Hà Hoa Tiên",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s095",
+      "name": "Trường Đại học Hà Nội",
+      "shortName": "ĐH Hà Nội",
+      "parent": null,
+      "region": "Hà Nội"
+    },
+    {
+      "id": "s096",
+      "name": "Trường Đại học Hà Tĩnh",
+      "shortName": "ĐH Hà Tĩnh",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s097",
+      "name": "Trường Đại học Hàng hải Việt Nam",
+      "shortName": "ĐH Hàng hải Việt Nam",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s098",
+      "name": "Trường Đại học Hòa Bình",
+      "shortName": "ĐH Hòa Bình",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s099",
+      "name": "Trường Đại học Hùng Vương",
+      "shortName": "ĐH Hùng Vương",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s100",
+      "name": "Trường Đại học Hùng Vương Thành phố Hồ Chí Minh",
+      "shortName": "ĐH Hùng Vương Thành phố Hồ Chí Minh",
+      "parent": null,
+      "region": "TP. Hồ Chí Minh"
+    },
+    {
+      "id": "s101",
+      "name": "Trường Đại học Hạ Long",
+      "shortName": "ĐH Hạ Long",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s102",
+      "name": "Trường Đại học Hải Dương",
+      "shortName": "ĐH Hải Dương",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s103",
+      "name": "Trường Đại học Hải Phòng",
+      "shortName": "ĐH Hải Phòng",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s104",
+      "name": "Trường Đại học Hồng Đức",
+      "shortName": "ĐH Hồng Đức",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s105",
+      "name": "Trường Đại học Intracom",
+      "shortName": "ĐH Intracom",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s106",
+      "name": "Trường Đại học Khoa học Sức khỏe, Đại học Quốc gia Thành phố Hồ Chí Minh",
+      "shortName": "ĐH Khoa học Sức khỏe",
+      "parent": "Đại học Quốc gia Thành phố Hồ Chí Minh",
+      "region": "TP. Hồ Chí Minh"
+    },
+    {
+      "id": "s107",
+      "name": "Trường Đại học Khoa học Tự nhiên, Đại học Quốc gia Hà Nội",
+      "shortName": "ĐH Khoa học Tự nhiên",
+      "parent": "Đại học Quốc gia Hà Nội",
+      "region": "Hà Nội"
+    },
+    {
+      "id": "s108",
+      "name": "Trường Đại học Khoa học Tự nhiên, Đại học Quốc gia Thành phố Hồ Chí Minh",
+      "shortName": "ĐH Khoa học Tự nhiên",
+      "parent": "Đại học Quốc gia Thành phố Hồ Chí Minh",
+      "region": "TP. Hồ Chí Minh"
+    },
+    {
+      "id": "s109",
+      "name": "Trường Đại học Khoa học Xã hội và Nhân văn, Đại học Quốc gia Hà Nội",
+      "shortName": "ĐH Khoa học Xã hội và Nhân văn",
+      "parent": "Đại học Quốc gia Hà Nội",
+      "region": "Hà Nội"
+    },
+    {
+      "id": "s110",
+      "name": "Trường Đại học Khoa học Xã hội và Nhân văn, Đại học Quốc gia Thành phố Hồ Chí Minh",
+      "shortName": "ĐH Khoa học Xã hội và Nhân văn",
+      "parent": "Đại học Quốc gia Thành phố Hồ Chí Minh",
+      "region": "TP. Hồ Chí Minh"
+    },
+    {
+      "id": "s111",
+      "name": "Trường Đại học Khoa học và Công nghệ Hà Nội",
+      "shortName": "ĐH Khoa học và Công nghệ Hà Nội",
+      "parent": null,
+      "region": "Hà Nội"
+    },
+    {
+      "id": "s112",
+      "name": "Trường Đại học Khoa học, Đại học Huế",
+      "shortName": "ĐH Khoa học",
+      "parent": "Đại học Huế",
+      "region": "Huế"
+    },
+    {
+      "id": "s113",
+      "name": "Trường Đại học Khoa học, Đại học Thái Nguyên",
+      "shortName": "ĐH Khoa học",
+      "parent": "Đại học Thái Nguyên",
+      "region": "Thái Nguyên"
+    },
+    {
+      "id": "s114",
+      "name": "Trường Đại học Khánh Hòa",
+      "shortName": "ĐH Khánh Hòa",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s115",
+      "name": "Trường Đại học Kinh Bắc",
+      "shortName": "ĐH Kinh Bắc",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s116",
+      "name": "Trường Đại học Kinh doanh và Công nghệ Hà Nội",
+      "shortName": "ĐH Kinh doanh và Công nghệ Hà Nội",
+      "parent": null,
+      "region": "Hà Nội"
+    },
+    {
+      "id": "s117",
+      "name": "Trường Đại học Kinh tế - Kỹ thuật Bình Dương",
+      "shortName": "ĐH Kinh tế - Kỹ thuật Bình Dương",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s118",
+      "name": "Trường Đại học Kinh tế - Luật, Đại học Quốc gia Thành phố Hồ Chí Minh",
+      "shortName": "ĐH Kinh tế - Luật",
+      "parent": "Đại học Quốc gia Thành phố Hồ Chí Minh",
+      "region": "TP. Hồ Chí Minh"
+    },
+    {
+      "id": "s119",
+      "name": "Trường Đại học Kinh tế - Tài chính Thành phố Hồ Chí Minh",
+      "shortName": "ĐH Kinh tế - Tài chính Thành phố Hồ Chí Minh",
+      "parent": null,
+      "region": "TP. Hồ Chí Minh"
+    },
+    {
+      "id": "s120",
+      "name": "Trường Đại học Kinh tế Công nghiệp Long An",
+      "shortName": "ĐH Kinh tế Công nghiệp Long An",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s121",
+      "name": "Trường Đại học Kinh tế Nghệ An",
+      "shortName": "ĐH Kinh tế Nghệ An",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s122",
+      "name": "Trường Đại học Kinh tế và Quản trị kinh doanh, Đại học Thái Nguyên",
+      "shortName": "ĐH Kinh tế và Quản trị kinh doanh",
+      "parent": "Đại học Thái Nguyên",
+      "region": "Thái Nguyên"
+    },
+    {
+      "id": "s123",
+      "name": "Trường Đại học Kinh tế – Kỹ thuật Công nghiệp",
+      "shortName": "ĐH Kinh tế – Kỹ thuật Công nghiệp",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s124",
+      "name": "Trường Đại học Kinh tế, Đại học Huế",
+      "shortName": "ĐH Kinh tế",
+      "parent": "Đại học Huế",
+      "region": "Huế"
+    },
+    {
+      "id": "s125",
+      "name": "Trường Đại học Kinh tế, Đại học Quốc gia Hà Nội",
+      "shortName": "ĐH Kinh tế",
+      "parent": "Đại học Quốc gia Hà Nội",
+      "region": "Hà Nội"
+    },
+    {
+      "id": "s126",
+      "name": "Trường Đại học Kinh tế, Đại học Đà Nẵng",
+      "shortName": "ĐH Kinh tế",
+      "parent": "Đại học Đà Nẵng",
+      "region": "Đà Nẵng"
+    },
+    {
+      "id": "s127",
+      "name": "Trường Đại học Kiên Giang",
+      "shortName": "ĐH Kiên Giang",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s128",
+      "name": "Trường Đại học Kiến trúc Hà Nội",
+      "shortName": "ĐH Kiến trúc Hà Nội",
+      "parent": null,
+      "region": "Hà Nội"
+    },
+    {
+      "id": "s129",
+      "name": "Trường Đại học Kiến trúc Thành phố Hồ Chí Minh",
+      "shortName": "ĐH Kiến trúc Thành phố Hồ Chí Minh",
+      "parent": null,
+      "region": "TP. Hồ Chí Minh"
+    },
+    {
+      "id": "s130",
+      "name": "Trường Đại học Kiến trúc Đà Nẵng",
+      "shortName": "ĐH Kiến trúc Đà Nẵng",
+      "parent": null,
+      "region": "Đà Nẵng"
+    },
+    {
+      "id": "s131",
+      "name": "Trường Đại học Kiểm sát",
+      "shortName": "ĐH Kiểm sát",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s132",
+      "name": "Trường Đại học Kỹ thuật Công nghiệp, Đại học Thái Nguyên",
+      "shortName": "ĐH Kỹ thuật Công nghiệp",
+      "parent": "Đại học Thái Nguyên",
+      "region": "Thái Nguyên"
+    },
+    {
+      "id": "s133",
+      "name": "Trường Đại học Kỹ thuật Y Dược Đà Nẵng",
+      "shortName": "ĐH Kỹ thuật Y Dược Đà Nẵng",
+      "parent": null,
+      "region": "Đà Nẵng"
+    },
+    {
+      "id": "s134",
+      "name": "Trường Đại học Kỹ thuật Y tế Hải Dương",
+      "shortName": "ĐH Kỹ thuật Y tế Hải Dương",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s135",
+      "name": "Trường Đại học Kỹ thuật – Công nghệ Cần Thơ",
+      "shortName": "ĐH Kỹ thuật – Công nghệ Cần Thơ",
+      "parent": null,
+      "region": "Cần Thơ"
+    },
+    {
+      "id": "s136",
+      "name": "Trường Đại học Kỹ thuật – Hậu cần Công an nhân dân",
+      "shortName": "ĐH Kỹ thuật – Hậu cần Công an nhân dân",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s137",
+      "name": "Trường Đại học Lao động – Xã hội",
+      "shortName": "ĐH Lao động – Xã hội",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s138",
+      "name": "Trường Đại học Luật Hà Nội",
+      "shortName": "ĐH Luật Hà Nội",
+      "parent": null,
+      "region": "Hà Nội"
+    },
+    {
+      "id": "s139",
+      "name": "Trường Đại học Luật Thành phố Hồ Chí Minh",
+      "shortName": "ĐH Luật Thành phố Hồ Chí Minh",
+      "parent": null,
+      "region": "TP. Hồ Chí Minh"
+    },
+    {
+      "id": "s140",
+      "name": "Trường Đại học Luật, Đại học Huế",
+      "shortName": "ĐH Luật",
+      "parent": "Đại học Huế",
+      "region": "Huế"
+    },
+    {
+      "id": "s141",
+      "name": "Trường Đại học Luật, Đại học Quốc gia Hà Nội",
+      "shortName": "ĐH Luật",
+      "parent": "Đại học Quốc gia Hà Nội",
+      "region": "Hà Nội"
+    },
+    {
+      "id": "s142",
+      "name": "Trường Đại học Lâm nghiệp",
+      "shortName": "ĐH Lâm nghiệp",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s143",
+      "name": "Trường Đại học Lương Thế Vinh",
+      "shortName": "ĐH Lương Thế Vinh",
+      "parent": null,
+      "region": "Vinh"
+    },
+    {
+      "id": "s144",
+      "name": "Trường Đại học Lạc Hồng",
+      "shortName": "ĐH Lạc Hồng",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s145",
+      "name": "Trường Đại học Mỏ – Địa chất",
+      "shortName": "ĐH Mỏ – Địa chất",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s146",
+      "name": "Trường Đại học Mở Hà Nội",
+      "shortName": "ĐH Mở Hà Nội",
+      "parent": null,
+      "region": "Hà Nội"
+    },
+    {
+      "id": "s147",
+      "name": "Trường Đại học Mở Thành phố Hồ Chí Minh",
+      "shortName": "ĐH Mở Thành phố Hồ Chí Minh",
+      "parent": null,
+      "region": "TP. Hồ Chí Minh"
+    },
+    {
+      "id": "s148",
+      "name": "Trường Đại học Mỹ thuật Công nghiệp",
+      "shortName": "ĐH Mỹ thuật Công nghiệp",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s149",
+      "name": "Trường Đại học Mỹ thuật Thành phố Hồ Chí Minh",
+      "shortName": "ĐH Mỹ thuật Thành phố Hồ Chí Minh",
+      "parent": null,
+      "region": "TP. Hồ Chí Minh"
+    },
+    {
+      "id": "s150",
+      "name": "Trường Đại học Mỹ thuật Việt Nam",
+      "shortName": "ĐH Mỹ thuật Việt Nam",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s151",
+      "name": "Trường Đại học Nam Cần Thơ",
+      "shortName": "ĐH Nam Cần Thơ",
+      "parent": null,
+      "region": "Cần Thơ"
+    },
+    {
+      "id": "s152",
+      "name": "Trường Đại học Nghệ thuật, Đại học Huế",
+      "shortName": "ĐH Nghệ thuật",
+      "parent": "Đại học Huế",
+      "region": "Huế"
+    },
+    {
+      "id": "s153",
+      "name": "Trường Đại học Ngoại ngữ – Tin học Thành phố Hồ Chí Minh",
+      "shortName": "ĐH Ngoại ngữ – Tin học Thành phố Hồ Chí Minh",
+      "parent": null,
+      "region": "TP. Hồ Chí Minh"
+    },
+    {
+      "id": "s154",
+      "name": "Trường Đại học Ngoại ngữ, Đại học Huế",
+      "shortName": "ĐH Ngoại ngữ",
+      "parent": "Đại học Huế",
+      "region": "Huế"
+    },
+    {
+      "id": "s155",
+      "name": "Trường Đại học Ngoại ngữ, Đại học Quốc gia Hà Nội",
+      "shortName": "ĐH Ngoại ngữ",
+      "parent": "Đại học Quốc gia Hà Nội",
+      "region": "Hà Nội"
+    },
+    {
+      "id": "s156",
+      "name": "Trường Đại học Ngoại ngữ, Đại học Đà Nẵng",
+      "shortName": "ĐH Ngoại ngữ",
+      "parent": "Đại học Đà Nẵng",
+      "region": "Đà Nẵng"
+    },
+    {
+      "id": "s157",
+      "name": "Trường Đại học Ngoại thương",
+      "shortName": "ĐH Ngoại thương",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s158",
+      "name": "Trường Đại học Nguyễn Huệ",
+      "shortName": "ĐH Nguyễn Huệ",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s159",
+      "name": "Trường Đại học Nguyễn Trãi",
+      "shortName": "ĐH Nguyễn Trãi",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s160",
+      "name": "Trường Đại học Nguyễn Tất Thành",
+      "shortName": "ĐH Nguyễn Tất Thành",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s161",
+      "name": "Trường Đại học Ngân hàng Thành phố Hồ Chí Minh",
+      "shortName": "ĐH Ngân hàng Thành phố Hồ Chí Minh",
+      "parent": null,
+      "region": "TP. Hồ Chí Minh"
+    },
+    {
+      "id": "s162",
+      "name": "Trường Đại học Ngô Quyền",
+      "shortName": "ĐH Ngô Quyền",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s163",
+      "name": "Trường Đại học Nha Trang",
+      "shortName": "ĐH Nha Trang",
+      "parent": null,
+      "region": "Nha Trang"
+    },
+    {
+      "id": "s164",
+      "name": "Trường Đại học Nông Lâm Thành phố Hồ Chí Minh",
+      "shortName": "ĐH Nông Lâm Thành phố Hồ Chí Minh",
+      "parent": null,
+      "region": "TP. Hồ Chí Minh"
+    },
+    {
+      "id": "s165",
+      "name": "Trường Đại học Nông Lâm, Đại học Huế",
+      "shortName": "ĐH Nông Lâm",
+      "parent": "Đại học Huế",
+      "region": "Huế"
+    },
+    {
+      "id": "s166",
+      "name": "Trường Đại học Nông Lâm, Đại học Thái Nguyên",
+      "shortName": "ĐH Nông Lâm",
+      "parent": "Đại học Thái Nguyên",
+      "region": "Thái Nguyên"
+    },
+    {
+      "id": "s167",
+      "name": "Trường Đại học Phan Châu Trinh",
+      "shortName": "ĐH Phan Châu Trinh",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s168",
+      "name": "Trường Đại học Phan Thiết",
+      "shortName": "ĐH Phan Thiết",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s169",
+      "name": "Trường Đại học Phòng cháy chữa cháy (Việt Nam)",
+      "shortName": "ĐH Phòng cháy chữa cháy",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s170",
+      "name": "Trường Đại học Phú Xuân",
+      "shortName": "ĐH Phú Xuân",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s171",
+      "name": "Trường Đại học Phú Yên",
+      "shortName": "ĐH Phú Yên",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s172",
+      "name": "Trường Đại học Phạm Văn Đồng",
+      "shortName": "ĐH Phạm Văn Đồng",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s173",
+      "name": "Trường Đại học Quang Trung",
+      "shortName": "ĐH Quang Trung",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s174",
+      "name": "Trường Đại học Quy Nhơn",
+      "shortName": "ĐH Quy Nhơn",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s175",
+      "name": "Trường Đại học Quản lý và Công nghệ Hải Phòng",
+      "shortName": "ĐH Quản lý và Công nghệ Hải Phòng",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s176",
+      "name": "Trường Đại học Quảng Bình",
+      "shortName": "ĐH Quảng Bình",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s177",
+      "name": "Trường Đại học Quảng Nam",
+      "shortName": "ĐH Quảng Nam",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s178",
+      "name": "Trường Đại học Quốc tế Bắc Hà",
+      "shortName": "ĐH Quốc tế Bắc Hà",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s179",
+      "name": "Trường Đại học Quốc tế Hồng Bàng",
+      "shortName": "ĐH Quốc tế Hồng Bàng",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s180",
+      "name": "Trường Đại học Quốc tế Miền Đông",
+      "shortName": "ĐH Quốc tế Miền Đông",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s181",
+      "name": "Trường Đại học Quốc tế RMIT Việt Nam",
+      "shortName": "ĐH Quốc tế RMIT Việt Nam",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s182",
+      "name": "Trường Đại học Quốc tế Sài Gòn",
+      "shortName": "ĐH Quốc tế Sài Gòn",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s183",
+      "name": "Trường Đại học Quốc tế, Đại học Quốc gia Thành phố Hồ Chí Minh",
+      "shortName": "ĐH Quốc tế",
+      "parent": "Đại học Quốc gia Thành phố Hồ Chí Minh",
+      "region": "TP. Hồ Chí Minh"
+    },
+    {
+      "id": "s184",
+      "name": "Trường Đại học Sao Đỏ",
+      "shortName": "ĐH Sao Đỏ",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s185",
+      "name": "Trường Đại học Sài Gòn",
+      "shortName": "ĐH Sài Gòn",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s186",
+      "name": "Trường Đại học Sân khấu – Điện ảnh Hà Nội",
+      "shortName": "ĐH Sân khấu – Điện ảnh Hà Nội",
+      "parent": null,
+      "region": "Hà Nội"
+    },
+    {
+      "id": "s187",
+      "name": "Trường Đại học Sân khấu – Điện ảnh Thành phố Hồ Chí Minh",
+      "shortName": "ĐH Sân khấu – Điện ảnh Thành phố Hồ Chí Minh",
+      "parent": null,
+      "region": "TP. Hồ Chí Minh"
+    },
+    {
+      "id": "s188",
+      "name": "Trường Đại học Sư phạm Hà Nội",
+      "shortName": "ĐH Sư phạm Hà Nội",
+      "parent": null,
+      "region": "Hà Nội"
+    },
+    {
+      "id": "s189",
+      "name": "Trường Đại học Sư phạm Hà Nội 2",
+      "shortName": "ĐH Sư phạm Hà Nội 2",
+      "parent": null,
+      "region": "Hà Nội"
+    },
+    {
+      "id": "s190",
+      "name": "Trường Đại học Sư phạm Kỹ thuật Hưng Yên",
+      "shortName": "ĐH Sư phạm Kỹ thuật Hưng Yên",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s191",
+      "name": "Trường Đại học Sư phạm Kỹ thuật Nam Định",
+      "shortName": "ĐH Sư phạm Kỹ thuật Nam Định",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s192",
+      "name": "Trường Đại học Sư phạm Kỹ thuật Thành phố Hồ Chí Minh",
+      "shortName": "ĐH Sư phạm Kỹ thuật Thành phố Hồ Chí Minh",
+      "parent": null,
+      "region": "TP. Hồ Chí Minh"
+    },
+    {
+      "id": "s193",
+      "name": "Trường Đại học Sư phạm Kỹ thuật Vinh",
+      "shortName": "ĐH Sư phạm Kỹ thuật Vinh",
+      "parent": null,
+      "region": "Vinh"
+    },
+    {
+      "id": "s194",
+      "name": "Trường Đại học Sư phạm Kỹ thuật Vĩnh Long",
+      "shortName": "ĐH Sư phạm Kỹ thuật Vĩnh Long",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s195",
+      "name": "Trường Đại học Sư phạm Kỹ thuật, Đại học Đà Nẵng",
+      "shortName": "ĐH Sư phạm Kỹ thuật",
+      "parent": "Đại học Đà Nẵng",
+      "region": "Đà Nẵng"
+    },
+    {
+      "id": "s196",
+      "name": "Trường Đại học Sư phạm Nghệ thuật Trung ương",
+      "shortName": "ĐH Sư phạm Nghệ thuật Trung ương",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s197",
+      "name": "Trường Đại học Sư phạm Thành phố Hồ Chí Minh",
+      "shortName": "ĐH Sư phạm Thành phố Hồ Chí Minh",
+      "parent": null,
+      "region": "TP. Hồ Chí Minh"
+    },
+    {
+      "id": "s198",
+      "name": "Trường Đại học Sư phạm Thể dục Thể thao Hà Nội",
+      "shortName": "ĐH Sư phạm Thể dục Thể thao Hà Nội",
+      "parent": null,
+      "region": "Hà Nội"
+    },
+    {
+      "id": "s199",
+      "name": "Trường Đại học Sư phạm Thể dục Thể thao Thành phố Hồ Chí Minh",
+      "shortName": "ĐH Sư phạm Thể dục Thể thao Thành phố Hồ Chí Minh",
+      "parent": null,
+      "region": "TP. Hồ Chí Minh"
+    },
+    {
+      "id": "s200",
+      "name": "Trường Đại học Sư phạm, Đại học Huế",
+      "shortName": "ĐH Sư phạm",
+      "parent": "Đại học Huế",
+      "region": "Huế"
+    },
+    {
+      "id": "s201",
+      "name": "Trường Đại học Sư phạm, Đại học Thái Nguyên",
+      "shortName": "ĐH Sư phạm",
+      "parent": "Đại học Thái Nguyên",
+      "region": "Thái Nguyên"
+    },
+    {
+      "id": "s202",
+      "name": "Trường Đại học Sư phạm, Đại học Đà Nẵng",
+      "shortName": "ĐH Sư phạm",
+      "parent": "Đại học Đà Nẵng",
+      "region": "Đà Nẵng"
+    },
+    {
+      "id": "s203",
+      "name": "Trường Đại học Thành Đô",
+      "shortName": "ĐH Thành Đô",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s204",
+      "name": "Trường Đại học Thái Bình",
+      "shortName": "ĐH Thái Bình",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s205",
+      "name": "Trường Đại học Thái Bình Dương",
+      "shortName": "ĐH Thái Bình Dương",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s206",
+      "name": "Trường Đại học Thông tin liên lạc",
+      "shortName": "ĐH Thông tin liên lạc",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s207",
+      "name": "Trường Đại học Thăng Long",
+      "shortName": "ĐH Thăng Long",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s208",
+      "name": "Trường Đại học Thương mại",
+      "shortName": "ĐH Thương mại",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s209",
+      "name": "Trường Đại học Thể dục Thể thao Bắc Ninh",
+      "shortName": "ĐH Thể dục Thể thao Bắc Ninh",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s210",
+      "name": "Trường Đại học Thể dục Thể thao Thành phố Hồ Chí Minh",
+      "shortName": "ĐH Thể dục Thể thao Thành phố Hồ Chí Minh",
+      "parent": null,
+      "region": "TP. Hồ Chí Minh"
+    },
+    {
+      "id": "s211",
+      "name": "Trường Đại học Thể dục Thể thao Đà Nẵng",
+      "shortName": "ĐH Thể dục Thể thao Đà Nẵng",
+      "parent": null,
+      "region": "Đà Nẵng"
+    },
+    {
+      "id": "s212",
+      "name": "Trường Đại học Thủ Dầu Một",
+      "shortName": "ĐH Thủ Dầu Một",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s213",
+      "name": "Trường Đại học Thủ đô Hà Nội",
+      "shortName": "ĐH Thủ đô Hà Nội",
+      "parent": null,
+      "region": "Hà Nội"
+    },
+    {
+      "id": "s214",
+      "name": "Trường Đại học Thủy lợi",
+      "shortName": "ĐH Thủy lợi",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s215",
+      "name": "Trường Đại học Tiền Giang",
+      "shortName": "ĐH Tiền Giang",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s216",
+      "name": "Trường Đại học Trần Quốc Tuấn",
+      "shortName": "ĐH Trần Quốc Tuấn",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s217",
+      "name": "Trường Đại học Trần Đại Nghĩa",
+      "shortName": "ĐH Trần Đại Nghĩa",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s218",
+      "name": "Trường Đại học Tài chính - Marketing",
+      "shortName": "ĐH Tài chính - Marketing",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s219",
+      "name": "Trường Đại học Tài chính - Quản trị kinh doanh",
+      "shortName": "ĐH Tài chính - Quản trị kinh doanh",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s220",
+      "name": "Trường Đại học Tài nguyên và Môi trường Hà Nội",
+      "shortName": "ĐH Tài nguyên và Môi trường Hà Nội",
+      "parent": null,
+      "region": "Hà Nội"
+    },
+    {
+      "id": "s221",
+      "name": "Trường Đại học Tài nguyên và Môi trường Thành phố Hồ Chí Minh",
+      "shortName": "ĐH Tài nguyên và Môi trường Thành phố Hồ Chí Minh",
+      "parent": null,
+      "region": "TP. Hồ Chí Minh"
+    },
+    {
+      "id": "s222",
+      "name": "Trường Đại học Tân Trào",
+      "shortName": "ĐH Tân Trào",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s223",
+      "name": "Trường Đại học Tân Tạo",
+      "shortName": "ĐH Tân Tạo",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s224",
+      "name": "Trường Đại học Tây Bắc",
+      "shortName": "ĐH Tây Bắc",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s225",
+      "name": "Trường Đại học Tây Nguyên",
+      "shortName": "ĐH Tây Nguyên",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s226",
+      "name": "Trường Đại học Tây Đô",
+      "shortName": "ĐH Tây Đô",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s227",
+      "name": "Trường Đại học Tôn Đức Thắng",
+      "shortName": "ĐH Tôn Đức Thắng",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s228",
+      "name": "Trường Đại học VinUni",
+      "shortName": "ĐH VinUni",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s229",
+      "name": "Trường Đại học Vinh",
+      "shortName": "ĐH Vinh",
+      "parent": null,
+      "region": "Vinh"
+    },
+    {
+      "id": "s230",
+      "name": "Trường Đại học Việt - Đức",
+      "shortName": "ĐH Việt - Đức",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s231",
+      "name": "Trường Đại học Việt Nhật, Đại học Quốc gia Hà Nội",
+      "shortName": "ĐH Việt Nhật",
+      "parent": "Đại học Quốc gia Hà Nội",
+      "region": "Hà Nội"
+    },
+    {
+      "id": "s232",
+      "name": "Trường Đại học Võ Trường Toản",
+      "shortName": "ĐH Võ Trường Toản",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s233",
+      "name": "Trường Đại học Văn Hiến",
+      "shortName": "ĐH Văn Hiến",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s234",
+      "name": "Trường Đại học Văn Lang",
+      "shortName": "ĐH Văn Lang",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s235",
+      "name": "Trường Đại học Văn hóa - Nghệ thuật Quân đội",
+      "shortName": "ĐH Văn hóa - Nghệ thuật Quân đội",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s236",
+      "name": "Trường Đại học Văn hóa Hà Nội",
+      "shortName": "ĐH Văn hóa Hà Nội",
+      "parent": null,
+      "region": "Hà Nội"
+    },
+    {
+      "id": "s237",
+      "name": "Trường Đại học Văn hóa Thành phố Hồ Chí Minh",
+      "shortName": "ĐH Văn hóa Thành phố Hồ Chí Minh",
+      "parent": null,
+      "region": "TP. Hồ Chí Minh"
+    },
+    {
+      "id": "s238",
+      "name": "Trường Đại học Văn hóa, Thể thao và Du lịch Thanh Hóa",
+      "shortName": "ĐH Văn hóa",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s239",
+      "name": "Trường Đại học Xây dựng Hà Nội",
+      "shortName": "ĐH Xây dựng Hà Nội",
+      "parent": null,
+      "region": "Hà Nội"
+    },
+    {
+      "id": "s240",
+      "name": "Trường Đại học Xây dựng Miền Trung",
+      "shortName": "ĐH Xây dựng Miền Trung",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s241",
+      "name": "Trường Đại học Xây dựng Miền Tây",
+      "shortName": "ĐH Xây dựng Miền Tây",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s242",
+      "name": "Trường Đại học Y Dược Cần Thơ",
+      "shortName": "ĐH Y Dược Cần Thơ",
+      "parent": null,
+      "region": "Cần Thơ"
+    },
+    {
+      "id": "s243",
+      "name": "Trường Đại học Y Dược Hải Phòng",
+      "shortName": "ĐH Y Dược Hải Phòng",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s244",
+      "name": "Trường Đại học Y Dược Thành phố Hồ Chí Minh",
+      "shortName": "ĐH Y Dược Thành phố Hồ Chí Minh",
+      "parent": null,
+      "region": "TP. Hồ Chí Minh"
+    },
+    {
+      "id": "s245",
+      "name": "Trường Đại học Y Dược Thái Bình",
+      "shortName": "ĐH Y Dược Thái Bình",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s246",
+      "name": "Trường Đại học Y Dược, Đại học Huế",
+      "shortName": "ĐH Y Dược",
+      "parent": "Đại học Huế",
+      "region": "Huế"
+    },
+    {
+      "id": "s247",
+      "name": "Trường Đại học Y Dược, Đại học Quốc gia Hà Nội",
+      "shortName": "ĐH Y Dược",
+      "parent": "Đại học Quốc gia Hà Nội",
+      "region": "Hà Nội"
+    },
+    {
+      "id": "s248",
+      "name": "Trường Đại học Y Dược, Đại học Thái Nguyên",
+      "shortName": "ĐH Y Dược",
+      "parent": "Đại học Thái Nguyên",
+      "region": "Thái Nguyên"
+    },
+    {
+      "id": "s249",
+      "name": "Trường Đại học Y Hà Nội",
+      "shortName": "ĐH Y Hà Nội",
+      "parent": null,
+      "region": "Hà Nội"
+    },
+    {
+      "id": "s250",
+      "name": "Trường Đại học Y khoa Phạm Ngọc Thạch",
+      "shortName": "ĐH Y khoa Phạm Ngọc Thạch",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s251",
+      "name": "Trường Đại học Y khoa Vinh",
+      "shortName": "ĐH Y khoa Vinh",
+      "parent": null,
+      "region": "Vinh"
+    },
+    {
+      "id": "s252",
+      "name": "Trường Đại học Y tế Công cộng",
+      "shortName": "ĐH Y tế Công cộng",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s253",
+      "name": "Trường Đại học Yersin Đà Lạt",
+      "shortName": "ĐH Yersin Đà Lạt",
+      "parent": null,
+      "region": "Đà Lạt"
+    },
+    {
+      "id": "s254",
+      "name": "Trường Đại học Điều dưỡng Nam Định",
+      "shortName": "ĐH Điều dưỡng Nam Định",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s255",
+      "name": "Trường Đại học Điện lực",
+      "shortName": "ĐH Điện lực",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s256",
+      "name": "Trường Đại học Đà Lạt",
+      "shortName": "ĐH Đà Lạt",
+      "parent": null,
+      "region": "Đà Lạt"
+    },
+    {
+      "id": "s257",
+      "name": "Trường Đại học Đông Á",
+      "shortName": "ĐH Đông Á",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s258",
+      "name": "Trường Đại học Đông Đô",
+      "shortName": "ĐH Đông Đô",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s259",
+      "name": "Trường Đại học Đại Nam",
+      "shortName": "ĐH Đại Nam",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s260",
+      "name": "Trường Đại học Đồng Nai",
+      "shortName": "ĐH Đồng Nai",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s261",
+      "name": "Trường Đại học Đồng Tháp",
+      "shortName": "ĐH Đồng Tháp",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s262",
+      "name": "Đại học (Việt Nam)",
+      "shortName": "Đại học",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s263",
+      "name": "Đại học Bách khoa Hà Nội",
+      "shortName": "ĐH Bách khoa Hà Nội",
+      "parent": null,
+      "region": "Hà Nội"
+    },
+    {
+      "id": "s264",
+      "name": "Đại học Công nghiệp Hà Nội",
+      "shortName": "ĐH Công nghiệp Hà Nội",
+      "parent": null,
+      "region": "Hà Nội"
+    },
+    {
+      "id": "s265",
+      "name": "Đại học Duy Tân",
+      "shortName": "ĐH Duy Tân",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s266",
+      "name": "Đại học Kinh tế Quốc dân",
+      "shortName": "ĐH Kinh tế Quốc dân",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s267",
+      "name": "Đại học Kinh tế Thành phố Hồ Chí Minh",
+      "shortName": "ĐH Kinh tế Thành phố Hồ Chí Minh",
+      "parent": null,
+      "region": "TP. Hồ Chí Minh"
+    },
+    {
+      "id": "s268",
+      "name": "Đại học Phenikaa",
+      "shortName": "ĐH Phenikaa",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s269",
+      "name": "Đại học RMIT",
+      "shortName": "ĐH RMIT",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s270",
+      "name": "Đại học trọng điểm quốc gia Việt Nam",
+      "shortName": "ĐH trọng điểm quốc gia Việt Nam",
+      "parent": null,
+      "region": null
+    },
+    {
+      "id": "s271",
+      "name": "Đại học tư thục",
+      "shortName": "ĐH tư thục",
+      "parent": null,
+      "region": null
+    }
+  ]
+}

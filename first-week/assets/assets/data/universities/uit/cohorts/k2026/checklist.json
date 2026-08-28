@@ -1,0 +1,609 @@
+{
+  "schemaVersion": 1,
+  "checklistId": "uit-k2026",
+  "universityId": "uit",
+  "campusId": null,
+  "faculty": null,
+  "cohort": {
+    "code": "K2026",
+    "year": 2026
+  },
+  "title": "UIT K2026 — Tân sinh viên",
+  "description": "Checklist thí điểm cho tân sinh viên UIT khóa 2026. Mỗi việc trong đây đến từ một câu hỏi có thật trong nhóm khóa 2026 hoặc một thông báo chính thức của trường. Không có việc nào được thêm vào chỉ vì 'tân sinh viên thường cần'.",
+  "creator": {
+    "id": "c-pilot",
+    "name": "Bản thí điểm",
+    "cohort": "K2026",
+    "verifiedStudent": false
+  },
+  "revision": 2,
+  "status": "published",
+  "lastUpdated": "2026-08-28",
+  "users": 0,
+  "provenanceNote": "Nguồn cộng đồng là nhóm công khai 'UIT Khóa 2026 (K21)', đọc ngày 28/08/2026. Không lưu tên, ảnh đại diện, đường dẫn trang cá nhân hay ID Facebook của bất kỳ ai — chỉ lưu vấn đề lặp lại.",
+  "tasks": [
+    {
+      "id": "uit-k2026-chup-hinh-profile",
+      "title": "Chụp hình profile tân sinh viên đúng lịch của ngành",
+      "section": "Trước tuần sinh hoạt",
+      "bucket": "now",
+      "trust": "OFFICIAL",
+      "deadline": null,
+      "dueLabel": "25/8 – 28/8 (thông báo không ghi năm)",
+      "why": "Phòng CTSV xếp lịch chụp hình profile theo từng ngành trong bốn ngày, và ngày 28/8 là buổi chụp bổ sung dự phòng cho ai chưa đi đúng lịch. Đây là ảnh do trường chụp; thông báo không nói ảnh này có được dùng cho thẻ sinh viên hay không.",
+      "steps": [
+        "Mở trang 'Lịch trình chi tiết dành cho tân sinh viên - Khóa 2026' của Phòng CTSV",
+        "Tìm ngành của bạn trong bảng lịch chụp hình",
+        "Đi đúng buổi sáng hoặc chiều của ngành mình",
+        "Nếu lỡ lịch, đi buổi chụp bổ sung ngày 28/8"
+      ],
+      "requires": [],
+      "sourceIds": [
+        "src-ctsv-lichtrinh"
+      ],
+      "observations": [
+        {
+          "kind": "official_unit_post",
+          "school": "uit",
+          "group": "UIT Khóa 2026 (K21)",
+          "observedAt": "2026-08-28",
+          "summary": "Trang cộng đồng chính thức của trường nhắc lịch chụp hình profile trong ngày."
+        }
+      ],
+      "tips": [],
+      "confirmations": 0,
+      "updated": "2026-08-28",
+      "appliesWhen": null,
+      "uncertainty": "Trang thông báo ghi 'Sáng 25/8 … Ngày 28/8' nhưng không ghi năm, và ngày đăng hiển thị là 20/08/2025 dù bài viết dành cho khóa 2026. Không suy ra năm ở đây."
+    },
+    {
+      "id": "uit-k2026-shcd-diemdanh",
+      "title": "Điểm danh Sinh hoạt công dân bằng tài khoản email trường",
+      "section": "Tuần sinh hoạt công dân",
+      "bucket": "now",
+      "trust": "COMMUNITY_VERIFIED",
+      "deadline": null,
+      "dueLabel": "Chưa ai xác nhận mốc này",
+      "why": "Buổi sinh hoạt diễn ra ở Hội trường A, Lầu 3 Toà nhà A theo lịch trình của Phòng CTSV. Hai bạn K2026 đã không điểm danh được: một bạn mất mạng nên không kịp điền form và sau đó form đã khoá, một bạn không quét được mã QR lúc kết thúc. Một bạn khác cho biết phải đăng nhập Google bằng email trường thì mới quét được. Trường chưa công bố quy trình điểm danh ở trang nào tìm được.",
+      "steps": [
+        "Đăng nhập Google bằng email sinh viên của trường trước khi vào hội trường",
+        "Điền form điểm danh đầu buổi ngay khi form mở",
+        "Quét mã QR lúc kết thúc buổi",
+        "Chụp màn hình hoặc chụp hình lại làm bằng chứng"
+      ],
+      "requires": [
+        "Email sinh viên của trường",
+        "Điện thoại có mạng"
+      ],
+      "sourceIds": [
+        "src-ctsv-lichtrinh"
+      ],
+      "observations": [
+        {
+          "kind": "community_observation",
+          "group": "UIT Khóa 2026 (K21)",
+          "observedAt": "2026-08-26",
+          "summary": "Sinh viên tham gia SHCD nhưng không thể điểm danh do mất kết nối, và form đã khóa sau đó.",
+          "school": "uit"
+        },
+        {
+          "kind": "community_observation",
+          "group": "UIT Khóa 2026 (K21)",
+          "observedAt": "2026-08-26",
+          "summary": "Sinh viên không quét được mã QR lúc kết thúc buổi và hỏi nộp bằng chứng ở đâu để được ghi nhận.",
+          "school": "uit"
+        },
+        {
+          "kind": "community_observation",
+          "group": "UIT Khóa 2026 (K21)",
+          "observedAt": "2026-08-26",
+          "summary": "Một sinh viên khác cho biết phải đăng nhập Google bằng email trường thì mới quét được mã.",
+          "school": "uit"
+        },
+        {
+          "kind": "community_observation",
+          "school": "uit",
+          "group": "UIT Khóa 2026 (K21)",
+          "observedAt": "2026-08-28",
+          "summary": "Sinh viên hỏi lịch SHCD của mình là ca sáng nhưng đi buổi chiều thì có sao không."
+        }
+      ],
+      "tips": [
+        {
+          "author": "Một bạn trong nhóm K2026",
+          "text": "Đăng nhập Google bằng mail trường trước rồi mới quét mã, không thì không vào được form."
+        }
+      ],
+      "confirmations": 4,
+      "updated": "2026-08-28",
+      "appliesWhen": null,
+      "uncertainty": "Chưa tìm được thông báo chính thức nào của trường mô tả cách điểm danh SHCD — form, mã QR, hay thời hạn đóng form. Các bước ở đây là cách sinh viên trong nhóm mô tả, không phải quy định."
+    },
+    {
+      "id": "uit-k2026-shcd-thieu-diemdanh",
+      "title": "Nếu bạn có dự SHCD nhưng không điểm danh được",
+      "section": "Tuần sinh hoạt công dân",
+      "bucket": "now",
+      "trust": "NEEDS_OFFICIAL_SOURCE",
+      "deadline": null,
+      "dueLabel": "Chưa có quy trình chính thức",
+      "why": "Đây là câu hỏi thật của hai bạn K2026 và đến giờ vẫn chưa có câu trả lời chính thức. Trong nhóm, cách được nhắc tới là giữ lại ảnh chụp tại chỗ rồi dùng email sinh viên gửi về Phòng CTSV — đó là kinh nghiệm của sinh viên, không phải quy trình trường công bố. Một bạn cũng hỏi 'không điểm danh có bị sao không' và câu đó chưa được trả lời ở đâu.",
+      "steps": [
+        "Giữ lại mọi bằng chứng bạn có mặt: ảnh chụp tại chỗ, ảnh màn hình form",
+        "Gửi mail từ địa chỉ email sinh viên của bạn tới Phòng CTSV: ctsv@uit.edu.vn",
+        "Nói rõ buổi nào, ngành nào, và vì sao không điểm danh được",
+        "Nếu Phòng CTSV trả lời, gửi câu trả lời đó vào đây bằng nút Đóng góp"
+      ],
+      "requires": [
+        "Email sinh viên của trường",
+        "Ảnh chụp làm bằng chứng"
+      ],
+      "sourceIds": [
+        "src-ctsv-lienhe"
+      ],
+      "observations": [
+        {
+          "kind": "community_observation",
+          "group": "UIT Khóa 2026 (K21)",
+          "observedAt": "2026-08-26",
+          "summary": "Sinh viên hỏi có cách nào điểm danh lại sau khi form đã khóa.",
+          "school": "uit"
+        },
+        {
+          "kind": "community_observation",
+          "group": "UIT Khóa 2026 (K21)",
+          "observedAt": "2026-08-26",
+          "summary": "Cộng đồng khuyên giữ ảnh chụp làm bằng chứng và dùng email sinh viên gửi về Phòng CTSV.",
+          "school": "uit"
+        },
+        {
+          "kind": "community_observation",
+          "group": "UIT Khóa 2026 (K21)",
+          "observedAt": "2026-08-26",
+          "summary": "Một sinh viên hỏi không điểm danh thì có bị gì không; câu hỏi này chưa được trả lời.",
+          "school": "uit"
+        }
+      ],
+      "tips": [
+        {
+          "author": "Một bạn trong nhóm K2026",
+          "text": "Bạn có chụp hình lại ở đó không? Dùng mail sinh viên gửi về phòng CTSV nhé."
+        }
+      ],
+      "confirmations": 3,
+      "updated": "2026-08-28",
+      "appliesWhen": "Bạn đã dự buổi sinh hoạt nhưng form đã khoá hoặc không quét được mã QR",
+      "uncertainty": "Chưa xác minh được ba điều: Phòng CTSV có nhận bằng chứng để bù điểm danh hay không, hạn nộp là bao lâu, và thiếu điểm danh SHCD thì hậu quả là gì."
+    },
+    {
+      "id": "uit-k2026-nhan-the-sv",
+      "title": "Nhận thẻ sinh viên, giấy báo nhập học và quà",
+      "section": "Thẻ và giấy tờ",
+      "bucket": "now",
+      "trust": "OFFICIAL",
+      "deadline": null,
+      "dueLabel": "Sáng 8h00–11h30, chiều 14h00–16h30",
+      "why": "Phòng CTSV phát thẻ sinh viên, giấy báo nhập học và quà cho khóa 2026 tại Sảnh nhà C. Thông báo ghi rõ phải tự đi nhận, không uỷ quyền nhận thay, và chỉ nhận được nếu đã hoàn thành xác nhận nhập học, học phí, hồ sơ nhập học và tình trạng là 'Đang học'.",
+      "steps": [
+        "Kiểm tra tình trạng của bạn đã là 'Đang học' chưa",
+        "Đến Sảnh nhà C, tầng trệt Toà nhà C, trong khung giờ thông báo",
+        "Mang giấy tờ tuỳ thân có ảnh để đối chiếu",
+        "Tự đi nhận — thông báo ghi rõ không uỷ quyền nhận thay"
+      ],
+      "requires": [
+        "Giấy tờ tuỳ thân có ảnh: CCCD / VNeID / Giấy phép lái xe"
+      ],
+      "sourceIds": [
+        "src-ctsv-thesv"
+      ],
+      "observations": [
+        {
+          "kind": "official_unit_post",
+          "school": "uit",
+          "group": "UIT Khóa 2026 (K21)",
+          "observedAt": "2026-08-28",
+          "summary": "Trang cộng đồng chính thức của trường hỏi sinh viên đã nhận thẻ và quà tân sinh viên chưa."
+        },
+        {
+          "kind": "community_observation",
+          "school": "uit",
+          "group": "UIT Khóa 2026 (K21)",
+          "observedAt": "2026-08-28",
+          "summary": "Sinh viên đi SHCD ngang toà C thấy giăng dây và được hỏi đã lấy giấy báo nhập học chưa."
+        }
+      ],
+      "tips": [],
+      "confirmations": 1,
+      "updated": "2026-08-28",
+      "appliesWhen": null,
+      "uncertainty": "Thông báo đăng ngày 24/08/2026 nhưng ghi khoảng thời gian phát thẻ là '25/08/2024 – 28/08/2024'. Nhiều khả năng là lỗi năm trong thông báo; ở đây giữ nguyên như trường ghi và không tự sửa thành 2026."
+    },
+    {
+      "id": "uit-k2026-anh-the-sv",
+      "title": "Kiểm tra ảnh sẽ dùng cho thẻ sinh viên",
+      "section": "Thẻ và giấy tờ",
+      "bucket": "now",
+      "trust": "NEEDS_OFFICIAL_SOURCE",
+      "deadline": null,
+      "dueLabel": "Chưa có câu trả lời chính thức",
+      "why": "Một bạn K2026 hỏi thẻ sinh viên lấy ảnh đợt thi THPT hay ảnh đã nộp trên web trường, và có đổi lại được không. Câu hỏi này có thật; câu trả lời thì chưa. Thông báo phát thẻ sinh viên khóa 2026 không nói ảnh lấy từ đâu, và lịch trình tân sinh viên có buổi chụp hình profile nhưng không nói ảnh đó có lên thẻ hay không.",
+      "steps": [
+        "Khi nhận thẻ, xem ảnh trên thẻ là ảnh nào",
+        "Nếu cần đổi, hỏi Phòng CTSV: ctsv@uit.edu.vn",
+        "Có câu trả lời chính thức thì gửi vào đây bằng nút Đóng góp"
+      ],
+      "requires": [],
+      "sourceIds": [
+        "src-ctsv-thesv",
+        "src-ctsv-lichtrinh",
+        "src-ctsv-lienhe"
+      ],
+      "observations": [
+        {
+          "kind": "community_observation",
+          "group": "UIT Khóa 2026 (K21)",
+          "observedAt": "2026-08-25",
+          "summary": "Sinh viên hỏi ảnh trên thẻ sinh viên lấy từ đợt thi THPT hay từ ảnh đã nộp trên web trường, và có đổi được không.",
+          "school": "uit"
+        },
+        {
+          "kind": "community_observation",
+          "group": "UIT Khóa 2026 (K21)",
+          "observedAt": "2026-08-25",
+          "summary": "Các trả lời trong nhóm cho câu hỏi này là đùa; không ghi nhận làm thông tin.",
+          "school": "uit"
+        }
+      ],
+      "tips": [],
+      "confirmations": 2,
+      "updated": "2026-08-28",
+      "appliesWhen": null,
+      "uncertainty": "Chưa xác minh được ảnh trên thẻ sinh viên lấy từ nguồn nào, và có đổi được hay không. Ba nguồn chính thức đính kèm là bối cảnh, không trả lời câu hỏi này."
+    },
+    {
+      "id": "uit-k2026-thi-xeplop-tienganh",
+      "title": "Thi xếp lớp tiếng Anh đầu vào",
+      "section": "Tiếng Anh",
+      "bucket": "now",
+      "trust": "OFFICIAL",
+      "deadline": null,
+      "dueLabel": "Chưa tìm được lịch thi chính thức",
+      "why": "Kết quả kỳ thi này quyết định bạn vào lớp tiếng Anh trình độ nào. Trung tâm Ngoại ngữ của trường có hướng dẫn làm đề thi thử: đăng nhập tracnghiem.uit.edu.vn bằng tài khoản chứng thực trong giấy báo nhập học rồi chọn 'TIẾNG ANH (Thi thử)'. Bài đi theo thứ tự LISTENING → READING → WRITING, tổng 90 phút, và chỉ được làm một lần duy nhất. Lịch trình của Phòng CTSV cũng ghi: sinh viên trùng lịch thi tiếng Anh sẽ sinh hoạt công dân vào buổi còn lại trong ngày.",
+      "steps": [
+        "Vào tracnghiem.uit.edu.vn",
+        "Đăng nhập bằng tài khoản chứng thực trong giấy báo nhập học",
+        "Chọn 'TIẾNG ANH (Thi thử)' để làm đề mẫu — chỉ được một lần",
+        "Kiểm tra tai nghe trước khi bắt đầu; phòng thi không cho mang thiết bị điện tử",
+        "Nếu có chứng chỉ tiếng Anh, kiểm tra chứng chỉ còn hạn và hỏi phongdaotaodh@uit.edu.vn xem có được miễn không",
+        "Nếu lịch thi trùng buổi sinh hoạt công dân, bạn sinh hoạt vào buổi còn lại trong ngày"
+      ],
+      "requires": [
+        "Tài khoản chứng thực trong giấy báo nhập học",
+        "Giấy tờ tuỳ thân hoặc thẻ sinh viên",
+        "Tai nghe"
+      ],
+      "sourceIds": [
+        "src-cfl-huongdan-av",
+        "src-forum-av-2026",
+        "src-ctsv-lichtrinh"
+      ],
+      "observations": [
+        {
+          "kind": "official_unit_post",
+          "group": "UIT Khóa 2026 (K21)",
+          "observedAt": "2026-08-28",
+          "summary": "Trang của Trung tâm Ngoại ngữ trường đăng trong nhóm, nhắc tân sinh viên chuẩn bị thi xếp lớp tiếng Anh.",
+          "school": "uit"
+        },
+        {
+          "kind": "community_observation",
+          "school": "uit",
+          "group": "UIT Khóa 2026 (K21)",
+          "observedAt": "2026-08-28",
+          "summary": "Sinh viên dùng iOS không nghe được phần listening của bài thi thử trên web; thoát ra tải lại thì mất luôn lượt thi duy nhất."
+        },
+        {
+          "kind": "community_observation",
+          "school": "uit",
+          "group": "UIT Khóa 2026 (K21)",
+          "observedAt": "2026-08-28",
+          "summary": "Sinh viên đã nộp minh chứng chứng chỉ tiếng Anh nhưng chưa được duyệt, trong khi trường vẫn xếp lịch thi."
+        },
+        {
+          "kind": "official_unit_post",
+          "school": "uit",
+          "group": "UIT Khóa 2026 (K21)",
+          "observedAt": "2026-08-28",
+          "summary": "Trang của Trung tâm Ngoại ngữ gửi link bài thi mẫu trong nhóm."
+        }
+      ],
+      "tips": [
+        {
+          "author": "Một bạn trong nhóm K2026",
+          "text": "Kiểm tra tai nghe và trình duyệt trước khi bấm bắt đầu. Có bạn dùng iOS không nghe được, tải lại trang là mất luôn lượt thi duy nhất."
+        }
+      ],
+      "confirmations": 2,
+      "updated": "2026-08-28",
+      "appliesWhen": null,
+      "uncertainty": "Chưa tìm được ngày, giờ và phòng thi chính thức của kỳ thi xếp lớp khóa 2026. Điều kiện miễn thi phụ thuộc điểm chứng chỉ và chương trình học, nhưng chưa tìm được trang chính thức nào công bố bảng quy đổi."
+    },
+    {
+      "id": "uit-k2026-shcd-trung-lich-tadv",
+      "title": "Nếu lịch SHCD trùng lịch thi tiếng Anh",
+      "section": "Tuần sinh hoạt công dân",
+      "bucket": "now",
+      "trust": "OFFICIAL",
+      "deadline": null,
+      "dueLabel": "Theo lịch của ngành bạn",
+      "why": "Hai bạn K2026 hỏi đúng chuyện này, và lần này trường đã trả lời sẵn. Lịch trình của Phòng CTSV ghi: sinh viên trùng lịch thi tiếng Anh sẽ sinh hoạt vào buổi sáng hoặc buổi chiều còn lại trong ngày, chung với các bạn ngành còn lại. Không phải xin nghỉ.",
+      "steps": [
+        "Đối chiếu lịch thi tiếng Anh với buổi sinh hoạt công dân của ngành bạn",
+        "Nếu trùng, đi buổi còn lại trong cùng ngày",
+        "Vẫn điểm danh như bình thường ở buổi bạn đi"
+      ],
+      "requires": [],
+      "sourceIds": [
+        "src-ctsv-lichtrinh"
+      ],
+      "observations": [
+        {
+          "kind": "community_observation",
+          "school": "uit",
+          "group": "UIT Khóa 2026 (K21)",
+          "observedAt": "2026-08-28",
+          "summary": "Sinh viên hỏi SHCD trùng lịch thi tiếng Anh thì phải làm sao, có cần xin nghỉ không."
+        },
+        {
+          "kind": "community_observation",
+          "school": "uit",
+          "group": "UIT Khóa 2026 (K21)",
+          "observedAt": "2026-08-28",
+          "summary": "Sinh viên hỏi lịch SHCD là ca sáng nhưng muốn đi buổi chiều."
+        }
+      ],
+      "tips": [],
+      "confirmations": 2,
+      "updated": "2026-08-28",
+      "appliesWhen": null,
+      "uncertainty": "Thông báo chỉ nói tới trường hợp trùng lịch thi tiếng Anh. Đổi buổi vì lý do khác thì không có trang nào của trường nói được hay không."
+    },
+    {
+      "id": "uit-k2026-ho-so-truc-tuyen",
+      "title": "Tạo hồ sơ trực tuyến và khai bảo hiểm y tế trên portal",
+      "section": "Hồ sơ nhập học",
+      "bucket": "now",
+      "trust": "OFFICIAL",
+      "deadline": null,
+      "dueLabel": "Trang thông báo không ghi hạn",
+      "why": "Hồ sơ trực tuyến là nơi khai lý lịch, sức khoẻ và bảo hiểm y tế, rồi tải ảnh giấy tờ lên. Khai xong phải bấm LƯU MỤC NÀY rồi NỘP DUYỆT — nghĩa là hồ sơ được người duyệt, và có thể bị trả lại. Trong nhóm có hai bạn tắc đúng ở phần bảo hiểm y tế.",
+      "steps": [
+        "Vào https://portal.uit.edu.vn/sinh-vien/tan-sinh-vien",
+        "Đăng nhập bằng tài khoản chứng thực trong giấy báo trúng tuyển",
+        "Khai sơ yếu lý lịch, thông tin sức khoẻ và bảo hiểm y tế",
+        "Tải ảnh giấy tờ lên — cắt gọn và xoay đúng chiều trước khi tải",
+        "Bấm LƯU MỤC NÀY ở cuối mỗi mục, rồi bấm NỘP DUYỆT"
+      ],
+      "requires": [
+        "Tài khoản chứng thực trong giấy báo trúng tuyển",
+        "CCCD (mặt trước và sau)",
+        "Giấy khai sinh",
+        "Học bạ THPT",
+        "Kết quả thi THPT hoặc bằng tốt nghiệp",
+        "Giấy khám sức khoẻ",
+        "Thẻ BHYT: loại thẻ, mã số, hạn dùng và ảnh chụp kết quả tra cứu"
+      ],
+      "sourceIds": [
+        "src-ctsv-hoso-online"
+      ],
+      "observations": [
+        {
+          "kind": "community_observation",
+          "school": "uit",
+          "group": "UIT Khóa 2026 (K21)",
+          "observedAt": "2026-08-28",
+          "summary": "Sinh viên khai đủ bảo hiểm y tế trên portal nhưng hệ thống vẫn báo chưa cập nhật, và không tìm được chỗ cập nhật."
+        },
+        {
+          "kind": "community_observation",
+          "school": "uit",
+          "group": "UIT Khóa 2026 (K21)",
+          "observedAt": "2026-08-28",
+          "summary": "Sinh viên hỏi thẻ bảo hiểm y tế trên app VSSID không có ảnh thẻ thì nộp được không."
+        }
+      ],
+      "tips": [],
+      "confirmations": 2,
+      "updated": "2026-08-28",
+      "appliesWhen": null,
+      "uncertainty": "Trang hướng dẫn không ghi hạn nộp. Hai câu hỏi cụ thể trong nhóm — ảnh thẻ BHYT trên VSSID có được chấp nhận không, và vì sao portal báo chưa cập nhật khi đã khai — đều chưa có trang nào của trường trả lời."
+    },
+    {
+      "id": "uit-k2026-ho-so-chua-hop-le",
+      "title": "Nếu hồ sơ bị báo chưa hợp lệ",
+      "section": "Hồ sơ nhập học",
+      "bucket": "now",
+      "trust": "NEEDS_OFFICIAL_SOURCE",
+      "deadline": null,
+      "dueLabel": "Chưa có quy trình chính thức",
+      "why": "Hồ sơ trực tuyến phải qua bước NỘP DUYỆT, nên có thể bị trả lại. Trong nhóm, một phụ huynh hỏi lý lịch của con chưa hợp lệ thì bổ sung thế nào. Chưa ai trả lời, và cũng chưa tìm được trang nào của trường mô tả cách bổ sung.",
+      "steps": [
+        "Mở lại hồ sơ trên portal và xem mục nào bị đánh dấu",
+        "Hỏi Phòng CTSV: ctsv@uit.edu.vn, kèm mã số sinh viên",
+        "Có câu trả lời chính thức thì gửi vào đây bằng nút Đóng góp"
+      ],
+      "requires": [],
+      "sourceIds": [
+        "src-ctsv-lienhe",
+        "src-ctsv-hoso-online"
+      ],
+      "observations": [
+        {
+          "kind": "community_observation",
+          "school": "uit",
+          "group": "UIT Khóa 2026 (K21)",
+          "observedAt": "2026-08-28",
+          "summary": "Phụ huynh của một tân sinh viên hỏi lý lịch chưa hợp lệ thì bổ sung như thế nào."
+        }
+      ],
+      "tips": [],
+      "confirmations": 1,
+      "updated": "2026-08-28",
+      "appliesWhen": "Portal báo hồ sơ hoặc lý lịch của bạn chưa hợp lệ",
+      "uncertainty": "Chưa xác minh được: hồ sơ bị trả lại thì báo cho ai, bổ sung ở đâu, và có hạn không."
+    },
+    {
+      "id": "uit-k2026-tai-khoan-truong",
+      "title": "Ba tài khoản trường cấp, và giữ chúng lại",
+      "section": "Tài khoản",
+      "bucket": "now",
+      "trust": "OFFICIAL",
+      "deadline": null,
+      "dueLabel": "Ngay khi có giấy báo nhập học",
+      "why": "Trường cấp ba thứ khác nhau: tài khoản chứng thực, email sinh viên, và tài khoản ms.uit.edu.vn/Office365. Tài khoản chứng thực nằm trong giấy báo nhập học và là thứ dùng để đăng nhập portal và làm bài thi thử tiếng Anh. Email sinh viên dùng vĩnh viễn, kể cả sau khi tốt nghiệp; tài khoản chứng thực giữ 5 năm sau tốt nghiệp.",
+      "steps": [
+        "Tìm tài khoản chứng thực in trong giấy báo nhập học và lưu lại",
+        "Đăng nhập portal bằng tài khoản đó",
+        "Lưu email sinh viên — đây là địa chỉ trường dùng để làm việc với bạn",
+        "Nếu mất hoặc không tìm được tài khoản, hỏi ctsv@uit.edu.vn"
+      ],
+      "requires": [
+        "Giấy báo nhập học"
+      ],
+      "sourceIds": [
+        "src-ctsv-taikhoan",
+        "src-ctsv-lienhe"
+      ],
+      "observations": [
+        {
+          "kind": "community_observation",
+          "school": "uit",
+          "group": "UIT Khóa 2026 (K21)",
+          "observedAt": "2026-08-28",
+          "summary": "Sinh viên quên mất cách lấy tài khoản Office 365 và hỏi trong nhóm."
+        }
+      ],
+      "tips": [],
+      "confirmations": 1,
+      "updated": "2026-08-28",
+      "appliesWhen": null,
+      "uncertainty": "Thông báo nói ba tài khoản là gì và giữ được bao lâu, nhưng không nói cách tra cứu lại tài khoản Office 365 — đúng thứ bạn trong nhóm đang hỏi."
+    },
+    {
+      "id": "uit-k2026-mien-thi-tienganh",
+      "title": "Nếu bạn đã nộp chứng chỉ tiếng Anh mà vẫn bị xếp lịch thi",
+      "section": "Tiếng Anh",
+      "bucket": "now",
+      "trust": "NEEDS_OFFICIAL_SOURCE",
+      "deadline": null,
+      "dueLabel": "Chưa có quy trình chính thức",
+      "why": "Một bạn K2026 đã nộp minh chứng chứng chỉ nhưng chưa được duyệt, trong khi hệ thống vẫn xếp lịch thi và không đổi. Trên diễn đàn trường, nhân viên trả lời rằng miễn thi hay không còn tuỳ điểm chứng chỉ và chương trình học, và nhắc kiểm tra chứng chỉ còn hạn. Không có trang nào công bố bảng quy đổi hay việc phải làm trong lúc chờ duyệt.",
+      "steps": [
+        "Kiểm tra chứng chỉ của bạn còn hạn không",
+        "Hỏi Phòng Đào tạo Đại học: phongdaotaodh@uit.edu.vn, kèm mã số sinh viên và loại chứng chỉ",
+        "Trong lúc chờ, giữ lịch thi đã xếp — chưa có thông báo nào nói được bỏ",
+        "Có câu trả lời chính thức thì gửi vào đây bằng nút Đóng góp"
+      ],
+      "requires": [
+        "Chứng chỉ tiếng Anh còn hạn"
+      ],
+      "sourceIds": [
+        "src-forum-av-2026"
+      ],
+      "observations": [
+        {
+          "kind": "community_observation",
+          "school": "uit",
+          "group": "UIT Khóa 2026 (K21)",
+          "observedAt": "2026-08-28",
+          "summary": "Sinh viên đã nộp minh chứng chứng chỉ tiếng Anh, chưa được duyệt, nhưng vẫn bị xếp lịch thi và lịch không đổi."
+        }
+      ],
+      "tips": [],
+      "confirmations": 1,
+      "updated": "2026-08-28",
+      "appliesWhen": "Bạn đã nộp chứng chỉ tiếng Anh và đang chờ duyệt",
+      "uncertainty": "Chưa xác minh được: bảng quy đổi điểm chứng chỉ theo chương trình, thời gian duyệt minh chứng, và có phải đi thi trong lúc chờ duyệt không."
+    },
+    {
+      "id": "uit-k2026-doi-ao-dong-phuc",
+      "title": "Đổi áo đồng phục nếu sai size",
+      "section": "Thẻ và giấy tờ",
+      "bucket": "soon",
+      "trust": "NEEDS_OFFICIAL_SOURCE",
+      "deadline": null,
+      "dueLabel": "Chưa có quy trình chính thức",
+      "why": "Ba bạn K2026 gặp cùng một chuyện: mua áo bị rộng và hỏi đổi được không, muốn đổi size M lấy L, và bán lại áo mua dư. Nghĩa là size chọn trước và chọn sai là chuyện thường. Chưa tìm được trang nào của trường nói có đổi được hay không.",
+      "steps": [
+        "Giữ áo còn nguyên và giữ hoá đơn nếu có",
+        "Hỏi Phòng CTSV: ctsv@uit.edu.vn",
+        "Có câu trả lời chính thức thì gửi vào đây bằng nút Đóng góp"
+      ],
+      "requires": [],
+      "sourceIds": [
+        "src-ctsv-lienhe"
+      ],
+      "observations": [
+        {
+          "kind": "community_observation",
+          "school": "uit",
+          "group": "UIT Khóa 2026 (K21)",
+          "observedAt": "2026-08-28",
+          "summary": "Sinh viên hỏi lỡ mua áo đồng phục bị rộng thì đem đi đổi được không."
+        },
+        {
+          "kind": "community_observation",
+          "school": "uit",
+          "group": "UIT Khóa 2026 (K21)",
+          "observedAt": "2026-08-28",
+          "summary": "Sinh viên muốn đổi áo size M lấy size L với bạn cùng khoá."
+        },
+        {
+          "kind": "community_observation",
+          "school": "uit",
+          "group": "UIT Khóa 2026 (K21)",
+          "observedAt": "2026-08-28",
+          "summary": "Sinh viên bán lại áo mua dư, còn nguyên bao."
+        }
+      ],
+      "tips": [],
+      "confirmations": 3,
+      "updated": "2026-08-28",
+      "appliesWhen": "Bạn đã mua áo đồng phục và mặc không vừa",
+      "uncertainty": "Chưa xác minh được trường có nhận đổi size hay không, đổi ở đâu, và trong bao lâu."
+    },
+    {
+      "id": "uit-k2026-giay-xac-nhan-sv",
+      "title": "Xin giấy xác nhận sinh viên",
+      "section": "Thẻ và giấy tờ",
+      "bucket": "soon",
+      "trust": "NEEDS_OFFICIAL_SOURCE",
+      "deadline": null,
+      "dueLabel": "Chưa có quy trình chính thức",
+      "why": "Một bạn K2026 cần giấy xác nhận sinh viên để đăng ký vé metro và bị báo huỷ không rõ lý do. Giấy xác nhận là thứ trường cấp, nhưng chưa tìm được trang nào của trường mô tả cách xin cho khoá 2026.",
+      "steps": [
+        "Kiểm tra tình trạng của bạn trên portal đã là 'Đang học' chưa",
+        "Hỏi Phòng CTSV: ctsv@uit.edu.vn",
+        "Có quy trình chính thức thì gửi vào đây bằng nút Đóng góp"
+      ],
+      "requires": [],
+      "sourceIds": [
+        "src-ctsv-lienhe"
+      ],
+      "observations": [
+        {
+          "kind": "community_observation",
+          "school": "uit",
+          "group": "UIT Khóa 2026 (K21)",
+          "observedAt": "2026-08-28",
+          "summary": "Sinh viên hỏi cách xin giấy xác nhận sinh viên để đăng ký metro; đăng ký bị báo huỷ không rõ lý do."
+        }
+      ],
+      "tips": [],
+      "confirmations": 1,
+      "updated": "2026-08-28",
+      "appliesWhen": null,
+      "uncertainty": "Chưa xác minh được nộp đơn ở đâu, mất bao lâu, và vì sao đăng ký metro bị huỷ."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "universityId": "uit",
+  "name": "Trường Đại học Công nghệ Thông tin, Đại học Quốc gia Thành phố Hồ Chí Minh",
+  "shortName": "ĐH Công nghệ Thông tin",
+  "parent": "Đại học Quốc gia Thành phố Hồ Chí Minh",
+  "domain": "uit.edu.vn",
+  "region": "TP. Hồ Chí Minh",
+  "campuses": [],
+  "officialDomains": [
+    "uit.edu.vn",
+    "celuit.edu.vn"
+  ]
+}

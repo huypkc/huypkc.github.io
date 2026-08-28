@@ -1,0 +1,417 @@
+{
+  "schemaVersion": 1,
+  "checklistId": "nttu-k26-2026",
+  "universityId": "nttu",
+  "campusId": null,
+  "faculty": null,
+  "cohort": {
+    "code": "K26",
+    "year": 2026
+  },
+  "title": "NTTU K26 — Tân sinh viên 2026",
+  "description": "Checklist thí điểm cho tân sinh viên Nguyễn Tất Thành khóa K26. Mỗi việc đến từ một câu hỏi có thật trong nhóm khóa K26 hoặc một thông báo chính thức của trường. Không lấy gì từ trường khác.",
+  "creator": {
+    "id": "c-pilot",
+    "name": "Bản thí điểm",
+    "cohort": "K26",
+    "verifiedStudent": false
+  },
+  "revision": 1,
+  "status": "published",
+  "lastUpdated": "2026-08-28",
+  "users": 0,
+  "provenanceNote": "Nguồn cộng đồng là nhóm công khai 'NTTU K26 - TÂN SINH VIÊN 2026' (20,3K thành viên), đọc ngày 28/08/2026. Nhóm cho phép đăng ẩn danh. Không lưu tên, ảnh đại diện, đường dẫn trang cá nhân, ID Facebook hay mã lớp của bất kỳ ai.",
+  "tasks": [
+    {
+      "id": "nttu-k26-xac-nhan-nhap-hoc",
+      "title": "Xác nhận nhập học trực tuyến",
+      "section": "Nhập học",
+      "bucket": "now",
+      "trust": "OFFICIAL",
+      "deadline": "2026-08-21T17:00",
+      "dueLabel": "Trước 17h ngày 21/8/2026",
+      "why": "Trường nói thẳng: thí sinh không hoàn thành thủ tục nhập học xem như từ chối nhập học tại trường. Bước này làm trên hệ thống của Bộ, không phải trên trang của trường.",
+      "steps": [
+        "Vào hệ thống tuyển sinh của Bộ tại thisinh.thitotnghiepthpt.edu.vn",
+        "Xác nhận nhập học vào Trường Đại học Nguyễn Tất Thành",
+        "Lưu lại màn hình xác nhận",
+        "Sau đó mới đến trường làm thủ tục trực tiếp"
+      ],
+      "requires": [],
+      "sourceIds": [
+        "src-nttu-xacnhan"
+      ],
+      "observations": [],
+      "tips": [],
+      "updated": "2026-08-28",
+      "appliesWhen": null,
+      "uncertainty": "Thông báo không nói thí sinh lỡ hạn thì còn cách nào không.",
+      "confirmations": 0
+    },
+    {
+      "id": "nttu-k26-thu-tuc-truc-tiep",
+      "title": "Làm thủ tục nhập học trực tiếp tại cơ sở",
+      "section": "Nhập học",
+      "bucket": "now",
+      "trust": "OFFICIAL",
+      "deadline": null,
+      "dueLabel": "Từ 11/8 đến 21/8/2026, 6h30–17h, kể cả thứ Bảy và Chủ nhật",
+      "why": "Sau khi xác nhận trực tuyến, bạn đến trường để nhận giấy báo nhập học, hoàn thành nghĩa vụ tài chính và nộp hồ sơ. Chọn một trong hai cơ sở.",
+      "steps": [
+        "Chọn cơ sở: 300A Nguyễn Tất Thành, Phường Xóm Chiếu; hoặc 331 Đỗ Mười, Phường An Phú Đông, Quận 12",
+        "Đi trong khung giờ 6h30–17h",
+        "Nhận giấy báo nhập học",
+        "Hoàn thành nghĩa vụ tài chính và nộp hồ sơ"
+      ],
+      "requires": [],
+      "sourceIds": [
+        "src-nttu-quytrinh",
+        "src-nttu-xacnhan"
+      ],
+      "observations": [],
+      "tips": [],
+      "updated": "2026-08-28",
+      "appliesWhen": null,
+      "uncertainty": "Danh sách giấy tờ cụ thể nằm trong ảnh trên trang chính thức và không đọc được thành chữ, nên không chép vào đây. Xem 'Checklist trước khi đi nhập học' trên trang gốc. Hai trang chính thức ghi địa chỉ cơ sở Quận 12 khác nhau ('331 Quốc lộ 1A' và '331 Đỗ Mười').",
+      "confirmations": 0
+    },
+    {
+      "id": "nttu-k26-tim-lop",
+      "title": "Tìm lớp và kết nối với bạn cùng lớp",
+      "section": "Trước buổi học đầu",
+      "bucket": "now",
+      "trust": "COMMUNITY_VERIFIED",
+      "deadline": null,
+      "dueLabel": "Chưa ai xác nhận mốc này",
+      "why": "Đây là chuyện được hỏi nhiều nhất trong nhóm K26: các bạn đăng mã lớp của mình để tìm người cùng lớp và xin link group lớp. Mã lớp in trên kết quả xếp lớp của bạn, mỗi người một mã khác nhau.",
+      "steps": [
+        "Tìm mã lớp của bạn trên hệ thống hoặc trên giấy tờ nhập học",
+        "Đăng mã lớp của bạn vào nhóm khoá và hỏi group lớp",
+        "Kiểm tra lại với một người thứ hai cùng lớp trước khi tin một link group"
+      ],
+      "requires": [],
+      "sourceIds": [],
+      "observations": [
+        {
+          "kind": "community_observation",
+          "school": "nttu",
+          "group": "NTTU K26 - TÂN SINH VIÊN 2026",
+          "observedAt": "2026-08-27",
+          "summary": "Sinh viên đăng bài muốn tìm bạn cùng lớp; trong bình luận có bạn nêu mã lớp của mình."
+        },
+        {
+          "kind": "community_observation",
+          "school": "nttu",
+          "group": "NTTU K26 - TÂN SINH VIÊN 2026",
+          "observedAt": "2026-08-24",
+          "summary": "Sinh viên tìm bạn cùng lớp bằng mã lớp ngành Dược."
+        },
+        {
+          "kind": "community_observation",
+          "school": "nttu",
+          "group": "NTTU K26 - TÂN SINH VIÊN 2026",
+          "observedAt": "2026-08-28",
+          "summary": "Sinh viên tìm bạn cùng lớp ngành Quản trị."
+        },
+        {
+          "kind": "community_observation",
+          "school": "nttu",
+          "group": "NTTU K26 - TÂN SINH VIÊN 2026",
+          "observedAt": "2026-08-28",
+          "summary": "Sinh viên tìm bạn cùng lớp ngành Ngôn ngữ Anh."
+        },
+        {
+          "kind": "community_observation",
+          "school": "nttu",
+          "group": "NTTU K26 - TÂN SINH VIÊN 2026",
+          "observedAt": "2026-08-28",
+          "summary": "Sinh viên tìm bạn cùng lớp ngành Điều dưỡng."
+        },
+        {
+          "kind": "community_observation",
+          "school": "nttu",
+          "group": "NTTU K26 - TÂN SINH VIÊN 2026",
+          "observedAt": "2026-08-28",
+          "summary": "Sinh viên tìm bạn cùng lớp ngành Truyền thông đa phương tiện và xin link group lớp."
+        }
+      ],
+      "tips": [],
+      "updated": "2026-08-28",
+      "appliesWhen": null,
+      "uncertainty": "Chưa tìm được kênh chính thức nào của trường để tra cứu danh sách lớp hay group lớp. Các mã lớp thấy trong nhóm là ví dụ của từng bạn, không phải mã áp dụng cho mọi người.",
+      "confirmations": 6
+    },
+    {
+      "id": "nttu-k26-vi-tri-phong-hoc",
+      "title": "Kiểm tra địa điểm và phòng học trước buổi học",
+      "section": "Trước buổi học đầu",
+      "bucket": "now",
+      "trust": "NEEDS_OFFICIAL_SOURCE",
+      "deadline": null,
+      "dueLabel": "Chưa có nguồn chính thức về ký hiệu phòng",
+      "why": "Hai bạn K26 đã hỏi một địa điểm trong lịch nằm ở đâu — một phòng ký hiệu bắt đầu bằng L.HT và một sân bóng. Một bạn trong nhóm trả lời phòng đó là hội trường lầu 9 cơ sở Quận 12 An Phú Đông. Trang chính thức của trường có xác nhận cơ sở này có hội trường và toà nhà có tới lầu 9, nhưng không nói hội trường ở lầu nào và không giải thích ký hiệu phòng.",
+      "steps": [
+        "Xem ký hiệu phòng trên lịch học của bạn",
+        "Đối chiếu với sơ đồ cơ sở trước ngày học, đừng để tới hôm đó mới tìm",
+        "Nếu không chắc, hỏi lại trong nhóm lớp và xác nhận với người thứ hai",
+        "Biết chắc ký hiệu phòng nghĩa là gì thì gửi vào đây bằng nút Đóng góp"
+      ],
+      "requires": [],
+      "sourceIds": [
+        "src-nttu-campus-apd"
+      ],
+      "observations": [
+        {
+          "kind": "community_observation",
+          "school": "nttu",
+          "group": "NTTU K26 - TÂN SINH VIÊN 2026",
+          "observedAt": "2026-08-28",
+          "summary": "Sinh viên hỏi một phòng học ký hiệu L.HT nằm ở tầng nào, khu nào, phòng nào."
+        },
+        {
+          "kind": "community_observation",
+          "school": "nttu",
+          "group": "NTTU K26 - TÂN SINH VIÊN 2026",
+          "observedAt": "2026-08-28",
+          "summary": "Một bạn trong nhóm trả lời đó là hội trường lầu 9 cơ sở Quận 12 An Phú Đông. Chưa có nguồn chính thức xác nhận."
+        },
+        {
+          "kind": "community_observation",
+          "school": "nttu",
+          "group": "NTTU K26 - TÂN SINH VIÊN 2026",
+          "observedAt": "2026-08-28",
+          "summary": "Sinh viên hỏi một sân bóng đá trong lịch nằm ở khu vực nào."
+        }
+      ],
+      "tips": [
+        {
+          "author": "Một bạn trong nhóm K26",
+          "text": "Hội trường lầu 9 cơ sở Quận 12 An Phú Đông. Đây là câu trả lời của một bạn trong nhóm, chưa có trang nào của trường xác nhận."
+        }
+      ],
+      "updated": "2026-08-28",
+      "appliesWhen": null,
+      "uncertainty": "Chưa tìm được trang nào của trường giải thích ký hiệu phòng học hay công bố sơ đồ phòng theo ký hiệu. Câu trả lời trong nhóm khớp với việc toà nhà có tới lầu 9 và có hội trường, nhưng khớp không phải là xác nhận.",
+      "confirmations": 3
+    },
+    {
+      "id": "nttu-k26-chuan-bi-buoi-hoc-dau",
+      "title": "Chuẩn bị cho buổi học đầu tiên",
+      "section": "Trước buổi học đầu",
+      "bucket": "now",
+      "trust": "COMMUNITY_TIP",
+      "deadline": null,
+      "dueLabel": "Chưa ai xác nhận mốc này",
+      "why": "Bốn bạn K26 hỏi cùng một chuyện: đi học mang gì, buổi đầu cần chuẩn bị gì, balo ngoài có được không, ngành mình có cần máy tính Casio không. Bài trả lời chi tiết nhất trong nhóm lại được Facebook gắn nhãn 'Nội dung do AI tạo', nên nó không phải kinh nghiệm của ai cả. Ghi lại ở đây đúng như vậy.",
+      "steps": [
+        "Chưa mua giáo trình vội — đợi giảng viên hướng dẫn rồi hãy mua",
+        "Mang sổ ghi bài và bút; nhiều bạn ghi chung tất cả môn vào một cuốn",
+        "Hỏi lại lớp hoặc giảng viên về những thứ riêng của ngành bạn"
+      ],
+      "requires": [],
+      "sourceIds": [],
+      "observations": [
+        {
+          "kind": "community_observation",
+          "school": "nttu",
+          "group": "NTTU K26 - TÂN SINH VIÊN 2026",
+          "observedAt": "2026-08-28",
+          "summary": "Một bài trong nhóm liệt kê những thứ cần chuẩn bị khi học đại học. Bài này được nền tảng gắn nhãn là nội dung do AI tạo, không phải kinh nghiệm cá nhân."
+        },
+        {
+          "kind": "community_observation",
+          "school": "nttu",
+          "group": "NTTU K26 - TÂN SINH VIÊN 2026",
+          "observedAt": "2026-08-28",
+          "summary": "Sinh viên hỏi đi học thì mang những thứ gì theo."
+        },
+        {
+          "kind": "community_observation",
+          "school": "nttu",
+          "group": "NTTU K26 - TÂN SINH VIÊN 2026",
+          "observedAt": "2026-08-28",
+          "summary": "Sinh viên hỏi buổi đầu đi học cần chuẩn bị gì."
+        },
+        {
+          "kind": "community_observation",
+          "school": "nttu",
+          "group": "NTTU K26 - TÂN SINH VIÊN 2026",
+          "observedAt": "2026-08-28",
+          "summary": "Sinh viên hỏi đi học có được mang balo ngoài không."
+        },
+        {
+          "kind": "community_observation",
+          "school": "nttu",
+          "group": "NTTU K26 - TÂN SINH VIÊN 2026",
+          "observedAt": "2026-08-28",
+          "summary": "Sinh viên ngành Ngôn ngữ Trung hỏi ngành mình có cần máy tính Casio không."
+        }
+      ],
+      "tips": [
+        {
+          "author": "Bài trong nhóm K26 (nền tảng gắn nhãn: nội dung do AI tạo)",
+          "text": "Giáo trình: không cần mua trước, đợi vào học giảng viên hướng dẫn hãy mua. Sổ ghi bài: thường ghi chung tất cả các môn vào một cuốn. Bút ghi và bút highlight để take note. Laptop hoặc máy tính bảng để học online và làm bài nhóm."
+        }
+      ],
+      "updated": "2026-08-28",
+      "appliesWhen": null,
+      "uncertainty": "Không có trang nào của trường liệt kê những thứ tân sinh viên cần mang. Đặc biệt: không có nguồn nào nói laptop hay máy tính bảng là bắt buộc — đó là gợi ý trong một bài do AI tạo, không phải yêu cầu của trường. Quy định về balo và đồng phục cũng chưa có nguồn.",
+      "confirmations": 5
+    },
+    {
+      "id": "nttu-k26-chuan-bi-theo-nganh",
+      "title": "Chuẩn bị riêng theo ngành của bạn",
+      "section": "Trước buổi học đầu",
+      "bucket": "soon",
+      "trust": "NEEDS_OFFICIAL_SOURCE",
+      "deadline": null,
+      "dueLabel": "Chưa có câu trả lời chính thức",
+      "why": "Bốn bạn K26 hỏi riêng cho ngành mình — Điều dưỡng, Du lịch, Ngân hàng, Ngôn ngữ Trung — và không câu nào được trả lời. Đây là bằng chứng rõ nhất trong đợt thí điểm này rằng checklist chung theo khoá là chưa đủ: cùng một khoá, mỗi ngành cần chuẩn bị khác nhau.",
+      "steps": [
+        "Hỏi thẳng trong group lớp hoặc group ngành của bạn",
+        "Hỏi cố vấn học tập của ngành",
+        "Có câu trả lời cho ngành của bạn thì gửi vào đây bằng nút Đóng góp"
+      ],
+      "requires": [],
+      "sourceIds": [],
+      "observations": [
+        {
+          "kind": "community_observation",
+          "school": "nttu",
+          "group": "NTTU K26 - TÂN SINH VIÊN 2026",
+          "observedAt": "2026-08-28",
+          "summary": "Sinh viên ngành Điều dưỡng hỏi cần chuẩn bị những gì."
+        },
+        {
+          "kind": "community_observation",
+          "school": "nttu",
+          "group": "NTTU K26 - TÂN SINH VIÊN 2026",
+          "observedAt": "2026-08-28",
+          "summary": "Sinh viên ngành Du lịch hỏi cần chuẩn bị những gì."
+        },
+        {
+          "kind": "community_observation",
+          "school": "nttu",
+          "group": "NTTU K26 - TÂN SINH VIÊN 2026",
+          "observedAt": "2026-08-28",
+          "summary": "Sinh viên ngành Ngân hàng nói chưa biết gì và xin được hướng dẫn."
+        },
+        {
+          "kind": "community_observation",
+          "school": "nttu",
+          "group": "NTTU K26 - TÂN SINH VIÊN 2026",
+          "observedAt": "2026-08-28",
+          "summary": "Sinh viên ngành Ngôn ngữ Trung hỏi ngành mình có học gì liên quan tới máy tính không."
+        }
+      ],
+      "tips": [],
+      "updated": "2026-08-28",
+      "appliesWhen": null,
+      "uncertainty": "Không câu hỏi nào trong số này được trả lời trong nhóm, và chưa tìm được trang nào của trường trả lời theo ngành. First Week hiện chỉ có lớp Trường → Khoá; bốn câu hỏi này là bằng chứng cần thêm lớp Ngành.",
+      "confirmations": 4
+    },
+    {
+      "id": "nttu-k26-the-sv-truoc-buoi-hoc",
+      "title": "Lấy thẻ sinh viên trước buổi học đầu tiên",
+      "section": "Thẻ và giấy tờ",
+      "bucket": "soon",
+      "trust": "NEEDS_OFFICIAL_SOURCE",
+      "deadline": null,
+      "dueLabel": "Chưa có quy trình chính thức",
+      "why": "Hai bạn K26 hỏi cùng một nỗi lo: chưa có thẻ sinh viên kịp ngày học thì có vào trường được không, và thẻ phải lên lấy trước hay lấy đúng hôm đi học cũng được. Chưa tìm được trang nào của trường trả lời.",
+      "steps": [
+        "Hỏi cố vấn học tập hoặc phòng công tác sinh viên của cơ sở bạn học",
+        "Mang giấy tờ tuỳ thân có ảnh cho buổi học đầu để phòng khi chưa có thẻ",
+        "Có câu trả lời chính thức thì gửi vào đây bằng nút Đóng góp"
+      ],
+      "requires": [],
+      "sourceIds": [],
+      "observations": [
+        {
+          "kind": "community_observation",
+          "school": "nttu",
+          "group": "NTTU K26 - TÂN SINH VIÊN 2026",
+          "observedAt": "2026-08-28",
+          "summary": "Sinh viên hỏi nếu chưa kịp có thẻ sinh viên trước ngày học thì có được vào trường không."
+        },
+        {
+          "kind": "community_observation",
+          "school": "nttu",
+          "group": "NTTU K26 - TÂN SINH VIÊN 2026",
+          "observedAt": "2026-08-28",
+          "summary": "Sinh viên hỏi thẻ sinh viên phải lên lấy trước ngày đi học hay lấy đúng hôm đi học cũng được."
+        }
+      ],
+      "tips": [],
+      "updated": "2026-08-28",
+      "appliesWhen": null,
+      "uncertainty": "Chưa xác minh được thẻ sinh viên có bắt buộc để vào cơ sở hay không, và lấy thẻ muộn thì có sao không.",
+      "confirmations": 2
+    },
+    {
+      "id": "nttu-k26-gdqp",
+      "title": "Xem lịch Giáo dục quốc phòng và điểm tập trung",
+      "section": "Học kỳ đầu",
+      "bucket": "soon",
+      "trust": "NEEDS_OFFICIAL_SOURCE",
+      "deadline": null,
+      "dueLabel": "Chưa có lịch chính thức đọc được",
+      "why": "Một bạn K26 thấy trên app có một đợt kéo dài nhiều ngày liên tục nhưng không biết đó là đi quân sự tập trung hay chỉ học lý thuyết, và app không ghi chỗ tập trung. Hai thứ đó khác nhau hoàn toàn về việc phải chuẩn bị gì.",
+      "steps": [
+        "Mở lịch trên hệ thống của trường và ghi lại đúng những gì nó hiển thị",
+        "Hỏi cố vấn học tập xem đợt đó là học tập trung hay học lý thuyết",
+        "Hỏi rõ điểm tập trung và những thứ phải mang",
+        "Biết chắc rồi thì gửi vào đây bằng nút Đóng góp"
+      ],
+      "requires": [],
+      "sourceIds": [],
+      "observations": [
+        {
+          "kind": "community_observation",
+          "school": "nttu",
+          "group": "NTTU K26 - TÂN SINH VIÊN 2026",
+          "observedAt": "2026-08-28",
+          "summary": "Sinh viên thấy trên app một đợt học kéo dài nhiều ngày liên tục, không rõ là đi quân sự tập trung hay chỉ học lý thuyết, và app không hiển thị điểm tập trung."
+        }
+      ],
+      "tips": [],
+      "updated": "2026-08-28",
+      "appliesWhen": null,
+      "uncertainty": "Chưa tìm được trang nào của trường công bố lịch Giáo dục quốc phòng cho K26 hay điểm tập trung. Ngày tháng bạn đó thấy là lịch riêng trên app của bạn ấy, nên không ghi thành mốc chung ở đây.",
+      "confirmations": 1
+    },
+    {
+      "id": "nttu-k26-mien-hoc-phan-tieng-anh",
+      "title": "Nộp chứng chỉ tiếng Anh để xét miễn học phần",
+      "section": "Học kỳ đầu",
+      "bucket": "soon",
+      "trust": "NEEDS_OFFICIAL_SOURCE",
+      "deadline": null,
+      "dueLabel": "Chưa có hạn chính thức",
+      "why": "Trong nhóm có một chủ đề dành riêng cho tân sinh viên K26 có chứng chỉ tiếng Anh, về việc nộp đầu vào để xét miễn học phần tiếng Anh. Việc này có thật; điều kiện cụ thể thì chưa tìm được trang chính thức nào công bố.",
+      "steps": [
+        "Kiểm tra chứng chỉ của bạn còn hạn không",
+        "Hỏi cố vấn học tập hoặc phòng đào tạo về loại chứng chỉ và mức điểm được xét",
+        "Có bảng quy đổi chính thức thì gửi vào đây bằng nút Đóng góp"
+      ],
+      "requires": [
+        "Chứng chỉ tiếng Anh còn hạn"
+      ],
+      "sourceIds": [],
+      "observations": [
+        {
+          "kind": "official_unit_post",
+          "school": "nttu",
+          "group": "NTTU K26 - TÂN SINH VIÊN 2026",
+          "observedAt": "2026-08-28",
+          "summary": "Nhóm có một chủ đề riêng cho tân sinh viên K26 có chứng chỉ tiếng Anh nộp đầu vào để xét miễn học phần tiếng Anh."
+        }
+      ],
+      "tips": [],
+      "updated": "2026-08-28",
+      "appliesWhen": "Bạn có chứng chỉ tiếng Anh và muốn xét miễn học phần",
+      "uncertainty": "Chưa xác minh được loại chứng chỉ nào được chấp nhận, mức điểm tối thiểu, hạn nộp, và nộp ở đâu.",
+      "confirmations": 0
+    }
+  ]
+}

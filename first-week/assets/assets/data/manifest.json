@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-28",
+  "universityIndex": "universities/index.json",
+  "universities": [
+    {
+      "universityId": "uit",
+      "name": "Trường Đại học Công nghệ Thông tin, ĐHQG-HCM",
+      "shortName": "ĐH Công nghệ Thông tin",
+      "path": "universities/uit/university.json",
+      "cohorts": [
+        {
+          "cohort": "k2026",
+          "cohortId": "k2026",
+          "checklistId": "uit-k2026",
+          "revision": 2,
+          "title": "UIT K2026 — Tân sinh viên",
+          "taskCount": 13,
+          "datedCount": 0,
+          "users": 0,
+          "lastUpdated": "2026-08-28",
+          "updatedAt": "2026-08-28",
+          "checklist": "universities/uit/cohorts/k2026/checklist.json",
+          "sources": "universities/uit/cohorts/k2026/sources.json"
+        }
+      ]
+    },
+    {
+      "universityId": "nttu",
+      "name": "Trường Đại học Nguyễn Tất Thành",
+      "shortName": "ĐH Nguyễn Tất Thành",
+      "path": "universities/nttu/university.json",
+      "cohorts": [
+        {
+          "cohort": "k26-2026",
+          "cohortId": "k26-2026",
+          "checklistId": "nttu-k26-2026",
+          "revision": 1,
+          "title": "NTTU K26 — Tân sinh viên 2026",
+          "taskCount": 9,
+          "datedCount": 1,
+          "users": 0,
+          "lastUpdated": "2026-08-28",
+          "updatedAt": "2026-08-28",
+          "checklist": "universities/nttu/cohorts/k26-2026/checklist.json",
+          "sources": "universities/nttu/cohorts/k26-2026/sources.json"
+        }
+      ]
+    }
+  ]
+}

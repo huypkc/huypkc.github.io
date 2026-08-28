@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "src-ctsv-lichtrinh",
+      "url": "https://ctsv.uit.edu.vn/bai-viet/lich-trinh-chi-tiet-danh-cho-tan-sinh-vien-khoa-2026",
+      "title": "Lịch trình chi tiết dành cho tân sinh viên - Khóa 2026",
+      "publisher": "Phòng Công tác Sinh viên, Trường Đại học Công nghệ Thông tin, ĐHQG-HCM",
+      "retrievedAt": "2026-08-28",
+      "kind": "official",
+      "note": "Đọc lại ngày 28/08/2026. Trang hiển thị ngày đăng 'Wed, 20/08/2025 - 15:21' dù bài viết dành cho khóa 2026; các mốc ngày trong bài viết không ghi năm."
+    },
+    {
+      "id": "src-ctsv-thesv",
+      "url": "https://ctsv.uit.edu.vn/bai-viet/thong-bao-ve-viec-phat-sinh-vien-giay-bao-nhap-hoc-va-qua-tang-cho-sinh-vien-khoa-2026",
+      "title": "Thông báo về việc phát Thẻ sinh viên, Giấy báo nhập học và Quà tặng cho sinh viên khóa 2026",
+      "publisher": "Phòng Công tác Sinh viên, Trường Đại học Công nghệ Thông tin, ĐHQG-HCM",
+      "retrievedAt": "2026-08-28",
+      "kind": "official",
+      "note": "Đăng 24/08/2026. Thông báo ghi khoảng thời gian phát thẻ là '25/08/2024 – 28/08/2024'; giữ nguyên như trường ghi, không tự sửa năm."
+    },
+    {
+      "id": "src-ctsv-lienhe",
+      "url": "https://ctsv.uit.edu.vn/",
+      "title": "Phòng Công tác Sinh viên — thông tin liên hệ",
+      "publisher": "Phòng Công tác Sinh viên, Trường Đại học Công nghệ Thông tin, ĐHQG-HCM",
+      "retrievedAt": "2026-08-28",
+      "kind": "official",
+      "note": "Địa chỉ liên hệ công bố trên trang: ctsv@uit.edu.vn, (028) 37252002 Ext: 116."
+    },
+    {
+      "id": "src-cfl-huongdan-av",
+      "url": "http://www.celuit.edu.vn/huongdan-av",
+      "title": "Hướng dẫn thi trắc nghiệm đề thi mẫu tiếng Anh xếp lớp đầu vào",
+      "publisher": "Trung tâm Ngoại ngữ, Trường Đại học Công nghệ Thông tin, ĐHQG-HCM",
+      "retrievedAt": "2026-08-28",
+      "kind": "official",
+      "note": "Trang không ghi ngày đăng. Mô tả quy trình làm đề thi thử, không phải lịch thi chính thức."
+    },
+    {
+      "id": "src-forum-av-2026",
+      "url": "https://forum.uit.edu.vn/t/ki-thi-tieng-anh-dau-vao-2026/162229",
+      "title": "Kì thi tiếng Anh đầu vào 2026 — Hỗ trợ Tân sinh viên",
+      "publisher": "Diễn đàn Trường Đại học Công nghệ Thông tin, ĐHQG-HCM",
+      "retrievedAt": "2026-08-28",
+      "kind": "official",
+      "note": "Câu trả lời của nhân viên trường trên diễn đàn của trường, không phải thông báo chính thức có số hiệu."
+    },
+    {
+      "id": "src-ctsv-hoso-online",
+      "url": "https://ctsv.uit.edu.vn/bai-viet/nhap-hoc-huong-dan-tao-ho-so-truc-tuyen-danh-cho-tan-sinh-vien",
+      "title": "[NHẬP HỌC] Hướng dẫn Tạo hồ sơ trực tuyến dành cho tân sinh viên",
+      "publisher": "Phòng Công tác Sinh viên, Trường Đại học Công nghệ Thông tin, ĐHQG-HCM",
+      "retrievedAt": "2026-08-28",
+      "kind": "official",
+      "note": "Trang hiển thị ngày đăng 13/08/2020 nhưng nội dung ghi áp dụng cho Khóa 2026. Không sửa ngày."
+    },
+    {
+      "id": "src-ctsv-taikhoan",
+      "url": "https://ctsv.uit.edu.vn/bai-viet/thong-bao-ve-thoi-han-su-dung-cac-tai-khoan-cap-cho-sinh-vien",
+      "title": "Thông báo về thời hạn sử dụng các tài khoản cấp cho sinh viên",
+      "publisher": "Phòng Công tác Sinh viên, Trường Đại học Công nghệ Thông tin, ĐHQG-HCM",
+      "retrievedAt": "2026-08-28",
+      "kind": "official",
+      "note": "Đăng 07/09/2016, cập nhật 24/07/2021. Nói về ba loại tài khoản và thời hạn, không hướng dẫn cách tra cứu lại."
+    }
+  ]
+}

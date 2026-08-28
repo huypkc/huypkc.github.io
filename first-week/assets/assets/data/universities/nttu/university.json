@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "universityId": "nttu",
+  "name": "Trường Đại học Nguyễn Tất Thành",
+  "shortName": "ĐH Nguyễn Tất Thành",
+  "parent": null,
+  "domain": "ntt.edu.vn",
+  "region": "TP. Hồ Chí Minh",
+  "officialDomains": [
+    "ntt.edu.vn"
+  ],
+  "campuses": [
+    {
+      "id": "cs1",
+      "name": "Cơ sở 300A Nguyễn Tất Thành",
+      "address": "300A Nguyễn Tất Thành, Phường Xóm Chiếu, TP. Hồ Chí Minh"
+    },
+    {
+      "id": "cs-apd",
+      "name": "Cơ sở An Phú Đông — Quận 12",
+      "address": "331 Đỗ Mười, Phường An Phú Đông, Quận 12, TP. Hồ Chí Minh"
+    }
+  ]
+}
