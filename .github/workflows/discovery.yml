@@ -1,0 +1,17 @@
+# The visible copy, the schema.org JSON-LD and llms.txt have to say the same
+# things. Nothing installs; the check is standard-library Python.
+name: discovery
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tool/discovery-check.py
