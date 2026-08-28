@@ -41818,7 +41818,7 @@ a5C(a){var s=0,r=A.K(t.ob),q,p=2,o=[],n=this,m,l,k,j
 var $async$oX=A.L(function(b,c){if(b===1){o.push(c)
 s=p}for(;;)switch(s){case 0:p=4
 s=7
-return A.A(n.a.e.$1(A.iC("https://raw.githubusercontent.com/huypkc/first-week/main/data/"+a,0,null)),$async$oX)
+return A.A(n.a.e.$1(A.iC("https://raw.githubusercontent.com/huypkc/first-week-data/main/"+a,0,null)),$async$oX)
 case 7:l=c
 q=l
 s=1
