@@ -47,17 +47,49 @@ sub-100ms latency work behind that line.
 
 - **One Frame** — a private, local-first photo journal for Android. One
   photograph and one sentence a day, encrypted before it touches disk, proven
-  by reading the bytes back. 141 Flutter tests. A signed v2 Android artifact.
+  by reading the bytes back. 220 Flutter tests. A signed v2 Android artifact.
   Verified on device, in release validation, not published to any store.
   https://huypkc.github.io/one-frame.html
 - **ThunViet V2** — contract-first delivery: requirement → authorise → isolate
-  → build → verify → release. 610 TypeScript tests, 14 contract operations
+  → build → verify → release. 638 TypeScript tests, 14 contract operations
   verified.
+
+Counts are the output of a run, not an estimate: `flutter test` and
+`node --test`, both executed 2026-08-29.
 
 What is deliberately not claimed: no Play Store listing, no store release, no
 production users, no uptime figure, no iOS build, no TestFlight.
+
+## Engineering log
+
+The homepage carries a dated log of engineering observations — what was
+observed, what work triggered it, the judgement drawn, what changed in the
+system as a result, the evidence behind it, and what would falsify it. Each
+entry is labelled VERIFIED, SUPPORTED, INFERRED or SUPERSEDED, and those words
+mean different things: VERIFIED is backed by inspectable code, tests, a commit
+or a reproducible run; SUPPORTED has evidence pointing one way without proving
+it; INFERRED is a working model; SUPERSEDED has been replaced by later
+evidence and is kept rather than deleted.
+
+Entries citing thun-viet/one-frame, thun-viet/basic-system-v2 and the Slack
+wake bridge give a commit SHA without a link, because those repositories are
+not public. Entries citing huypkc/first-week link to the public commit.
+
+Every entry also says how a reader can check it: the repository is public and
+the command reproduces; the command and its unedited output are reproduced in
+the evidence appendix; or the repository is private and source access is
+available on request.
+
+## Evidence appendix
+
+https://huypkc.github.io/evidence.html names each command behind the numbers,
+where and at which commit it ran, and links the unedited output committed
+beside the page. Four of the six runs are from private repositories, so a
+reader can see what was printed but cannot re-run it; the page says so rather
+than implying otherwise. Read access for review is available on request.
 
 ## Pages
 
 - https://huypkc.github.io/ — homepage
 - https://huypkc.github.io/one-frame.html — One Frame case study
+- https://huypkc.github.io/evidence.html — evidence appendix: commands and raw output

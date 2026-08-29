@@ -15,3 +15,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: python3 tool/discovery-check.py
+      # The log on the page is generated from data/engineering-log.json and
+      # committed. This fails if the two have drifted apart.
+      - run: python3 tool/render-log.py --check

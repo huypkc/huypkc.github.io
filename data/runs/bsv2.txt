@@ -1,0 +1,3931 @@
+
+> thunviet-v2@ test /home/huy/working/releases/basic-system-v2
+> node --test .claude/hooks/*.test.mjs apps/storefront/src/*.test.ts platform/coordinator-runtime/*.test.mjs platform/owner-authorization/*.test.mjs services/api/openapi/*.test.mjs services/api/src/*.test.ts supabase/tests/owner-authorization/*.test.ts supabase/tests/owner-authorization/*.test.mjs
+
+TAP version 13
+# Subtest: storefront ghi apps/storefront/** → PASS
+ok 1 - storefront ghi apps/storefront/** → PASS
+  ---
+  duration_ms: 64.425174
+  type: 'test'
+  ...
+# Subtest: storefront ghi packages/shared/** → EXIT 2
+ok 2 - storefront ghi packages/shared/** → EXIT 2
+  ---
+  duration_ms: 77.349434
+  type: 'test'
+  ...
+# Subtest: architect được ghi packages/shared/**
+ok 3 - architect được ghi packages/shared/**
+  ---
+  duration_ms: 167.441163
+  type: 'test'
+  ...
+# Subtest: express-api ghi services/api/src/integrations/** → EXIT 2 (reserved)
+ok 4 - express-api ghi services/api/src/integrations/** → EXIT 2 (reserved)
+  ---
+  duration_ms: 71.5343
+  type: 'test'
+  ...
+# Subtest: express-api ghi services/api/openapi/** → EXIT 2 (deny)
+ok 5 - express-api ghi services/api/openapi/** → EXIT 2 (deny)
+  ---
+  duration_ms: 119.92925
+  type: 'test'
+  ...
+# Subtest: express-api ghi được đúng hai file config service, không hơn
+ok 6 - express-api ghi được đúng hai file config service, không hơn
+  ---
+  duration_ms: 531.265024
+  type: 'test'
+  ...
+# Subtest: mọi persona import V1 → EXIT 2
+ok 7 - mọi persona import V1 → EXIT 2
+  ---
+  duration_ms: 187.351708
+  type: 'test'
+  ...
+# Subtest: agent_type không tồn tại → EXIT 2
+ok 8 - agent_type không tồn tại → EXIT 2
+  ---
+  duration_ms: 63.431856
+  type: 'test'
+  ...
+# Subtest: thiếu agent_type → EXIT 2 (fail closed)
+ok 9 - thiếu agent_type → EXIT 2 (fail closed)
+  ---
+  duration_ms: 70.204457
+  type: 'test'
+  ...
+# Subtest: reserved chặn cả qa-integrator
+ok 10 - reserved chặn cả qa-integrator
+  ---
+  duration_ms: 84.377099
+  type: 'test'
+  ...
+# Subtest: mọi ownership glob resolve được ≥1 filesystem entry
+ok 11 - mọi ownership glob resolve được ≥1 filesystem entry
+  ---
+  duration_ms: 298.793237
+  type: 'test'
+  ...
+# Subtest: PLANNED_PATHS: thư mục cha có thật, và không có mục chết
+ok 12 - PLANNED_PATHS: thư mục cha có thật, và không có mục chết
+  ---
+  duration_ms: 0.321736
+  type: 'test'
+  ...
+# Subtest: SubagentStop có diff ngoài ownership → EXIT 2
+ok 13 - SubagentStop có diff ngoài ownership → EXIT 2
+  ---
+  duration_ms: 63.366796
+  type: 'test'
+  ...
+# Subtest: SubagentStop diff trong ownership → PASS
+ok 14 - SubagentStop diff trong ownership → PASS
+  ---
+  duration_ms: 66.109534
+  type: 'test'
+  ...
+# Subtest: trust root: KHÔNG persona nào ghi được, kể cả qa-integrator
+ok 15 - trust root: KHÔNG persona nào ghi được, kể cả qa-integrator
+  ---
+  duration_ms: 2516.752868
+  type: 'test'
+  ...
+# Subtest: trust root: phòng thủ HAI lớp — bỏ reserved[] đi vẫn bị deny[] chặn
+ok 16 - trust root: phòng thủ HAI lớp — bỏ reserved[] đi vẫn bị deny[] chặn
+  ---
+  duration_ms: 1.323453
+  type: 'test'
+  ...
+# Subtest: vùng signing ngoài trust root: chỉ qa-integrator ghi được
+ok 17 - vùng signing ngoài trust root: chỉ qa-integrator ghi được
+  ---
+  duration_ms: 172.16139
+  type: 'test'
+  ...
+# Subtest: SubagentStop bắt được persona lén sửa vùng signing
+ok 18 - SubagentStop bắt được persona lén sửa vùng signing
+  ---
+  duration_ms: 44.932278
+  type: 'test'
+  ...
+# Subtest: persona read-only được nhận diện, nhưng vẫn không ghi được gì
+ok 19 - persona read-only được nhận diện, nhưng vẫn không ghi được gì
+  ---
+  duration_ms: 101.653856
+  type: 'test'
+  ...
+# Subtest: mọi agent trong .claude/agents đều có trong ownership manifest
+ok 20 - mọi agent trong .claude/agents đều có trong ownership manifest
+  ---
+  duration_ms: 3.697576
+  type: 'test'
+  ...
+# Subtest: --staged: persona ghi trong scope → pass
+ok 21 - --staged: persona ghi trong scope → pass
+  ---
+  duration_ms: 50.916705
+  type: 'test'
+  ...
+# Subtest: --staged: persona ghi ngoài scope → EXIT 2
+ok 22 - --staged: persona ghi ngoài scope → EXIT 2
+  ---
+  duration_ms: 49.617282
+  type: 'test'
+  ...
+# Subtest: --staged: agent_type lạ → EXIT 2 (fail closed)
+ok 23 - --staged: agent_type lạ → EXIT 2 (fail closed)
+  ---
+  duration_ms: 47.321851
+  type: 'test'
+  ...
+# Subtest: --staged: không có persona = owner commit trực tiếp → không chặn vì scope
+ok 24 - --staged: không có persona = owner commit trực tiếp → không chặn vì scope
+  ---
+  duration_ms: 48.39296
+  type: 'test'
+  ...
+# Subtest: --staged: luật V1 áp cả cho owner
+ok 25 - --staged: luật V1 áp cả cho owner
+  ---
+  duration_ms: 85.872796
+  type: 'test'
+  ...
+# Subtest: --staged: ownership manifest hỏng → EXIT 2
+ok 26 - --staged: ownership manifest hỏng → EXIT 2
+  ---
+  duration_ms: 40.157354
+  type: 'test'
+  ...
+# Subtest: --staged: không có gì staged → pass, không giả vờ đã kiểm
+ok 27 - --staged: không có gì staged → pass, không giả vờ đã kiểm
+  ---
+  duration_ms: 43.507093
+  type: 'test'
+  ...
+# Subtest: --staged: danh sách miễn content scan không có mục chết, và đúng bằng thực tế
+ok 28 - --staged: danh sách miễn content scan không có mục chết, và đúng bằng thực tế
+  ---
+  duration_ms: 12.669305
+  type: 'test'
+  ...
+# Subtest: PreToolUse: ghi hợp lệ bên trong linked worktree → PASS
+ok 29 - PreToolUse: ghi hợp lệ bên trong linked worktree → PASS
+  ---
+  duration_ms: 62.059873
+  type: 'test'
+  ...
+# Subtest: PreToolUse: ghi ngoài ownership bên trong linked worktree → EXIT 2
+ok 30 - PreToolUse: ghi ngoài ownership bên trong linked worktree → EXIT 2
+  ---
+  duration_ms: 92.674398
+  type: 'test'
+  ...
+# Subtest: PreToolUse: từ worktree ghi thoát ra ngoài worktree → EXIT 2
+ok 31 - PreToolUse: từ worktree ghi thoát ra ngoài worktree → EXIT 2
+  ---
+  duration_ms: 90.380447
+  type: 'test'
+  ...
+# Subtest: --staged vẫn chặn diff ngoài ownership, cả ở main checkout lẫn trong linked worktree
+ok 32 - --staged vẫn chặn diff ngoài ownership, cả ở main checkout lẫn trong linked worktree
+  ---
+  duration_ms: 214.31604
+  type: 'test'
+  ...
+# Subtest: PreToolUse: ownership đọc từ root của worktree, không phải của hook script
+ok 33 - PreToolUse: ownership đọc từ root của worktree, không phải của hook script
+  ---
+  duration_ms: 72.507289
+  type: 'test'
+  ...
+# Subtest: không persona nào sửa được ownership manifest
+ok 34 - không persona nào sửa được ownership manifest
+  ---
+  duration_ms: 326.184319
+  type: 'test'
+  ...
+# Subtest: SubagentStop bắt persona lén sửa manifest
+ok 35 - SubagentStop bắt persona lén sửa manifest
+  ---
+  duration_ms: 49.548641
+  type: 'test'
+  ...
+# Subtest: guard tự bảo vệ chốt manifest — gỡ chốt là phải ồn ào
+ok 36 - guard tự bảo vệ chốt manifest — gỡ chốt là phải ồn ào
+  ---
+  duration_ms: 0.460039
+  type: 'test'
+  ...
+# Subtest: ratification: qa-integrator giữ đúng hai root config được owner duyệt
+ok 37 - ratification: qa-integrator giữ đúng hai root config được owner duyệt
+  ---
+  duration_ms: 0.372697
+  type: 'test'
+  ...
+# Subtest: stdin đóng, JSON hợp lệ → trả lời ngay, không chạm deadline
+ok 38 - stdin đóng, JSON hợp lệ → trả lời ngay, không chạm deadline
+  ---
+  duration_ms: 31.136054
+  type: 'test'
+  ...
+# Subtest: stdin không bao giờ đóng → EXIT 2 tại deadline, không treo
+ok 39 - stdin không bao giờ đóng → EXIT 2 tại deadline, không treo
+  ---
+  duration_ms: 10009.01914
+  type: 'test'
+  ...
+# Subtest: hook input rỗng → EXIT 2 (fail closed)
+ok 40 - hook input rỗng → EXIT 2 (fail closed)
+  ---
+  duration_ms: 32.098182
+  type: 'test'
+  ...
+# Subtest: hook input malformed → EXIT 2 (fail closed)
+ok 41 - hook input malformed → EXIT 2 (fail closed)
+  ---
+  duration_ms: 28.113461
+  type: 'test'
+  ...
+# Subtest: heartbeat cùng failure mode nhưng fail OPEN — không bao giờ chặn session
+ok 42 - heartbeat cùng failure mode nhưng fail OPEN — không bao giờ chặn session
+  ---
+  duration_ms: 10008.335549
+  type: 'test'
+  ...
+# Subtest: hai hook chạy song song đều kết thúc, không cái nào treo
+ok 43 - hai hook chạy song song đều kết thúc, không cái nào treo
+  ---
+  duration_ms: 43.750141
+  type: 'test'
+  ...
+# Subtest: settings.json bọc outer deadline, không cho exit 124 lọt ra
+ok 44 - settings.json bọc outer deadline, không cho exit 124 lọt ra
+  ---
+  duration_ms: 0.629711
+  type: 'test'
+  ...
+# Subtest: PreToolUse: agent có failure marker bị chặn trước side effect đầu tiên
+ok 45 - PreToolUse: agent có failure marker bị chặn trước side effect đầu tiên
+  ---
+  duration_ms: 29.379134
+  type: 'test'
+  ...
+# Subtest: PreToolUse: marker hỏng cũng chặn (fail closed)
+ok 46 - PreToolUse: marker hỏng cũng chặn (fail closed)
+  ---
+  duration_ms: 35.661637
+  type: 'test'
+  ...
+# Subtest: PreToolUse: marker của agent khác không chặn ai cả
+ok 47 - PreToolUse: marker của agent khác không chặn ai cả
+  ---
+  duration_ms: 79.629523
+  type: 'test'
+  ...
+# Subtest: PreToolUse: marker được gỡ (retry thành công) ⇒ worker chạy tiếp
+ok 48 - PreToolUse: marker được gỡ (retry thành công) ⇒ worker chạy tiếp
+  ---
+  duration_ms: 66.852534
+  type: 'test'
+  ...
+# Subtest: WIRING: persona commit trong worktree của mình, KHÔNG có env → danh tính suy ra từ worktree
+ok 49 - WIRING: persona commit trong worktree của mình, KHÔNG có env → danh tính suy ra từ worktree
+  ---
+  duration_ms: 97.017933
+  type: 'test'
+  ...
+# Subtest: WIRING: persona ghi NGOÀI ownership, KHÔNG có env → EXIT 2 (trước đây exit 0 như owner)
+ok 50 - WIRING: persona ghi NGOÀI ownership, KHÔNG có env → EXIT 2 (trước đây exit 0 như owner)
+  ---
+  duration_ms: 84.727304
+  type: 'test'
+  ...
+# Subtest: WIRING: persona không tự khai được danh tính yếu hơn
+ok 51 - WIRING: persona không tự khai được danh tính yếu hơn
+  ---
+  duration_ms: 80.440746
+  type: 'test'
+  ...
+# Subtest: WIRING: checkout chính không có record → vẫn là owner, hành vi cũ nguyên vẹn
+ok 52 - WIRING: checkout chính không có record → vẫn là owner, hành vi cũ nguyên vẹn
+  ---
+  duration_ms: 97.088594
+  type: 'test'
+  ...
+# Subtest: WIRING: hai record trỏ cùng một worktree → deny, không đoán persona
+ok 53 - WIRING: hai record trỏ cùng một worktree → deny, không đoán persona
+  ---
+  duration_ms: 82.432002
+  type: 'test'
+  ...
+# Subtest: storefront shell
+    # Subtest: serves an HTML document at /
+    ok 1 - serves an HTML document at /
+      ---
+      duration_ms: 31.230544
+      type: 'test'
+      ...
+    # Subtest: answers 404 on an unknown path instead of serving the shell anyway
+    ok 2 - answers 404 on an unknown path instead of serving the shell anyway
+      ---
+      duration_ms: 8.875328
+      type: 'test'
+      ...
+    1..2
+ok 54 - storefront shell
+  ---
+  duration_ms: 52.245567
+  type: 'suite'
+  ...
+# Subtest: STOREFRONT_MAINTENANCE_MODE parser
+    # Subtest: is off unless the value is exactly "true"
+    ok 1 - is off unless the value is exactly "true"
+      ---
+      duration_ms: 0.365307
+      type: 'test'
+      ...
+    1..1
+ok 55 - STOREFRONT_MAINTENANCE_MODE parser
+  ---
+  duration_ms: 0.604831
+  type: 'suite'
+  ...
+# Subtest: maintenance mode at the app boundary
+    # Subtest: serves the maintenance page with 503 when the flag is on
+    ok 1 - serves the maintenance page with 503 when the flag is on
+      ---
+      duration_ms: 25.585944
+      type: 'test'
+      ...
+    # Subtest: serves the storefront shell when the flag is off
+    ok 2 - serves the storefront shell when the flag is off
+      ---
+      duration_ms: 6.777521
+      type: 'test'
+      ...
+    # Subtest: serves the storefront shell when the flag value is not valid
+    ok 3 - serves the storefront shell when the flag value is not valid
+      ---
+      duration_ms: 5.603709
+      type: 'test'
+      ...
+    1..3
+ok 56 - maintenance mode at the app boundary
+  ---
+  duration_ms: 38.704497
+  type: 'suite'
+  ...
+# Subtest: catalog listing states
+    # Subtest: flushes a busy loading region before the upstream body arrives
+    ok 1 - flushes a busy loading region before the upstream body arrives
+      ---
+      duration_ms: 62.528891
+      type: 'test'
+      ...
+    # Subtest: says the catalog is empty instead of rendering a blank page
+    ok 2 - says the catalog is empty instead of rendering a blank page
+      ---
+      duration_ms: 16.406392
+      type: 'test'
+      ...
+    # Subtest: answers 502 with a retry route when the upstream fails
+    ok 3 - answers 502 with a retry route when the upstream fails
+      ---
+      duration_ms: 8.922019
+      type: 'test'
+      ...
+    # Subtest: renders each product with its price and a link into the detail page
+    ok 4 - renders each product with its price and a link into the detail page
+      ---
+      duration_ms: 20.636127
+      type: 'test'
+      ...
+    1..4
+ok 57 - catalog listing states
+  ---
+  duration_ms: 110.078895
+  type: 'suite'
+  ...
+# Subtest: product detail
+    # Subtest: renders the title, description and the image gallery
+    ok 1 - renders the title, description and the image gallery
+      ---
+      duration_ms: 16.399951
+      type: 'test'
+      ...
+    # Subtest: derives one radio group per variant axis from the offerings
+    ok 2 - derives one radio group per variant axis from the offerings
+      ---
+      duration_ms: 17.205716
+      type: 'test'
+      ...
+    # Subtest: shows the price range until every axis is chosen
+    ok 3 - shows the price range until every axis is chosen
+      ---
+      duration_ms: 16.954881
+      type: 'test'
+      ...
+    # Subtest: resolves the chosen point of the variant space to one offering
+    ok 4 - resolves the chosen point of the variant space to one offering
+      ---
+      duration_ms: 8.570282
+      type: 'test'
+      ...
+    # Subtest: marks an unavailable combination as such instead of hiding it
+    ok 5 - marks an unavailable combination as such instead of hiding it
+      ---
+      duration_ms: 17.788406
+      type: 'test'
+      ...
+    # Subtest: answers a custom 404 with a way back to the shop for an unknown slug
+    ok 6 - answers a custom 404 with a way back to the shop for an unknown slug
+      ---
+      duration_ms: 8.037293
+      type: 'test'
+      ...
+    # Subtest: rejects a malformed slug without asking the upstream about it
+    ok 7 - rejects a malformed slug without asking the upstream about it
+      ---
+      duration_ms: 5.466357
+      type: 'test'
+      ...
+    # Subtest: answers 502 when the detail read fails
+    ok 8 - answers 502 when the detail read fails
+      ---
+      duration_ms: 6.394833
+      type: 'test'
+      ...
+    1..8
+ok 58 - product detail
+  ---
+  duration_ms: 98.219634
+  type: 'suite'
+  ...
+# Subtest: locale routing
+    # Subtest: serves the catalog under /vi and links on into /vi
+    ok 1 - serves the catalog under /vi and links on into /vi
+      ---
+      duration_ms: 14.67522
+      type: 'test'
+      ...
+    # Subtest: serves the catalog under /en with English chrome and /en links
+    ok 2 - serves the catalog under /en with English chrome and /en links
+      ---
+      duration_ms: 21.96107
+      type: 'test'
+      ...
+    # Subtest: redirects an unprefixed catalog URL to the default locale, query intact
+    ok 3 - redirects an unprefixed catalog URL to the default locale, query intact
+      ---
+      duration_ms: 7.167387
+      type: 'test'
+      ...
+    # Subtest: answers 404 for a locale it does not have, without a blank page
+    ok 4 - answers 404 for a locale it does not have, without a blank page
+      ---
+      duration_ms: 7.640136
+      type: 'test'
+      ...
+    # Subtest: translates only the chrome it owns, never the product's own words
+    ok 5 - translates only the chrome it owns, never the product's own words
+      ---
+      duration_ms: 12.878528
+      type: 'test'
+      ...
+    1..5
+ok 59 - locale routing
+  ---
+  duration_ms: 65.264069
+  type: 'suite'
+  ...
+# Subtest: variant selection
+    # Subtest: needs every axis before it names an offering
+    ok 1 - needs every axis before it names an offering
+      ---
+      duration_ms: 0.214433
+      type: 'test'
+      ...
+    # Subtest: names no offering for a point the product does not sell
+    ok 2 - names no offering for a point the product does not sell
+      ---
+      duration_ms: 0.101532
+      type: 'test'
+      ...
+    # Subtest: spans the cheapest and dearest offering, unavailable ones included
+    ok 3 - spans the cheapest and dearest offering, unavailable ones included
+      ---
+      duration_ms: 0.790134
+      type: 'test'
+      ...
+    1..3
+ok 60 - variant selection
+  ---
+  duration_ms: 1.265222
+  type: 'suite'
+  ...
+# Subtest: start ghi state alive, cập nhật, stop đánh dấu stopped
+ok 61 - start ghi state alive, cập nhật, stop đánh dấu stopped
+  ---
+  duration_ms: 176.545325
+  type: 'test'
+  ...
+# Subtest: start hai lần không tạo hai heartbeat
+ok 62 - start hai lần không tạo hai heartbeat
+  ---
+  duration_ms: 11.434993
+  type: 'test'
+  ...
+# Subtest: parent Claude chết ⇒ heartbeat tự dừng
+ok 63 - parent Claude chết ⇒ heartbeat tự dừng
+  ---
+  duration_ms: 231.881008
+  type: 'test'
+  ...
+# Subtest: heartbeat quá 90s bị coi là stale
+ok 64 - heartbeat quá 90s bị coi là stale
+  ---
+  duration_ms: 0.55876
+  type: 'test'
+  ...
+# Subtest: state hỏng ⇒ null, và không bao giờ được tính là active
+ok 65 - state hỏng ⇒ null, và không bao giờ được tính là active
+  ---
+  duration_ms: 3.35048
+  type: 'test'
+  ...
+# Subtest: pid không còn sống ⇒ không active dù state nói alive
+ok 66 - pid không còn sống ⇒ không active dù state nói alive
+  ---
+  duration_ms: 3.9349
+  type: 'test'
+  ...
+# Subtest: PID còn sống nhưng start_ticks lệch ⇒ PID đã bị cấp lại, không active
+ok 67 - PID còn sống nhưng start_ticks lệch ⇒ PID đã bị cấp lại, không active
+  ---
+  duration_ms: 1.445796
+  type: 'test'
+  ...
+# Subtest: /proc không đọc được ⇒ fail closed, không active
+ok 68 - /proc không đọc được ⇒ fail closed, không active
+  ---
+  duration_ms: 0.861525
+  type: 'test'
+  ...
+# Subtest: beater dừng khi start_ticks không còn khớp
+ok 69 - beater dừng khi start_ticks không còn khớp
+  ---
+  duration_ms: 138.489349
+  type: 'test'
+  ...
+# Subtest: session không phải coordinator ⇒ hook no-op
+ok 70 - session không phải coordinator ⇒ hook no-op
+  ---
+  duration_ms: 3.655815
+  type: 'test'
+  ...
+# Subtest: hook coordinator start/stop qua SessionStart/SessionEnd
+ok 71 - hook coordinator start/stop qua SessionStart/SessionEnd
+  ---
+  duration_ms: 69.178618
+  type: 'test'
+  ...
+# Subtest: SessionStart bám PID phiên Claude, không phải hook-runner thoáng qua
+ok 72 - SessionStart bám PID phiên Claude, không phải hook-runner thoáng qua
+  ---
+  duration_ms: 323.501134
+  type: 'test'
+  ...
+# Subtest: ancestor không xác minh được ⇒ fail closed, không beater, không state alive
+ok 73 - ancestor không xác minh được ⇒ fail closed, không beater, không state alive
+  ---
+  duration_ms: 216.659768
+  type: 'test'
+  ...
+# Subtest: resolveSessionPid fail closed: /proc hỏng hoặc không có ancestor mang role
+ok 74 - resolveSessionPid fail closed: /proc hỏng hoặc không có ancestor mang role
+  ---
+  duration_ms: 2.434464
+  type: 'test'
+  ...
+# Subtest: SubagentStop KHÔNG được dừng heartbeat của coordinator cha
+ok 75 - SubagentStop KHÔNG được dừng heartbeat của coordinator cha
+  ---
+  duration_ms: 63.172152
+  type: 'test'
+  ...
+# Subtest: SubagentStart chỉ vá beater đã chết, và dùng PID coordinator trong state
+ok 76 - SubagentStart chỉ vá beater đã chết, và dùng PID coordinator trong state
+  ---
+  duration_ms: 126.480086
+  type: 'test'
+  ...
+# Subtest: session id độc hại bị từ chối (không path traversal)
+ok 77 - session id độc hại bị từ chối (không path traversal)
+  ---
+  duration_ms: 0.831115
+  type: 'test'
+  ...
+# Subtest: ghi state là atomic — không đọc được file nửa vời
+ok 78 - ghi state là atomic — không đọc được file nửa vời
+  ---
+  duration_ms: 621.122542
+  type: 'test'
+  ...
+# Subtest: main tuyến tính: đúng MỘT commit mới, mang receipt, nội dung y hệt branch
+ok 79 - main tuyến tính: đúng MỘT commit mới, mang receipt, nội dung y hệt branch
+  ---
+  duration_ms: 355.075646
+  type: 'test'
+  ...
+# Subtest: nhiều commit trên branch ⇒ vẫn MỘT commit trên main, trailer phủ cả dải
+ok 80 - nhiều commit trên branch ⇒ vẫn MỘT commit trên main, trailer phủ cả dải
+  ---
+  duration_ms: 362.013599
+  type: 'test'
+  ...
+# Subtest: một commit = một uỷ quyền: revert một phát hoàn tác trọn vẹn đơn vị việc
+ok 81 - một commit = một uỷ quyền: revert một phát hoàn tác trọn vẹn đơn vị việc
+  ---
+  duration_ms: 386.868331
+  type: 'test'
+  ...
+# Subtest: INTENTIONAL BREAK — worktree bẩn ⇒ fabricated evidence, main không đổi
+ok 82 - INTENTIONAL BREAK — worktree bẩn ⇒ fabricated evidence, main không đổi
+  ---
+  duration_ms: 239.786029
+  type: 'test'
+  ...
+# Subtest: INTENTIONAL BREAK — commit không nằm trên branch đã khai ⇒ từ chối
+ok 83 - INTENTIONAL BREAK — commit không nằm trên branch đã khai ⇒ từ chối
+  ---
+  duration_ms: 153.908564
+  type: 'test'
+  ...
+# Subtest: INTENTIONAL BREAK — changed_paths ngoài ownership ⇒ từ chối
+ok 84 - INTENTIONAL BREAK — changed_paths ngoài ownership ⇒ từ chối
+  ---
+  duration_ms: 127.049626
+  type: 'test'
+  ...
+# Subtest: INTENTIONAL BREAK — main đã đi tiếp sau spawn ⇒ đòi rebase, không nhận lời khai
+ok 85 - INTENTIONAL BREAK — main đã đi tiếp sau spawn ⇒ đòi rebase, không nhận lời khai
+  ---
+  duration_ms: 127.471634
+  type: 'test'
+  ...
+# Subtest: INTENTIONAL BREAK — handoff khai commit_sha null ⇒ không promote
+ok 86 - INTENTIONAL BREAK — handoff khai commit_sha null ⇒ không promote
+  ---
+  duration_ms: 89.475699
+  type: 'test'
+  ...
+# Subtest: INTENTIONAL BREAK — main bẩn ⇒ không chạm vào
+ok 87 - INTENTIONAL BREAK — main bẩn ⇒ không chạm vào
+  ---
+  duration_ms: 103.132311
+  type: 'test'
+  ...
+# Subtest: INTENTIONAL BREAK — main dịch giữa verify và merge ⇒ not_fast_forward, main sạch nguyên
+ok 88 - INTENTIONAL BREAK — main dịch giữa verify và merge ⇒ not_fast_forward, main sạch nguyên
+  ---
+  duration_ms: 148.578169
+  type: 'test'
+  ...
+# Subtest: INTENTIONAL BREAK — tích hợp lần hai ⇒ base_moved, không tạo commit rỗng
+ok 89 - INTENTIONAL BREAK — tích hợp lần hai ⇒ base_moved, không tạo commit rỗng
+  ---
+  duration_ms: 146.254908
+  type: 'test'
+  ...
+# Subtest: fail closed — event key sai hình / receipt chưa từng spawn
+ok 90 - fail closed — event key sai hình / receipt chưa từng spawn
+  ---
+  duration_ms: 60.568016
+  type: 'test'
+  ...
+# Subtest: provenanceOf — hai trailer cùng tên ⇒ từ chối, không chọn cái đầu
+ok 91 - provenanceOf — hai trailer cùng tên ⇒ từ chối, không chọn cái đầu
+  ---
+  duration_ms: 75.326719
+  type: 'test'
+  ...
+# Subtest: expires_at đã qua KHÔNG chặn tích hợp — cửa sổ ký, không phải tuổi thọ grant
+ok 92 - expires_at đã qua KHÔNG chặn tích hợp — cửa sổ ký, không phải tuổi thọ grant
+  ---
+  duration_ms: 97.107395
+  type: 'test'
+  ...
+# Subtest: INTENTIONAL BREAK — hook nuốt mất trailer ⇒ provenance_not_written
+ok 93 - INTENTIONAL BREAK — hook nuốt mất trailer ⇒ provenance_not_written
+  ---
+  duration_ms: 98.981129
+  type: 'test'
+  ...
+# Subtest: INTENTIONAL BREAK — branch không còn diff nào (commit rồi revert) ⇒ không tạo commit rỗng
+ok 94 - INTENTIONAL BREAK — branch không còn diff nào (commit rồi revert) ⇒ không tạo commit rỗng
+  ---
+  duration_ms: 111.675354
+  type: 'test'
+  ...
+# Subtest: thiếu env → lỗi nêu đúng biến còn thiếu
+ok 95 - thiếu env → lỗi nêu đúng biến còn thiếu
+  ---
+  duration_ms: 3.203627
+  type: 'test'
+  ...
+# Subtest: thiếu cả OWNER_AUTH_BASE_URL lẫn SUPABASE_URL → lỗi
+ok 96 - thiếu cả OWNER_AUTH_BASE_URL lẫn SUPABASE_URL → lỗi
+  ---
+  duration_ms: 0.370307
+  type: 'test'
+  ...
+# Subtest: ready list không có trên board → dừng, không POST gì cả
+ok 97 - ready list không có trên board → dừng, không POST gì cả
+  ---
+  duration_ms: 34.619624
+  type: 'test'
+  ...
+# Subtest: card đang ở list khác → vẫn gửi observed list thật, không tự sửa
+ok 98 - card đang ở list khác → vẫn gửi observed list thật, không tự sửa
+  ---
+  duration_ms: 2.445833
+  type: 'test'
+  ...
+# Subtest: happy path: đúng hai field, đúng header, trả event_key
+ok 99 - happy path: đúng hai field, đúng header, trả event_key
+  ---
+  duration_ms: 1.67228
+  type: 'test'
+  ...
+# Subtest: endpoint trả lỗi → ném lỗi mang code, không lộ token
+ok 100 - endpoint trả lỗi → ném lỗi mang code, không lộ token
+  ---
+  duration_ms: 2.153609
+  type: 'test'
+  ...
+# Subtest: có promptEventKey ⇒ gửi thêm prompt_event_key, không đổi hai field kia
+ok 101 - có promptEventKey ⇒ gửi thêm prompt_event_key, không đổi hai field kia
+  ---
+  duration_ms: 1.061898
+  type: 'test'
+  ...
+# Subtest: promptEventKey rỗng ⇒ body KHÔNG mọc field prompt_event_key
+ok 102 - promptEventKey rỗng ⇒ body KHÔNG mọc field prompt_event_key
+  ---
+  duration_ms: 2.451434
+  type: 'test'
+  ...
+# Subtest: signUrl lấy origin từ config, fail closed, không fallback localhost
+ok 103 - signUrl lấy origin từ config, fail closed, không fallback localhost
+  ---
+  duration_ms: 0.57479
+  type: 'test'
+  ...
+# Subtest: receipt ĐÃ terminal ⇒ không post gì thêm, không đóng trùng
+ok 104 - receipt ĐÃ terminal ⇒ không post gì thêm, không đóng trùng
+  ---
+  duration_ms: 3.706426
+  type: 'test'
+  ...
+# Subtest: receipt CHƯA terminal ⇒ đóng blocked đúng MỘT lần, handoff không bịa evidence
+ok 105 - receipt CHƯA terminal ⇒ đóng blocked đúng MỘT lần, handoff không bịa evidence
+  ---
+  duration_ms: 1.250032
+  type: 'test'
+  ...
+# Subtest: staged nhưng persona chưa từng launch (chưa work.spawned) ⇒ không post
+ok 106 - staged nhưng persona chưa từng launch (chưa work.spawned) ⇒ không post
+  ---
+  duration_ms: 0.507519
+  type: 'test'
+  ...
+# Subtest: không xác minh được trạng thái terminal ⇒ báo lỗi + marker durable, không đoán là đã xong
+ok 107 - không xác minh được trạng thái terminal ⇒ báo lỗi + marker durable, không đoán là đã xong
+  ---
+  duration_ms: 1.223042
+  type: 'test'
+  ...
+# Subtest: claim của coordinator khác ⇒ không post, đánh dấu chưa giải quyết
+ok 108 - claim của coordinator khác ⇒ không post, đánh dấu chưa giải quyết
+  ---
+  duration_ms: 0.867505
+  type: 'test'
+  ...
+# Subtest: watchdog vừa abort và SẼ resume đúng phiên này ⇒ lưới KHÔNG đóng receipt
+ok 109 - watchdog vừa abort và SẼ resume đúng phiên này ⇒ lưới KHÔNG đóng receipt
+  ---
+  duration_ms: 0.713833
+  type: 'test'
+  ...
+# Subtest: phiên này là resume candidate của supervisor ⇒ lưới KHÔNG đóng receipt
+ok 110 - phiên này là resume candidate của supervisor ⇒ lưới KHÔNG đóng receipt
+  ---
+  duration_ms: 0.960877
+  type: 'test'
+  ...
+# Subtest: phiên kết thúc hẳn, không ai resume ⇒ đóng đúng MỘT lần
+ok 111 - phiên kết thúc hẳn, không ai resume ⇒ đóng đúng MỘT lần
+  ---
+  duration_ms: 1.417735
+  type: 'test'
+  ...
+# Subtest: không xác minh được sẽ resume hay không ⇒ KHÔNG đóng + marker durable
+ok 112 - không xác minh được sẽ resume hay không ⇒ KHÔNG đóng + marker durable
+  ---
+  duration_ms: 1.220922
+  type: 'test'
+  ...
+# Subtest: SubagentStop của persona con KHÔNG kích hoạt cơ chế này
+ok 113 - SubagentStop của persona con KHÔNG kích hoạt cơ chế này
+  ---
+  duration_ms: 0.720003
+  type: 'test'
+  ...
+# Subtest: phiên không mang receipt (lane prompt / phiên thường) ⇒ đi qua sạch
+ok 114 - phiên không mang receipt (lane prompt / phiên thường) ⇒ đi qua sạch
+  ---
+  duration_ms: 0.611591
+  type: 'test'
+  ...
+# Subtest: SessionEnd của đúng phiên ⇒ đóng receipt của chính phiên đó
+ok 115 - SessionEnd của đúng phiên ⇒ đóng receipt của chính phiên đó
+  ---
+  duration_ms: 0.739443
+  type: 'test'
+  ...
+# Subtest: entrypoint SessionEnd: phiên thường đi qua sạch, exit 0, không chạm mạng
+ok 116 - entrypoint SessionEnd: phiên thường đi qua sạch, exit 0, không chạm mạng
+  ---
+  duration_ms: 94.786523
+  type: 'test'
+  ...
+# Subtest: đường gọi thật: stdin hook → process con → closeOne → POST /work/result
+ok 117 - đường gọi thật: stdin hook → process con → closeOne → POST /work/result
+  ---
+  duration_ms: 326.658781
+  type: 'test'
+  ...
+# Subtest: chạy mà trả sớm ⇒ VẪN để lại dấu vết; phiên thường thì không để lại rác
+ok 118 - chạy mà trả sớm ⇒ VẪN để lại dấu vết; phiên thường thì không để lại rác
+  ---
+  duration_ms: 160.48389
+  type: 'test'
+  ...
+# Subtest: entrypoint gọi sai mode ⇒ không âm thầm chạy
+ok 119 - entrypoint gọi sai mode ⇒ không âm thầm chạy
+  ---
+  duration_ms: 100.83728
+  type: 'test'
+  ...
+# Subtest: settings.json: hook SessionEnd có command gọi session-end-result.mjs
+ok 120 - settings.json: hook SessionEnd có command gọi session-end-result.mjs
+  ---
+  duration_ms: 1.056518
+  type: 'test'
+  ...
+# Subtest: settings.json: command SessionEnd truyền đúng arg `sessionend`
+ok 121 - settings.json: command SessionEnd truyền đúng arg `sessionend`
+  ---
+  duration_ms: 0.289155
+  type: 'test'
+  ...
+# Subtest: settings.json: session-end-result chạy SAU coordinator-heartbeat trong cùng group
+ok 122 - settings.json: session-end-result chạy SAU coordinator-heartbeat trong cùng group
+  ---
+  duration_ms: 1.377604
+  type: 'test'
+  ...
+# Subtest: settings.json: permissions và matcher PreToolUse không đổi
+ok 123 - settings.json: permissions và matcher PreToolUse không đổi
+  ---
+  duration_ms: 0.292495
+  type: 'test'
+  ...
+# Subtest: handoff tự sinh mang đủ field server bắt buộc và không nói dối về test
+ok 124 - handoff tự sinh mang đủ field server bắt buộc và không nói dối về test
+  ---
+  duration_ms: 0.339396
+  type: 'test'
+  ...
+# Subtest: launch không thành hình ⇒ không POST gì cả
+ok 125 - launch không thành hình ⇒ không POST gì cả
+  ---
+  duration_ms: 63.04213
+  type: 'test'
+  ...
+# Subtest: spawn hợp lệ ⇒ POST /work/spawned đúng một lần
+ok 126 - spawn hợp lệ ⇒ POST /work/spawned đúng một lần
+  ---
+  duration_ms: 121.859334
+  type: 'test'
+  ...
+# Subtest: 409 already_spawned đúng receipt = idempotent success
+ok 127 - 409 already_spawned đúng receipt = idempotent success
+  ---
+  duration_ms: 146.779137
+  type: 'test'
+  ...
+# Subtest: 422 ⇒ fail closed: marker durable, receipt chưa đánh dấu đã báo
+ok 128 - 422 ⇒ fail closed: marker durable, receipt chưa đánh dấu đã báo
+  ---
+  duration_ms: 126.222332
+  type: 'test'
+  ...
+# Subtest: field thiếu hoặc lệch với Git thật ⇒ fail closed, không POST
+ok 129 - field thiếu hoặc lệch với Git thật ⇒ fail closed, không POST
+  ---
+  duration_ms: 130.755972
+  type: 'test'
+  ...
+# Subtest: lỗi report KHÔNG ném ra hook và KHÔNG dựa vào exit code
+ok 130 - lỗi report KHÔNG ném ra hook và KHÔNG dựa vào exit code
+  ---
+  duration_ms: 211.388384
+  type: 'test'
+  ...
+# Subtest: persona không có pending stage ⇒ marker, không im lặng
+ok 131 - persona không có pending stage ⇒ marker, không im lặng
+  ---
+  duration_ms: 78.436193
+  type: 'test'
+  ...
+# Subtest: subagent không phải persona ⇒ không marker, không POST
+ok 132 - subagent không phải persona ⇒ không marker, không POST
+  ---
+  duration_ms: 87.645946
+  type: 'test'
+  ...
+# Subtest: retry 201 hoặc 409 xoá marker của đúng agent đó
+ok 133 - retry 201 hoặc 409 xoá marker của đúng agent đó
+  ---
+  duration_ms: 326.872486
+  type: 'test'
+  ...
+# Subtest: rename branch đúng công thức expectedBranch của server
+ok 134 - rename branch đúng công thức expectedBranch của server
+  ---
+  duration_ms: 133.759085
+  type: 'test'
+  ...
+# Subtest: subagent thường (không receipt) ⇒ không rename, không POST
+ok 135 - subagent thường (không receipt) ⇒ không rename, không POST
+  ---
+  duration_ms: 53.886057
+  type: 'test'
+  ...
+# Subtest: call site chỉ mở cho SubagentStart của phiên coordinator
+ok 136 - call site chỉ mở cho SubagentStart của phiên coordinator
+  ---
+  duration_ms: 75.42099
+  type: 'test'
+  ...
+# Subtest: SubagentStart được wire và hook gọi spawn-report
+ok 137 - SubagentStart được wire và hook gọi spawn-report
+  ---
+  duration_ms: 0.631021
+  type: 'test'
+  ...
+# Subtest: context sống của chính phiên ⇒ stage trước launch, claim đúng coordinator_id
+ok 138 - context sống của chính phiên ⇒ stage trước launch, claim đúng coordinator_id
+  ---
+  duration_ms: 85.904996
+  type: 'test'
+  ...
+# Subtest: prompt giả mạo không đổi được authority
+ok 139 - prompt giả mạo không đổi được authority
+  ---
+  duration_ms: 83.987722
+  type: 'test'
+  ...
+# Subtest: context thiếu, sai danh tính hay stale ⇒ deny trước khi gọi mạng
+ok 140 - context thiếu, sai danh tính hay stale ⇒ deny trước khi gọi mạng
+  ---
+  duration_ms: 41.767612
+  type: 'test'
+  ...
+# Subtest: hai coordinator chạy song song không bind chéo receipt của nhau
+ok 141 - hai coordinator chạy song song không bind chéo receipt của nhau
+  ---
+  duration_ms: 89.298176
+  type: 'test'
+  ...
+# Subtest: persona, contract hay scope lệch receipt ⇒ deny trước khi gọi mạng
+ok 142 - persona, contract hay scope lệch receipt ⇒ deny trước khi gọi mạng
+  ---
+  duration_ms: 43.184907
+  type: 'test'
+  ...
+# Subtest: không bind được claim ⇒ fail closed: deny launch, không stage
+ok 143 - không bind được claim ⇒ fail closed: deny launch, không stage
+  ---
+  duration_ms: 176.363943
+  type: 'test'
+  ...
+# Subtest: subagent thường và tool khác đi qua sạch: không stage, không mạng
+ok 144 - subagent thường và tool khác đi qua sạch: không stage, không mạng
+  ---
+  duration_ms: 45.425367
+  type: 'test'
+  ...
+# Subtest: đã stage rồi ⇒ không stage đè, không claim lại
+ok 145 - đã stage rồi ⇒ không stage đè, không claim lại
+  ---
+  duration_ms: 53.240406
+  type: 'test'
+  ...
+# Subtest: CLI pretooluse: deny = exit 2 kèm lý do, pass = exit 0
+ok 146 - CLI pretooluse: deny = exit 2 kèm lý do, pass = exit 0
+  ---
+  duration_ms: 128.407981
+  type: 'test'
+  ...
+# Subtest: PreToolUse được wire cho Agent, matcher cũ và permissions không đổi
+ok 147 - PreToolUse được wire cho Agent, matcher cũ và permissions không đổi
+  ---
+  duration_ms: 25.760868
+  type: 'test'
+  ...
+# Subtest: branch lạ trong worktree không bị rename
+ok 148 - branch lạ trong worktree không bị rename
+  ---
+  duration_ms: 35.110373
+  type: 'test'
+  ...
+# Subtest: 204 (không có việc) ⇒ không gọi Claude
+ok 149 - 204 (không có việc) ⇒ không gọi Claude
+  ---
+  duration_ms: 3.234788
+  type: 'test'
+  ...
+# Subtest: receipt hợp lệ ⇒ wake đúng một lần, rồi child đang sống chặn
+ok 150 - receipt hợp lệ ⇒ wake đúng một lần, rồi child đang sống chặn
+  ---
+  duration_ms: 9.362736
+  type: 'test'
+  ...
+# Subtest: child chết rồi thì cooldown 5 phút vẫn là rate limit
+ok 151 - child chết rồi thì cooldown 5 phút vẫn là rate limit
+  ---
+  duration_ms: 26.559532
+  type: 'test'
+  ...
+# Subtest: coordinator đang sống ⇒ không wake
+ok 152 - coordinator đang sống ⇒ không wake
+  ---
+  duration_ms: 2.292851
+  type: 'test'
+  ...
+# Subtest: stale spawned work ⇒ resume đúng session id, không tạo session mới
+ok 153 - stale spawned work ⇒ resume đúng session id, không tạo session mới
+  ---
+  duration_ms: 9.946007
+  type: 'test'
+  ...
+# Subtest: chưa từng có session ⇒ launch mới với session id do supervisor sinh
+ok 154 - chưa từng có session ⇒ launch mới với session id do supervisor sinh
+  ---
+  duration_ms: 7.612575
+  type: 'test'
+  ...
+# Subtest: ba lần lỗi liên tiếp ⇒ halt và ngừng gọi Claude
+ok 155 - ba lần lỗi liên tiếp ⇒ halt và ngừng gọi Claude
+  ---
+  duration_ms: 0.948327
+  type: 'test'
+  ...
+# Subtest: thành công reset bộ đếm lỗi
+ok 156 - thành công reset bộ đếm lỗi
+  ---
+  duration_ms: 3.739526
+  type: 'test'
+  ...
+# Subtest: launch lỗi cũng tính là failure, không ghi cooldown
+ok 157 - launch lỗi cũng tính là failure, không ghi cooldown
+  ---
+  duration_ms: 1.031098
+  type: 'test'
+  ...
+# Subtest: state hỏng ⇒ fail closed, halt, không wake
+ok 158 - state hỏng ⇒ fail closed, halt, không wake
+  ---
+  duration_ms: 0.641941
+  type: 'test'
+  ...
+# Subtest: payload wake thiếu event_key ⇒ failure, không launch
+ok 159 - payload wake thiếu event_key ⇒ failure, không launch
+  ---
+  duration_ms: 0.318036
+  type: 'test'
+  ...
+# Subtest: readSupervisorState trả null cho file hỏng
+ok 160 - readSupervisorState trả null cho file hỏng
+  ---
+  duration_ms: 2.015165
+  type: 'test'
+  ...
+# Subtest: wake token không vào environment của Claude child
+ok 161 - wake token không vào environment của Claude child
+  ---
+  duration_ms: 1.729881
+  type: 'test'
+  ...
+# Subtest: phiên mới ⇒ truyền --session-id, không bao giờ kèm --resume
+ok 162 - phiên mới ⇒ truyền --session-id, không bao giờ kèm --resume
+  ---
+  duration_ms: 0.986277
+  type: 'test'
+  ...
+# Subtest: không có session id ⇒ KHÔNG launch (fail closed, không spawn mù)
+ok 163 - không có session id ⇒ KHÔNG launch (fail closed, không spawn mù)
+  ---
+  duration_ms: 0.962717
+  type: 'test'
+  ...
+# Subtest: log redact wake token
+ok 164 - log redact wake token
+  ---
+  duration_ms: 0.205904
+  type: 'test'
+  ...
+# Subtest: control client: bearer đúng, 204 ⇒ null, 409 claim ⇒ null, lỗi HTTP ⇒ throw
+ok 165 - control client: bearer đúng, 204 ⇒ null, 409 claim ⇒ null, lỗi HTTP ⇒ throw
+  ---
+  duration_ms: 1.008428
+  type: 'test'
+  ...
+# Subtest: config phải là mode 0600 và đủ key
+ok 166 - config phải là mode 0600 và đủ key
+  ---
+  duration_ms: 1.13457
+  type: 'test'
+  ...
+# Subtest: chỉ một supervisor giữ được lock; lock chết thì thu hồi
+ok 167 - chỉ một supervisor giữ được lock; lock chết thì thu hồi
+  ---
+  duration_ms: 1.284722
+  type: 'test'
+  ...
+# Subtest: goal gắn event key và giữ nguyên ràng buộc
+ok 168 - goal gắn event key và giữ nguyên ràng buộc
+  ---
+  duration_ms: 0.215734
+  type: 'test'
+  ...
+# Subtest: phải claim được TRƯỚC khi wake; thua claim ⇒ không launch
+ok 169 - phải claim được TRƯỚC khi wake; thua claim ⇒ không launch
+  ---
+  duration_ms: 0.273835
+  type: 'test'
+  ...
+# Subtest: claim xảy ra trước launch và dùng cùng coordinator id
+ok 170 - claim xảy ra trước launch và dùng cùng coordinator id
+  ---
+  duration_ms: 2.867011
+  type: 'test'
+  ...
+# Subtest: coordinator id bền qua restart để recovery claim hợp lệ
+ok 171 - coordinator id bền qua restart để recovery claim hợp lệ
+  ---
+  duration_ms: 6.17795
+  type: 'test'
+  ...
+# Subtest: recovery claim vẫn wake, và được đánh dấu recovery
+ok 172 - recovery claim vẫn wake, và được đánh dấu recovery
+  ---
+  duration_ms: 5.532188
+  type: 'test'
+  ...
+# Subtest: lỗi mạng khi claim là failure; launch lỗi ghi spawn_failed
+ok 173 - lỗi mạng khi claim là failure; launch lỗi ghi spawn_failed
+  ---
+  duration_ms: 0.629281
+  type: 'test'
+  ...
+# Subtest: control plane chết khi báo spawn_failed vẫn không nuốt failure
+ok 174 - control plane chết khi báo spawn_failed vẫn không nuốt failure
+  ---
+  duration_ms: 0.396407
+  type: 'test'
+  ...
+# Subtest: intent hợp lệ ⇒ đúng một launch, goal có path file, KHÔNG có brief
+ok 175 - intent hợp lệ ⇒ đúng một launch, goal có path file, KHÔNG có brief
+  ---
+  duration_ms: 4.867376
+  type: 'test'
+  ...
+# Subtest: promptGoalFor mang đủ ràng buộc, chỉ nội suy file và idempotency key
+ok 176 - promptGoalFor mang đủ ràng buộc, chỉ nội suy file và idempotency key
+  ---
+  duration_ms: 0.229215
+  type: 'test'
+  ...
+# Subtest: idempotency_key bẩn ⇒ không ghi file, không launch, báo dispatch_failed
+ok 177 - idempotency_key bẩn ⇒ không ghi file, không launch, báo dispatch_failed
+  ---
+  duration_ms: 0.719313
+  type: 'test'
+  ...
+# Subtest: writeBrief ghi file 0600 parse ra đúng intent
+ok 178 - writeBrief ghi file 0600 parse ra đúng intent
+  ---
+  duration_ms: 0.932727
+  type: 'test'
+  ...
+# Subtest: claimPrompt trả null ⇒ rơi xuống đường wake như cũ
+ok 179 - claimPrompt trả null ⇒ rơi xuống đường wake như cũ
+  ---
+  duration_ms: 7.218038
+  type: 'test'
+  ...
+# Subtest: claimPrompt lỗi mạng ⇒ failure, không chạm đường wake
+ok 180 - claimPrompt lỗi mạng ⇒ failure, không chạm đường wake
+  ---
+  duration_ms: 0.479088
+  type: 'test'
+  ...
+# Subtest: coordinator đang sống ⇒ không claimPrompt, không fetchWake, không launch
+ok 181 - coordinator đang sống ⇒ không claimPrompt, không fetchWake, không launch
+  ---
+  duration_ms: 0.236714
+  type: 'test'
+  ...
+# Subtest: launch lỗi ở đường prompt ⇒ promptResult(dispatch_failed) và tick failed
+ok 182 - launch lỗi ở đường prompt ⇒ promptResult(dispatch_failed) và tick failed
+  ---
+  duration_ms: 0.464949
+  type: 'test'
+  ...
+# Subtest: promptResult chết vẫn không nuốt failure
+ok 183 - promptResult chết vẫn không nuốt failure
+  ---
+  duration_ms: 0.314116
+  type: 'test'
+  ...
+# Subtest: dispatch xong, child chết, tick lại ngay ⇒ prompt_cooldown, vẫn đúng một launch
+ok 184 - dispatch xong, child chết, tick lại ngay ⇒ prompt_cooldown, vẫn đúng một launch
+  ---
+  duration_ms: 27.724923
+  type: 'test'
+  ...
+# Subtest: qua COOLDOWN_MS ⇒ dispatch lại (coordinator chết mà không báo result)
+ok 185 - qua COOLDOWN_MS ⇒ dispatch lại (coordinator chết mà không báo result)
+  ---
+  duration_ms: 12.965901
+  type: 'test'
+  ...
+# Subtest: launch lỗi ở đường prompt ⇒ KHÔNG ghi cooldown
+ok 186 - launch lỗi ở đường prompt ⇒ KHÔNG ghi cooldown
+  ---
+  duration_ms: 0.622141
+  type: 'test'
+  ...
+# Subtest: control client prompt: 204⇒null, 201⇒json, 500⇒throw, result 409 không throw
+ok 187 - control client prompt: 204⇒null, 201⇒json, 500⇒throw, result 409 không throw
+  ---
+  duration_ms: 1.031068
+  type: 'test'
+  ...
+# Subtest: control client: /work/spawned gửi đủ field envelope, 409 = đã ghi, lỗi HTTP ⇒ throw
+ok 188 - control client: /work/spawned gửi đủ field envelope, 409 = đã ghi, lỗi HTTP ⇒ throw
+  ---
+  duration_ms: 0.53835
+  type: 'test'
+  ...
+# Subtest: startTicks đọc TRƯỜNG 22, comm chứa ')' và khoảng trắng cũng không lệch
+ok 189 - startTicks đọc TRƯỜNG 22, comm chứa ')' và khoảng trắng cũng không lệch
+  ---
+  duration_ms: 0.694542
+  type: 'test'
+  ...
+# Subtest: child còn sống lâu hơn cooldown ⇒ vẫn đúng MỘT launch
+ok 190 - child còn sống lâu hơn cooldown ⇒ vẫn đúng MỘT launch
+  ---
+  duration_ms: 5.07116
+  type: 'test'
+  ...
+# Subtest: supervisor restart khi child còn sống ⇒ đọc lại state từ đĩa, không dispatch trùng
+ok 191 - supervisor restart khi child còn sống ⇒ đọc lại state từ đĩa, không dispatch trùng
+  ---
+  duration_ms: 8.415499
+  type: 'test'
+  ...
+# Subtest: child chết trước khi báo kết quả ⇒ recovery launch đúng MỘT lần
+ok 192 - child chết trước khi báo kết quả ⇒ recovery launch đúng MỘT lần
+  ---
+  duration_ms: 19.230581
+  type: 'test'
+  ...
+# Subtest: PID bị OS cấp lại (start_ticks lệch) ⇒ không nhận nhầm là child của mình
+ok 193 - PID bị OS cấp lại (start_ticks lệch) ⇒ không nhận nhầm là child của mình
+  ---
+  duration_ms: 17.953629
+  type: 'test'
+  ...
+# Subtest: PID còn sống nhưng không đọc được start_ticks ⇒ HALT identity_unverifiable
+ok 194 - PID còn sống nhưng không đọc được start_ticks ⇒ HALT identity_unverifiable
+  ---
+  duration_ms: 13.807295
+  type: 'test'
+  ...
+# Subtest: launch không trả pid ⇒ halt fail-closed, KHÔNG rơi về cooldown
+ok 195 - launch không trả pid ⇒ halt fail-closed, KHÔNG rơi về cooldown
+  ---
+  duration_ms: 0.513479
+  type: 'test'
+  ...
+# Subtest: child chết trước khi đọc được start_ticks ⇒ halt fail-closed
+ok 196 - child chết trước khi đọc được start_ticks ⇒ halt fail-closed
+  ---
+  duration_ms: 17.052843
+  type: 'test'
+  ...
+# Subtest: không ghi được state sau launch ⇒ halt fail-closed
+ok 197 - không ghi được state sau launch ⇒ halt fail-closed
+  ---
+  duration_ms: 5.994137
+  type: 'test'
+  ...
+# Subtest: state cũ trên đĩa chưa có field launches ⇒ coi như {}, không fail
+ok 198 - state cũ trên đĩa chưa có field launches ⇒ coi như {}, không fail
+  ---
+  duration_ms: 6.707219
+  type: 'test'
+  ...
+# Subtest: launches sai shape ⇒ state hỏng ⇒ halt như corrupt_state
+ok 199 - launches sai shape ⇒ state hỏng ⇒ halt như corrupt_state
+  ---
+  duration_ms: 1.992396
+  type: 'test'
+  ...
+# Subtest: mergeLaunches: giữ entry sống của key khác, dọn entry chết, thay entry cùng key
+ok 200 - mergeLaunches: giữ entry sống của key khác, dọn entry chết, thay entry cùng key
+  ---
+  duration_ms: 32.221012
+  type: 'test'
+  ...
+# Subtest: wake ghi launches theo merge: entry chết bị dọn, entry mới vào đúng key
+ok 201 - wake ghi launches theo merge: entry chết bị dọn, entry mới vào đúng key
+  ---
+  duration_ms: 15.219421
+  type: 'test'
+  ...
+# Subtest: wake ghi launch context cùng danh tính process
+ok 202 - wake ghi launch context cùng danh tính process
+  ---
+  duration_ms: 6.979204
+  type: 'test'
+  ...
+# Subtest: lane prompt không có context ⇒ phiên planning không spawn persona được
+ok 203 - lane prompt không có context ⇒ phiên planning không spawn persona được
+  ---
+  duration_ms: 9.923306
+  type: 'test'
+  ...
+# Subtest: context hỏng ⇒ state hỏng, không đọc thành 'chưa có launch nào'
+ok 204 - context hỏng ⇒ state hỏng, không đọc thành 'chưa có launch nào'
+  ---
+  duration_ms: 1.950744
+  type: 'test'
+  ...
+# Subtest: mergeLaunches giữ nguyên context của entry sống ở key khác
+ok 205 - mergeLaunches giữ nguyên context của entry sống ở key khác
+  ---
+  duration_ms: 8.49571
+  type: 'test'
+  ...
+# Subtest: fresh launch: UUID sinh trước spawn và persist ĐÚNG UUID đó, không null
+ok 206 - fresh launch: UUID sinh trước spawn và persist ĐÚNG UUID đó, không null
+  ---
+  duration_ms: 17.375879
+  type: 'test'
+  ...
+# Subtest: resume launch: giữ session cũ, không sinh UUID mới, persist đúng nó
+ok 207 - resume launch: giữ session cũ, không sinh UUID mới, persist đúng nó
+  ---
+  duration_ms: 6.707659
+  type: 'test'
+  ...
+# Subtest: không tạo được session id ⇒ fail closed TRƯỚC launch: không claim, không spawn
+ok 208 - không tạo được session id ⇒ fail closed TRƯỚC launch: không claim, không spawn
+  ---
+  duration_ms: 0.425258
+  type: 'test'
+  ...
+# Subtest: đường prompt cũng không persist session_id null
+ok 209 - đường prompt cũng không persist session_id null
+  ---
+  duration_ms: 8.654294
+  type: 'test'
+  ...
+# Subtest: child của đường prompt còn sống ⇒ không claimPrompt lại, không dispatch lại
+ok 210 - child của đường prompt còn sống ⇒ không claimPrompt lại, không dispatch lại
+  ---
+  duration_ms: 6.127339
+  type: 'test'
+  ...
+# Subtest: launcher bật stream JSON và bỏ stdio ignore (không có stream thì không có tín hiệu)
+ok 211 - launcher bật stream JSON và bỏ stdio ignore (không có stream thì không có tín hiệu)
+  ---
+  duration_ms: 3.746106
+  type: 'test'
+  ...
+# Subtest: token đứng yên nhưng stream còn sống ⇒ KHÔNG stall, KHÔNG nudge
+ok 212 - token đứng yên nhưng stream còn sống ⇒ KHÔNG stall, KHÔNG nudge
+  ---
+  duration_ms: 6.109809
+  type: 'test'
+  ...
+# Subtest: im lặng > 5 phút ⇒ đúng 1 stall + 1 nudge, không lặp
+ok 213 - im lặng > 5 phút ⇒ đúng 1 stall + 1 nudge, không lặp
+  ---
+  duration_ms: 7.628835
+  type: 'test'
+  ...
+# Subtest: nudge không chứng minh được an toàn ⇒ BLOCKED fail-closed, không kill mù
+ok 214 - nudge không chứng minh được an toàn ⇒ BLOCKED fail-closed, không kill mù
+  ---
+  duration_ms: 7.042115
+  type: 'test'
+  ...
+# Subtest: có progress trong grace ⇒ không abort; hết grace mới abort rồi resume đúng session
+ok 215 - có progress trong grace ⇒ không abort; hết grace mới abort rồi resume đúng session
+  ---
+  duration_ms: 33.636347
+  type: 'test'
+  ...
+# Subtest: abort rồi mà child chưa chết ⇒ chờ, không kill lại
+ok 216 - abort rồi mà child chưa chết ⇒ chờ, không kill lại
+  ---
+  duration_ms: 7.561164
+  type: 'test'
+  ...
+# Subtest: repo progress đếm là tiến triển kể cả khi stream im
+ok 217 - repo progress đếm là tiến triển kể cả khi stream im
+  ---
+  duration_ms: 6.474495
+  type: 'test'
+  ...
+# Subtest: token đứng yên nhưng ping còn mới ⇒ KHÔNG stall
+ok 218 - token đứng yên nhưng ping còn mới ⇒ KHÔNG stall
+  ---
+  duration_ms: 2.235439
+  type: 'test'
+  ...
+# Subtest: token đứng yên nhưng repo progress còn mới ⇒ KHÔNG stall
+ok 219 - token đứng yên nhưng repo progress còn mới ⇒ KHÔNG stall
+  ---
+  duration_ms: 0.377237
+  type: 'test'
+  ...
+# Subtest: permission ⇒ BLOCKED, không bao giờ là stall
+ok 220 - permission ⇒ BLOCKED, không bao giờ là stall
+  ---
+  duration_ms: 0.247014
+  type: 'test'
+  ...
+# Subtest: tool chạy lâu ⇒ TOOL_RUNNING, không phải stall
+ok 221 - tool chạy lâu ⇒ TOOL_RUNNING, không phải stall
+  ---
+  duration_ms: 0.243724
+  type: 'test'
+  ...
+# Subtest: tool xong ⇒ hết TOOL_RUNNING, quay lại tính theo tín hiệu
+ok 222 - tool xong ⇒ hết TOOL_RUNNING, quay lại tính theo tín hiệu
+  ---
+  duration_ms: 0.374757
+  type: 'test'
+  ...
+# Subtest: im lặng trên MỌI tín hiệu > 5 phút ⇒ SUSPECTED_STALL
+ok 223 - im lặng trên MỌI tín hiệu > 5 phút ⇒ SUSPECTED_STALL
+  ---
+  duration_ms: 0.325576
+  type: 'test'
+  ...
+# Subtest: PID chết mà stream đóng thiếu result ⇒ FAILED; có result ⇒ DONE
+ok 224 - PID chết mà stream đóng thiếu result ⇒ FAILED; có result ⇒ DONE
+  ---
+  duration_ms: 0.251975
+  type: 'test'
+  ...
+# Subtest: saw_result rồi mà tool đang chạy ⇒ TOOL_RUNNING, không phải DONE
+ok 225 - saw_result rồi mà tool đang chạy ⇒ TOOL_RUNNING, không phải DONE
+  ---
+  duration_ms: 0.205714
+  type: 'test'
+  ...
+# Subtest: saw_result rồi mà mọi tín hiệu im quá ngưỡng ⇒ SUSPECTED_STALL, nudge → abort vẫn chạy
+ok 226 - saw_result rồi mà mọi tín hiệu im quá ngưỡng ⇒ SUSPECTED_STALL, nudge → abort vẫn chạy
+  ---
+  duration_ms: 0.5836
+  type: 'test'
+  ...
+# Subtest: saw_result rồi mà đang chờ permission ⇒ BLOCKED
+ok 227 - saw_result rồi mà đang chờ permission ⇒ BLOCKED
+  ---
+  duration_ms: 0.477129
+  type: 'test'
+  ...
+# Subtest: saw_result + stream đã đóng ⇒ DONE dù PID chưa được reap
+ok 228 - saw_result + stream đã đóng ⇒ DONE dù PID chưa được reap
+  ---
+  duration_ms: 0.274795
+  type: 'test'
+  ...
+# Subtest: không xác minh được danh tính ⇒ BLOCKED fail-closed, không bao giờ stall
+ok 229 - không xác minh được danh tính ⇒ BLOCKED fail-closed, không bao giờ stall
+  ---
+  duration_ms: 0.173423
+  type: 'test'
+  ...
+# Subtest: stall ⇒ đúng MỘT nudge, tick sau trong grace không nudge lại
+ok 230 - stall ⇒ đúng MỘT nudge, tick sau trong grace không nudge lại
+  ---
+  duration_ms: 0.153313
+  type: 'test'
+  ...
+# Subtest: có progress trong grace ⇒ clear, KHÔNG abort
+ok 231 - có progress trong grace ⇒ clear, KHÔNG abort
+  ---
+  duration_ms: 0.129692
+  type: 'test'
+  ...
+# Subtest: hết grace mà vẫn im ⇒ abort
+ok 232 - hết grace mà vẫn im ⇒ abort
+  ---
+  duration_ms: 0.110582
+  type: 'test'
+  ...
+# Subtest: chưa nudge được thì KHÔNG bao giờ tới abort
+ok 233 - chưa nudge được thì KHÔNG bao giờ tới abort
+  ---
+  duration_ms: 0.135862
+  type: 'test'
+  ...
+# Subtest: PID bị OS cấp lại (start_ticks lệch) ⇒ KHÔNG gửi signal
+ok 234 - PID bị OS cấp lại (start_ticks lệch) ⇒ KHÔNG gửi signal
+  ---
+  duration_ms: 1.537247
+  type: 'test'
+  ...
+# Subtest: identity khớp ⇒ abort đúng process group của child
+ok 235 - identity khớp ⇒ abort đúng process group của child
+  ---
+  duration_ms: 0.640941
+  type: 'test'
+  ...
+# Subtest: child không phải process group leader ⇒ KHÔNG kill nhóm (tránh giết cả supervisor)
+ok 236 - child không phải process group leader ⇒ KHÔNG kill nhóm (tránh giết cả supervisor)
+  ---
+  duration_ms: 0.472198
+  type: 'test'
+  ...
+# Subtest: process đã chết ⇒ không signal, không lỗi
+ok 237 - process đã chết ⇒ không signal, không lỗi
+  ---
+  duration_ms: 0.356487
+  type: 'test'
+  ...
+# Subtest: JSON rác không crash và không reset timer stream/token
+ok 238 - JSON rác không crash và không reset timer stream/token
+  ---
+  duration_ms: 0.320066
+  type: 'test'
+  ...
+# Subtest: usage cộng dồn: chỉ token TĂNG mới đổi last_token_change_at
+ok 239 - usage cộng dồn: chỉ token TĂNG mới đổi last_token_change_at
+  ---
+  duration_ms: 0.193214
+  type: 'test'
+  ...
+# Subtest: ping chỉ chứng minh stream sống, không phải token progress
+ok 240 - ping chỉ chứng minh stream sống, không phải token progress
+  ---
+  duration_ms: 0.132653
+  type: 'test'
+  ...
+# Subtest: stream KHÔNG lưu nội dung message — không có đường nào lộ prompt
+ok 241 - stream KHÔNG lưu nội dung message — không có đường nào lộ prompt
+  ---
+  duration_ms: 0.280535
+  type: 'test'
+  ...
+# Subtest: recorder persist tín hiệu ra file, throttle nhưng flush khi exit
+ok 242 - recorder persist tín hiệu ra file, throttle nhưng flush khi exit
+  ---
+  duration_ms: 1.535837
+  type: 'test'
+  ...
+# Subtest: resume cùng session_id: cờ terminal của lần chạy trước không rò sang lần mới
+ok 243 - resume cùng session_id: cờ terminal của lần chạy trước không rò sang lần mới
+  ---
+  duration_ms: 3.704886
+  type: 'test'
+  ...
+# Subtest: progress file hỏng ⇒ null, không crash
+ok 244 - progress file hỏng ⇒ null, không crash
+  ---
+  duration_ms: 0.664482
+  type: 'test'
+  ...
+# Subtest: status hiện phase/token/tuổi từng tín hiệu/verdict, không lộ text
+ok 245 - status hiện phase/token/tuổi từng tín hiệu/verdict, không lộ text
+  ---
+  duration_ms: 0.481919
+  type: 'test'
+  ...
+# Subtest: entry point đọc được từ wiring thật, không phải danh sách chép tay
+ok 246 - entry point đọc được từ wiring thật, không phải danh sách chép tay
+  ---
+  duration_ms: 9.210634
+  type: 'test'
+  ...
+# Subtest: WIRING: mọi module cưỡng chế đều có caller production
+ok 247 - WIRING: mọi module cưỡng chế đều có caller production
+  ---
+  duration_ms: 8.005903
+  type: 'test'
+  ...
+# Subtest: WIRING: có module production import validateHandoff từ integration-queue
+ok 248 - WIRING: có module production import validateHandoff từ integration-queue
+  ---
+  duration_ms: 7.235869
+  type: 'test'
+  ...
+# Subtest: positive control: bao đóng không rỗng nghĩa
+ok 249 - positive control: bao đóng không rỗng nghĩa
+  ---
+  duration_ms: 4.789155
+  type: 'test'
+  ...
+# Rebasing (1/1)
+# [KSuccessfully rebased and updated refs/heads/agent/v2-setup-01-r1-architect-contract.
+# Subtest: branch theo đúng agent/<req>-r<rev>-<persona>
+ok 250 - branch theo đúng agent/<req>-r<rev>-<persona>
+  ---
+  duration_ms: 2.086347
+  type: 'test'
+  ...
+# Subtest: plan hợp lệ trả branch/worktree/base_sha
+ok 251 - plan hợp lệ trả branch/worktree/base_sha
+  ---
+  duration_ms: 1.260282
+  type: 'test'
+  ...
+# Subtest: receipt chưa verify ⇒ không spawn
+ok 252 - receipt chưa verify ⇒ không spawn
+  ---
+  duration_ms: 0.294485
+  type: 'test'
+  ...
+# Subtest: duplicate receipt không tạo worktree thứ hai
+ok 253 - duplicate receipt không tạo worktree thứ hai
+  ---
+  duration_ms: 0.889876
+  type: 'test'
+  ...
+# Subtest: branch/worktree đang bận không bị cướp
+ok 254 - branch/worktree đang bận không bị cướp
+  ---
+  duration_ms: 0.51337
+  type: 'test'
+  ...
+# Subtest: hai persona khác nhau ⇒ hai worktree khác nhau
+ok 255 - hai persona khác nhau ⇒ hai worktree khác nhau
+  ---
+  duration_ms: 0.777434
+  type: 'test'
+  ...
+# Subtest: revision / contract / Ready-list / persona / scope lệch ⇒ chặn
+ok 256 - revision / contract / Ready-list / persona / scope lệch ⇒ chặn
+  ---
+  duration_ms: 1.419125
+  type: 'test'
+  ...
+# Subtest: manifest: write list không giao nhau, reserved không persona nào phủ
+ok 257 - manifest: write list không giao nhau, reserved không persona nào phủ
+  ---
+  duration_ms: 7.431742
+  type: 'test'
+  ...
+# Subtest: scope của persona được kiểm theo ownership manifest
+ok 258 - scope của persona được kiểm theo ownership manifest
+  ---
+  duration_ms: 0.53583
+  type: 'test'
+  ...
+# Subtest: owned_paths hẹp hơn glob manifest vẫn hợp lệ — nhưng không mở được reserved/deny
+ok 259 - owned_paths hẹp hơn glob manifest vẫn hợp lệ — nhưng không mở được reserved/deny
+  ---
+  duration_ms: 0.680693
+  type: 'test'
+  ...
+# Subtest: work.spawned chỉ ghi sau khi persona thật sự launch
+ok 260 - work.spawned chỉ ghi sau khi persona thật sự launch
+  ---
+  duration_ms: 0.466098
+  type: 'test'
+  ...
+# Subtest: secret không được có mặt trong worker worktree
+ok 261 - secret không được có mặt trong worker worktree
+  ---
+  duration_ms: 2.596436
+  type: 'test'
+  ...
+# Subtest: hai worktree thật sự tách nhau — ghi bên này không lộ sang bên kia
+ok 262 - hai worktree thật sự tách nhau — ghi bên này không lộ sang bên kia
+  ---
+  duration_ms: 157.328074
+  type: 'test'
+  ...
+# Subtest: boundary guard chặn ghi ra ngoài worktree (main checkout / worktree khác)
+ok 263 - boundary guard chặn ghi ra ngoài worktree (main checkout / worktree khác)
+  ---
+  duration_ms: 404.396961
+  type: 'test'
+  ...
+# Subtest: cleanup từ chối worktree bẩn hoặc chưa integrate
+ok 264 - cleanup từ chối worktree bẩn hoặc chưa integrate
+  ---
+  duration_ms: 0.57271
+  type: 'test'
+  ...
+# Subtest: main tiến lên ở vùng không liên quan ⇒ rebase + chạy lại test, không ký lại
+ok 265 - main tiến lên ở vùng không liên quan ⇒ rebase + chạy lại test, không ký lại
+  ---
+  duration_ms: 0.498199
+  type: 'test'
+  ...
+# Subtest: base_sha == main ⇒ integrate thẳng
+ok 266 - base_sha == main ⇒ integrate thẳng
+  ---
+  duration_ms: 0.162443
+  type: 'test'
+  ...
+# Subtest: đổi revision/persona/scope/contract/card/list ⇒ receipt stale, phải ký lại
+ok 267 - đổi revision/persona/scope/contract/card/list ⇒ receipt stale, phải ký lại
+  ---
+  duration_ms: 0.392507
+  type: 'test'
+  ...
+# Subtest: rebase thật lên main đã tiến ⇒ commit SHA đổi, handoff phải cập nhật
+ok 268 - rebase thật lên main đã tiến ⇒ commit SHA đổi, handoff phải cập nhật
+  ---
+  duration_ms: 159.36583
+  type: 'test'
+  ...
+# Subtest: handoff hợp lệ đi qua
+ok 269 - handoff hợp lệ đi qua
+  ---
+  duration_ms: 0.57832
+  type: 'test'
+  ...
+# Subtest: handoff fail closed cho từng loại drift
+ok 270 - handoff fail closed cho từng loại drift
+  ---
+  duration_ms: 0.598811
+  type: 'test'
+  ...
+# Subtest: rebase xong mà đã chạy lại test thì handoff hợp lệ
+ok 271 - rebase xong mà đã chạy lại test thì handoff hợp lệ
+  ---
+  duration_ms: 0.154963
+  type: 'test'
+  ...
+# Subtest: conflict được trả về đúng người sở hữu; generated thì regenerate
+ok 272 - conflict được trả về đúng người sở hữu; generated thì regenerate
+  ---
+  duration_ms: 0.611741
+  type: 'test'
+  ...
+# Subtest: integration tuần tự — candidate thứ hai bị chặn
+ok 273 - integration tuần tự — candidate thứ hai bị chặn
+  ---
+  duration_ms: 14.141221
+  type: 'test'
+  ...
+# Subtest: mọi persona definition đều có section Context loading + Test-first
+ok 274 - mọi persona definition đều có section Context loading + Test-first
+  ---
+  duration_ms: 1.057849
+  type: 'test'
+  ...
+# Subtest: thiếu OWNER_AUTH_PAGE_API_BASE ⇒ exit khác 0, không ghi artifact
+ok 275 - thiếu OWNER_AUTH_PAGE_API_BASE ⇒ exit khác 0, không ghi artifact
+  ---
+  duration_ms: 81.191281
+  type: 'test'
+  ...
+# Subtest: thiếu OWNER_AUTH_PAGE_DOMAIN ⇒ exit khác 0, không ghi artifact
+ok 276 - thiếu OWNER_AUTH_PAGE_DOMAIN ⇒ exit khác 0, không ghi artifact
+  ---
+  duration_ms: 202.309443
+  type: 'test'
+  ...
+# Subtest: API base không phải URL tuyệt đối https ⇒ fail closed
+ok 277 - API base không phải URL tuyệt đối https ⇒ fail closed
+  ---
+  duration_ms: 108.765262
+  type: 'test'
+  ...
+# Subtest: artifact đủ 5 file và build hai lần cho byte y hệt
+ok 278 - artifact đủ 5 file và build hai lần cho byte y hệt
+  ---
+  duration_ms: 298.935508
+  type: 'test'
+  ...
+# Subtest: artifact không rò đường dẫn tuyệt đối của máy build
+ok 279 - artifact không rò đường dẫn tuyệt đối của máy build
+  ---
+  duration_ms: 138.55599
+  type: 'test'
+  ...
+# Subtest: CNAME sinh từ env, script không hardcode domain
+ok 280 - CNAME sinh từ env, script không hardcode domain
+  ---
+  duration_ms: 186.809618
+  type: 'test'
+  ...
+# Subtest: connect-src cho phép mọi endpoint trang thật sự gọi
+ok 281 - connect-src cho phép mọi endpoint trang thật sự gọi
+  ---
+  duration_ms: 143.431048
+  type: 'test'
+  ...
+# Subtest: connect-src không nới ra ngoài API base
+ok 282 - connect-src không nới ra ngoài API base
+  ---
+  duration_ms: 114.720258
+  type: 'test'
+  ...
+# Subtest: connect-src là base được tiêm ở dạng prefix, các directive khác giữ nguyên
+ok 283 - connect-src là base được tiêm ở dạng prefix, các directive khác giữ nguyên
+  ---
+  duration_ms: 105.28629
+  type: 'test'
+  ...
+# Subtest: đổi env ⇒ CSP và fetch target đổi cùng nhau
+ok 284 - đổi env ⇒ CSP và fetch target đổi cùng nhau
+  ---
+  duration_ms: 97.159995
+  type: 'test'
+  ...
+# Subtest: main.js gọi API bằng base tuyệt đối, không còn base tương đối
+ok 285 - main.js gọi API bằng base tuyệt đối, không còn base tương đối
+  ---
+  duration_ms: 101.305489
+  type: 'test'
+  ...
+# Subtest: artifact sinh từ ui/, không phải bản sao fork
+ok 286 - artifact sinh từ ui/, không phải bản sao fork
+  ---
+  duration_ms: 93.170865
+  type: 'test'
+  ...
+# Subtest: không có bản sao source UI thứ hai trong platform/owner-authorization
+ok 287 - không có bản sao source UI thứ hai trong platform/owner-authorization
+  ---
+  duration_ms: 1.359394
+  type: 'test'
+  ...
+# Subtest: source không hardcode host nào
+ok 288 - source không hardcode host nào
+  ---
+  duration_ms: 0.914956
+  type: 'test'
+  ...
+# Subtest: artifact không chứa pattern secret
+ok 289 - artifact không chứa pattern secret
+  ---
+  duration_ms: 81.447707
+  type: 'test'
+  ...
+# Subtest: artifact đã commit khớp với bản rebuild (--check exit 0)
+ok 290 - artifact đã commit khớp với bản rebuild (--check exit 0)
+  ---
+  duration_ms: 84.834717
+  type: 'test'
+  ...
+# Subtest: artifact lệch với source ⇒ --check exit khác 0
+ok 291 - artifact lệch với source ⇒ --check exit khác 0
+  ---
+  duration_ms: 88.025464
+  type: 'test'
+  ...
+# Subtest: thiếu file trong artifact ⇒ --check exit khác 0
+ok 292 - thiếu file trong artifact ⇒ --check exit khác 0
+  ---
+  duration_ms: 74.657796
+  type: 'test'
+  ...
+# Subtest: build:owner-auth cũ vẫn chạy đúng và assets.ts không đổi
+ok 293 - build:owner-auth cũ vẫn chạy đúng và assets.ts không đổi
+  ---
+  duration_ms: 103.629171
+  type: 'test'
+  ...
+# Subtest: không còn receipt non-terminal → preflight cho phép rotate
+ok 294 - không còn receipt non-terminal → preflight cho phép rotate
+  ---
+  duration_ms: 32.66315
+  type: 'test'
+  ...
+# Subtest: còn receipt non-terminal → dừng, nêu đúng receipt đang chặn
+ok 295 - còn receipt non-terminal → dừng, nêu đúng receipt đang chặn
+  ---
+  duration_ms: 6.677359
+  type: 'test'
+  ...
+# Subtest: thiếu config → fail closed, không gọi network
+ok 296 - thiếu config → fail closed, không gọi network
+  ---
+  duration_ms: 0.633181
+  type: 'test'
+  ...
+# Subtest: endpoint lỗi → fail closed, KHÔNG coi là sạch
+ok 297 - endpoint lỗi → fail closed, KHÔNG coi là sạch
+  ---
+  duration_ms: 1.950325
+  type: 'test'
+  ...
+# Subtest: preflight không ghi gì: chỉ GET /wake/next
+ok 298 - preflight không ghi gì: chỉ GET /wake/next
+  ---
+  duration_ms: 0.400587
+  type: 'test'
+  ...
+# Subtest: GET / trả text/html — điều kiện trang render được
+ok 299 - GET / trả text/html — điều kiện trang render được
+  ---
+  duration_ms: 62.297167
+  type: 'test'
+  ...
+# Subtest: CSP giữ connect-src 'self', không bị hạ thành sandbox
+ok 300 - CSP giữ connect-src 'self', không bị hạ thành sandbox
+  ---
+  duration_ms: 2.909192
+  type: 'test'
+  ...
+# Subtest: asset phụ trả đúng type
+ok 301 - asset phụ trả đúng type
+  ---
+  duration_ms: 20.414293
+  type: 'test'
+  ...
+# Subtest: Host lệch → 403, kể cả 127.0.0.1 (RP ID là localhost)
+ok 302 - Host lệch → 403, kể cả 127.0.0.1 (RP ID là localhost)
+  ---
+  duration_ms: 11.518645
+  type: 'test'
+  ...
+# Subtest: Origin lạ trên asset route → 403
+ok 303 - Origin lạ trên asset route → 403
+  ---
+  duration_ms: 7.009064
+  type: 'test'
+  ...
+# Subtest: proxy POST thiếu Origin → 403 (fail closed, không suy đoán)
+ok 304 - proxy POST thiếu Origin → 403 (fail closed, không suy đoán)
+  ---
+  duration_ms: 10.434246
+  type: 'test'
+  ...
+# Subtest: proxy POST Origin sai → 403 và không chạm upstream
+ok 305 - proxy POST Origin sai → 403 và không chạm upstream
+  ---
+  duration_ms: 6.569387
+  type: 'test'
+  ...
+# Subtest: route ngoài ceremony không lọt qua
+ok 306 - route ngoài ceremony không lọt qua
+  ---
+  duration_ms: 5.62285
+  type: 'test'
+  ...
+# Subtest: method lạ → 405
+ok 307 - method lạ → 405
+  ---
+  duration_ms: 2.393153
+  type: 'test'
+  ...
+# Subtest: /pending/ rỗng → 404, không proxy
+ok 308 - /pending/ rỗng → 404, không proxy
+  ---
+  duration_ms: 19.011648
+  type: 'test'
+  ...
+# Subtest: enroll forward path, Origin và bootstrap token; không kèm Authorization
+ok 309 - enroll forward path, Origin và bootstrap token; không kèm Authorization
+  ---
+  duration_ms: 42.595047
+  type: 'test'
+  ...
+# Subtest: GET /pending/<key> được proxy
+ok 310 - GET /pending/<key> được proxy
+  ---
+  duration_ms: 14.245833
+  type: 'test'
+  ...
+# Subtest: GET /pending/<key> không kèm Origin vẫn tới upstream
+ok 311 - GET /pending/<key> không kèm Origin vẫn tới upstream
+  ---
+  duration_ms: 6.256941
+  type: 'test'
+  ...
+# Subtest: GET /pending/<key> Origin sai → 403 và không chạm upstream
+ok 312 - GET /pending/<key> Origin sai → 403 và không chạm upstream
+  ---
+  duration_ms: 2.675678
+  type: 'test'
+  ...
+# Subtest: allowlist đúng bốn endpoint ceremony, không hơn
+ok 313 - allowlist đúng bốn endpoint ceremony, không hơn
+  ---
+  duration_ms: 1.429975
+  type: 'test'
+  ...
+# contract-check FAIL: no contract at /tmp/contract-check-test-WFUJVI/gone.json
+# contract-check FAIL: contract is not valid JSON: Expected property name or '}' in JSON at position 2 (line 1 column 3)
+# contract-check FAIL: generated types drift from the contract - hand-edits to the generated types do not survive - run: pnpm contract:generate
+# Subtest: allow-list rejects $schema in a component schema
+ok 314 - allow-list rejects $schema in a component schema
+  ---
+  duration_ms: 16.252529
+  type: 'test'
+  ...
+# Subtest: allow-list rejects $id in a component schema
+ok 315 - allow-list rejects $id in a component schema
+  ---
+  duration_ms: 6.844891
+  type: 'test'
+  ...
+# Subtest: allow-list rejects $anchor in a component schema
+ok 316 - allow-list rejects $anchor in a component schema
+  ---
+  duration_ms: 6.655039
+  type: 'test'
+  ...
+# Subtest: allow-list rejects $defs in a component schema
+ok 317 - allow-list rejects $defs in a component schema
+  ---
+  duration_ms: 12.121485
+  type: 'test'
+  ...
+# Subtest: allow-list rejects $vocabulary in a component schema
+ok 318 - allow-list rejects $vocabulary in a component schema
+  ---
+  duration_ms: 3.597164
+  type: 'test'
+  ...
+# Subtest: allow-list rejects $recursiveAnchor in a component schema
+ok 319 - allow-list rejects $recursiveAnchor in a component schema
+  ---
+  duration_ms: 4.946407
+  type: 'test'
+  ...
+# Subtest: allow-list rejects $recursiveRef in a component schema
+ok 320 - allow-list rejects $recursiveRef in a component schema
+  ---
+  duration_ms: 4.284237
+  type: 'test'
+  ...
+# Subtest: allow-list rejects $dynamicAnchor in a component schema
+ok 321 - allow-list rejects $dynamicAnchor in a component schema
+  ---
+  duration_ms: 6.219211
+  type: 'test'
+  ...
+# Subtest: allow-list rejects $dynamicRef in a component schema
+ok 322 - allow-list rejects $dynamicRef in a component schema
+  ---
+  duration_ms: 4.323577
+  type: 'test'
+  ...
+# Subtest: allow-list rejects prefixItems in a component schema
+ok 323 - allow-list rejects prefixItems in a component schema
+  ---
+  duration_ms: 4.764495
+  type: 'test'
+  ...
+# Subtest: allow-list rejects unevaluatedProperties in a component schema
+ok 324 - allow-list rejects unevaluatedProperties in a component schema
+  ---
+  duration_ms: 3.89836
+  type: 'test'
+  ...
+# Subtest: allow-list rejects unevaluatedItems in a component schema
+ok 325 - allow-list rejects unevaluatedItems in a component schema
+  ---
+  duration_ms: 3.690365
+  type: 'test'
+  ...
+# Subtest: allow-list rejects dependentRequired in a component schema
+ok 326 - allow-list rejects dependentRequired in a component schema
+  ---
+  duration_ms: 4.602661
+  type: 'test'
+  ...
+# Subtest: allow-list rejects dependentSchemas in a component schema
+ok 327 - allow-list rejects dependentSchemas in a component schema
+  ---
+  duration_ms: 10.083159
+  type: 'test'
+  ...
+# Subtest: allow-list rejects minContains in a component schema
+ok 328 - allow-list rejects minContains in a component schema
+  ---
+  duration_ms: 4.427328
+  type: 'test'
+  ...
+# Subtest: allow-list rejects maxContains in a component schema
+ok 329 - allow-list rejects maxContains in a component schema
+  ---
+  duration_ms: 7.605036
+  type: 'test'
+  ...
+# Subtest: allow-list rejects contentSchema in a component schema
+ok 330 - allow-list rejects contentSchema in a component schema
+  ---
+  duration_ms: 4.231115
+  type: 'test'
+  ...
+# Subtest: allow-list rejects nullable in a component schema
+ok 331 - allow-list rejects nullable in a component schema
+  ---
+  duration_ms: 3.861508
+  type: 'test'
+  ...
+# Subtest: the committed contract is clean
+ok 332 - the committed contract is clean
+  ---
+  duration_ms: 1.932365
+  type: 'test'
+  ...
+# Subtest: allow-list reaches nested subschemas
+ok 333 - allow-list reaches nested subschemas
+  ---
+  duration_ms: 3.675915
+  type: 'test'
+  ...
+# Subtest: allow-list reaches inline response schemas
+ok 334 - allow-list reaches inline response schemas
+  ---
+  duration_ms: 1.543497
+  type: 'test'
+  ...
+# Subtest: a property merely named like a keyword is not a keyword
+ok 335 - a property merely named like a keyword is not a keyword
+  ---
+  duration_ms: 1.361044
+  type: 'test'
+  ...
+# Subtest: missing operationId fails
+ok 336 - missing operationId fails
+  ---
+  duration_ms: 1.266523
+  type: 'test'
+  ...
+# Subtest: duplicate operationId fails
+ok 337 - duplicate operationId fails
+  ---
+  duration_ms: 4.599742
+  type: 'test'
+  ...
+# Subtest: forbidden vendor extensions fail
+ok 338 - forbidden vendor extensions fail
+  ---
+  duration_ms: 16.402422
+  type: 'test'
+  ...
+# Subtest: a non-3.1 document fails
+ok 339 - a non-3.1 document fails
+  ---
+  duration_ms: 2.021745
+  type: 'test'
+  ...
+# Subtest: cli passes on the committed contract
+ok 340 - cli passes on the committed contract
+  ---
+  duration_ms: 1446.028491
+  type: 'test'
+  ...
+# Subtest: cli fails on a missing contract
+ok 341 - cli fails on a missing contract
+  ---
+  duration_ms: 52.137256
+  type: 'test'
+  ...
+# Subtest: cli fails on an unparseable contract
+ok 342 - cli fails on an unparseable contract
+  ---
+  duration_ms: 51.22778
+  type: 'test'
+  ...
+# Subtest: cli fails on hand-edited generated types
+ok 343 - cli fails on hand-edited generated types
+  ---
+  duration_ms: 838.003708
+  type: 'test'
+  ...
+# Subtest: the v2 contract stays inside the enforced draft-07 subset
+ok 344 - the v2 contract stays inside the enforced draft-07 subset
+  ---
+  duration_ms: 8.671105
+  type: 'test'
+  ...
+# Subtest: the contract version is pinned to v2-contract-1
+ok 345 - the contract version is pinned to v2-contract-1
+  ---
+  duration_ms: 0.286315
+  type: 'test'
+  ...
+# Subtest: catalog and cart shapes still carry no inventory or reservation vocabulary
+ok 346 - catalog and cart shapes still carry no inventory or reservation vocabulary
+  ---
+  duration_ms: 1.489416
+  type: 'test'
+  ...
+# Subtest: every Vnd amount goes through AmountVnd, which is a non-negative integer
+ok 347 - every Vnd amount goes through AmountVnd, which is a non-negative integer
+  ---
+  duration_ms: 3.080555
+  type: 'test'
+  ...
+# Subtest: media is addressed by imageId and no schema embeds a URL
+ok 348 - media is addressed by imageId and no schema embeds a URL
+  ---
+  duration_ms: 4.253976
+  type: 'test'
+  ...
+# Subtest: MediaRef carries an imageId and its alt text and nothing else
+ok 349 - MediaRef carries an imageId and its alt text and nothing else
+  ---
+  duration_ms: 0.379387
+  type: 'test'
+  ...
+# Subtest: Blank pins its supplier, its cost and when a human last verified it
+ok 350 - Blank pins its supplier, its cost and when a human last verified it
+  ---
+  duration_ms: 0.258765
+  type: 'test'
+  ...
+# Subtest: blank availability is a status with dated exceptions, not a quantity
+ok 351 - blank availability is a status with dated exceptions, not a quantity
+  ---
+  duration_ms: 0.191704
+  type: 'test'
+  ...
+# Subtest: staleness is computable from Timestamp alone
+ok 352 - staleness is computable from Timestamp alone
+  ---
+  duration_ms: 0.492359
+  type: 'test'
+  ...
+# Subtest: Colorway is a global registry that catalog schemas reference by id
+ok 353 - Colorway is a global registry that catalog schemas reference by id
+  ---
+  duration_ms: 5.749902
+  type: 'test'
+  ...
+# Subtest: a VariantOption binds its axis to the value type that axis allows
+ok 354 - a VariantOption binds its axis to the value type that axis allows
+  ---
+  duration_ms: 0.364727
+  type: 'test'
+  ...
+# Subtest: an Offering selects each axis exactly once
+ok 355 - an Offering selects each axis exactly once
+  ---
+  duration_ms: 0.189394
+  type: 'test'
+  ...
+# Subtest: Offering keeps unitCostVnd and the public read views never expose it
+ok 356 - Offering keeps unitCostVnd and the public read views never expose it
+  ---
+  duration_ms: 0.480109
+  type: 'test'
+  ...
+# Subtest: artwork moves draft -> submitted -> approved|rejected -> archived
+ok 357 - artwork moves draft -> submitted -> approved|rejected -> archived
+  ---
+  duration_ms: 0.222474
+  type: 'test'
+  ...
+# Subtest: a published Product must name the approved artwork it was published from
+ok 358 - a published Product must name the approved artwork it was published from
+  ---
+  duration_ms: 0.243614
+  type: 'test'
+  ...
+# Subtest: OrderLineSnapshot is immutable, complete, and carries unitCostVnd
+ok 359 - OrderLineSnapshot is immutable, complete, and carries unitCostVnd
+  ---
+  duration_ms: 0.191573
+  type: 'test'
+  ...
+# Subtest: Cart holds live references and Order holds snapshots
+ok 360 - Cart holds live references and Order holds snapshots
+  ---
+  duration_ms: 0.128582
+  type: 'test'
+  ...
+# Subtest: payment method and reconciliation provider are two independent axes
+ok 361 - payment method and reconciliation provider are two independent axes
+  ---
+  duration_ms: 0.173913
+  type: 'test'
+  ...
+# Subtest: POD fulfillment tracks production at the supplier, not stock in a warehouse
+ok 362 - POD fulfillment tracks production at the supplier, not stock in a warehouse
+  ---
+  duration_ms: 0.148693
+  type: 'test'
+  ...
+# Subtest: product listing is cursor paginated and detail is addressed by slug
+ok 363 - product listing is cursor paginated and detail is addressed by slug
+  ---
+  duration_ms: 0.192803
+  type: 'test'
+  ...
+# Subtest: the catalog read pilot is two operations, addressed as the storefront addresses them
+ok 364 - the catalog read pilot is two operations, addressed as the storefront addresses them
+  ---
+  duration_ms: 0.264504
+  type: 'test'
+  ...
+# Subtest: listing takes the cursor it hands back, and nothing that implies an offset
+ok 365 - listing takes the cursor it hands back, and nothing that implies an offset
+  ---
+  duration_ms: 0.277225
+  type: 'test'
+  ...
+# Subtest: detail is addressed by the product slug, per D18
+ok 366 - detail is addressed by the product slug, per D18
+  ---
+  duration_ms: 0.195564
+  type: 'test'
+  ...
+# Subtest: every declared failure of every operation is the one error envelope
+ok 367 - every declared failure of every operation is the one error envelope
+  ---
+  duration_ms: 0.452998
+  type: 'test'
+  ...
+# Subtest: the pilot adds operations without disturbing /health
+ok 368 - the pilot adds operations without disturbing /health
+  ---
+  duration_ms: 0.139872
+  type: 'test'
+  ...
+# Subtest: @thunviet/shared exports an entry point that exists
+ok 369 - @thunviet/shared exports an entry point that exists
+  ---
+  duration_ms: 0.414717
+  type: 'test'
+  ...
+# Subtest: the contract declares exactly the fourteen operations of the pilot plus these lanes
+ok 370 - the contract declares exactly the fourteen operations of the pilot plus these lanes
+  ---
+  duration_ms: 0.357806
+  type: 'test'
+  ...
+# Subtest: a cartId is an opaque UUID the client holds, never a session cookie
+ok 371 - a cartId is an opaque UUID the client holds, never a session cookie
+  ---
+  duration_ms: 0.490298
+  type: 'test'
+  ...
+# Subtest: cart operations are reachable without auth; checkout and order are not
+ok 372 - cart operations are reachable without auth; checkout and order are not
+  ---
+  duration_ms: 1.014038
+  type: 'test'
+  ...
+# Subtest: checkout is where a cart is bound to a user, and an order always has one
+ok 373 - checkout is where a cart is bound to a user, and an order always has one
+  ---
+  duration_ms: 0.293336
+  type: 'test'
+  ...
+# Subtest: checkout freezes what was bought; later catalog edits cannot reach it
+ok 374 - checkout freezes what was bought; later catalog edits cannot reach it
+  ---
+  duration_ms: 0.159153
+  type: 'test'
+  ...
+# Subtest: checkout reserves stock for a 30 minute window written into the domain state
+ok 375 - checkout reserves stock for a 30 minute window written into the domain state
+  ---
+  duration_ms: 0.203094
+  type: 'test'
+  ...
+# Subtest: every reservation has a way out, and there are exactly three of them
+ok 376 - every reservation has a way out, and there are exactly three of them
+  ---
+  duration_ms: 0.126352
+  type: 'test'
+  ...
+# Subtest: expiry is a domain transition; the sweeper is one caller of it, not the truth
+ok 377 - expiry is a domain transition; the sweeper is one caller of it, not the truth
+  ---
+  duration_ms: 0.279155
+  type: 'test'
+  ...
+# Subtest: money arriving after the window goes to a human, never back to the reservation
+ok 378 - money arriving after the window goes to a human, never back to the reservation
+  ---
+  duration_ms: 0.177394
+  type: 'test'
+  ...
+# Subtest: confirming money is one transition with two callers, idempotent by provider event
+ok 379 - confirming money is one transition with two callers, idempotent by provider event
+  ---
+  duration_ms: 0.304436
+  type: 'test'
+  ...
+# Subtest: this lane declares no payment operation
+ok 380 - this lane declares no payment operation
+  ---
+  duration_ms: 0.294755
+  type: 'test'
+  ...
+# Subtest: checkout takes a cart, an address id, a shipping method and a payment method - and nothing else
+ok 381 - checkout takes a cart, an address id, a shipping method and a payment method - and nothing else
+  ---
+  duration_ms: 0.186593
+  type: 'test'
+  ...
+# Subtest: no client-supplied address body and no client-supplied quote reaches checkout
+ok 382 - no client-supplied address body and no client-supplied quote reaches checkout
+  ---
+  duration_ms: 0.460588
+  type: 'test'
+  ...
+# Subtest: the shipping address is a snapshot on the order, not a live reference to an address book
+ok 383 - the shipping address is a snapshot on the order, not a live reference to an address book
+  ---
+  duration_ms: 0.199184
+  type: 'test'
+  ...
+# Subtest: the order snapshots everything the shopper agreed to pay for
+ok 384 - the order snapshots everything the shopper agreed to pay for
+  ---
+  duration_ms: 0.280585
+  type: 'test'
+  ...
+# Subtest: money stays VND-implicit: one money type, no currency field anywhere
+ok 385 - money stays VND-implicit: one money type, no currency field anywhere
+  ---
+  duration_ms: 10.260752
+  type: 'test'
+  ...
+# Subtest: checkout.create declares the four steps the server owns
+ok 386 - checkout.create declares the four steps the server owns
+  ---
+  duration_ms: 0.486178
+  type: 'test'
+  ...
+# Subtest: the address book is exactly four operations and it declares no fifth surface
+ok 387 - the address book is exactly four operations and it declares no fifth surface
+  ---
+  duration_ms: 0.352426
+  type: 'test'
+  ...
+# Subtest: /me means the session says whose book it is; no operation takes a userId
+ok 388 - /me means the session says whose book it is; no operation takes a userId
+  ---
+  duration_ms: 0.409687
+  type: 'test'
+  ...
+# Subtest: an Address is the mutable original the snapshot is copied from, field for field
+ok 389 - an Address is the mutable original the snapshot is copied from, field for field
+  ---
+  duration_ms: 2.116547
+  type: 'test'
+  ...
+# Subtest: AddressId is its own id type, unguessable, and checkout takes that type
+ok 390 - AddressId is its own id type, unguessable, and checkout takes that type
+  ---
+  duration_ms: 0.411357
+  type: 'test'
+  ...
+# Subtest: somebody else's address is a named refusal here, and an unnamed 404 at checkout
+ok 391 - somebody else's address is a named refusal here, and an unnamed 404 at checkout
+  ---
+  duration_ms: 0.312335
+  type: 'test'
+  ...
+# Subtest: at most one default, said in one field, and every write returns the whole book
+ok 392 - at most one default, said in one field, and every write returns the whole book
+  ---
+  duration_ms: 0.299855
+  type: 'test'
+  ...
+# Subtest: a label is free text with a bound, not an enum of somebody else's categories
+ok 393 - a label is free text with a bound, not an enum of somebody else's categories
+  ---
+  duration_ms: 0.152733
+  type: 'test'
+  ...
+# Subtest: deleting an address deletes it, and an empty patch is refused structurally
+ok 394 - deleting an address deletes it, and an empty patch is refused structurally
+  ---
+  duration_ms: 1.233622
+  type: 'test'
+  ...
+# Subtest: SeedFixture is expressed in v2 schemas, not in an ad hoc seed shape
+ok 395 - SeedFixture is expressed in v2 schemas, not in an ad hoc seed shape
+  ---
+  duration_ms: 0.319785
+  type: 'test'
+  ...
+# Subtest: the shipped contract boots the app
+ok 396 - the shipped contract boots the app
+  ---
+  duration_ms: 1491.114125
+  type: 'test'
+  ...
+# Subtest: GET /health returns 200 and a valid HealthResponse
+ok 397 - GET /health returns 200 and a valid HealthResponse
+  ---
+  duration_ms: 632.475477
+  type: 'test'
+  ...
+# Subtest: an undeclared query parameter is a 400 with a pointed detail
+ok 398 - an undeclared query parameter is a 400 with a pointed detail
+  ---
+  duration_ms: 513.867841
+  type: 'test'
+  ...
+# Subtest: pointers are body-rooted, with pseudo-roots for the other inputs
+ok 399 - pointers are body-rooted, with pseudo-roots for the other inputs
+  ---
+  duration_ms: 0.250574
+  type: 'test'
+  ...
+# Subtest: an unknown path is a 404 in the envelope
+ok 400 - an unknown path is a 404 in the envelope
+  ---
+  duration_ms: 450.344232
+  type: 'test'
+  ...
+# Subtest: a wrong method is a 405 in the envelope
+ok 401 - a wrong method is a 405 in the envelope
+  ---
+  duration_ms: 496.981163
+  type: 'test'
+  ...
+# Subtest: startup throws when the spec cannot be read
+ok 402 - startup throws when the spec cannot be read
+  ---
+  duration_ms: 0.611901
+  type: 'test'
+  ...
+# Subtest: startup throws when the spec is not JSON
+ok 403 - startup throws when the spec is not JSON
+  ---
+  duration_ms: 0.295645
+  type: 'test'
+  ...
+# Subtest: startup throws when the document is not a valid OpenAPI spec
+ok 404 - startup throws when the document is not a valid OpenAPI spec
+  ---
+  duration_ms: 1.12211
+  type: 'test'
+  ...
+# Subtest: startup throws when an operation has no operationId
+ok 405 - startup throws when an operation has no operationId
+  ---
+  duration_ms: 0.452518
+  type: 'test'
+  ...
+# Subtest: startup throws when an operationId is duplicated
+ok 406 - startup throws when an operationId is duplicated
+  ---
+  duration_ms: 0.255935
+  type: 'test'
+  ...
+# Subtest: startup throws when a $ref does not resolve
+ok 407 - startup throws when a $ref does not resolve
+  ---
+  duration_ms: 1.230672
+  type: 'test'
+  ...
+# Subtest: startup throws on an external $ref
+ok 408 - startup throws on an external $ref
+  ---
+  duration_ms: 1.015458
+  type: 'test'
+  ...
+# Subtest: startup throws when a schema cannot be compiled
+ok 409 - startup throws when a schema cannot be compiled
+  ---
+  duration_ms: 12.426281
+  type: 'test'
+  ...
+# response violates contract: /uptimeSeconds must be number
+# Subtest: the shipped contract still resolves its $refs under quick mode
+ok 410 - the shipped contract still resolves its $refs under quick mode
+  ---
+  duration_ms: 831.420238
+  type: 'test'
+  ...
+# Subtest: startup throws when a contract operation has no handler
+ok 411 - startup throws when a contract operation has no handler
+  ---
+  duration_ms: 578.111897
+  type: 'test'
+  ...
+# Subtest: startup throws when the registry has a key the contract does not declare
+ok 412 - startup throws when the registry has a key the contract does not declare
+  ---
+  duration_ms: 465.882604
+  type: 'test'
+  ...
+# Subtest: every contract operation is in the shipped registry
+ok 413 - every contract operation is in the shipped registry
+  ---
+  duration_ms: 0.225884
+  type: 'test'
+  ...
+# Subtest: startup refuses, loudly, when no persistence adapter is supplied
+ok 414 - startup refuses, loudly, when no persistence adapter is supplied
+  ---
+  duration_ms: 1426.071831
+  type: 'test'
+  ...
+# Subtest: nothing in the shipped service imports the in-memory repositories
+ok 415 - nothing in the shipped service imports the in-memory repositories
+  ---
+  duration_ms: 1.717171
+  type: 'test'
+  ...
+# response violates contract: /status must be equal to constant
+# Subtest: a response that violates the schema is refused, not shipped
+ok 416 - a response that violates the schema is refused, not shipped
+  ---
+  duration_ms: 589.935374
+  type: 'test'
+  ...
+# response violates contract: status 418 is not declared for system.health
+# Subtest: a status the contract does not declare is refused too
+ok 417 - a status the contract does not declare is refused too
+  ---
+  duration_ms: 656.070501
+  type: 'test'
+  ...
+# Subtest: with validation off the same bad body goes out, so the flag is real
+ok 418 - with validation off the same bad body goes out, so the flag is real
+  ---
+  duration_ms: 617.493488
+  type: 'test'
+  ...
+# Subtest: system.health touches no filesystem, socket or DNS
+ok 419 - system.health touches no filesystem, socket or DNS
+  ---
+  duration_ms: 1.11687
+  type: 'test'
+  ...
+# Subtest: the I/O observer is not vacuous
+ok 420 - the I/O observer is not vacuous
+  ---
+  duration_ms: 0.644802
+  type: 'test'
+  ...
+# Subtest: GET /products returns a page of published products, each with a productId and a slug
+ok 421 - GET /products returns a page of published products, each with a productId and a slug
+  ---
+  duration_ms: 746.375932
+  type: 'test'
+  ...
+# Subtest: GET /products answers identically twice, so the fixture is deterministic
+ok 422 - GET /products answers identically twice, so the fixture is deterministic
+  ---
+  duration_ms: 527.654341
+  type: 'test'
+  ...
+# Subtest: a cursor this API never issued is a 400, not a silently reset first page
+ok 423 - a cursor this API never issued is a 400, not a silently reset first page
+  ---
+  duration_ms: 584.488125
+  type: 'test'
+  ...
+# Subtest: GET /products/{slug} returns the published product addressed by that slug
+ok 424 - GET /products/{slug} returns the published product addressed by that slug
+  ---
+  duration_ms: 402.730859
+  type: 'test'
+  ...
+# Subtest: a slug no published product answers to is a 404 in the envelope
+ok 425 - a slug no published product answers to is a 404 in the envelope
+  ---
+  duration_ms: 421.169029
+  type: 'test'
+  ...
+# Subtest: an unpublished product is a 404 too, not a peek at unpublished work
+ok 426 - an unpublished product is a 404 too, not a peek at unpublished work
+  ---
+  duration_ms: 421.863192
+  type: 'test'
+  ...
+# Subtest: a path segment that is not a well-formed slug is a 400 with a pointed detail
+ok 427 - a path segment that is not a well-formed slug is a 400 with a pointed detail
+  ---
+  duration_ms: 377.729026
+  type: 'test'
+  ...
+# Subtest: the catalog handlers touch no filesystem, socket or DNS at request time
+ok 428 - the catalog handlers touch no filesystem, socket or DNS at request time
+  ---
+  duration_ms: 0.253204
+  type: 'test'
+  ...
+# Subtest: the seed validates against the contract's SeedFixture schema
+ok 429 - the seed validates against the contract's SeedFixture schema
+  ---
+  duration_ms: 361.320206
+  type: 'test'
+  ...
+# Subtest: the seed is plain JSON data, so it cannot drift between two reads
+ok 430 - the seed is plain JSON data, so it cannot drift between two reads
+  ---
+  duration_ms: 3.253447
+  type: 'test'
+  ...
+# Subtest: the seed has both a published and an unpublished product
+ok 431 - the seed has both a published and an unpublished product
+  ---
+  duration_ms: 0.227064
+  type: 'test'
+  ...
+# Subtest: every published product is publishable and sellable
+ok 432 - every published product is publishable and sellable
+  ---
+  duration_ms: 0.266084
+  type: 'test'
+  ...
+# Subtest: slugs and ids are unique
+ok 433 - slugs and ids are unique
+  ---
+  duration_ms: 0.268194
+  type: 'test'
+  ...
+# Subtest: every reference in the seed resolves, and every option is one the blank offers
+ok 434 - every reference in the seed resolves, and every option is one the blank offers
+  ---
+  duration_ms: 0.360517
+  type: 'test'
+  ...
+# Subtest: reservedUntil is reservedAt plus exactly thirty minutes
+ok 435 - reservedUntil is reservedAt plus exactly thirty minutes
+  ---
+  duration_ms: 2.061397
+  type: 'test'
+  ...
+# Subtest: the window is carried on the record, so a later config change cannot move it
+ok 436 - the window is carried on the record, so a later config change cannot move it
+  ---
+  duration_ms: 0.325416
+  type: 'test'
+  ...
+# Subtest: a hold inside its window is not expired by either caller
+ok 437 - a hold inside its window is not expired by either caller
+  ---
+  duration_ms: 3.785998
+  type: 'test'
+  ...
+# Subtest: lazy expiry and the sweeper produce the same state, differing only in who wrote it
+ok 438 - lazy expiry and the sweeper produce the same state, differing only in who wrote it
+  ---
+  duration_ms: 1.059759
+  type: 'test'
+  ...
+# Subtest: an expiry is also a release, so the units are accounted for
+ok 439 - an expiry is also a release, so the units are accounted for
+  ---
+  duration_ms: 0.268735
+  type: 'test'
+  ...
+# Subtest: expiring twice is a no-op: the first trigger stays on the record
+ok 440 - expiring twice is a no-op: the first trigger stays on the record
+  ---
+  duration_ms: 6.924963
+  type: 'test'
+  ...
+# Subtest: exactly one function in the service writes the expired state
+ok 441 - exactly one function in the service writes the expired state
+  ---
+  duration_ms: 2.328691
+  type: 'test'
+  ...
+# Subtest: the sweeper is a caller of the same transition, not a second one
+ok 442 - the sweeper is a caller of the same transition, not a second one
+  ---
+  duration_ms: 1.219902
+  type: 'test'
+  ...
+# Subtest: a reservation consumes no units until it is committed
+ok 443 - a reservation consumes no units until it is committed
+  ---
+  duration_ms: 0.641421
+  type: 'test'
+  ...
+# Subtest: every hold has a way out, and none of them leads back to held
+ok 444 - every hold has a way out, and none of them leads back to held
+  ---
+  duration_ms: 0.754434
+  type: 'test'
+  ...
+# Subtest: committing records when, and only from a live hold
+ok 445 - committing records when, and only from a live hold
+  ---
+  duration_ms: 0.286195
+  type: 'test'
+  ...
+# Subtest: cart.create issues an empty cart addressed by an opaque id, with no session
+ok 446 - cart.create issues an empty cart addressed by an opaque id, with no session
+  ---
+  duration_ms: 1386.691792
+  type: 'test'
+  ...
+# Subtest: a cart id that answers to nothing is a 404, and a malformed one a 400
+ok 447 - a cart id that answers to nothing is a 404, and a malformed one a 400
+  ---
+  duration_ms: 587.793893
+  type: 'test'
+  ...
+# Subtest: the server prices the line; the client never says what anything costs
+ok 448 - the server prices the line; the client never says what anything costs
+  ---
+  duration_ms: 497.158104
+  type: 'test'
+  ...
+# Subtest: adding the same offering twice adds quantities rather than growing a second line
+ok 449 - adding the same offering twice adds quantities rather than growing a second line
+  ---
+  duration_ms: 449.542089
+  type: 'test'
+  ...
+# Subtest: an offering the catalog does not sell is a 404; one it cannot sell is a 409
+ok 450 - an offering the catalog does not sell is a 404; one it cannot sell is a 409
+  ---
+  duration_ms: 433.304891
+  type: 'test'
+  ...
+# Subtest: cart.item.update sets an absolute quantity, and is idempotent on retry
+ok 451 - cart.item.update sets an absolute quantity, and is idempotent on retry
+  ---
+  duration_ms: 406.861211
+  type: 'test'
+  ...
+# Subtest: removing a line answers with the cart; removing it twice is a 404
+ok 452 - removing a line answers with the cart; removing it twice is a 404
+  ---
+  duration_ms: 353.2837
+  type: 'test'
+  ...
+# Subtest: cart operations are anonymous; checkout, order and the whole book are not
+ok 453 - cart operations are anonymous; checkout, order and the whole book are not
+  ---
+  duration_ms: 486.459758
+  type: 'test'
+  ...
+# Subtest: checkout resolves the addressId server-side and snapshots what it resolved
+ok 454 - checkout resolves the addressId server-side and snapshots what it resolved
+  ---
+  duration_ms: 476.145795
+  type: 'test'
+  ...
+# Subtest: checkout reserves one hold per line for thirty minutes, and decrements nothing
+ok 455 - checkout reserves one hold per line for thirty minutes, and decrements nothing
+  ---
+  duration_ms: 381.231479
+  type: 'test'
+  ...
+# Subtest: the cart acquires an owner at checkout, and nowhere earlier
+ok 456 - the cart acquires an owner at checkout, and nowhere earlier
+  ---
+  duration_ms: 406.384266
+  type: 'test'
+  ...
+# Subtest: somebody else's address is a 404 at checkout, identical to one that never existed
+ok 457 - somebody else's address is a 404 at checkout, identical to one that never existed
+  ---
+  duration_ms: 474.837115
+  type: 'test'
+  ...
+# Subtest: a client may not name its own shipping fee, and an empty cart is not an order
+ok 458 - a client may not name its own shipping fee, and an empty cart is not an order
+  ---
+  duration_ms: 437.480391
+  type: 'test'
+  ...
+# Subtest: a destination the chosen method cannot serve is a 409, not a fee of zero
+ok 459 - a destination the chosen method cannot serve is a 409, not a fee of zero
+  ---
+  duration_ms: 574.350547
+  type: 'test'
+  ...
+# Subtest: an address outside Vietnam cannot be shipped to by any method
+ok 460 - an address outside Vietnam cannot be shipped to by any method
+  ---
+  duration_ms: 589.320224
+  type: 'test'
+  ...
+# Subtest: an order belonging to somebody else is a 404, exactly as a missing one is
+ok 461 - an order belonging to somebody else is a 404, exactly as a missing one is
+  ---
+  duration_ms: 526.318096
+  type: 'test'
+  ...
+# Subtest: a placed order does not move when the address or the cart it came from does
+ok 462 - a placed order does not move when the address or the cart it came from does
+  ---
+  duration_ms: 472.050619
+  type: 'test'
+  ...
+# Subtest: reading an order after its window expires the hold through the one transition
+ok 463 - reading an order after its window expires the hold through the one transition
+  ---
+  duration_ms: 517.186335
+  type: 'test'
+  ...
+# Subtest: the first address becomes the default, because it is the only possible answer
+ok 464 - the first address becomes the default, because it is the only possible answer
+  ---
+  duration_ms: 448.212417
+  type: 'test'
+  ...
+# Subtest: a second address does not steal the default, and asking for it demotes the first
+ok 465 - a second address does not steal the default, and asking for it demotes the first
+  ---
+  duration_ms: 479.681479
+  type: 'test'
+  ...
+# Subtest: a patch writes only what it names, and isDefault true is a promotion
+ok 466 - a patch writes only what it names, and isDefault true is a promotion
+  ---
+  duration_ms: 398.82565
+  type: 'test'
+  ...
+# Subtest: 403 for somebody else's address in the book, 404 for one that does not exist
+ok 467 - 403 for somebody else's address in the book, 404 for one that does not exist
+  ---
+  duration_ms: 408.259109
+  type: 'test'
+  ...
+# Subtest: delete is permanent, and the default is only ever promoted when one entry remains
+ok 468 - delete is permanent, and the default is only ever promoted when one entry remains
+  ---
+  duration_ms: 434.329224
+  type: 'test'
+  ...
+# Subtest: the book refuses the entry it could not carry back out
+ok 469 - the book refuses the entry it could not carry back out
+  ---
+  duration_ms: 503.118329
+  type: 'test'
+  ...
+# (node:597157) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/huy/working/releases/basic-system-v2/supabase/tests/owner-authorization/bundle.test.ts is not specified and it doesn't parse as CommonJS.
+# Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+# To eliminate this warning, add "type": "module" to /home/huy/working/releases/basic-system-v2/package.json.
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: bundle gửi tới browser không chứa secret hay service key
+ok 470 - bundle gửi tới browser không chứa secret hay service key
+  ---
+  duration_ms: 1.231132
+  type: 'test'
+  ...
+# Subtest: source UI cũng sạch — không chỉ bundle đã minify
+ok 471 - source UI cũng sạch — không chỉ bundle đã minify
+  ---
+  duration_ms: 0.768394
+  type: 'test'
+  ...
+# Subtest: static/assets.ts đúng bằng output của build — không sửa tay
+ok 472 - static/assets.ts đúng bằng output của build — không sửa tay
+  ---
+  duration_ms: 204.058854
+  type: 'test'
+  ...
+# Subtest: UI chỉ gọi API cùng origin
+ok 473 - UI chỉ gọi API cùng origin
+  ---
+  duration_ms: 1.538897
+  type: 'test'
+  ...
+# (node:597168) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/huy/working/releases/basic-system-v2/supabase/tests/owner-authorization/canonical-envelope.test.ts is not specified and it doesn't parse as CommonJS.
+# Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+# To eliminate this warning, add "type": "module" to /home/huy/working/releases/basic-system-v2/package.json.
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: canonicalization ổn định qua nhiều lần gọi
+ok 474 - canonicalization ổn định qua nhiều lần gọi
+  ---
+  duration_ms: 6.851072
+  type: 'test'
+  ...
+# Subtest: thứ tự khai báo key không đổi canonical bytes
+ok 475 - thứ tự khai báo key không đổi canonical bytes
+  ---
+  duration_ms: 0.299045
+  type: 'test'
+  ...
+# Subtest: key sắp xếp theo UTF-16 code unit, mảng giữ nguyên thứ tự
+ok 476 - key sắp xếp theo UTF-16 code unit, mảng giữ nguyên thứ tự
+  ---
+  duration_ms: 0.268615
+  type: 'test'
+  ...
+# Subtest: canonicalize từ chối giá trị không biểu diễn được
+ok 477 - canonicalize từ chối giá trị không biểu diễn được
+  ---
+  duration_ms: 0.58451
+  type: 'test'
+  ...
+# Subtest: field lạ vẫn được giữ và canonicalize (envelope là tối thiểu)
+ok 478 - field lạ vẫn được giữ và canonicalize (envelope là tối thiểu)
+  ---
+  duration_ms: 0.331926
+  type: 'test'
+  ...
+# Subtest: đổi một byte ⇒ digest khác
+ok 479 - đổi một byte ⇒ digest khác
+  ---
+  duration_ms: 30.224806
+  type: 'test'
+  ...
+# Subtest: digest là SHA-256 (32 byte)
+ok 480 - digest là SHA-256 (32 byte)
+  ---
+  duration_ms: 1.062729
+  type: 'test'
+  ...
+# Subtest: parseEnvelope từ chối envelope không hợp lệ
+ok 481 - parseEnvelope từ chối envelope không hợp lệ
+  ---
+  duration_ms: 0.990588
+  type: 'test'
+  ...
+# Subtest: command là enum đóng: đổi giá trị ⇒ canonical bytes khác và không parse được
+ok 482 - command là enum đóng: đổi giá trị ⇒ canonical bytes khác và không parse được
+  ---
+  duration_ms: 0.517739
+  type: 'test'
+  ...
+# Subtest: expires_at nằm trong canonical bytes ⇒ gia hạn là envelope khác
+ok 483 - expires_at nằm trong canonical bytes ⇒ gia hạn là envelope khác
+  ---
+  duration_ms: 0.997447
+  type: 'test'
+  ...
+# Subtest: generateNonce cho 256-bit hex duy nhất
+ok 484 - generateNonce cho 256-bit hex duy nhất
+  ---
+  duration_ms: 3.992311
+  type: 'test'
+  ...
+# (node:597250) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/huy/working/releases/basic-system-v2/supabase/tests/owner-authorization/challenge.test.ts is not specified and it doesn't parse as CommonJS.
+# Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+# To eliminate this warning, add "type": "module" to /home/huy/working/releases/basic-system-v2/package.json.
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: challenge = base64url(SHA-256(canonical envelope))
+ok 485 - challenge = base64url(SHA-256(canonical envelope))
+  ---
+  duration_ms: 22.557781
+  type: 'test'
+  ...
+# Subtest: challenge deterministic — không phụ thuộc thời gian
+ok 486 - challenge deterministic — không phụ thuộc thời gian
+  ---
+  duration_ms: 2.791009
+  type: 'test'
+  ...
+# Subtest: mỗi field bound đổi ⇒ challenge khác
+ok 487 - mỗi field bound đổi ⇒ challenge khác
+  ---
+  duration_ms: 5.520268
+  type: 'test'
+  ...
+# Subtest: randomChallenge là 32 byte và không lặp
+ok 488 - randomChallenge là 32 byte và không lặp
+  ---
+  duration_ms: 2.711398
+  type: 'test'
+  ...
+# Subtest: owner_authorization migration trên Postgres thật
+    # Subtest: chỉ thêm đúng một bảng — không có product schema
+    ok 1 - chỉ thêm đúng một bảng — không có product schema
+      ---
+      duration_ms: 64.975925
+      type: 'test'
+      ...
+    # Subtest: owner_credentials có đủ cột theo spec
+    ok 2 - owner_credentials có đủ cột theo spec
+      ---
+      duration_ms: 72.815646
+      type: 'test'
+      ...
+    # Subtest: RLS enable + force
+    ok 3 - RLS enable + force
+      ---
+      duration_ms: 133.674179
+      type: 'test'
+      ...
+    # Subtest: anon/authenticated không có quyền nào trên owner_credentials và events
+    ok 4 - anon/authenticated không có quyền nào trên owner_credentials và events
+      ---
+      duration_ms: 1409.752283
+      type: 'test'
+      ...
+    # Subtest: service_role đọc/ghi được owner_credentials, anon không execute được grant fn
+    ok 5 - service_role đọc/ghi được owner_credentials, anon không execute được grant fn
+      ---
+      duration_ms: 546.603198
+      type: 'test'
+      ...
+    # Subtest: rp_id: backfill 'localhost', tối đa một credential enabled cho mỗi RP
+    ok 6 - rp_id: backfill 'localhost', tối đa một credential enabled cho mỗi RP
+      ---
+      duration_ms: 446.313284
+      type: 'test'
+      ...
+    # Subtest: grant hợp lệ: counter bump + receipt, cùng một transaction
+    ok 7 - grant hợp lệ: counter bump + receipt, cùng một transaction
+      ---
+      duration_ms: 166.27684
+      type: 'test'
+      ...
+    # Subtest: duplicate grant cho cùng request bị từ chối
+    ok 8 - duplicate grant cho cùng request bị từ chối
+      ---
+      duration_ms: 138.886292
+      type: 'test'
+      ...
+    # Subtest: nonce dùng lại bị từ chối, counter không đổi
+    ok 9 - nonce dùng lại bị từ chối, counter không đổi
+      ---
+      duration_ms: 161.20701
+      type: 'test'
+      ...
+    # Subtest: counter rollback bị từ chối
+    ok 10 - counter rollback bị từ chối
+      ---
+      duration_ms: 160.203772
+      type: 'test'
+      ...
+    # Subtest: credential lạ hoặc bị disable không grant được
+    ok 11 - credential lạ hoặc bị disable không grant được
+      ---
+      duration_ms: 211.041757
+      type: 'test'
+      ...
+    # Subtest: authenticator counter 0 vẫn ký được, và vẫn chỉ một lần nhờ nonce
+    ok 12 - authenticator counter 0 vẫn ký được, và vẫn chỉ một lần nhờ nonce
+      ---
+      duration_ms: 314.646651
+      type: 'test'
+      ...
+# DB suite: 14/14 executed
+    # Subtest: hai supervisor claim đồng thời ⇒ đúng một bên thắng
+    ok 13 - hai supervisor claim đồng thời ⇒ đúng một bên thắng
+      ---
+      duration_ms: 115.499217
+      type: 'test'
+      ...
+    # Subtest: grant thất bại không để lại receipt nửa vời (atomic)
+    ok 14 - grant thất bại không để lại receipt nửa vời (atomic)
+      ---
+      duration_ms: 229.534017
+      type: 'test'
+      ...
+    1..14
+ok 489 - owner_authorization migration trên Postgres thật
+  ---
+  duration_ms: 11791.745843
+  type: 'suite'
+  ...
+# (node:597439) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/huy/working/releases/basic-system-v2/supabase/tests/owner-authorization/handler.test.ts is not specified and it doesn't parse as CommonJS.
+# Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+# To eliminate this warning, add "type": "module" to /home/huy/working/releases/basic-system-v2/package.json.
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: GET / phục vụ trang ký, không lộ secret
+ok 490 - GET / phục vụ trang ký, không lộ secret
+  ---
+  duration_ms: 38.515194
+  type: 'test'
+  ...
+# Subtest: CORS chỉ exact origin, không wildcard
+ok 491 - CORS chỉ exact origin, không wildcard
+  ---
+  duration_ms: 2.109917
+  type: 'test'
+  ...
+# Subtest: enrollment cần bootstrap token
+ok 492 - enrollment cần bootstrap token
+  ---
+  duration_ms: 23.305694
+  type: 'test'
+  ...
+# Subtest: enrollment lần đầu OK, lần hai fail closed
+ok 493 - enrollment lần đầu OK, lần hai fail closed
+  ---
+  duration_ms: 13.683523
+  type: 'test'
+  ...
+# Subtest: enrollment từ chối challenge server chưa từng phát
+ok 494 - enrollment từ chối challenge server chưa từng phát
+  ---
+  duration_ms: 2.403363
+  type: 'test'
+  ...
+# Subtest: enroll đóng khi RP hiện tại đã có khoá enabled, mở khi chỉ còn khoá RP khác
+ok 495 - enroll đóng khi RP hiện tại đã có khoá enabled, mở khi chỉ còn khoá RP khác
+  ---
+  duration_ms: 4.190324
+  type: 'test'
+  ...
+# Subtest: khoá thuộc RP khác không ký được ở RP hiện tại
+ok 496 - khoá thuộc RP khác không ký được ở RP hiện tại
+  ---
+  duration_ms: 3.340289
+  type: 'test'
+  ...
+# Subtest: khoá đã disable không ký thêm được lần nào
+ok 497 - khoá đã disable không ký thêm được lần nào
+  ---
+  duration_ms: 1.321463
+  type: 'test'
+  ...
+# Subtest: grant ký dưới RP cũ vẫn qua proofHolds sau khi đổi RP và disable khoá cũ
+ok 498 - grant ký dưới RP cũ vẫn qua proofHolds sau khi đổi RP và disable khoá cũ
+  ---
+  duration_ms: 22.600181
+  type: 'test'
+  ...
+# Subtest: event_key không tồn tại → 404
+ok 499 - event_key không tồn tại → 404
+  ---
+  duration_ms: 0.990387
+  type: 'test'
+  ...
+# Subtest: event tồn tại nhưng sai loại → 404
+ok 500 - event tồn tại nhưng sai loại → 404
+  ---
+  duration_ms: 0.599541
+  type: 'test'
+  ...
+# Subtest: envelope hỏng trong event → 422
+ok 501 - envelope hỏng trong event → 422
+  ---
+  duration_ms: 0.693603
+  type: 'test'
+  ...
+# Subtest: revision trong envelope lệch event → 422
+ok 502 - revision trong envelope lệch event → 422
+  ---
+  duration_ms: 0.583001
+  type: 'test'
+  ...
+# Subtest: requirement đã revise sau khi request → 409 revision_changed
+ok 503 - requirement đã revise sau khi request → 409 revision_changed
+  ---
+  duration_ms: 0.817055
+  type: 'test'
+  ...
+# Subtest: browser không thể tự khai persona/scope — server bỏ qua
+ok 504 - browser không thể tự khai persona/scope — server bỏ qua
+  ---
+  duration_ms: 3.90938
+  type: 'test'
+  ...
+# Subtest: ký hợp lệ → đúng một grant, có proof, không có work.spawned
+ok 505 - ký hợp lệ → đúng một grant, có proof, không có work.spawned
+  ---
+  duration_ms: 5.602199
+  type: 'test'
+  ...
+# Subtest: GET /pending trả envelope đầy đủ để owner đọc trước khi ký
+ok 506 - GET /pending trả envelope đầy đủ để owner đọc trước khi ký
+  ---
+  duration_ms: 1.258703
+  type: 'test'
+  ...
+# Subtest: chữ ký từ origin/RP ID khác → không grant
+ok 507 - chữ ký từ origin/RP ID khác → không grant
+  ---
+  duration_ms: 12.38632
+  type: 'test'
+  ...
+# Subtest: thiếu user verification → không grant
+ok 508 - thiếu user verification → không grant
+  ---
+  duration_ms: 3.484272
+  type: 'test'
+  ...
+# Subtest: envelope bị sửa sau khi phát challenge → chữ ký vô hiệu
+ok 509 - envelope bị sửa sau khi phát challenge → chữ ký vô hiệu
+  ---
+  duration_ms: 15.445195
+  type: 'test'
+  ...
+# Subtest: envelope quá hạn → không ký được, lỗi riêng authorization_expired
+ok 510 - envelope quá hạn → không ký được, lỗi riêng authorization_expired
+  ---
+  duration_ms: 0.458029
+  type: 'test'
+  ...
+# Subtest: hết hạn giữa options và verify → verify từ chối theo đồng hồ server
+ok 511 - hết hạn giữa options và verify → verify từ chối theo đồng hồ server
+  ---
+  duration_ms: 2.407953
+  type: 'test'
+  ...
+# Subtest: expires_at còn hạn tính theo đồng hồ server, không theo client
+ok 512 - expires_at còn hạn tính theo đồng hồ server, không theo client
+  ---
+  duration_ms: 4.405158
+  type: 'test'
+  ...
+# Subtest: GET /pending fail closed khi envelope đã quá hạn
+ok 513 - GET /pending fail closed khi envelope đã quá hạn
+  ---
+  duration_ms: 0.689832
+  type: 'test'
+  ...
+# Subtest: ký lại cùng request → duplicate_grant
+ok 514 - ký lại cùng request → duplicate_grant
+  ---
+  duration_ms: 4.617282
+  type: 'test'
+  ...
+# Subtest: nonce dùng lại ở request khác → duplicate_nonce
+ok 515 - nonce dùng lại ở request khác → duplicate_nonce
+  ---
+  duration_ms: 6.663198
+  type: 'test'
+  ...
+# Subtest: counter lùi → 409 counter_rollback, counter không bị ghi đè
+ok 516 - counter lùi → 409 counter_rollback, counter không bị ghi đè
+  ---
+  duration_ms: 3.135076
+  type: 'test'
+  ...
+# Subtest: authenticator counter 0 vẫn ký được, và vẫn chỉ một lần
+ok 517 - authenticator counter 0 vẫn ký được, và vẫn chỉ một lần
+  ---
+  duration_ms: 4.974939
+  type: 'test'
+  ...
+# Subtest: chưa enroll credential nào → không ký được
+ok 518 - chưa enroll credential nào → không ký được
+  ---
+  duration_ms: 0.658112
+  type: 'test'
+  ...
+# Subtest: /wake/next bắt buộc bearer wake token
+ok 519 - /wake/next bắt buộc bearer wake token
+  ---
+  duration_ms: 6.157289
+  type: 'test'
+  ...
+# Subtest: /wake/next 204 khi chưa có receipt
+ok 520 - /wake/next 204 khi chưa có receipt
+  ---
+  duration_ms: 0.737613
+  type: 'test'
+  ...
+# Subtest: /wake/next trả đúng dữ liệu tối thiểu cho receipt hợp lệ
+ok 521 - /wake/next trả đúng dữ liệu tối thiểu cho receipt hợp lệ
+  ---
+  duration_ms: 5.762052
+  type: 'test'
+  ...
+# Subtest: /wake/next im lặng sau work.completed hoặc work.blocked
+ok 522 - /wake/next im lặng sau work.completed hoặc work.blocked
+  ---
+  duration_ms: 8.399859
+  type: 'test'
+  ...
+# Subtest: /wake/next vẫn wake khi mới work.spawned (coordinator có thể đã chết)
+ok 523 - /wake/next vẫn wake khi mới work.spawned (coordinator có thể đã chết)
+  ---
+  duration_ms: 5.144521
+  type: 'test'
+  ...
+# Subtest: /wake/next fail closed khi grant bị sửa tay
+ok 524 - /wake/next fail closed khi grant bị sửa tay
+  ---
+  duration_ms: 30.995691
+  type: 'test'
+  ...
+# Subtest: /wake/next không ghi event nào
+ok 525 - /wake/next không ghi event nào
+  ---
+  duration_ms: 5.5771
+  type: 'test'
+  ...
+# Subtest: work endpoints bắt buộc control token
+ok 526 - work endpoints bắt buộc control token
+  ---
+  duration_ms: 11.24679
+  type: 'test'
+  ...
+# Subtest: control token không tạo được owner authorization
+ok 527 - control token không tạo được owner authorization
+  ---
+  duration_ms: 1.371765
+  type: 'test'
+  ...
+# Subtest: claim đầu tiên 201, claim trùng của coordinator khác 409
+ok 528 - claim đầu tiên 201, claim trùng của coordinator khác 409
+  ---
+  duration_ms: 13.068052
+  type: 'test'
+  ...
+# Subtest: recovery claim: cùng coordinator nhận lại được sau crash
+ok 529 - recovery claim: cùng coordinator nhận lại được sau crash
+  ---
+  duration_ms: 12.158886
+  type: 'test'
+  ...
+# Subtest: claim đòi receipt có thật và proof còn hợp lệ
+ok 530 - claim đòi receipt có thật và proof còn hợp lệ
+  ---
+  duration_ms: 10.632789
+  type: 'test'
+  ...
+# Subtest: không spawned nếu chưa claim
+ok 531 - không spawned nếu chưa claim
+  ---
+  duration_ms: 4.897057
+  type: 'test'
+  ...
+# Subtest: spawned của coordinator khác bị chặn
+ok 532 - spawned của coordinator khác bị chặn
+  ---
+  duration_ms: 8.240547
+  type: 'test'
+  ...
+# Subtest: spawned phải khớp persona/branch/contract của envelope
+ok 533 - spawned phải khớp persona/branch/contract của envelope
+  ---
+  duration_ms: 32.07587
+  type: 'test'
+  ...
+# Subtest: spawned hai lần bị chặn
+ok 534 - spawned hai lần bị chặn
+  ---
+  duration_ms: 5.837594
+  type: 'test'
+  ...
+# Subtest: không completed/blocked nếu chưa spawned
+ok 535 - không completed/blocked nếu chưa spawned
+  ---
+  duration_ms: 13.921527
+  type: 'test'
+  ...
+# Subtest: completed cần handoff hợp lệ, khớp đúng spawned và scope
+ok 536 - completed cần handoff hợp lệ, khớp đúng spawned và scope
+  ---
+  duration_ms: 60.676068
+  type: 'test'
+  ...
+# Subtest: vòng đời đầy đủ: claim → spawned → completed, rồi đóng lại
+ok 537 - vòng đời đầy đủ: claim → spawned → completed, rồi đóng lại
+  ---
+  duration_ms: 15.946223
+  type: 'test'
+  ...
+# Subtest: blocked cần blockers
+ok 538 - blocked cần blockers
+  ---
+  duration_ms: 7.041245
+  type: 'test'
+  ...
+# Subtest: spawn lỗi ghi work.spawn_failed; đã spawned rồi thì không
+ok 539 - spawn lỗi ghi work.spawn_failed; đã spawned rồi thì không
+  ---
+  duration_ms: 9.418398
+  type: 'test'
+  ...
+# Subtest: /wake/next im lặng sau khi work.completed được ghi qua /work/result
+ok 540 - /wake/next im lặng sau khi work.completed được ghi qua /work/result
+  ---
+  duration_ms: 8.815496
+  type: 'test'
+  ...
+# Subtest: /authorize/request bắt buộc control token
+ok 541 - /authorize/request bắt buộc control token
+  ---
+  duration_ms: 1.828592
+  type: 'test'
+  ...
+# Subtest: /authorize/request từ chối mọi field ngoài hai field được phép
+ok 542 - /authorize/request từ chối mọi field ngoài hai field được phép
+  ---
+  duration_ms: 1.631149
+  type: 'test'
+  ...
+# Subtest: /authorize/request đòi đủ hai field
+ok 543 - /authorize/request đòi đủ hai field
+  ---
+  duration_ms: 2.2512
+  type: 'test'
+  ...
+# Subtest: /authorize/request fail closed khi board/ready list chưa cấu hình
+ok 544 - /authorize/request fail closed khi board/ready list chưa cấu hình
+  ---
+  duration_ms: 1.245443
+  type: 'test'
+  ...
+# Subtest: card không nằm ở ready list → 409, không ghi request
+ok 545 - card không nằm ở ready list → 409, không ghi request
+  ---
+  duration_ms: 0.823285
+  type: 'test'
+  ...
+# Subtest: card chưa map requirement → 404
+ok 546 - card chưa map requirement → 404
+  ---
+  duration_ms: 1.037238
+  type: 'test'
+  ...
+# Subtest: metadata requirement thiếu field → 422, không default
+ok 547 - metadata requirement thiếu field → 422, không default
+  ---
+  duration_ms: 2.434833
+  type: 'test'
+  ...
+# Subtest: request hợp lệ → 201, envelope 11 field do server dựng
+ok 548 - request hợp lệ → 201, envelope 11 field do server dựng
+  ---
+  duration_ms: 1.247372
+  type: 'test'
+  ...
+# Subtest: command và expires_at do server sinh: enum đóng + TTL 15 phút theo đồng hồ server
+ok 549 - command và expires_at do server sinh: enum đóng + TTL 15 phút theo đồng hồ server
+  ---
+  duration_ms: 0.844265
+  type: 'test'
+  ...
+# Subtest: client không khai được command hay expires_at — 400 field_not_allowed
+ok 550 - client không khai được command hay expires_at — 400 field_not_allowed
+  ---
+  duration_ms: 1.921625
+  type: 'test'
+  ...
+# Subtest: metadata requirement không khai được command/expires_at
+ok 551 - metadata requirement không khai được command/expires_at
+  ---
+  duration_ms: 0.864896
+  type: 'test'
+  ...
+# Subtest: board và ready list lấy từ config, không phải từ input
+ok 552 - board và ready list lấy từ config, không phải từ input
+  ---
+  duration_ms: 0.776364
+  type: 'test'
+  ...
+# Subtest: gọi hai lần → đúng một event, lần hai idempotent, nonce không đổi
+ok 553 - gọi hai lần → đúng một event, lần hai idempotent, nonce không đổi
+  ---
+  duration_ms: 1.283703
+  type: 'test'
+  ...
+# Subtest: request cũ lệch field bound → 409 request_conflict, không ghi đè
+ok 554 - request cũ lệch field bound → 409 request_conflict, không ghi đè
+  ---
+  duration_ms: 0.911946
+  type: 'test'
+  ...
+# Subtest: requirement revision mới → event_key mới, request cũ nguyên vẹn
+ok 555 - requirement revision mới → event_key mới, request cũ nguyên vẹn
+  ---
+  duration_ms: 0.901146
+  type: 'test'
+  ...
+# Subtest: không đường nào của /authorize/request ghi được grant
+ok 556 - không đường nào của /authorize/request ghi được grant
+  ---
+  duration_ms: 4.255876
+  type: 'test'
+  ...
+# Subtest: revoke: quyền OWNER — control token và service_role đều trượt
+ok 557 - revoke: quyền OWNER — control token và service_role đều trượt
+  ---
+  duration_ms: 5.555849
+  type: 'test'
+  ...
+# Subtest: revoke: ghi đúng một event, lần hai là 409
+ok 558 - revoke: ghi đúng một event, lần hai là 409
+  ---
+  duration_ms: 4.994208
+  type: 'test'
+  ...
+# Subtest: revoke: receipt không tồn tại → 404, receipt đã terminal → 409
+ok 559 - revoke: receipt không tồn tại → 404, receipt đã terminal → 409
+  ---
+  duration_ms: 13.49238
+  type: 'test'
+  ...
+# Subtest: CHẶN: sau thu hồi, /wake/next im lặng và claim MỚI bị từ chối
+ok 560 - CHẶN: sau thu hồi, /wake/next im lặng và claim MỚI bị từ chối
+  ---
+  duration_ms: 8.895408
+  type: 'test'
+  ...
+# Subtest: KHÔNG CHẶN: run đã claim vẫn recover, spawn và đóng handoff sau thu hồi
+ok 561 - KHÔNG CHẶN: run đã claim vẫn recover, spawn và đóng handoff sau thu hồi
+  ---
+  duration_ms: 7.475783
+  type: 'test'
+  ...
+# Subtest: thu hồi KHÔNG làm hỏng proof: coordinator khác vẫn không cướp được claim
+ok 562 - thu hồi KHÔNG làm hỏng proof: coordinator khác vẫn không cướp được claim
+  ---
+  duration_ms: 9.01412
+  type: 'test'
+  ...
+# (node:597456) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/huy/working/releases/basic-system-v2/supabase/tests/owner-authorization/prompt-intent.test.ts is not specified and it doesn't parse as CommonJS.
+# Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+# To eliminate this warning, add "type": "module" to /home/huy/working/releases/basic-system-v2/package.json.
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: /prompt/request chỉ nhận prompt token — control/bootstrap/service key đều trượt
+ok 563 - /prompt/request chỉ nhận prompt token — control/bootstrap/service key đều trượt
+  ---
+  duration_ms: 47.908151
+  type: 'test'
+  ...
+# Subtest: prompt token không mở được bất kỳ endpoint quyền nào
+ok 564 - prompt token không mở được bất kỳ endpoint quyền nào
+  ---
+  duration_ms: 8.109624
+  type: 'test'
+  ...
+# Subtest: /prompt/request từ chối field lạ thay vì bỏ qua im lặng
+ok 565 - /prompt/request từ chối field lạ thay vì bỏ qua im lặng
+  ---
+  duration_ms: 4.041802
+  type: 'test'
+  ...
+# Subtest: /prompt/request validate từng field ở biên tin cậy
+ok 566 - /prompt/request validate từng field ở biên tin cậy
+  ---
+  duration_ms: 16.522593
+  type: 'test'
+  ...
+# Subtest: brief_sha256 không khớp brief ⇒ 422, không ghi gì
+ok 567 - brief_sha256 không khớp brief ⇒ 422, không ghi gì
+  ---
+  duration_ms: 8.333838
+  type: 'test'
+  ...
+# Subtest: requirement phải tồn tại, đúng revision và đang Ready by Owner
+ok 568 - requirement phải tồn tại, đúng revision và đang Ready by Owner
+  ---
+  duration_ms: 7.179018
+  type: 'test'
+  ...
+# Subtest: cùng idempotency_key ⇒ đúng một intent, lần hai là idempotent
+ok 569 - cùng idempotency_key ⇒ đúng một intent, lần hai là idempotent
+  ---
+  duration_ms: 4.196804
+  type: 'test'
+  ...
+# Subtest: brief bị sửa sau request ⇒ 409, intent gốc giữ nguyên
+ok 570 - brief bị sửa sau request ⇒ 409, intent gốc giữ nguyên
+  ---
+  duration_ms: 3.525083
+  type: 'test'
+  ...
+# Subtest: đổi requirement dưới cùng một idempotency_key cũng bị chặn
+ok 571 - đổi requirement dưới cùng một idempotency_key cũng bị chặn
+  ---
+  duration_ms: 15.932273
+  type: 'test'
+  ...
+# Subtest: claim trả nguyên intent và chỉ tạo đúng một claim event
+ok 572 - claim trả nguyên intent và chỉ tạo đúng một claim event
+  ---
+  duration_ms: 4.246745
+  type: 'test'
+  ...
+# Subtest: claim phơi revision hiện tại để coordinator preflight từ chối được
+ok 573 - claim phơi revision hiện tại để coordinator preflight từ chối được
+  ---
+  duration_ms: 3.285398
+  type: 'test'
+  ...
+# Subtest: coordinator khác không cướp được intent đã claim
+ok 574 - coordinator khác không cướp được intent đã claim
+  ---
+  duration_ms: 2.102467
+  type: 'test'
+  ...
+# Subtest: restart giữa claim và dispatch ⇒ chính coordinator đó nhận lại, vẫn một lần
+ok 575 - restart giữa claim và dispatch ⇒ chính coordinator đó nhận lại, vẫn một lần
+  ---
+  duration_ms: 1.998256
+  type: 'test'
+  ...
+# Subtest: intent ghi khi local đang tắt vẫn còn nguyên để nhận sau
+ok 576 - intent ghi khi local đang tắt vẫn còn nguyên để nhận sau
+  ---
+  duration_ms: 2.28248
+  type: 'test'
+  ...
+# Subtest: claim đòi control token và coordinator_id
+ok 577 - claim đòi control token và coordinator_id
+  ---
+  duration_ms: 1.758032
+  type: 'test'
+  ...
+# Subtest: hàng đợi rỗng ⇒ 204, không tạo event nào
+ok 578 - hàng đợi rỗng ⇒ 204, không tạo event nào
+  ---
+  duration_ms: 0.768164
+  type: 'test'
+  ...
+# Subtest: result đóng vòng đời, chỉ chủ claim ghi được, và chỉ một lần
+ok 579 - result đóng vòng đời, chỉ chủ claim ghi được, và chỉ một lần
+  ---
+  duration_ms: 2.688518
+  type: 'test'
+  ...
+# Subtest: intent đã handled không được dispatch lại
+ok 580 - intent đã handled không được dispatch lại
+  ---
+  duration_ms: 1.812262
+  type: 'test'
+  ...
+# Subtest: vòng đời đóng bằng result: sau khi handled thì không coordinator nào nhận lại
+ok 581 - vòng đời đóng bằng result: sau khi handled thì không coordinator nào nhận lại
+  ---
+  duration_ms: 2.125468
+  type: 'test'
+  ...
+# Subtest: result từ chối status lạ và intent chưa claim
+ok 582 - result từ chối status lạ và intent chưa claim
+  ---
+  duration_ms: 3.026223
+  type: 'test'
+  ...
+# Subtest: intent chưa ký không claim/spawn được worker
+ok 583 - intent chưa ký không claim/spawn được worker
+  ---
+  duration_ms: 2.541965
+  type: 'test'
+  ...
+# Subtest: brief chứa payload injection vẫn chỉ là chuỗi, không sinh quyền nào
+ok 584 - brief chứa payload injection vẫn chỉ là chuỗi, không sinh quyền nào
+  ---
+  duration_ms: 1.089199
+  type: 'test'
+  ...
+# Subtest: prompt_event_key bind brief_sha256 vào canonical envelope owner sẽ ký
+ok 585 - prompt_event_key bind brief_sha256 vào canonical envelope owner sẽ ký
+  ---
+  duration_ms: 2.598396
+  type: 'test'
+  ...
+# Subtest: brief_sha256 lấy từ intent phía server, caller không khai được
+ok 586 - brief_sha256 lấy từ intent phía server, caller không khai được
+  ---
+  duration_ms: 1.238682
+  type: 'test'
+  ...
+# Subtest: prompt_event_key không tồn tại hoặc sai loại ⇒ 404, không dựng envelope
+ok 587 - prompt_event_key không tồn tại hoặc sai loại ⇒ 404, không dựng envelope
+  ---
+  duration_ms: 2.088497
+  type: 'test'
+  ...
+# Subtest: intent trỏ requirement khác card ⇒ 409, không dựng envelope
+ok 588 - intent trỏ requirement khác card ⇒ 409, không dựng envelope
+  ---
+  duration_ms: 1.984656
+  type: 'test'
+  ...
+# Subtest: revision đổi sau intent ⇒ producer từ chối, không dựng envelope
+ok 589 - revision đổi sau intent ⇒ producer từ chối, không dựng envelope
+  ---
+  duration_ms: 1.588788
+  type: 'test'
+  ...
+# Subtest: cùng prompt gọi producer hai lần ⇒ vẫn một request, nonce giữ nguyên
+ok 590 - cùng prompt gọi producer hai lần ⇒ vẫn một request, nonce giữ nguyên
+  ---
+  duration_ms: 7.031025
+  type: 'test'
+  ...
+# Subtest: request cũ không brief rồi gắn brief vào ⇒ 409 chứ không ghi đè
+ok 591 - request cũ không brief rồi gắn brief vào ⇒ 409 chứ không ghi đè
+  ---
+  duration_ms: 2.583246
+  type: 'test'
+  ...
+# Subtest: producer không prompt vẫn chạy y như cũ — envelope không mọc field thừa
+ok 592 - producer không prompt vẫn chạy y như cũ — envelope không mọc field thừa
+  ---
+  duration_ms: 1.258183
+  type: 'test'
+  ...
+# Subtest: prompt_event_key rỗng bị từ chối chứ không coi như không truyền
+ok 593 - prompt_event_key rỗng bị từ chối chứ không coi như không truyền
+  ---
+  duration_ms: 0.847895
+  type: 'test'
+  ...
+# (node:597519) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/huy/working/releases/basic-system-v2/supabase/tests/owner-authorization/webauthn.test.ts is not specified and it doesn't parse as CommonJS.
+# Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+# To eliminate this warning, add "type": "module" to /home/huy/working/releases/basic-system-v2/package.json.
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: assertion hợp lệ trên đúng envelope → verified
+ok 594 - assertion hợp lệ trên đúng envelope → verified
+  ---
+  duration_ms: 16.116426
+  type: 'test'
+  ...
+# Subtest: invalid signature → từ chối
+ok 595 - invalid signature → từ chối
+  ---
+  duration_ms: 4.401969
+  type: 'test'
+  ...
+# Subtest: wrong origin → từ chối
+ok 596 - wrong origin → từ chối
+  ---
+  duration_ms: 1.565058
+  type: 'test'
+  ...
+# Subtest: wrong RP ID → từ chối
+ok 597 - wrong RP ID → từ chối
+  ---
+  duration_ms: 2.387992
+  type: 'test'
+  ...
+# Subtest: envelope đổi ⇒ challenge cũ không khớp assertion mới
+ok 598 - envelope đổi ⇒ challenge cũ không khớp assertion mới
+  ---
+  duration_ms: 2.704608
+  type: 'test'
+  ...
+# Subtest: user verification thiếu → từ chối
+ok 599 - user verification thiếu → từ chối
+  ---
+  duration_ms: 2.76932
+  type: 'test'
+  ...
+# Subtest: credential lạ → từ chối trước cả khi verify
+ok 600 - credential lạ → từ chối trước cả khi verify
+  ---
+  duration_ms: 1.862653
+  type: 'test'
+  ...
+# Subtest: credential đúng ID nhưng key khác → chữ ký sai
+ok 601 - credential đúng ID nhưng key khác → chữ ký sai
+  ---
+  duration_ms: 5.899515
+  type: 'test'
+  ...
+# Subtest: credential disabled vẫn verify lại được proof nó đã ký
+ok 602 - credential disabled vẫn verify lại được proof nó đã ký
+  ---
+  duration_ms: 6.007986
+  type: 'test'
+  ...
+# Subtest: counter lùi bị thư viện bắt (stored > new)
+ok 603 - counter lùi bị thư viện bắt (stored > new)
+  ---
+  duration_ms: 4.574461
+  type: 'test'
+  ...
+# Subtest: enrollment hợp lệ trả credential + fingerprint ổn định
+ok 604 - enrollment hợp lệ trả credential + fingerprint ổn định
+  ---
+  duration_ms: 4.438338
+  type: 'test'
+  ...
+# Subtest: enrollment thiếu user verification → từ chối
+ok 605 - enrollment thiếu user verification → từ chối
+  ---
+  duration_ms: 2.555845
+  type: 'test'
+  ...
+# Subtest: enrollment challenge lạ → từ chối
+ok 606 - enrollment challenge lạ → từ chối
+  ---
+  duration_ms: 1.075239
+  type: 'test'
+  ...
+1..606
+# tests 638
+# suites 8
+# pass 638
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 26901.645809

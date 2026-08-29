@@ -472,3 +472,85 @@ table.grid td{color:var(--muted)}
 }
 .note b{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
   font-weight:400;color:var(--ink);margin-right:8px}
+
+/* ── the engineering log ─────────────────────────────────────────── */
+
+/* A record of what was observed, what was decided, and what the claim rests
+   on. Collapsed it has to be readable in one pass, so a row is three things
+   and nothing else: when, what, and how well it is known. Everything that
+   needs reading rather than scanning is behind the disclosure.
+
+   <details> carries the open/closed state, so this works with JavaScript off
+   and the keyboard behaviour is the browser's, not a reimplementation. */
+
+.logsay{
+  max-width:34em;margin-bottom:clamp(32px,4vw,52px);
+  font-size:clamp(16px,1.6vw,18px);line-height:1.6;color:var(--muted);
+}
+.logyear{
+  font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--muted);
+  margin:clamp(28px,3.4vw,44px) 0 0;
+}
+.logyear:first-of-type{margin-top:0}
+.log{border-top:1px solid var(--hair);margin-top:12px}
+
+.entry{border-bottom:1px solid var(--hair)}
+
+.entry > summary{
+  display:grid;
+  grid-template-columns:76px minmax(0,1fr) auto 1em;
+  align-items:baseline;gap:4px 20px;
+  padding:16px 0;cursor:pointer;list-style:none;
+}
+/* Safari still paints its own triangle without this. */
+.entry > summary::-webkit-details-marker{display:none}
+.entry > summary:hover .what{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+
+.entry .when{
+  font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--muted);
+  white-space:nowrap;
+}
+.entry .what{
+  font-size:clamp(16px,1.7vw,19px);font-weight:500;letter-spacing:-.02em;
+  line-height:1.35;
+}
+/* The sign is the only affordance, and it is the last thing in the row so the
+   titles keep one left edge to scan down. */
+.entry > summary::after{
+  content:"+";justify-self:end;
+  font-family:var(--mono);font-size:15px;color:var(--hair-firm);line-height:1;
+}
+.entry[open] > summary::after{content:"\2212"}
+.entry[open] > summary .what{color:var(--ink)}
+
+.entrybody{padding:0 0 28px}
+.entrymeta{
+  font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:4px;
+}
+/* Reuses .find from the report: a mono label beside the text it labels. */
+.entrybody .find dd{max-width:44em}
+.entrybody .ev{margin:0;padding-left:18px}
+.entrybody .ev li{margin-bottom:5px}
+.entrybody .ev li:last-child{margin-bottom:0}
+.entrybody .ev a{border-bottom:1px solid var(--hair);padding-bottom:1px}
+.entrybody .ev a:hover{border-bottom-color:currentColor}
+.entrybody .quiet{color:var(--muted)}
+
+/* Narrow: the date moves above the title rather than squeezing it into a
+   column too thin to read. The sign stays on the title's line. */
+@media (max-width:620px){
+  .entry > summary{
+    grid-template-columns:minmax(0,1fr) 1em;
+    gap:3px 14px;padding:15px 0;
+  }
+  .entry .when{grid-column:1 / -1}
+  .entry .pill{grid-column:1 / -1;margin-top:5px}
+  .entry > summary::after{grid-column:2;grid-row:2}
+}
+
+/* Links inside a .find row — the report's rows were prose-only until the
+   evidence appendix started pointing at the raw output files. */
+.find dd a{border-bottom:1px solid var(--hair);padding-bottom:1px}
+.find dd a:hover{border-bottom-color:currentColor}

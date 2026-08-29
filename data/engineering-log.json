@@ -1,0 +1,281 @@
+{
+  "note": "Source of truth for the Engineering Log on index.html. Rendered to static HTML by tool/render-log.py; the page must not depend on this file at runtime. Every entry must cite evidence that exists. Do not add an entry whose status cannot be defended.",
+  "statuses": {
+    "VERIFIED": "Directly supported by inspectable evidence: code, tests, build artifacts, a commit, a CI result, or a reproducible experiment.",
+    "SUPPORTED": "Several pieces of evidence point the same way, but the conclusion is not fully proven.",
+    "INFERRED": "A working model or interpretation, labelled as such.",
+    "SUPERSEDED": "A later observation replaced the conclusion. The entry stays; the correction is named."
+  },
+  "entries": [
+    {
+      "date": "2026-08-29",
+      "title": "A gate with tests and no callers is not a gate",
+      "type": "verification",
+      "project": "ThunViet V2",
+      "status": "VERIFIED",
+      "observation": "integration-queue.mjs carried validateHandoff, gitFacts and withIntegrationLock from the first commit, with tests, and zero production callers. No test ever went red for it, because the gate was not broken — it had simply stopped being called. The static import closure from eighteen entry points never reached it.",
+      "trigger": "Auditing how persona branches were actually arriving on main.",
+      "hypothesis": "A unit test cannot see a gate that has been disconnected from the path that runs. Reachability has to be asserted from where the repository really wires things, not from a hand-written list.",
+      "consequence": "A wiring test computes the static import closure from package.json scripts, the hooks in .claude/settings.json and .husky, so removing the wiring turns the suite red rather than needing the test updated to follow. A deterministic call site was added (coordinator:integrate), commits must carry an Authorization-Event-Key receipt trailer, and a branch reaches main only by base_sha == main plus merge --ff-only.",
+      "measurement": "35 of 36 persona branches had reached main by manual fast-forward, through no gate at all.",
+      "correction": "The first version of the wiring test asserted it was \"called from production code\". It proved reachability only — a mutation of if (false) validateHandoff(...) survives it, because the import remains. The claim was narrowed to what the test actually demonstrates, and the limit is written in the file rather than hidden.",
+      "evidence": [
+        {
+          "label": "commit f019bc9",
+          "ref": "f019bc901af5df399a540bf0baf949d7e82ea036",
+          "repo": "thun-viet/basic-system-v2",
+          "access": "private"
+        },
+        {
+          "label": "commit 9c65bd1",
+          "ref": "9c65bd1754eb9fb38606104f4d93d85adb0d1973",
+          "repo": "thun-viet/basic-system-v2",
+          "access": "private"
+        },
+        {
+          "label": "mutation results recorded in both commits: removing the gate from package.json turns 3 tests red; removing the integration-queue import turns 1 red; five separate mutations of the provenance path each turn the suite red",
+          "ref": null
+        }
+      ],
+      "falsifier": "A persona branch arriving on main without an Authorization-Event-Key receipt, or the suite staying green after the gate is removed from package.json.",
+      "checkable": "on-request"
+    },
+    {
+      "date": "2026-08-29",
+      "title": "Identity claimed by the acting process cannot bound that process",
+      "type": "boundary",
+      "project": "ThunViet V2",
+      "status": "VERIFIED",
+      "observation": "THUNVIET_PERSONA and CLAUDE_AGENT_TYPE were read in this repository and set nowhere in it. Measured on a real repository and a real worktree with no environment injected, the boundary guard printed \"owner (no persona identity)\" and exited 0 for every path. The invariant it existed to enforce was enforced nowhere outside four PreToolUse tool names.",
+      "trigger": "Checking whether the guard actually constrained a subagent, rather than assuming the environment it reads was populated.",
+      "hypothesis": "Identity has to be derived from where the commit is happening, not from the testimony of the process doing the committing.",
+      "consequence": "Identity is derived from the worktree via a spawn record the coordinator writes before launch, read from the main checkout because the runtime directory is gitignored. The worktree beats the environment: a claim that contradicts the record is denied, two records for one worktree are denied rather than guessed, and no record falls back to the previous owner behaviour.",
+      "evidence": [
+        {
+          "label": "commit c1ce150",
+          "ref": "c1ce150e721afe347f302efdd656757b2fe48f03",
+          "repo": "thun-viet/basic-system-v2",
+          "access": "private"
+        },
+        {
+          "label": "5 wiring tests run against a real linked worktree and a real spawn record, with the guard as a child process and no environment injected",
+          "ref": null
+        },
+        {
+          "label": "mutations: restoring the old derivation turns 3 red, dropping the env-mismatch check turns 1 red, dropping the ambiguous-record denial turns 1 red",
+          "ref": null
+        }
+      ],
+      "falsifier": "A persona commit passing the guard while claiming an identity that contradicts its own spawn record.",
+      "checkable": "on-request"
+    },
+    {
+      "date": "2026-08-28",
+      "title": "A rule that carried no security weight was silently dropping trusted messages",
+      "type": "correction",
+      "project": "Slack wake bridge",
+      "status": "VERIFIED",
+      "observation": "Three owner instructions were dropped in one morning. Each opened with ACTION or CLARIFICATION followed by an em dash, while the prefix list matched an exact colon only. One of them said in its own body that it had been written so the bridge could ingest it. The sender was fully trusted throughout, and nothing was logged.",
+      "trigger": "Instructions that were sent and never arrived.",
+      "hypothesis": "The separator never carried the security weight — the trusted-sender check does. Requiring exact punctuation staked a delivery guarantee on a language model's typography habits, which is not a guarantee. The strictness added interpretation surface without adding safety.",
+      "consequence": "The keyword now accepts a colon, hyphen, en dash or em dash, case-insensitively, and CLARIFICATION joined the keyword list. The matched prefix is normalised before it reaches a log line or the inbox, so records no longer vary with typography. The bridge still refuses by default and still never interprets the message body.",
+      "evidence": [
+        {
+          "label": "commit ff52a7e",
+          "ref": "ff52a7ee24acafc03cb905cf7e064dcb31055fc1",
+          "repo": "claude-slack-bridge",
+          "access": "local"
+        },
+        {
+          "label": "46 tests, 46 passing, executed 2026-08-29; the three added cases are the exact message shapes that were lost",
+          "ref": null
+        }
+      ],
+      "falsifier": "A trusted top-level instruction in an agreed shape that the bridge still drops without a record.",
+      "checkable": "quoted",
+      "appendix": "bridge"
+    },
+    {
+      "date": "2026-08-28",
+      "title": "Directory order is the filesystem's business, not the test's",
+      "type": "reliability",
+      "project": "One Frame",
+      "status": "VERIFIED",
+      "observation": "The sealing loop deletes .part files left by an interrupted attempt and also creates a .part per photograph before renaming it into place. Those are the same path when the names collide, which they do by definition. listSync() is a snapshot taken before the loop runs, so if it ordered the photograph before the stale .part, sealing consumed the path by renaming it and the delete then threw — aborting the migration whose whole design is to survive being interrupted.",
+      "trigger": "CI produced the unsafe ordering on its first run. Local suites had given the safe order across two dozen runs and said nothing.",
+      "hypothesis": "A local suite passing repeatedly says nothing about an ordering the filesystem chooses. The delete should tolerate the file already being gone, which it should have from the start: a .part that has vanished was already consumed or already cleaned up, and neither is a reason to abandon a migration halfway.",
+      "consequence": "The delete tolerates absence. No test was added — the existing test already seeds exactly this collision and passes or fails on directory order, so a second one like it would pin nothing. CI is the environment that catches this, and it did.",
+      "evidence": [
+        {
+          "label": "commit f26e3c2",
+          "ref": "f26e3c2df735dd621db7b8bcb9ad9ac730dc632c",
+          "repo": "thun-viet/one-frame",
+          "access": "private"
+        }
+      ],
+      "falsifier": "A migration aborting on a stale .part with the tolerant delete in place.",
+      "checkable": "on-request"
+    },
+    {
+      "date": "2026-08-28",
+      "title": "The live test was testing the harness, not the service",
+      "type": "verification",
+      "project": "First Week",
+      "status": "VERIFIED",
+      "observation": "TestWidgetsFlutterBinding.ensureInitialized() replaces HttpClient with a stub that answers 400 to everything and never opens a socket. The live smoke test called it, so every run failed with an empty-body 400 — which the client correctly reads as \"the edge refused this\", and which looked exactly like the service being broken.",
+      "trigger": "An endpoint that appeared to be failing.",
+      "hypothesis": "The failure was in the test, not the service. The same payload, byte for byte, returned 201 from curl while the test returned 400.",
+      "consequence": "Removing the one line makes the test pass. The service did have a separate, real fault: a fine-grained token belonging to a collaborator account can only reach repositories owned by the account that created it, which the service now maps to an explicit error rather than a generic failure.",
+      "evidence": [
+        {
+          "label": "commit 3cba674",
+          "ref": "3cba67474bcbc2e867e523b253f1175805fefa2c",
+          "repo": "huypkc/first-week",
+          "access": "public",
+          "url": "https://github.com/huypkc/first-week/commit/3cba67474bcbc2e867e523b253f1175805fefa2c"
+        }
+      ],
+      "falsifier": "The smoke test failing against a service that curl shows is healthy, with the binding call removed.",
+      "checkable": "independent",
+      "appendix": "first-week"
+    },
+    {
+      "date": "2026-08-28",
+      "title": "A signing key with no reputation is not a distribution channel",
+      "type": "release",
+      "project": "First Week",
+      "status": "SUPPORTED",
+      "observation": "Two installs of comparable APKs from the same file manager on the same device, four minutes apart: the one signed with an established key installed by hand with no warning at 17:57; the one signed with a fresh key was blocked at 18:01.",
+      "trigger": "Planning to hand an APK to students directly.",
+      "hypothesis": "Play Protect gates a sideloaded install on the reputation of the signing key, so a fresh key cannot be a distribution route — and a Play Console account was not available. The mechanism is read from the behaviour, not from anything inspectable, which is why this is not marked VERIFIED.",
+      "consequence": "The app runs in a browser as well as on Android. Three files used dart:io, which is the trap — it compiles for web and throws when touched, so the build looked fine and the page would have died on first save. File and path_provider became shared_preferences on Android and localStorage in a browser; HttpClient became package:http with UTF-8 read and written explicitly, because http falls back to latin-1 when a server omits the charset and every Vietnamese diacritic would have become mojibake.",
+      "evidence": [
+        {
+          "label": "commit 0c034c3",
+          "ref": "0c034c327a9dfe3437d28e3d2e1b001da612f98b",
+          "repo": "huypkc/first-week",
+          "access": "public",
+          "url": "https://github.com/huypkc/first-week/commit/0c034c327a9dfe3437d28e3d2e1b001da612f98b"
+        },
+        {
+          "label": "the running web build",
+          "ref": null,
+          "url": "https://huypkc.github.io/first-week/"
+        }
+      ],
+      "falsifier": "A fresh-key APK installing without a Play Protect warning on a comparable device, which would move the cause somewhere other than key reputation.",
+      "checkable": "independent",
+      "appendix": "first-week"
+    },
+    {
+      "date": "2026-08-27",
+      "title": "Fifty-three tests proved the model consistent, not the database",
+      "type": "verification",
+      "project": "One Frame",
+      "status": "VERIFIED",
+      "observation": "Every one of the fifty-three credit-ledger tests ran against an in-memory double. It modelled optimistic concurrency and stale-read retry from a reading of the documentation rather than from the database, so the invariants holding meant the model was self-consistent — not that the database agreed with it. The adapter that would hold real money had never been executed once.",
+      "trigger": "Preparing a ledger that charges for generation.",
+      "hypothesis": "A test against a model of a system is evidence about the model. Contested paths have to run against the real thing.",
+      "consequence": "Eleven tests now run the contested paths against the Firestore emulator, in a lane of their own so the offline suite stays free of Java and stays at seventy milliseconds. Three assumptions the ledger rests on became facts: create refuses an id that already exists, a transaction retries when its read set goes stale, and a query inside a transaction locks the range it read.",
+      "correction": "The first test written for the range lock passed with the query moved outside the transaction entirely, so it proved nothing. It was replaced with one that fails when the query leaves the transaction.",
+      "evidence": [
+        {
+          "label": "commit 97bfe4c",
+          "ref": "97bfe4ca718857e4feb3cfbe6ac1ae2f968d6fe6",
+          "repo": "thun-viet/one-frame",
+          "access": "private"
+        }
+      ],
+      "falsifier": "An emulator run in which create accepts a duplicate id, a stale read set does not retry, or a range lock does not hold on an empty result.",
+      "checkable": "on-request"
+    },
+    {
+      "date": "2026-08-27",
+      "title": "Export is not backup until a restore runs on another device",
+      "type": "reliability",
+      "project": "One Frame",
+      "status": "VERIFIED",
+      "observation": "Export copied each photograph off disk still sealed with the exporting device's key, and restore wrote those bytes back untouched. On the phone that made the backup the key matches and nothing looks wrong. Anywhere else — a new phone, or the same phone after a reinstall — the key is gone and every restored photograph is a file nothing can open. The envelope opened, the sentences came back, and the pictures were silently unrecoverable.",
+      "trigger": "Restoring onto a cleared device, which is the case the passphrase exists for.",
+      "hypothesis": "The existing round-trip test could not catch this, because it exports and restores with a single key. A backup is only demonstrated by a restore that crosses a device boundary.",
+      "consequence": "Photographs now travel unsealed inside the envelope, which already encrypts the whole payload with AES-256-GCM, and the restoring device seals them with its own key on the way out. The schema moved to 2 so an older build refuses these archives rather than writing plaintext photographs to disk, and an unreadable photograph is counted as skipped or marked missing rather than failing the whole backup.",
+      "evidence": [
+        {
+          "label": "commit 1268de1",
+          "ref": "1268de1551ba5cb1a429280d5d163d978319fd34",
+          "repo": "thun-viet/one-frame",
+          "access": "private"
+        },
+        {
+          "label": "verified on a Redmi Note 10 Pro after pm clear: sentence restored, photograph a broken-image icon before the fix. The two new tests fail without it.",
+          "ref": null
+        }
+      ],
+      "falsifier": "A cross-device restore in which a photograph comes back unopenable.",
+      "checkable": "on-request"
+    },
+    {
+      "date": "2026-08-27",
+      "title": "Three defects that analysed clean and passed 137 tests",
+      "type": "verification",
+      "project": "One Frame",
+      "status": "VERIFIED",
+      "observation": "On hardware, the privacy switch did not move when toggled, the lock screen rendered in Flutter's fallback text style with every line yellow and underlined, and the biometric prompt never appeared at all. All three sat in code that analysed clean and passed 137 tests.",
+      "trigger": "The previous commit recorded that none of it had been verified on hardware.",
+      "hypothesis": "The widget harness supplies a MaterialApp, so it cannot see a gate that sits above the Navigator with no Material ancestor. The setting had been persisting the whole time, which is the worst version of the bug — the feature worked and the interface was lying about it. The biometric library is hosted by BiometricPrompt and refuses anything that is not a FragmentActivity, failing silently with no throw and no log.",
+      "consequence": "The shell listens to both controllers; a Material ancestor was added above the lock screen; the activity became a FlutterFragmentActivity.",
+      "evidence": [
+        {
+          "label": "commit f39cb04",
+          "ref": "f39cb044ee4010748081fea663a7f7e47818030d",
+          "repo": "thun-viet/one-frame",
+          "access": "private"
+        },
+        {
+          "label": "verified on a Redmi Note 10 Pro, Android 11: solid-black recents card, app starts locked, BiometricPrompt in the window and in logcat, 0 FATAL",
+          "ref": null
+        }
+      ],
+      "falsifier": "Any of the three recurring on a device while the suite stays green.",
+      "boundary": "Completing the authentication needs the owner's own finger, so the unlock path past the prompt is still unwitnessed. That is a boundary, not a gap.",
+      "checkable": "on-request"
+    },
+    {
+      "date": "2026-08-26",
+      "title": "A gate that cannot fail is not a gate",
+      "type": "release",
+      "project": "One Frame",
+      "status": "VERIFIED",
+      "observation": "Release builds were signed with the debug key, which Google Play rejects outright. The first fix moved both pipelines to a release build but set the debug-signing escape hatch at job level, so the gate could not tell a correctly wired signing config from a bypassed one. A green run therefore said nothing about whether release signing still fell back to the debug key.",
+      "trigger": "A release-readiness audit, finding P0-1.",
+      "hypothesis": "A safeguard that is never observed failing has not been shown to work. The refusal itself has to be executed and asserted, and asserted for the stated reason rather than by accident.",
+      "consequence": "The release build is refused when android/key.properties is absent, with an actionable message instead of a silent fall back to the debug key. Both pipelines now run that build once without the escape hatch and require it to refuse; only then is the escape hatch applied, scoped to a single step, to produce the regression artifact — which is renamed app-release-ci-debugsigned.apk, because publishing it as app-release.apk invited exactly the mistake the audit was opened to prevent.",
+      "evidence": [
+        {
+          "label": "commit b411636",
+          "ref": "b4116360c350b2cb6ea2a36cb77678e95899f32c",
+          "repo": "thun-viet/one-frame",
+          "access": "private"
+        },
+        {
+          "label": "commit bd134b9",
+          "ref": "bd134b9684a7472eb4544f1c0c67d2da57a1ca7a",
+          "repo": "thun-viet/one-frame",
+          "access": "private"
+        },
+        {
+          "label": "verified locally in order: the refusal step exits non-zero with \"Release build refused\"; the QA build then succeeds; the notification icon survives shrinking; allowBackup=false confirmed via aapt2 dump xmltree",
+          "ref": null
+        }
+      ],
+      "falsifier": "A release build succeeding with no key.properties and no escape hatch set.",
+      "checkable": "quoted",
+      "appendix": "signing"
+    }
+  ],
+  "checkable": {
+    "independent": "The repository is public. Clone it and run the commands yourself.",
+    "quoted": "The exact command and its unedited output are reproduced in the evidence appendix.",
+    "on-request": "The repository is private. The commit reference is given; source access on request."
+  }
+}

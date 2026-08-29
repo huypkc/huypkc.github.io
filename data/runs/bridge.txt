@@ -1,0 +1,290 @@
+
+> claude-slack-bridge@0.1.0 test
+> node --test test/*.test.js
+
+TAP version 13
+# Subtest: a trusted actionable message wakes the coordinator exactly once
+ok 1 - a trusted actionable message wakes the coordinator exactly once
+  ---
+  duration_ms: 10.320242
+  type: 'test'
+  ...
+# Subtest: an untrusted sender never reaches the inbox, let alone tmux
+ok 2 - an untrusted sender never reaches the inbox, let alone tmux
+  ---
+  duration_ms: 0.932366
+  type: 'test'
+  ...
+# Subtest: a message with no action prefix is not an instruction
+ok 3 - a message with no action prefix is not an instruction
+  ---
+  duration_ms: 0.729483
+  type: 'test'
+  ...
+# Subtest: Claude's own checkpoint does not wake Claude
+ok 4 - Claude's own checkpoint does not wake Claude
+  ---
+  duration_ms: 0.669862
+  type: 'test'
+  ...
+# Subtest: the same Slack event delivered twice executes once
+ok 5 - the same Slack event delivered twice executes once
+  ---
+  duration_ms: 1.69849
+  type: 'test'
+  ...
+# Subtest: a Slack retry after a wake does not wake again
+ok 6 - a Slack retry after a wake does not wake again
+  ---
+  duration_ms: 2.139048
+  type: 'test'
+  ...
+# Subtest: a missing tmux leaves the event pending rather than dropping it
+ok 7 - a missing tmux leaves the event pending rather than dropping it
+  ---
+  duration_ms: 1.496327
+  type: 'test'
+  ...
+# Subtest: a restart hands over what the previous run never delivered
+ok 8 - a restart hands over what the previous run never delivered
+  ---
+  duration_ms: 2.081536
+  type: 'test'
+  ...
+# Subtest: a burst becomes one wake, not one per message
+ok 9 - a burst becomes one wake, not one per message
+  ---
+  duration_ms: 3.234947
+  type: 'test'
+  ...
+# Subtest: a second burst waits out the minimum interval
+ok 10 - a second burst waits out the minimum interval
+  ---
+  duration_ms: 2.016426
+  type: 'test'
+  ...
+# Subtest: the inbox records what happened and never the message body
+ok 11 - the inbox records what happened and never the message body
+  ---
+  duration_ms: 1.381795
+  type: 'test'
+  ...
+# Subtest: a trusted sender with an action prefix is allowed through
+ok 12 - a trusted sender with an action prefix is allowed through
+  ---
+  duration_ms: 0.941917
+  type: 'test'
+  ...
+# Subtest: ACTION: is an accepted prefix
+ok 13 - ACTION: is an accepted prefix
+  ---
+  duration_ms: 0.272455
+  type: 'test'
+  ...
+# Subtest: OWNER: is an accepted prefix
+ok 14 - OWNER: is an accepted prefix
+  ---
+  duration_ms: 0.111582
+  type: 'test'
+  ...
+# Subtest: CHATGPT: is an accepted prefix
+ok 15 - CHATGPT: is an accepted prefix
+  ---
+  duration_ms: 0.078701
+  type: 'test'
+  ...
+# Subtest: an untrusted sender is ignored even with a perfect prefix
+ok 16 - an untrusted sender is ignored even with a perfect prefix
+  ---
+  duration_ms: 0.174093
+  type: 'test'
+  ...
+# Subtest: a trusted sender without a prefix is ignored
+ok 17 - a trusted sender without a prefix is ignored
+  ---
+  duration_ms: 0.099161
+  type: 'test'
+  ...
+# Subtest: a Claude checkpoint does not wake Claude
+ok 18 - a Claude checkpoint does not wake Claude
+  ---
+  duration_ms: 0.148643
+  type: 'test'
+  ...
+# Subtest: a checkpoint is ignored on its content too, not only its author
+ok 19 - a checkpoint is ignored on its content too, not only its author
+  ---
+  duration_ms: 0.154173
+  type: 'test'
+  ...
+# Subtest: a bot post is ignored however it is dressed
+ok 20 - a bot post is ignored however it is dressed
+  ---
+  duration_ms: 0.396597
+  type: 'test'
+  ...
+# Subtest: an app posting on a trusted user's behalf is still that user
+ok 21 - an app posting on a trusted user's behalf is still that user
+  ---
+  duration_ms: 0.474118
+  type: 'test'
+  ...
+# Subtest: an edit is ignored: the text that passed here could change
+ok 22 - an edit is ignored: the text that passed here could change
+  ---
+  duration_ms: 0.192604
+  type: 'test'
+  ...
+# Subtest: another channel cannot reach this bridge
+ok 23 - another channel cannot reach this bridge
+  ---
+  duration_ms: 0.136103
+  type: 'test'
+  ...
+# Subtest: a thread reply is not a control message
+ok 24 - a thread reply is not a control message
+  ---
+  duration_ms: 0.132612
+  type: 'test'
+  ...
+# Subtest: a timestamp of the wrong shape is refused
+ok 25 - a timestamp of the wrong shape is refused
+  ---
+  duration_ms: 0.129212
+  type: 'test'
+  ...
+# Subtest: reactions and other event types are not messages
+ok 26 - reactions and other event types are not messages
+  ---
+  duration_ms: 0.124212
+  type: 'test'
+  ...
+# Subtest: wakes on a keyword separated by an em dash, not only a colon
+ok 27 - wakes on a keyword separated by an em dash, not only a colon
+  ---
+  duration_ms: 0.165952
+  type: 'test'
+  ...
+# Subtest: normalises the prefix so the log never varies with the writer's dash
+ok 28 - normalises the prefix so the log never varies with the writer's dash
+  ---
+  duration_ms: 0.142702
+  type: 'test'
+  ...
+# Subtest: a keyword without a separator is still not an instruction
+ok 29 - a keyword without a separator is still not an instruction
+  ---
+  duration_ms: 0.139503
+  type: 'test'
+  ...
+# Subtest: a route table maps each channel to its own terminal
+ok 30 - a route table maps each channel to its own terminal
+  ---
+  duration_ms: 0.669562
+  type: 'test'
+  ...
+# Subtest: whitespace around entries is not part of the target
+ok 31 - whitespace around entries is not part of the target
+  ---
+  duration_ms: 0.151642
+  type: 'test'
+  ...
+# Subtest: a pane target keeps its colon
+ok 32 - a pane target keeps its colon
+  ---
+  duration_ms: 0.821554
+  type: 'test'
+  ...
+# Subtest: one channel cannot name two targets
+ok 33 - one channel cannot name two targets
+  ---
+  duration_ms: 0.315765
+  type: 'test'
+  ...
+# Subtest: a malformed entry is refused rather than half-read
+ok 34 - a malformed entry is refused rather than half-read
+  ---
+  duration_ms: 0.160343
+  type: 'test'
+  ...
+# Subtest: an empty route table is a configuration error, not an idle bridge
+ok 35 - an empty route table is a configuration error, not an idle bridge
+  ---
+  duration_ms: 0.154642
+  type: 'test'
+  ...
+# Subtest: a wake is two argv calls, never a shell string
+ok 36 - a wake is two argv calls, never a shell string
+  ---
+  duration_ms: 3.772097
+  type: 'test'
+  ...
+# Subtest: the instruction contains no Slack text, only a timestamp and a channel
+ok 37 - the instruction contains no Slack text, only a timestamp and a channel
+  ---
+  duration_ms: 0.335426
+  type: 'test'
+  ...
+# Subtest: the instruction names the channel the event came from
+ok 38 - the instruction names the channel the event came from
+  ---
+  duration_ms: 0.217034
+  type: 'test'
+  ...
+# Subtest: a channel id of unknown shape never reaches a terminal
+ok 39 - a channel id of unknown shape never reaches a terminal
+  ---
+  duration_ms: 0.430778
+  type: 'test'
+  ...
+# Subtest: a waker cannot be built without the channel it speaks for
+ok 40 - a waker cannot be built without the channel it speaks for
+  ---
+  duration_ms: 0.269724
+  type: 'test'
+  ...
+# Subtest: malicious Slack text cannot become shell syntax
+ok 41 - malicious Slack text cannot become shell syntax
+  ---
+  duration_ms: 0.53796
+  type: 'test'
+  ...
+# Subtest: a tmux target of the wrong shape is refused at construction
+ok 42 - a tmux target of the wrong shape is refused at construction
+  ---
+  duration_ms: 0.207003
+  type: 'test'
+  ...
+# Subtest: a pane running something else is not the coordinator
+ok 43 - a pane running something else is not the coordinator
+  ---
+  duration_ms: 0.252724
+  type: 'test'
+  ...
+# Subtest: no tmux server at all is absence, not a crash
+ok 44 - no tmux server at all is absence, not a crash
+  ---
+  duration_ms: 0.397977
+  type: 'test'
+  ...
+# Subtest: a target with no panes is absence
+ok 45 - a target with no panes is absence
+  ---
+  duration_ms: 0.447358
+  type: 'test'
+  ...
+# Subtest: verification happens before anything is typed
+ok 46 - verification happens before anything is typed
+  ---
+  duration_ms: 0.272525
+  type: 'test'
+  ...
+1..46
+# tests 46
+# suites 0
+# pass 46
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 95.861053

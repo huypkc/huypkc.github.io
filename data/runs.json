@@ -1,0 +1,78 @@
+{
+  "note": "Commands actually executed, with their unedited output committed under data/runs/. Rendered into evidence.html by tool/render-log.py, which also asserts each `expect` string still appears in its file — so a number on the page cannot drift from the run behind it.",
+  "runs": [
+    {
+      "id": "one-frame-tests",
+      "claim": "220 Flutter tests — One Frame",
+      "command": "flutter test",
+      "repo": "thun-viet/one-frame",
+      "sha": "290a9d8719ea25f6d8bbf29bd9469349332a063d",
+      "access": "private",
+      "when": "2026-08-29",
+      "expect": "+220: All tests passed!",
+      "file": "data/runs/one-frame-tests.txt",
+      "note": "Run in a clean worktree of main."
+    },
+    {
+      "id": "bsv2-tests",
+      "claim": "638 TypeScript tests — ThunViet V2",
+      "command": "pnpm test",
+      "repo": "thun-viet/basic-system-v2",
+      "sha": "fa5081a93439c615aa812f4c9d93e11c8118cb62",
+      "access": "private",
+      "when": "2026-08-29",
+      "expect": "# pass 638",
+      "file": "data/runs/bsv2.txt",
+      "note": "node --test. Excludes the 53 Playwright end-to-end specs and the Firestore rules lane, which need a browser and an emulator."
+    },
+    {
+      "id": "contract",
+      "claim": "14 contract operations — ThunViet V2",
+      "command": "count the operations in services/api/openapi/openapi.json",
+      "repo": "thun-viet/basic-system-v2",
+      "sha": "fa5081a93439c615aa812f4c9d93e11c8118cb62",
+      "access": "private",
+      "when": "2026-08-29",
+      "expect": "operations: 14",
+      "file": "data/runs/contract.txt",
+      "note": "11 paths, 14 operations, spec version v2-contract-1. Every operation is listed in the output."
+    },
+    {
+      "id": "signing",
+      "claim": "the release build refuses without a signing key — One Frame",
+      "command": "flutter build apk --release",
+      "repo": "thun-viet/one-frame",
+      "sha": "290a9d8719ea25f6d8bbf29bd9469349332a063d",
+      "access": "private",
+      "when": "2026-08-29",
+      "expect": "Release build refused: android/key.properties was not found.",
+      "file": "data/runs/signing-refusal.txt",
+      "note": "Run in a clean worktree of main, where android/key.properties is absent because it is gitignored. The build fails on purpose: BUILD FAILED, exit 1. A green build here would mean signing had regressed to the debug key."
+    },
+    {
+      "id": "bridge",
+      "claim": "46 tests — Slack wake bridge",
+      "command": "npm test",
+      "repo": "claude-slack-bridge",
+      "sha": "ff52a7ee24acafc03cb905cf7e064dcb31055fc1",
+      "access": "local",
+      "when": "2026-08-29",
+      "expect": "# pass 46",
+      "file": "data/runs/bridge.txt",
+      "note": "Not published anywhere; this repository exists only on the author's machine."
+    },
+    {
+      "id": "first-week",
+      "claim": "79 tests run of 80 declared — First Week",
+      "command": "flutter test --exclude-tags live",
+      "repo": "huypkc/first-week",
+      "sha": "3cba67474bcbc2e867e523b253f1175805fefa2c",
+      "access": "public",
+      "url": "https://github.com/huypkc/first-week",
+      "when": "2026-08-29",
+      "expect": "+79: All tests passed!",
+      "file": "data/runs/first-week.txt",
+      "note": "80 tests are declared; one is tagged live and hits a real endpoint, so the offline run is 79. This repository is public — the same command reproduces this output for anyone."
+    }
+  ]
+}

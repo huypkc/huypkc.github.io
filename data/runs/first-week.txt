@@ -1,0 +1,81 @@
+00:00 +0: loading /home/huy/working/releases/first-week/app/test/gateway_test.dart
+00:00 +0: /home/huy/working/releases/first-week/app/test/gateway_test.dart: the endpoint lives in one place, and it is the deployed Worker
+00:00 +1: /home/huy/working/releases/first-week/app/test/gateway_test.dart: a checklist-level proposal carries the current id and revision
+00:00 +2: /home/huy/working/releases/first-week/app/test/gateway_test.dart: a task-level proposal binds the task being viewed
+00:00 +3: /home/huy/working/releases/first-week/app/test/gateway_test.dart: a 201 maps the proposalId onto the receipt
+00:00 +4: /home/huy/working/releases/first-week/app/test/gateway_test.dart: a 429 reads as rate limiting, in Vietnamese
+00:00 +5: /home/huy/working/releases/first-week/app/test/gateway_test.dart: a 400 with no body is treated as the edge, not the student
+00:00 +6: /home/huy/working/releases/first-week/app/test/gateway_test.dart: a 400 the Worker explains is a validation error
+00:00 +7: /home/huy/working/releases/first-week/app/test/gateway_test.dart: a 502 is retryable and says so
+00:00 +8: /home/huy/working/releases/first-week/app/test/gateway_test.dart: a dead network is retryable, not a validation error
+00:00 +9: /home/huy/working/releases/first-week/app/test/gateway_test.dart: invalid proposals are refused before any request empty content
+00:00 +10: /home/huy/working/releases/first-week/app/test/gateway_test.dart: invalid proposals are refused before any request content over the bound
+00:00 +11: /home/huy/working/releases/first-week/app/test/gateway_test.dart: invalid proposals are refused before any request a task-scoped kind with no task
+00:00 +12: /home/huy/working/releases/first-week/app/test/gateway_test.dart: invalid proposals are refused before any request a non-positive revision
+00:00 +13: /home/huy/working/releases/first-week/app/test/gateway_test.dart: invalid proposals are refused before any request a missing checklist
+00:00 +14: /home/huy/working/releases/first-week/app/test/gateway_test.dart: invalid proposals are refused before any request a source that is not http(s)
+00:00 +15: /home/huy/working/releases/first-week/app/test/gateway_test.dart: invalid proposals are refused before any request an EDIT_TASK with nothing to change
+00:00 +16: /home/huy/working/releases/first-week/app/test/gateway_test.dart: invalid proposals are refused before any request a valid https source is accepted
+00:00 +17: /home/huy/working/releases/first-week/app/test/gateway_test.dart: a successful contribution mutates neither canonical data nor the plan
+00:00 +18: /home/huy/working/releases/first-week/app/test/gateway_test.dart: a receipt is recorded locally so the student can see what they sent
+00:00 +19: /home/huy/working/releases/first-week/app/test/pilot_test.dart: both pilots the manifest exposes each checklist with its own revision
+00:00 +20: /home/huy/working/releases/first-week/app/test/pilot_test.dart: both pilots the two revisions are independent
+00:00 +21: /home/huy/working/releases/first-week/app/test/pilot_test.dart: both pilots every task carries provenance, not just a trust level
+00:00 +22: /home/huy/working/releases/first-week/app/test/pilot_test.dart: both pilots an observed problem is not promoted to OFFICIAL by itself
+00:00 +23: /home/huy/working/releases/first-week/app/test/pilot_test.dart: both pilots an unverified task says what is unverified about it
+00:00 +24: /home/huy/working/releases/first-week/app/test/pilot_test.dart: both pilots a confirmation count is countable, never decorative
+00:00 +25: /home/huy/working/releases/first-week/app/test/pilot_test.dart: both pilots observations record the problem, never who reported it
+00:00 +26: /home/huy/working/releases/first-week/app/test/pilot_test.dart: both pilots no canonical task can carry personal completion state
+00:00 +27: /home/huy/working/releases/first-week/app/test/pilot_test.dart: both pilots no fictional demo school is published beside the pilots
+00:00 +28: /home/huy/working/releases/first-week/app/test/pilot_test.dart: school isolation every observation names its own school
+00:00 +29: /home/huy/working/releases/first-week/app/test/pilot_test.dart: school isolation every official source is on its own school domains
+00:00 +30: /home/huy/working/releases/first-week/app/test/pilot_test.dart: school isolation a UIT checklist carrying an NTTU observation is refused
+00:00 +31: /home/huy/working/releases/first-week/app/test/pilot_test.dart: school isolation an NTTU checklist carrying a UIT observation is refused
+00:00 +32: /home/huy/working/releases/first-week/app/test/pilot_test.dart: school isolation a personal field in an observation is refused, not stripped
+00:00 +33: /home/huy/working/releases/first-week/app/test/pilot_test.dart: the canonical source the default points at the published data repository
+00:00 +34: /home/huy/working/releases/first-week/app/test/pilot_test.dart: the canonical source a subdirectory is joined without an empty segment
+00:00 +35: /home/huy/working/releases/first-week/app/test/pilot_test.dart: provenance widgets render values, not their source code
+00:00 +36: /home/huy/working/releases/first-week/app/test/slice_test.dart: with nothing installed, Today asks rather than guessing
+00:00 +37: /home/huy/working/releases/first-week/app/test/slice_test.dart: with nothing installed, Today asks rather than guessing
+00:00 +38: /home/huy/working/releases/first-week/app/test/slice_test.dart: with nothing installed, Today asks rather than guessing
+00:00 +39: /home/huy/working/releases/first-week/app/test/slice_test.dart: with nothing installed, Today asks rather than guessing
+00:00 +40: /home/huy/working/releases/first-week/app/test/slice_test.dart: with nothing installed, Today asks rather than guessing
+00:00 +41: /home/huy/working/releases/first-week/app/test/slice_test.dart: with nothing installed, Today asks rather than guessing
+00:00 +42: /home/huy/working/releases/first-week/app/test/slice_test.dart: with nothing installed, Today asks rather than guessing
+00:00 +43: /home/huy/working/releases/first-week/app/test/slice_test.dart: with nothing installed, Today asks rather than guessing
+00:00 +44: /home/huy/working/releases/first-week/app/test/slice_test.dart: with nothing installed, Today asks rather than guessing
+00:00 +45: /home/huy/working/releases/first-week/app/test/slice_test.dart: with nothing installed, Today asks rather than guessing
+00:00 +46: /home/huy/working/releases/first-week/app/test/slice_test.dart: with nothing installed, Today asks rather than guessing
+00:00 +47: /home/huy/working/releases/first-week/app/test/slice_test.dart: with nothing installed, Today asks rather than guessing
+00:00 +48: /home/huy/working/releases/first-week/app/test/slice_test.dart: with nothing installed, Today asks rather than guessing
+00:00 +49: /home/huy/working/releases/first-week/app/test/slice_test.dart: with nothing installed, Today asks rather than guessing
+00:00 +50: /home/huy/working/releases/first-week/app/test/slice_test.dart: with nothing installed, Today asks rather than guessing
+00:00 +51: /home/huy/working/releases/first-week/app/test/slice_test.dart: with nothing installed, Today asks rather than guessing
+00:00 +52: /home/huy/working/releases/first-week/app/test/slice_test.dart: with nothing installed, Today asks rather than guessing
+00:00 +53: /home/huy/working/releases/first-week/app/test/slice_test.dart: with nothing installed, Today asks rather than guessing
+00:00 +54: /home/huy/working/releases/first-week/app/test/slice_test.dart: with nothing installed, Today asks rather than guessing
+00:00 +55: /home/huy/working/releases/first-week/app/test/slice_test.dart: with nothing installed, Today asks rather than guessing
+00:00 +56: /home/huy/working/releases/first-week/app/test/slice_test.dart: with nothing installed, Today asks rather than guessing
+00:00 +57: /home/huy/working/releases/first-week/app/test/slice_test.dart: with nothing installed, Today asks rather than guessing
+00:00 +58: /home/huy/working/releases/first-week/app/test/slice_test.dart: with nothing installed, Today asks rather than guessing
+00:00 +59: /home/huy/working/releases/first-week/app/test/slice_test.dart: with nothing installed, Today asks rather than guessing
+00:00 +60: /home/huy/working/releases/first-week/app/test/slice_test.dart: with nothing installed, Today asks rather than guessing
+00:00 +61: /home/huy/working/releases/first-week/app/test/slice_test.dart: with nothing installed, Today asks rather than guessing
+00:00 +62: /home/huy/working/releases/first-week/app/test/slice_test.dart: with nothing installed, Today asks rather than guessing
+00:00 +63: /home/huy/working/releases/first-week/app/test/slice_test.dart: with nothing installed, Today asks rather than guessing
+00:00 +64: /home/huy/working/releases/first-week/app/test/slice_test.dart: with nothing installed, Today asks rather than guessing
+00:00 +65: /home/huy/working/releases/first-week/app/test/slice_test.dart: with nothing installed, Today asks rather than guessing
+00:01 +66: /home/huy/working/releases/first-week/app/test/slice_test.dart: with nothing installed, Today asks rather than guessing
+00:01 +67: /home/huy/working/releases/first-week/app/test/slice_test.dart: with nothing installed, Today asks rather than guessing
+00:01 +68: /home/huy/working/releases/first-week/app/test/slice_test.dart: with nothing installed, Today asks rather than guessing
+00:01 +69: /home/huy/working/releases/first-week/app/test/slice_test.dart: with nothing installed, Today asks rather than guessing
+00:01 +70: /home/huy/working/releases/first-week/app/test/slice_test.dart: with nothing installed, Today asks rather than guessing
+00:01 +71: /home/huy/working/releases/first-week/app/test/slice_test.dart: Explore lists both pilots with their real counts
+00:01 +72: /home/huy/working/releases/first-week/app/test/slice_test.dart: the checklist says it is young before you rely on it
+00:01 +73: /home/huy/working/releases/first-week/app/test/slice_test.dart: installing lands on Today with one task, not twelve
+00:02 +74: /home/huy/working/releases/first-week/app/test/slice_test.dart: a task shows its provenance and when the source was last read
+00:02 +75: /home/huy/working/releases/first-week/app/test/slice_test.dart: completing writes to the plan and says the checklist is unchanged
+00:02 +76: /home/huy/working/releases/first-week/app/test/slice_test.dart: a one-tap signal is recorded without editing the task
+00:02 +77: /home/huy/working/releases/first-week/app/test/slice_test.dart: proposing an edit is bound to the task, and asks for a source
+00:03 +78: /home/huy/working/releases/first-week/app/test/slice_test.dart: the You tab is straight about where the data lives
+00:03 +79: All tests passed!

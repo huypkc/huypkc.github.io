@@ -1,0 +1,16 @@
+spec: THUNVIET V2 API v2-contract-1
+paths: 11 operations: 14
+  GET /health
+  GET /products
+  GET /products/{slug}
+  POST /carts
+  GET /carts/{cartId}
+  POST /carts/{cartId}/items
+  PATCH /carts/{cartId}/items/{offeringId}
+  DELETE /carts/{cartId}/items/{offeringId}
+  POST /checkouts
+  GET /orders/{orderId}
+  GET /me/addresses
+  POST /me/addresses
+  PATCH /me/addresses/{addressId}
+  DELETE /me/addresses/{addressId}
