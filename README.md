@@ -19,6 +19,9 @@ tracking, no cookies.
 | `data/timeline.json` | Source of truth for the timeline |
 | `data/runs.json` | Source of truth for the evidence appendix |
 | `tool/render-timeline.py` | Renders both into committed static HTML |
+| `tool/render-og.py` | Renders `assets/og.png`, the social card |
+| `tool/redact-cv.py` | Publishes the CV with the phone number removed |
+| `huy-tran-cv.pdf` | The published CV — generated, never copied by hand |
 | `tool/discovery-check.py` | Gate: the three discovery surfaces must agree |
 
 ## Publish
@@ -43,6 +46,7 @@ convention:
 ```
 python3 tool/discovery-check.py
 python3 tool/render-timeline.py --check
+python3 tool/render-og.py --check
 ```
 
 It runs on every push and pull request to `master` (`.github/workflows/discovery.yml`)
@@ -79,6 +83,21 @@ from the crawlers `llms.txt` exists to serve. Expansion is native
 description of the timeline (how many entries, over what span, how many were
 later contradicted) is generated from the same data, so it cannot overstate the
 page it links to.
+
+## The CV
+
+`huy-tran-cv.pdf` is generated from the private CV, not copied from it. A CV
+emailed to a recruiter and a CV on a crawlable URL are not the same document:
+the phone number belongs on the first and not on the second. `tool/redact-cv.py`
+drops those glyph codes out of the content stream, so the number is absent from
+the file rather than hidden in it, and `pdftotext` output differs on exactly one
+line. Re-export the CV and run the command again — do not copy the file in by
+hand, or the number comes back.
+
+```
+pip install pikepdf
+python3 tool/redact-cv.py ~/path/to/CV.pdf
+```
 
 ## The rule the copy follows
 

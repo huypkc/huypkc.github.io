@@ -19,3 +19,6 @@ jobs:
       # evidence appendix are all generated from data/ and committed. This
       # fails if any of them has drifted from its data.
       - run: python3 tool/render-timeline.py --check
+      # The social card carries the site's one positioning line. This fails if
+      # the card and the page have drifted apart, or if the card is missing.
+      - run: pip install --quiet pillow && python3 tool/render-og.py --check

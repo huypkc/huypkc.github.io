@@ -13,6 +13,11 @@
   <meta property="og:site_name" content="Huy Tran" />
   <meta property="og:title" content="Huy Tran — Senior Software Engineer / Product Engineer" />
   <meta property="og:description" content="Systems-minded builder. Architecture, implementation, verification, release — with the evidence attached." />
+  <meta property="og:image" content="https://huypkc.github.io/assets/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://huypkc.github.io/assets/og.png" />
   <title>Huy Tran — Senior Software Engineer / Product Engineer</title>
   <link rel="icon" href="assets/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,11 +35,24 @@
       <p class="mark">Huy Tran</p>
       <h1 class="statement">I build products that are ready to ship.</h1>
       <p class="standing">
-        <span>Senior Software Engineer</span><span>Product Engineer</span><span>Systems-minded builder</span>
+        <span>Senior Software Engineer</span><span>Product Engineer</span>
       </p>
     </section>
 
-    <!-- 2 ─ the product, at size ──────────────────────────────────── -->
+    <!-- 2 ─ the ten years, before anything else ──────────────────── -->
+    <section class="frame frame--short rise" id="years" aria-label="Experience">
+      <p class="mark">Ten years</p>
+      <h2 class="problem">A decade of shipping inside teams that had customers.</h2>
+      <p class="years">
+        <b>FPT Software, GO1, CyberLogitec, and CBTW APAC since 2022.</b>
+        <span>Frontend and product engineering in production — TypeScript, React,
+        Next.js and Angular on the web, Flutter and React Native on mobile. That is
+        the work with users behind it. What follows is what I build when I own the
+        whole line rather than one layer of it.</span>
+      </p>
+    </section>
+
+    <!-- 3 ─ the product, at size ──────────────────────────────────── -->
     <section class="frame frame--grey showcase rise" id="product" aria-label="One Frame">
       <p class="mark">One Frame</p>
       <h2 class="problem">A private photo journal that never leaves the phone.</h2>
@@ -45,7 +63,7 @@
       </div>
     </section>
 
-    <!-- 3 ─ what it is, in three lines ────────────────────────────── -->
+    <!-- 4 ─ what it is, in three lines ────────────────────────────── -->
     <section class="frame rise" id="claims">
       <div class="claims">
         <p>One photo. One sentence. One day.</p>
@@ -60,52 +78,61 @@
       </p>
     </section>
 
-    <!-- 4 ─ the other problem ─────────────────────────────────────── -->
+    <!-- 5 ─ the other problem ─────────────────────────────────────── -->
     <section class="frame frame--grey rise" id="thunviet" aria-label="ThunViet V2">
       <p class="mark">ThunViet V2</p>
       <h2 class="problem">Contracts drift quietly. Then they break loudly.</h2>
+      <p class="logsay">An online store for an apparel brand, rebuilt from its API
+      contract outward — and delivered by AI agents that cannot begin work without an
+      authorization the owner signs with a hardware key. The OpenAPI contract is the
+      specification, the generated types and the runtime validator at once, so an
+      endpoint that drifts from it fails the gate instead of production.</p>
       <div class="pipeline" aria-label="Verification pipeline">
         <span><b>Requirement</b>&rarr;<b>Authorise</b>&rarr;<b>Isolate</b></span>
         <span><b>Build</b>&rarr;<b>Verify</b>&rarr;<b>Release</b></span>
       </div>
+      <p class="duo">
+        <a class="lead" href="timeline/#t-reduce-state-space">How it was designed, and what later turned out not to hold</a>
+      </p>
+      <p class="standing">
+        <span>Private repository</span><span>Source access on request</span><span>No production users</span>
+      </p>
     </section>
 
-    <!-- 5 ─ one sentence ─────────────────────────────────────────── -->
+    <!-- 6 ─ one sentence ─────────────────────────────────────────── -->
     <section class="frame rise" id="creed">
       <h2 class="creed">Claim only what survives verification.</h2>
     </section>
 
-    <!-- 6 ─ the numbers ──────────────────────────────────────────── -->
+    <!-- 7 ─ the numbers ──────────────────────────────────────────── -->
     <section class="frame frame--grey rise" id="evidence" aria-label="Evidence">
       <p class="mark">Evidence</p>
       <dl class="numbers">
-        <div><dt>220</dt><dd>Flutter tests</dd></div>
-        <div><dt>638</dt><dd>TypeScript tests</dd></div>
-        <div><dt>14</dt><dd>contract operations verified</dd></div>
-        <div><dt>v2</dt><dd>signed Android artifact</dd></div>
+        <div><dt><a href="evidence.html#one-frame-tests">220</a></dt><dd>Flutter tests</dd></div>
+        <div><dt><a href="evidence.html#bsv2-tests">638</a></dt><dd>TypeScript tests</dd></div>
+        <div><dt><a href="evidence.html#contract">14</a></dt><dd>contract operations verified</dd></div>
+        <div><dt><a href="evidence.html#signing">v2</a></dt><dd>signed Android artifact</dd></div>
       </dl>
+      <p class="logsay">A test count is not a quality claim, so each number here opens the
+      command that produced it and the unedited output it printed. Four of the six runs are
+      from private repositories: you can read what was printed but not re-run it, and the
+      appendix says so rather than implying otherwise.
+      <a href="https://github.com/huypkc/first-week" rel="noreferrer">First Week</a> is
+      public — clone it and the command reproduces.</p>
+      <p class="duo"><a href="evidence.html">The commands behind the numbers</a></p>
     </section>
 
-    <!-- 7 ─ the way in to the timeline ────────────────────────── -->
+    <!-- 8 ─ the way in to the timeline ────────────────────────── -->
     <!-- timeline-entry:start · generated by tool/render-timeline.py · edit data/timeline.json -->
     <section class="frame frame--short rise" id="timeline" aria-label="Timeline">
       <p class="mark">Timeline</p>
       <p class="years">
         <b>How my engineering decisions changed while building real systems.</b>
-        <span>17 dated entries, Aug 17 to Aug 29 2026. 3 were later revised or superseded by my own work, and those are kept as they were written.</span>
+        <span>17 dated entries. 3 were later revised or superseded by my own work, and those are kept as they were written.</span>
       </p>
       <p class="duo"><a class="lead" href="timeline/">Read the timeline</a></p>
     </section>
     <!-- timeline-entry:end -->
-
-    <!-- 8 ─ ten years, compressed ────────────────────────────────── -->
-    <section class="frame frame--short rise" id="years" aria-label="Experience">
-      <p class="mark">Before this</p>
-      <p class="years">
-        <b>Ten years of frontend and product work</b> —
-        <span>FPT Software, GO1, CyberLogitec, and CBTW APAC since 2022.</span>
-      </p>
-    </section>
 
     <!-- 9 ─ what the work actually is ────────────────────────────── -->
     <section class="frame frame--grey rise" id="capability" aria-label="Capability">
@@ -128,8 +155,8 @@
       <p class="mark">Open to</p>
       <p class="years">
         <b>Senior and founding engineering roles.</b>
-        <span>Product infrastructure. Backend architecture. Mobile platform and
-        release. Reliability and security. Distributed and real-time systems.
+        <span>Product infrastructure and backend architecture. Reliability,
+        security and release engineering. Distributed and real-time systems.
         Remote, contract, or founding-team collaboration.</span>
       </p>
       <p class="standing">
@@ -144,6 +171,7 @@
         <a href="mailto:huy.pkc@gmail.com">huy.pkc@gmail.com</a>
         <a href="https://linkedin.com/in/huypkc" target="_blank" rel="noreferrer">LinkedIn</a>
         <a href="https://github.com/huypkc" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="huy-tran-cv.pdf" download>CV (PDF)</a>
       </p>
     </section>
   </main>

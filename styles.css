@@ -544,6 +544,11 @@ table.grid td{color:var(--muted)}
 }
 .state--turned{color:var(--ink)}
 
+/* Every figure in the Evidence frame links to the run behind it. The rule is
+   hairline so the number still reads as a number, not as a link with a size. */
+.numbers dt a{border-bottom:2px solid var(--hair);padding-bottom:2px}
+.numbers dt a:hover{border-bottom-color:var(--accent);color:var(--accent)}
+
 /* Narrow: the date moves above the title rather than squeezing it into a
    column too thin to read. The sign stays on the title's line. */
 @media (max-width:620px){

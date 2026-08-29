@@ -183,15 +183,17 @@ def render_home(data: dict) -> str:
     """The homepage entry point. Its numbers are generated from the same data
     as the page they describe, so the homepage cannot overstate the timeline."""
     entries = data["entries"]
-    dates = sorted(x["date"] for x in entries)
+    # The date range is deliberately not here. On the homepage a twelve-day
+    # span reads as "started two weeks ago", which is a claim about the work
+    # rather than about the page. The dates are on the timeline itself, where
+    # a reader has the context to read them correctly.
     turned = sum(1 for x in entries if x["status"] in TURNED)
-    span = f"{short_date(dates[0])} to {short_date(dates[-1])} {dates[-1][:4]}"
     return (
         '    <section class="frame frame--short rise" id="timeline" aria-label="Timeline">\n'
         '      <p class="mark">Timeline</p>\n'
         '      <p class="years">\n'
         "        <b>How my engineering decisions changed while building real systems.</b>\n"
-        f"        <span>{len(entries)} dated entries, {e(span)}. "
+        f"        <span>{len(entries)} dated entries. "
         f"{turned} were later revised or superseded by my own work, and those "
         "are kept as they were written.</span>\n"
         "      </p>\n"

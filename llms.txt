@@ -11,9 +11,12 @@ LinkedIn: https://www.linkedin.com/in/huypkc
 
 ## Positioning
 
-Ten years of frontend and product work — FPT Software, GO1, CyberLogitec, and
-CBTW APAC since 2022 — now working across the whole line rather than one layer
-of it: why → system → architecture → implementation → proof.
+Ten years of frontend and product engineering shipped inside teams with
+customers — FPT Software, GO1, CyberLogitec, and CBTW APAC since 2022 —
+TypeScript, React, Next.js and Angular on the web, Flutter and React Native on
+mobile. That is the work with users behind it. The independent projects below
+are what the whole line looks like when I own all of it: why → system →
+architecture → implementation → proof.
 
 The working principle is on the site in one sentence: **claim only what
 survives verification**. Every number below is one a gate produces, not an
@@ -33,10 +36,9 @@ estimate.
 
 ## Open to
 
-Senior and founding engineering roles. Product infrastructure. Backend
-architecture. Mobile platform and release. Reliability and security.
-Distributed and real-time systems. Remote, contract, or founding-team
-collaboration.
+Senior and founding engineering roles. Product infrastructure and backend
+architecture. Reliability, security and release engineering. Distributed and
+real-time systems. Remote, contract, or founding-team collaboration.
 
 Stated plainly so a machine does not have to infer it: distributed and
 real-time systems is a direction of interest, **not** a claim of prior
@@ -50,12 +52,21 @@ sub-100ms latency work behind that line.
   by reading the bytes back. 220 Flutter tests. A signed v2 Android artifact.
   Verified on device, in release validation, not published to any store.
   https://huypkc.github.io/one-frame.html
-- **ThunViet V2** — contract-first delivery: requirement → authorise → isolate
-  → build → verify → release. 638 TypeScript tests, 14 contract operations
-  verified.
+- **ThunViet V2** — an online store for an apparel brand, rebuilt from its API
+  contract outward and delivered by AI agents that cannot begin work without an
+  authorization the owner signs with a hardware key. The OpenAPI contract is the
+  specification, the generated types and the runtime validator at once, so an
+  endpoint that drifts from it fails the gate instead of production. Requirement
+  → authorise → isolate → build → verify → release. 638 TypeScript tests, 14
+  contract operations verified. Private repository, no production users; source
+  access on request.
 
 Counts are the output of a run, not an estimate: `flutter test` and
-`node --test`, both executed 2026-08-29.
+`node --test`, both executed 2026-08-29. A test count is not a quality claim, so
+every figure on the homepage links to the command that produced it and to the
+unedited output committed beside the page. Four of the six runs are from private
+repositories and cannot be re-run by a reader; huypkc/first-week is public and
+reproduces.
 
 What is deliberately not claimed: no Play Store listing, no store release, no
 production users, no uptime figure, no iOS build, no TestFlight.
@@ -89,3 +100,4 @@ than implying otherwise. Read access for review is available on request.
 - https://huypkc.github.io/one-frame.html — One Frame case study
 - https://huypkc.github.io/timeline — engineering and research timeline: how the thinking changed
 - https://huypkc.github.io/evidence.html — evidence appendix: commands and raw output
+- https://huypkc.github.io/huy-tran-cv.pdf — CV, two pages
