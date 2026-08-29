@@ -60,25 +60,20 @@ Counts are the output of a run, not an estimate: `flutter test` and
 What is deliberately not claimed: no Play Store listing, no store release, no
 production users, no uptime figure, no iOS build, no TestFlight.
 
-## Engineering log
+## Timeline
 
-The homepage carries a dated log of engineering observations — what was
-observed, what work triggered it, the judgement drawn, what changed in the
-system as a result, the evidence behind it, and what would falsify it. Each
-entry is labelled VERIFIED, SUPPORTED, INFERRED or SUPERSEDED, and those words
-mean different things: VERIFIED is backed by inspectable code, tests, a commit
-or a reproducible run; SUPPORTED has evidence pointing one way without proving
-it; INFERRED is a working model; SUPERSEDED has been replaced by later
-evidence and is kept rather than deleted.
+https://huypkc.github.io/timeline is a dated record of how my engineering
+decisions changed while building these systems, August 2026 onward. The unit is
+a thought, not a commit: an entry exists because something was thought on a
+date about real work, and evidence is attached underneath when it exists.
 
-Entries citing thun-viet/one-frame, thun-viet/basic-system-v2 and the Slack
-wake bridge give a commit SHA without a link, because those repositories are
-not public. Entries citing huypkc/first-week link to the public commit.
-
-Every entry also says how a reader can check it: the repository is public and
-the command reproduces; the command and its unedited output are reproduced in
-the evidence appendix; or the repository is private and source access is
-available on request.
+Entries are never rewritten when a later one contradicts them. The original
+stays in its own words and links to what replaced it, so the page shows the
+revisions as well as the conclusions. Statuses are HYPOTHESIS, SUPPORTED,
+APPLIED, VERIFIED, REVISED and SUPERSEDED, and they are not decoration: only a
+narrow claim with directly inspectable evidence is VERIFIED, and where the
+origin of a thought cannot be established the entry says so rather than
+inventing a date.
 
 ## Evidence appendix
 
@@ -92,4 +87,5 @@ than implying otherwise. Read access for review is available on request.
 
 - https://huypkc.github.io/ — homepage
 - https://huypkc.github.io/one-frame.html — One Frame case study
+- https://huypkc.github.io/timeline — engineering and research timeline: how the thinking changed
 - https://huypkc.github.io/evidence.html — evidence appendix: commands and raw output

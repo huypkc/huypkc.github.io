@@ -1,0 +1,2 @@
+# Wrangler leaves account cache here; it is not part of the site.
+.wrangler/

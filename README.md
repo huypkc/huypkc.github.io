@@ -7,14 +7,18 @@ tracking, no cookies.
 
 | File | What it is |
 |---|---|
-| `index.html` | Homepage — eight held frames, one idea each |
+| `index.html` | Homepage — held frames, one idea each |
+| `timeline/index.html` | Engineering / research timeline, served at `/timeline` |
 | `one-frame.html` | One Frame case study |
 | `styles.css` | The whole visual language |
 | `script.js` | Reveal-on-scroll only; the page is complete without it |
 | `assets/` | Favicon and product photography |
 | `robots.txt` | Crawling allowed, points at the sitemap |
-| `sitemap.xml` | The two pages that actually exist |
+| `sitemap.xml` | The pages that actually exist |
 | `llms.txt` | Machine-readable profile for agentic search |
+| `data/timeline.json` | Source of truth for the timeline |
+| `data/runs.json` | Source of truth for the evidence appendix |
+| `tool/render-timeline.py` | Renders both into committed static HTML |
 | `tool/discovery-check.py` | Gate: the three discovery surfaces must agree |
 
 ## Publish
@@ -38,6 +42,7 @@ convention:
 
 ```
 python3 tool/discovery-check.py
+python3 tool/render-timeline.py --check
 ```
 
 It runs on every push and pull request to `master` (`.github/workflows/discovery.yml`)
@@ -46,6 +51,34 @@ from the visible copy or from `llms.txt`, if `sameAs` or the contact address
 disagree, if the sitemap and the files on disk drift apart, if a page loses its
 canonical or its `robots` directive, or if the real-time denial in `llms.txt`
 goes missing while the interest stays.
+
+## The timeline
+
+`/timeline` is a record of how the thinking changed, not a changelog. The unit
+is a thought: an entry exists because something was thought on a date about
+real work, and evidence hangs underneath it when evidence exists. An entry with
+nothing but a context and a question is a complete entry — that is what
+`HYPOTHESIS` is for.
+
+Two rules the data enforces on itself:
+
+- **Nothing is rewritten when a later entry contradicts it.** The original
+  keeps its words and its status becomes `REVISED` or `SUPERSEDED`, with a
+  `related` link to what replaced it. `tool/render-timeline.py` refuses to
+  render a `related` id that matches no entry, so a chain cannot rot.
+- **A commit dates an application, not an origin.** Where a thought predates
+  the code that shows it, the entry carries a `dateNote` saying how its date
+  was arrived at instead of borrowing precision from a SHA.
+
+`data/timeline.json` is the source of truth and the HTML is generated from it
+and committed, so the file on disk is the file that is served. The alternative
+— fetching the JSON in the browser — would put the entire page behind
+JavaScript, which is the failure this site is written against and would hide it
+from the crawlers `llms.txt` exists to serve. Expansion is native
+`<details>`, so the page is complete with no script at all. The homepage's
+description of the timeline (how many entries, over what span, how many were
+later contradicted) is generated from the same data, so it cannot overstate the
+page it links to.
 
 ## The rule the copy follows
 

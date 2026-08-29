@@ -20,6 +20,7 @@ Standard library only, so CI needs no install step.
 import json
 import pathlib
 import re
+import subprocess
 import sys
 import xml.etree.ElementTree as ET
 
@@ -45,6 +46,7 @@ def visible_text(html: str) -> str:
 
 index_html = (ROOT / "index.html").read_text()
 one_frame_html = (ROOT / "one-frame.html").read_text()
+timeline_html = (ROOT / "timeline" / "index.html").read_text()
 llms = (ROOT / "llms.txt").read_text()
 robots = (ROOT / "robots.txt").read_text()
 seen = visible_text(index_html)
@@ -92,6 +94,15 @@ if email and email not in llms:
     fail(f"the JSON-LD email {email!r} is not in llms.txt")
 
 # ── 4 · the sitemap and the files on disk agree ──────────────────────────
+# What Pages will actually serve is what git holds, so that is what the sitemap
+# is checked against.
+try:
+    tracked = set(subprocess.run(["git", "-C", ROOT, "ls-files"], check=True,
+                                 capture_output=True, text=True).stdout.split())
+except (OSError, subprocess.CalledProcessError):
+    tracked = {str(p.relative_to(ROOT)) for p in ROOT.rglob("*") if p.is_file()}
+    print("  note: not a git checkout, falling back to files on disk\n")
+
 ns = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9"}
 locs = [e.text.strip() for e in ET.parse(ROOT / "sitemap.xml").getroot().iter(f"{{{ns['s']}}}loc")]
 
@@ -102,20 +113,33 @@ for loc in locs:
         continue
     rel = loc[len(SITE):].lstrip("/") or "index.html"
     listed.add(rel)
-    if not (ROOT / rel).exists():
-        fail(f"sitemap lists {loc!r}, which does not exist in the repository")
+    # Tracked, not merely present. A file that exists only in the working tree
+    # passes every local check and 404s the moment it is published, which is
+    # exactly how evidence.html shipped as a dead sitemap entry.
+    if not tracked & {rel, f"{rel}/index.html"}:
+        fail(f"sitemap lists {loc!r}, which is not committed to the repository")
 
 for page in sorted(p.name for p in ROOT.glob("*.html")):
     if page not in listed:
         fail(f"{page} exists and is not in sitemap.xml")
 
+# timeline/index.html is served at /timeline, so the glob above cannot see it.
+if "timeline" not in listed:
+    fail("timeline/index.html exists and /timeline is not in sitemap.xml")
+
+# The homepage has to actually reach it, or the page is published and orphaned.
+if 'href="timeline/"' not in index_html:
+    fail("index.html does not link to timeline/")
+
 # ── 5 · every page declares where it canonically lives ───────────────────
-for name, html in (("index.html", index_html), ("one-frame.html", one_frame_html)):
+for name, html in (("index.html", index_html), ("one-frame.html", one_frame_html),
+                   ("timeline/index.html", timeline_html)):
     c = re.search(r'<link rel="canonical" href="([^"]+)"', html)
     if not c:
         fail(f"{name} has no canonical link")
         continue
-    expected = f"{SITE}/" if name == "index.html" else f"{SITE}/{name}"
+    expected = {"index.html": f"{SITE}/",
+                "timeline/index.html": f"{SITE}/timeline"}.get(name, f"{SITE}/{name}")
     if c.group(1) != expected:
         fail(f"{name} canonical is {c.group(1)!r}, expected {expected!r}")
     if not re.search(r'<meta name="robots" content="index, follow"', html):

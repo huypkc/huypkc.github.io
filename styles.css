@@ -538,6 +538,12 @@ table.grid td{color:var(--muted)}
 .entrybody .ev a:hover{border-bottom-color:currentColor}
 .entrybody .quiet{color:var(--muted)}
 
+.state{
+  font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--muted);
+  white-space:nowrap;
+}
+.state--turned{color:var(--ink)}
+
 /* Narrow: the date moves above the title rather than squeezing it into a
    column too thin to read. The sign stays on the title's line. */
 @media (max-width:620px){
@@ -546,7 +552,7 @@ table.grid td{color:var(--muted)}
     gap:3px 14px;padding:15px 0;
   }
   .entry .when{grid-column:1 / -1}
-  .entry .pill{grid-column:1 / -1;margin-top:5px}
+  .entry .pill,.entry .state{grid-column:1 / -1;margin-top:5px}
   .entry > summary::after{grid-column:2;grid-row:2}
 }
 

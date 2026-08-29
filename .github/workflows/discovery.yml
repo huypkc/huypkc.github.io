@@ -15,6 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: python3 tool/discovery-check.py
-      # The log on the page is generated from data/engineering-log.json and
-      # committed. This fails if the two have drifted apart.
-      - run: python3 tool/render-log.py --check
+      # The timeline, the homepage entry point that counts it, and the
+      # evidence appendix are all generated from data/ and committed. This
+      # fails if any of them has drifted from its data.
+      - run: python3 tool/render-timeline.py --check
