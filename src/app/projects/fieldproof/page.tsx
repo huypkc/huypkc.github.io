@@ -165,7 +165,7 @@ export default function FieldProofPage() {
             <br className="hidden md:block" /> inspection workflow
           </>
         }
-        lede="An inspector authenticates, records findings and photographs on a site with no signal, and syncs when there is one. An administrator reviews submitted work from a hosted console and can write nothing at all."
+        lede="Field work that survives bad connectivity. An inspector records findings on a site with no signal; the work syncs once there is one, freezes when it is handed in, and an administrator reviews it — photographs and all — from a hosted console that can write nothing at all."
       />
 
       {/* Try it — evidence you can open before reading anything */}

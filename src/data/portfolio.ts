@@ -162,7 +162,7 @@ export const EVIDENCE: EvidenceRecord[] = [
     claim:
       "One inspector cannot read or mutate another's work at any level of the chain",
     detail:
-      "pgTAP suite — 183 tests across 9 files, run three times per CI pass. Covers silent denials, not only raised errors",
+      "pgTAP suite — 183 assertions across 9 files, run three times per CI pass. Covers silent denials, not only raised errors",
     status: "Verified",
     href: LINKS.fieldproof.pgTap,
   },
@@ -182,7 +182,7 @@ export const EVIDENCE: EvidenceRecord[] = [
     kind: "Demo",
     claim: "The security boundary holds against the real hosted project",
     detail:
-      "Hosted Supabase smoke — 38 assertions through real Auth, real RLS and real Storage, not fakes",
+      "Hosted Supabase smoke — 38 tests through real Auth, real RLS and real Storage, not fakes",
     status: "Verified",
     href: LINKS.fieldproof.smokeRun,
   },
@@ -418,17 +418,31 @@ export const EVIDENCE: EvidenceRecord[] = [
 
 /* -------------------------------------------------------------- projects */
 
+/**
+ * A project card reads in one order, and the order is the point:
+ *
+ *   outcome    what it is for, in a line a non-engineer finishes reading
+ *   context    who has the problem, and what becomes possible
+ *   guarantee  the architecture translated into a promise
+ *   proof      the numbers, as supporting metadata rather than a headline
+ *
+ * A number never leads. Every `guarantee` below is narrow enough to be false
+ * if the code changed, and every `proof` entry has a record in EVIDENCE.
+ */
 export type Project = {
   slug: string
   name: string
-  /** One sentence, product-level. */
+  /** Product outcome. The card's headline. No metric, no hedge. */
+  outcome: string
+  /** Who it is for, the problem, what becomes possible. One or two sentences. */
   description: string
+  /** One sentence turning an architectural fact into an understandable promise. */
+  guarantee: string
   role: string
   stack: string[]
   status: ProjectStatus
-  /** Short evidence lines for the home-page snapshot. */
-  snapshot: string[]
-  /** Kinds shown as chips. Derived from EVIDENCE, never hand-listed. */
+  /** Compact supporting proof. Short enough to sit on one wrapped row. */
+  proof: string[]
   href: string
 }
 
@@ -436,59 +450,81 @@ export const PROJECTS: Project[] = [
   {
     slug: "fieldproof",
     name: "FieldProof",
+    outcome: "Field work that survives bad connectivity.",
     description:
-      "An offline-capable field inspection workflow: capture findings and photographs on site without a network, sync once there is one, and review submitted work from a hosted console.",
+      "Inspectors record findings on sites with no signal. The work syncs once a connection returns, freezes when it is handed in, and the office reviews it — photographs and all — from a hosted console.",
+    guarantee:
+      "Who owns a record, what the office may read, and the freeze on submitted work are all enforced by row-level policy in Postgres — not by the app, so they hold even when the app is bypassed.",
     role: "Solo engineer — mobile, database, admin, CI",
     stack: ["Flutter", "Supabase / Postgres", "Next.js", "GitHub Actions"],
     status: "Portfolio project",
-    snapshot: [
-      "279 mobile tests, 41 admin tests",
-      "Row Level Security proven by 183 database assertions",
-      "38-assertion smoke against the real hosted project",
-      "Installable Android build and a live review console",
+    proof: [
+      "Offline drafts",
+      "279 mobile tests",
+      "183 database assertions",
+      "Live review console",
     ],
     href: "/projects/fieldproof",
   },
   {
     slug: "one-frame",
     name: "One Frame",
+    outcome: "A journal that never leaves the phone.",
     description:
-      "A local-first Android journal: one photograph and one sentence a day, held on the device with no account and no server.",
+      "One photograph and one sentence a day, for someone who wants the habit without handing their life to a server. There is no account and no upload — and uninstalling loses it, which the app says on the first screen.",
+    // Scoped to the release build on purpose: the debug and profile manifests
+    // do declare INTERNET so the Flutter tooling can attach. Only the release
+    // manifest omits it, and that is what the published policy claims too.
+    guarantee:
+      "Private by manifest, not by promise — the release build declares no INTERNET permission, so the app has no route off the device at all.",
     role: "Solo engineer — mobile, product, release",
     stack: ["Flutter", "SQLite", "GitHub Actions"],
     status: "Not published",
-    snapshot: [
-      "220 tests — output committed, repository private",
-      "Release build refuses an unsigned artifact",
-      "Run and photographed on Android hardware",
+    proof: [
+      "220 tests",
+      "Release refuses an unsigned build",
+      "Run on Android hardware",
+      "Repository private",
     ],
     href: "/projects/one-frame",
   },
   {
     slug: "first-week",
     name: "First Week",
+    outcome: "A checklist that will not invent a deadline.",
     description:
-      "An enrolment checklist for Vietnamese students, written by the cohort before them. Every task carries where its claim came from, and a checklist nobody has filled in yet says so.",
+      "Vietnamese first-years piece their enrolment week together from school notices, group chats and the year above. First Week puts one cohort's steps in a single list and shows what stands behind each one — including the steps nobody has answered yet.",
+    // Narrow on purpose: the constructor throws only for Trust.official with no
+    // official source. Tasks at weaker trust levels may ship with none, and six
+    // NTTU tasks do — so "no source at all" would be false.
+    guarantee:
+      "A step marked official cannot be constructed without the school's own page attached — the model throws, so a guess can never reach the screen wearing the school's authority.",
     role: "Solo engineer — contract, data, application",
     stack: ["Flutter", "OpenAPI", "Frozen fixtures"],
     status: "Portfolio project",
-    snapshot: [
-      "Public repository — the test command reproduces",
-      "79 of 80 tests at the current head",
-      "14 screens captured on a real device",
-      "No CI — stated rather than implied",
+    proof: [
+      "Public repository",
+      "79 of 80 tests at HEAD",
+      "14 screens on a real device",
+      "No CI",
     ],
     href: "/projects/first-week",
   },
   {
     slug: "skillr",
     name: "Skillr",
+    // No outcome and no guarantee: there is no artifact, so there is nothing to
+    // headline. The card states the absence once, quietly, and the Evidence
+    // index carries the full record — rather than making "no evidence" the
+    // loudest thing in the grid.
+    outcome: "",
     description:
-      "No inspectable artifact for this project could be located, so no scope, stack or contribution is described.",
+      "Listed for inclusion in this portfolio. No repository, deployment, build or written artifact could be reached, so no scope, stack or contribution is described here.",
+    guarantee: "",
     role: "Not established",
     stack: [],
     status: "Unverified",
-    snapshot: ["No evidence located"],
+    proof: [],
     href: "/projects/skillr",
   },
 ]

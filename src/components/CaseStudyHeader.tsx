@@ -42,11 +42,16 @@ export default function CaseStudyHeader({
       </div>
 
       {chips.length > 0 ? (
-        <div className="mb-12 flex flex-wrap gap-2 border-b border-line pb-12">
+        <ul
+          aria-label="Evidence available for this project"
+          className="mb-12 flex flex-wrap gap-2 border-b border-line pb-12"
+        >
           {chips.map((c) => (
-            <EvidenceChip key={c} kind={c} />
+            <li key={c}>
+              <EvidenceChip kind={c} />
+            </li>
           ))}
-        </div>
+        </ul>
       ) : (
         <div className="mb-12 border-b border-line pb-12">
           <p className="font-mono text-[11px] text-dim">

@@ -7,9 +7,11 @@ import { chipsFor, LINKS, PROJECTS } from "@/data/portfolio"
 const CAPABILITIES = [
   {
     title: "Mobile product delivery",
+    guarantee:
+      "Work captured on a phone with no connection is still there after a restart, and reaches the server exactly once.",
     projects: ["FieldProof", "One Frame", "First Week"],
     evidence: [
-      "Flutter across three shipped codebases",
+      "Flutter across three codebases",
       "Offline and local-first persistence",
       "Release builds that fail closed without a signing key",
       "Walked on real Android hardware",
@@ -18,28 +20,34 @@ const CAPABILITIES = [
   },
   {
     title: "Backend and data boundaries",
+    guarantee:
+      "Unauthorised access is refused by database policy rather than by the application, so removing the app's own gate leaks nothing.",
     projects: ["FieldProof"],
     evidence: [
       "Supabase / Postgres schema and migrations",
       "Row Level Security enforced and forced, not advisory",
       "183 database assertions covering silent denials",
-      "38-assertion smoke against the real hosted project",
+      "38-test smoke against the real hosted project",
     ],
     href: "/projects/fieldproof",
   },
   {
     title: "Web product interfaces",
+    guarantee:
+      "Read-only by database policy, not by hiding buttons — the console holds no privileged credential at all.",
     projects: ["FieldProof Admin"],
     evidence: [
       "Next.js review console, deployed and reachable",
       "Search, review and detail surfaces over live data",
-      "Read-only by database policy, not by hiding buttons",
+      "No privileged key reaches the browser bundle",
     ],
     href: LINKS.fieldproof.demo,
     external: true,
   },
   {
     title: "Finishing work on an existing codebase",
+    guarantee:
+      "Slices land as reviewed pull requests with the gates green, and defects the device found are closed rather than noted.",
     projects: ["FieldProof"],
     evidence: [
       "Slices landed as reviewed pull requests",
@@ -127,35 +135,75 @@ export default function Home() {
                   className="flex flex-col gap-4 rounded-sm border border-line bg-card p-6 transition-colors hover:border-dim"
                 >
                   <div>
-                    <h3 className="mb-1 text-[15px] font-semibold text-fg">
-                      {p.name}
-                    </h3>
-                    <p className="font-mono text-[11px] text-dim">
-                      {p.stack.length > 0
-                        ? p.stack.join(" · ")
-                        : "No stack claimed"}
-                    </p>
-                  </div>
-                  <ul className="grow space-y-1">
-                    {p.snapshot.map((e) => (
-                      <li
-                        key={e}
-                        className="flex items-start gap-2 text-[13px] text-body"
-                      >
-                        <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-dim" />
-                        {e}
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="flex flex-wrap gap-1.5 pt-1">
-                    {chips.length > 0 ? (
-                      chips.map((c) => <EvidenceChip key={c} kind={c} />)
+                    {/* Name as label, outcome as heading — the same order the
+                        case-study pages already use. A project with
+                        no outcome keeps its name as the heading, so every card
+                        has exactly one and none repeats itself. */}
+                    {p.outcome ? (
+                      <>
+                        <p className="mb-1.5 font-mono text-[10px] uppercase tracking-widest text-dim">
+                          {p.name}
+                        </p>
+                        {/* The name is inside the heading but hidden, so a
+                            headings list names the project each outcome
+                            belongs to without changing the rendered page. */}
+                        <h3 className="text-[16px] font-semibold leading-snug text-fg">
+                          <span className="sr-only">{p.name}: </span>
+                          {p.outcome}
+                        </h3>
+                      </>
                     ) : (
-                      <span className="font-mono text-[10px] tracking-widest text-dim">
-                        NO EVIDENCE
+                      <h3 className="text-[16px] font-semibold leading-snug text-fg">
+                        {p.name}
+                      </h3>
+                    )}
+                  </div>
+
+                  <p className="text-[13px] leading-relaxed text-body">
+                    {p.description}
+                  </p>
+
+                  {p.guarantee ? (
+                    <p className="border-l border-line pl-3 text-[13px] leading-relaxed text-muted-fg">
+                      {p.guarantee}
+                    </p>
+                  ) : null}
+
+                  {/* Proof sits under the promise it supports, never above it. */}
+                  <div className="mt-auto flex flex-col gap-2 pt-1">
+                    {p.proof.length > 0 ? (
+                      <ul
+                        aria-label={`Evidence and limitations for ${p.name}`}
+                        className="flex flex-wrap gap-x-5 gap-y-1"
+                      >
+                        {p.proof.map((e) => (
+                          <li
+                            key={e}
+                            className="font-mono text-[11px] text-muted-fg"
+                          >
+                            {e}
+                          </li>
+                        ))}
+                      </ul>
+                    ) : null}
+                    {chips.length > 0 ? (
+                      <ul
+                        aria-label={`Evidence available for ${p.name}`}
+                        className="flex flex-wrap gap-1.5"
+                      >
+                        {chips.map((c) => (
+                          <li key={c}>
+                            <EvidenceChip kind={c} />
+                          </li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <span className="font-mono text-[11px] text-dim">
+                        Not verified
                       </span>
                     )}
                   </div>
+
                   <div className="border-t border-line pt-3">
                     <Link
                       href={p.href}
@@ -190,6 +238,9 @@ export default function Home() {
                   <h3 className="mb-2 text-[15px] font-semibold text-fg">
                     {c.title}
                   </h3>
+                  <p className="mb-3 text-[13px] leading-relaxed text-body">
+                    {c.guarantee}
+                  </p>
                   <div className="flex flex-wrap gap-1.5">
                     {c.projects.map((p) => (
                       <span
@@ -213,9 +264,12 @@ export default function Home() {
                       </li>
                     ))}
                   </ul>
+                  {/* Four links all reading "Inspect" are useless in a screen
+                      reader's link list; the label names what is inspected. */}
                   {c.external ? (
                     <a
                       href={c.href}
+                      aria-label={`Inspect the evidence for ${c.title} (external)`}
                       className="font-mono text-[11px] text-muted-fg transition-colors hover:text-fg"
                     >
                       Inspect ↗
@@ -223,6 +277,7 @@ export default function Home() {
                   ) : (
                     <Link
                       href={c.href}
+                      aria-label={`Inspect the evidence for ${c.title}`}
                       className="font-mono text-[11px] text-muted-fg transition-colors hover:text-fg"
                     >
                       Inspect →
