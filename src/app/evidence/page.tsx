@@ -1,21 +1,27 @@
 import type { Metadata } from "next"
 import EvidenceIndex from "@/components/EvidenceIndex"
 import PageHeader from "@/components/PageHeader"
+import { PageJsonLd } from "@/components/JsonLd"
+import { metadataFor, routeFor } from "@/lib/seo"
 
-export const metadata: Metadata = {
-  title: "Evidence",
-  description:
-    "Every evidence record across all projects, with verification status and a link to the artifact where one exists.",
-}
+export const metadata: Metadata = metadataFor("/evidence")
 
 export default function EvidencePage() {
   return (
     <div className="mx-auto max-w-5xl px-6 py-16">
+      <PageJsonLd
+        id="evidence"
+        name="Evidence"
+        path="/evidence"
+        description={routeFor("/evidence").description}
+      />
       <PageHeader
         label="Evidence index"
         title="Evidence"
         lede="Every claim this site makes, with the artifact behind it. Not everything here is verified — that is the point of publishing the index rather than a summary."
       />
+      {/* The table is the page; the heading exists for structure, not display. */}
+      <h2 className="sr-only">All evidence records</h2>
       <EvidenceIndex />
 
       <div className="mt-8 border-t border-line pt-6">

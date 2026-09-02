@@ -1,14 +1,12 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import { BareProjectJsonLd } from "@/components/JsonLd"
+import { metadataFor, routeFor } from "@/lib/seo"
 import CaseStudyHeader from "@/components/CaseStudyHeader"
 import EvidenceTable from "@/components/EvidenceTable"
 import { CONTACT, evidenceFor } from "@/data/portfolio"
 
-export const metadata: Metadata = {
-  title: "Skillr",
-  description:
-    "Listed for inclusion, but no inspectable artifact could be located. Nothing is claimed here.",
-}
+export const metadata: Metadata = metadataFor("/projects/skillr")
 
 const SEARCHED = [
   "Public and private repositories across every account and organisation I hold",
@@ -22,6 +20,11 @@ export default function SkillrPage() {
 
   return (
     <div className="mx-auto max-w-5xl px-6 py-16">
+      <BareProjectJsonLd
+        name="Skillr"
+        path="/projects/skillr"
+        description={routeFor("/projects/skillr").description}
+      />
       <CaseStudyHeader
         project="Skillr"
         status="Unverified"

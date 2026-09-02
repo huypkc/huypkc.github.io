@@ -1,16 +1,14 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
+import { ProjectJsonLd } from "@/components/JsonLd"
+import { metadataFor, routeFor } from "@/lib/seo"
 import CaseStudyHeader from "@/components/CaseStudyHeader"
 import EvidenceTable from "@/components/EvidenceTable"
 import LimitationBlock from "@/components/LimitationBlock"
 import { evidenceFor, LINKS } from "@/data/portfolio"
 
-export const metadata: Metadata = {
-  title: "One Frame",
-  description:
-    "A local-first Android journal — one photograph and one sentence a day, held on the device with no account and no server. Built to a signed release, deliberately not published.",
-}
+export const metadata: Metadata = metadataFor("/projects/one-frame")
 
 const DECISIONS = [
   {
@@ -44,6 +42,14 @@ export default function OneFramePage() {
 
   return (
     <div className="mx-auto max-w-5xl px-6 py-16">
+      <ProjectJsonLd
+        name="One Frame"
+        path="/projects/one-frame"
+        description={routeFor("/projects/one-frame").description}
+        applicationCategory="LifestyleApplication"
+        operatingSystem="Android"
+        programmingLanguage={["Dart"]}
+      />
       <CaseStudyHeader
         project="One Frame"
         status="Not published"

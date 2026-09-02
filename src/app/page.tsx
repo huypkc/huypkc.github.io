@@ -1,6 +1,7 @@
 import Link from "next/link"
 import EvidenceChip from "@/components/EvidenceChip"
 import SectionLabel from "@/components/SectionLabel"
+import { HomeJsonLd } from "@/components/JsonLd"
 import { chipsFor, LINKS, PROJECTS } from "@/data/portfolio"
 
 const CAPABILITIES = [
@@ -61,6 +62,8 @@ const CAPTIONS = [
 export default function Home() {
   return (
     <>
+      <HomeJsonLd />
+
       {/* Hero */}
       <section className="mx-auto max-w-5xl px-6 pt-20 pb-20 md:pt-28 md:pb-28">
         <div className="max-w-2xl">
@@ -156,6 +159,7 @@ export default function Home() {
                   <div className="border-t border-line pt-3">
                     <Link
                       href={p.href}
+                      aria-label={`Inspect project: ${p.name}`}
                       className="text-[12px] font-medium text-fg transition-colors hover:text-muted-fg"
                     >
                       Inspect project →

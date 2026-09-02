@@ -39,6 +39,8 @@ function Row({ row }: { row: EvidenceRecord }) {
         {row.href ? (
           <a
             href={row.href}
+            // "Open" repeated down the column is not a usable link name.
+            aria-label={`Open ${row.project} evidence: ${row.claim}`}
             className="whitespace-nowrap font-mono text-[11px] text-muted-fg underline-offset-4 transition-colors hover:text-fg hover:underline"
           >
             Open ↗

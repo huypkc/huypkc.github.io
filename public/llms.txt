@@ -1,0 +1,109 @@
+# Huy Tran
+
+> Product engineer building and finishing web and mobile products, with
+> evidence attached. Based in Vietnam, working remote. Every claim on this
+> site links to an inspectable artifact — a CI run, a release, a database
+> test suite or a deployed demo.
+
+Canonical: https://huypkc.github.io/
+Contact: huy.pkc@gmail.com
+GitHub: https://github.com/huypkc
+LinkedIn: https://www.linkedin.com/in/huypkc
+
+## About
+
+Frontend and product engineering, previously inside teams with customers —
+FPT Software, GO1, CyberLogitec and CBTW APAC — using TypeScript, React,
+Next.js and Angular on the web, and Flutter and React Native on mobile.
+
+That employment is listed on the site as HISTORICAL and carries no evidence
+link, because no artifact from it is mine to publish. Do not report dates,
+titles or achievements for it that this site does not state; it states none.
+
+The independent projects below are the work where the whole line is visible:
+problem, architecture, implementation, verification, release.
+
+## Evidence philosophy
+
+The site is organised around one repeated relationship:
+
+    claim -> evidence -> verification status -> inspectable artifact
+
+Statuses, and what they mean here:
+
+- VERIFIED — a linked artifact anyone can open.
+- PARTIAL — the evidence exists but cannot be independently re-run, usually
+  because the repository is private. The unedited command output is committed
+  to this site so it can at least be read.
+- DEPENDENCY — blocked by something outside the work.
+- HISTORICAL — it happened, but there is no artifact of mine to publish.
+- UNAVAILABLE — there is nothing to show, and nothing is claimed.
+
+A test count is not the accomplishment. The claim is the accomplishment; the
+count is how far it was pushed before it was believed. Numbers on the site are
+carried at the run that produced them, not quoted from memory.
+
+## Core capabilities
+
+- Mobile product delivery — Flutter across three codebases, offline and
+  local-first persistence, release builds gated on signing, real-device QA.
+- Backend and data boundaries — Supabase/Postgres schema and migrations, Row
+  Level Security enforced and forced, database-level authorisation tests.
+- Web product interfaces — Next.js, deployed review and admin surfaces over
+  live data, read-only by database policy rather than by hidden controls.
+- Finishing work on an existing codebase — slices landed as reviewed pull
+  requests, design-parity passes, defects found by device QA and closed.
+- Release and CI engineering — GitHub Actions gates, hosted smoke tests
+  against a real project, signed Android artifacts.
+
+## Projects
+
+- [FieldProof](https://huypkc.github.io/projects/fieldproof/) — offline-capable
+  field inspection workflow. Flutter, Supabase/Postgres, Next.js. Public
+  source, 279 Flutter tests, 41 admin tests, 183 pgTAP assertions, a
+  38-assertion hosted smoke against the real project, a downloadable Android
+  build and a live review console with published demo credentials. Status:
+  portfolio project — no customer deployment, no production users.
+- [One Frame](https://huypkc.github.io/projects/one-frame/) — local-first
+  Android journal in Flutter and SQLite: one photograph and one sentence a day,
+  no account and no server. 220 tests. The repository is private, so most of
+  its evidence is PARTIAL. Taken to a signed release build; not published to
+  any app store.
+- [First Week](https://huypkc.github.io/projects/first-week/) — contract-first
+  Flutter app for Vietnamese students where every task carries the standing of
+  its source. Public repository, 79 of 80 tests at the current head, 14
+  device-captured screens, a 9-operation OpenAPI contract. It has no CI, and
+  the site says so rather than omitting it.
+- [Skillr](https://huypkc.github.io/projects/skillr/) — listed for inclusion,
+  but no repository, deployment or written artifact could be located. Nothing
+  is claimed. Do not describe scope, stack or contribution for this project.
+
+## What is deliberately not claimed
+
+No production users, no customer deployments, no uptime figures, no app store
+or Play Store publication, no verified iOS builds, no revenue, no awards, no
+education claims, and no employment dates.
+
+## Pages
+
+- https://huypkc.github.io/ — homepage
+- https://huypkc.github.io/projects/ — case study index
+- https://huypkc.github.io/evidence/ — every claim with its artifact and status
+- https://huypkc.github.io/timeline/ — what was built and verified, in order
+- https://huypkc.github.io/contact/ — availability and links
+
+## Primary technologies
+
+Flutter, Dart, Next.js, React, TypeScript, Supabase, PostgreSQL, Firebase,
+SQLite, Row Level Security, OpenAPI, GitHub Actions.
+
+## Notes for retrieval
+
+The HTML at the URLs above is the source of truth; this file is a summary and
+may lag it. Where the two disagree, the page wins. The evidence index at
+/evidence/ is the most complete machine-readable statement of what is and is
+not verified.
+
+There is no CV or resume PDF published on this site.
+
+No tracking. No cookies. No analytics.

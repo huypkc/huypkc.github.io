@@ -1,18 +1,65 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import PageHeader from "@/components/PageHeader"
+import { PageJsonLd } from "@/components/JsonLd"
+import { metadataFor, routeFor } from "@/lib/seo"
 import StatusBadge from "@/components/StatusBadge"
 import { TIMELINE } from "@/data/portfolio"
 
-export const metadata: Metadata = {
-  title: "Timeline",
-  description:
-    "What was actually built and verified, in order. Employment is present but secondary — it carries no artifact I am free to publish.",
+export const metadata: Metadata = metadataFor("/timeline")
+
+const MONTH = [
+  "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+  "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
+]
+
+/** "2026-08" -> { mon: "Aug", year: "2026" } */
+function parts(iso: string) {
+  const [year, month] = iso.split("-")
+  return { mon: MONTH[Number(month) - 1], year }
+}
+
+/**
+ * Renders the date as one or two <time> elements. A range gets two, because
+ * <time> has no interval form and a single element covering "Aug – Sep" would
+ * carry a datetime that does not describe its own text.
+ */
+function When({ from, to }: { from?: string; to?: string }) {
+  if (!from) return null
+  const a = parts(from)
+
+  if (!to) {
+    return (
+      <time
+        dateTime={from}
+        className="font-mono text-[10px] tracking-wide text-dim"
+      >
+        {a.mon} {a.year}
+      </time>
+    )
+  }
+
+  const b = parts(to)
+  return (
+    <span className="font-mono text-[10px] tracking-wide text-dim">
+      <time dateTime={from}>{a.mon}</time>
+      {" – "}
+      <time dateTime={to}>
+        {b.mon} {b.year}
+      </time>
+    </span>
+  )
 }
 
 export default function TimelinePage() {
   return (
     <div className="mx-auto max-w-5xl px-6 py-16">
+      <PageJsonLd
+        id="timeline"
+        name="Timeline"
+        path="/timeline"
+        description={routeFor("/timeline").description}
+      />
       <PageHeader
         label="Engineering history"
         title="Timeline"
@@ -39,11 +86,7 @@ export default function TimelinePage() {
                         {item.project}
                       </h3>
                       <StatusBadge status={item.status} />
-                      {item.when ? (
-                        <span className="font-mono text-[10px] tracking-wide text-dim">
-                          {item.when}
-                        </span>
-                      ) : null}
+                      <When from={item.from} to={item.to} />
                     </div>
                     <p className="max-w-2xl text-[13px] leading-relaxed text-muted-fg">
                       {item.description}

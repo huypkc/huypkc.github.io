@@ -55,6 +55,7 @@ export default function ProjectCard({
         </div>
         <Link
           href={project.href}
+          aria-label={`Case study: ${project.name}`}
           className="inline-flex shrink-0 items-center gap-1 whitespace-nowrap text-[13px] font-medium text-fg transition-colors hover:text-muted-fg"
         >
           Case study →

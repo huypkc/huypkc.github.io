@@ -527,8 +527,13 @@ export type TimelineEntry = {
   what: string[]
   status: VerificationStatus
   href: string | null
-  /** Shown only when the date itself is evidenced. */
-  when?: string
+  /**
+   * ISO year-months, present only when the repository history evidences them.
+   * The visible label is derived from these, so the text a reader sees and the
+   * datetime a machine reads cannot disagree.
+   */
+  from?: string
+  to?: string
 }
 
 export type TimelineYear = { year: string; items: TimelineEntry[] }
@@ -539,7 +544,8 @@ export const TIMELINE: TimelineYear[] = [
     items: [
       {
         project: "FieldProof",
-        when: "Aug – Sep 2026",
+        from: "2026-08",
+        to: "2026-09",
         description:
           "Built from an empty repository to a system with an installable build, a live review console and an acceptance record that names the evidence behind every criterion.",
         what: [
@@ -554,7 +560,7 @@ export const TIMELINE: TimelineYear[] = [
       },
       {
         project: "First Week",
-        when: "Aug 2026",
+        from: "2026-08",
         description:
           "A contract-first Flutter app whose product argument is that a checklist nobody has filled in must look empty rather than plausible.",
         what: [
@@ -568,7 +574,7 @@ export const TIMELINE: TimelineYear[] = [
       },
       {
         project: "One Frame",
-        when: "Aug 2026",
+        from: "2026-08",
         description:
           "A local-first Android journal taken to a signed release build and device validation, then deliberately not published.",
         what: [

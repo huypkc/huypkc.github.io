@@ -1,0 +1,13 @@
+{
+  "name": "Huy Tran — Product Engineer",
+  "short_name": "Huy Tran",
+  "description": "I build and finish web and mobile products, with evidence attached.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#F8F8F6",
+  "theme_color": "#F8F8F6",
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

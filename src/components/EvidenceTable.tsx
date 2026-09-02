@@ -53,6 +53,10 @@ export default function EvidenceTable({ rows }: { rows: EvidenceRecord[] }) {
                 {row.href ? (
                   <a
                     href={row.href}
+                    // Every row's link reads "Open", so on its own it is a
+                    // useless name in a screen reader's link list. The label
+                    // names the artifact; the visible text stays "Open ↗".
+                    aria-label={`Open evidence for: ${row.claim}`}
                     className="font-mono text-[11px] text-muted-fg underline-offset-4 transition-colors hover:text-fg hover:underline"
                   >
                     Open ↗

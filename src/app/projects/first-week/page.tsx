@@ -1,16 +1,14 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
+import { ProjectJsonLd } from "@/components/JsonLd"
+import { metadataFor, routeFor } from "@/lib/seo"
 import CaseStudyHeader from "@/components/CaseStudyHeader"
 import EvidenceTable from "@/components/EvidenceTable"
 import LimitationBlock from "@/components/LimitationBlock"
 import { evidenceFor, LINKS } from "@/data/portfolio"
 
-export const metadata: Metadata = {
-  title: "First Week",
-  description:
-    "An enrolment checklist for Vietnamese students where every task carries the standing of its source, and a checklist nobody has filled in yet says so.",
-}
+export const metadata: Metadata = metadataFor("/projects/first-week")
 
 const SHOTS = [
   {
@@ -57,6 +55,15 @@ export default function FirstWeekPage() {
 
   return (
     <div className="mx-auto max-w-5xl px-6 py-16">
+      <ProjectJsonLd
+        name="First Week"
+        path="/projects/first-week"
+        description={routeFor("/projects/first-week").description}
+        applicationCategory="EducationalApplication"
+        operatingSystem="Android"
+        programmingLanguage={["Dart"]}
+        codeRepository={LINKS.firstWeek.repo}
+      />
       <CaseStudyHeader
         project="First Week"
         status="Portfolio project"

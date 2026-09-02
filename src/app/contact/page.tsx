@@ -1,13 +1,11 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import PageHeader from "@/components/PageHeader"
+import { PageJsonLd } from "@/components/JsonLd"
+import { metadataFor, routeFor } from "@/lib/seo"
 import { CONTACT } from "@/data/portfolio"
 
-export const metadata: Metadata = {
-  title: "Contact",
-  description:
-    "Available for existing product work, MVP completion, mobile and web implementation, Supabase/Firebase integration, admin portals and production readiness.",
-}
+export const metadata: Metadata = metadataFor("/contact")
 
 const AVAILABLE_FOR = [
   "Existing product work — finishing slices, bug fixes, parity passes",
@@ -40,6 +38,12 @@ const LINKS = [
 export default function ContactPage() {
   return (
     <div className="mx-auto max-w-5xl px-6 py-16">
+      <PageJsonLd
+        id="contact"
+        name="Contact"
+        path="/contact"
+        description={routeFor("/contact").description}
+      />
       <PageHeader label="Get in touch" title="Contact" />
 
       <div className="grid gap-12 md:grid-cols-[2fr_1fr]">

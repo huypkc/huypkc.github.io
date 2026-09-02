@@ -44,6 +44,32 @@ Two details that GitHub Pages makes load-bearing:
   than `/evidence.html`, which is what lets a direct hit on `/evidence`
   resolve instead of 404ing.
 
+## Discovery layer
+
+Canonical origin: `https://huypkc.github.io`. Every indexable route carries a
+canonical, a per-route Open Graph and Twitter card, `index, follow`, and JSON-LD
+that only states things visible on the page.
+
+```bash
+npm run og           # regenerate social cards + favicons into public/
+npm run check:seo    # assert the discovery layer in ./out (CI runs this)
+```
+
+- `src/lib/seo.ts` is the route table. Pages build their `<head>` from it and
+  `tool/render-og.mjs` renders the cards from it, so a card cannot say something
+  its page does not.
+- Social cards and favicons are **committed PNGs** under `public/og` and
+  `public/icons`. Next's `opengraph-image.tsx` emits an extensionless file,
+  which GitHub Pages serves as `application/octet-stream` — preview crawlers
+  reject that, so real `.png` files are used instead. Re-run `npm run og` after
+  editing any title or description in `src/lib/seo.ts`.
+- `sitemap.xml` takes `lastmod` from the last commit touching each page, and
+  omits it entirely if git cannot answer. The deploy workflow therefore checks
+  out with `fetch-depth: 0`.
+- `public/llms.txt` is a summary surface for retrieval agents. The HTML is the
+  source of truth; where they disagree the page wins.
+- No analytics, no tracking, no cookies.
+
 ## Content rules
 
 The site is built around one relationship, repeated:

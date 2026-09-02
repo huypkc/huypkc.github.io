@@ -2,16 +2,17 @@ import type { Metadata } from "next"
 import PageHeader from "@/components/PageHeader"
 import ProjectCard from "@/components/ProjectCard"
 import { PROJECTS } from "@/data/portfolio"
+import { ProjectsJsonLd } from "@/components/JsonLd"
+import { metadataFor } from "@/lib/seo"
 
-export const metadata: Metadata = {
-  title: "Work",
-  description:
-    "Engineering case studies. Each carries a status label and evidence chips, shown only where the evidence exists.",
-}
+export const metadata: Metadata = metadataFor("/projects")
 
 export default function ProjectsPage() {
   return (
     <div className="mx-auto max-w-5xl px-6 py-16">
+      <ProjectsJsonLd
+        items={PROJECTS.map((p) => ({ name: p.name, path: p.href }))}
+      />
       <PageHeader
         label="Case studies"
         title="Work"

@@ -1,17 +1,15 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
+import { ProjectJsonLd } from "@/components/JsonLd"
+import { metadataFor, routeFor } from "@/lib/seo"
 import CaseStudyHeader from "@/components/CaseStudyHeader"
 import EvidenceTable from "@/components/EvidenceTable"
 import LimitationBlock from "@/components/LimitationBlock"
 import StatusBadge from "@/components/StatusBadge"
 import { evidenceFor, LINKS } from "@/data/portfolio"
 
-export const metadata: Metadata = {
-  title: "FieldProof",
-  description:
-    "An offline-capable field inspection workflow — Flutter, Supabase/Postgres and Next.js — with 279 mobile tests, 183 database assertions and a live review console.",
-}
+export const metadata: Metadata = metadataFor("/projects/fieldproof")
 
 const WORKFLOW = [
   { step: "Inspection", sub: "site, address, client" },
@@ -148,6 +146,16 @@ export default function FieldProofPage() {
 
   return (
     <div className="mx-auto max-w-5xl px-6 py-16">
+      <ProjectJsonLd
+        name="FieldProof"
+        path="/projects/fieldproof"
+        description={routeFor("/projects/fieldproof").description}
+        applicationCategory="BusinessApplication"
+        operatingSystem="Android"
+        programmingLanguage={["Dart", "TypeScript", "SQL"]}
+        codeRepository={LINKS.fieldproof.repo}
+        downloadUrl={LINKS.fieldproof.release}
+      />
       <CaseStudyHeader
         project="FieldProof"
         status="Portfolio project"

@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { Inter, Instrument_Serif, JetBrains_Mono } from "next/font/google"
 import Nav from "@/components/Nav"
 import Footer from "@/components/Footer"
+import { metadataFor, SITE, url } from "@/lib/seo"
 import "./globals.css"
 
 const inter = Inter({
@@ -24,21 +25,44 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 })
 
+// The homepage row also supplies the site-wide defaults, so a route that adds
+// no metadata of its own still inherits a coherent card rather than an empty one.
+const home = metadataFor("/")
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://huypkc.github.io"),
+  metadataBase: new URL(SITE.origin),
   title: {
     default: "Huy Tran — Product Engineer",
-    template: "%s — Huy Tran",
+    template: `%s — ${SITE.name}`,
   },
-  description:
-    "I build and finish web and mobile products, with evidence attached. Every claim on this site links to an inspectable artifact.",
-  openGraph: {
-    title: "Huy Tran — Product Engineer",
-    description:
-      "I build and finish web and mobile products, with evidence attached.",
-    url: "https://huypkc.github.io",
-    siteName: "Huy Tran",
-    type: "website",
+  description: home.description,
+  applicationName: SITE.name,
+  authors: [{ name: SITE.name, url: url("/") }],
+  creator: SITE.name,
+  alternates: { canonical: url("/") },
+  openGraph: home.openGraph,
+  twitter: home.twitter,
+  // Committed PNGs under /icons rather than generated routes: GitHub Pages
+  // needs the file extension to serve the right content type.
+  icons: {
+    icon: [
+      { url: "/icons/icon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/icons/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icons/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [{ url: "/icons/apple-icon.png", sizes: "180x180", type: "image/png" }],
+  },
+  manifest: "/site.webmanifest",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
 }
 
