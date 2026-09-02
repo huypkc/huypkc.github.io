@@ -23,6 +23,7 @@ const ROUTES = [
   "/projects/skillr",
   "/evidence",
   "/timeline",
+  "/cv",
   "/contact",
 ]
 

@@ -125,10 +125,13 @@ export default function TimelinePage() {
       </div>
 
       <p className="mt-12 max-w-2xl border-t border-line pt-6 text-[13px] leading-relaxed text-muted-fg">
-        Dates appear only where they are evidenced by a repository&apos;s own
-        history. Employment years are not reconstructed from project dates, and
-        no employer is listed with a date I cannot support — which is why the
-        entry below 2026 carries none.
+        Project dates come from the repository&apos;s own history. Employment
+        dates come from my CV rather than from anything inspectable here, so
+        they are stated on the{" "}
+        <Link href="/cv" className="text-fg underline underline-offset-4">
+          CV
+        </Link>{" "}
+        and carry no evidence link — the distinction is the point of this page.
       </p>
     </div>
   )

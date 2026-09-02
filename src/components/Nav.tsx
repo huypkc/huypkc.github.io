@@ -7,6 +7,7 @@ const items = [
   { href: "/projects", label: "Work" },
   { href: "/evidence", label: "Evidence" },
   { href: "/timeline", label: "Timeline" },
+  { href: "/cv", label: "CV" },
   { href: "/contact", label: "Contact" },
 ]
 
@@ -24,7 +25,9 @@ export default function Nav() {
         </Link>
         <nav
           aria-label="Primary"
-          className="-mr-1 flex items-center gap-5 overflow-x-auto sm:gap-7"
+          // Five items no longer fit at 390px with the old gap; tighten it there
+          // and let the narrowest phones scroll rather than clipping Contact.
+          className="-mr-1 flex items-center gap-3 overflow-x-auto sm:gap-7"
         >
           {items.map((item) => {
             // /projects stays lit while you are inside a case study.

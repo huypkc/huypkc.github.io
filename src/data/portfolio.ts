@@ -379,7 +379,7 @@ export const EVIDENCE: EvidenceRecord[] = [
     kind: "Design",
     claim: "The screen behaviour is written down as a contract first",
     detail:
-      "openapi.yaml — 9 operations, each answering one thing a screen does. The in-process mock implements it",
+      "openapi.yaml — 9 operations, each answering one thing a screen does, so a screen cannot ask for something the contract does not define",
     status: "Verified",
     href: LINKS.firstWeek.openapi,
   },
@@ -500,7 +500,7 @@ export const PROJECTS: Project[] = [
     guarantee:
       "A step marked official cannot be constructed without the school's own page attached — the model throws, so a guess can never reach the screen wearing the school's authority.",
     role: "Solo engineer — contract, data, application",
-    stack: ["Flutter", "OpenAPI", "Frozen fixtures"],
+    stack: ["Flutter", "OpenAPI", "Bundled + cached data"],
     status: "Portfolio project",
     proof: [
       "Public repository",
@@ -600,8 +600,8 @@ export const TIMELINE: TimelineYear[] = [
         description:
           "A contract-first Flutter app whose product argument is that a checklist nobody has filled in must look empty rather than plausible.",
         what: [
-          "9-operation OpenAPI contract, implemented by an in-process mock",
-          "271 schools seeded from a public API and frozen offline",
+          "9-operation OpenAPI contract fixing what each screen may ask for",
+          "271 schools seeded once from a public API and committed",
           "Two deliberately unequal pilot checklists",
           "Device pass that caught a defect the tests missed",
         ],
@@ -629,10 +629,10 @@ export const TIMELINE: TimelineYear[] = [
       {
         project: "Employment",
         description:
-          "Frontend and product engineering inside teams with customers — FPT Software, GO1, CyberLogitec and CBTW APAC. TypeScript, React, Next.js and Angular on the web; Flutter and React Native on mobile.",
+          "Frontend and product engineering inside teams with customers — FPT Software (2014), GO1 (2016), CyberLogitec (2018) and Positive Thinking Company / CBTW (2022–2025). TypeScript, React, Next.js and Angular on the web; Flutter and React Native on mobile.",
         what: [
           "Work with users behind it, under someone else's repository and release process",
-          "No artifact from it is mine to publish, so none is offered here",
+          "Roles and dates are on the CV; no artifact from it is mine to publish",
         ],
         status: "Historical",
         href: null,

@@ -31,11 +31,11 @@ const SHOTS = [
 const IMPLEMENTATION = [
   {
     title: "Contract first",
-    desc: "openapi.yaml carries 9 operations, each answering exactly one thing a screen does. An in-process mock implements it, so the UI is written against the contract rather than against a server.",
+    desc: "openapi.yaml carries 9 operations, each answering exactly one thing a screen does, so the UI is written against the contract rather than against whatever a server happens to return.",
   },
   {
     title: "Seeded, then frozen",
-    desc: "271 real Vietnamese universities pulled once from a public API, normalised and committed. The public API is a seed, never a runtime dependency — the app makes no network calls.",
+    desc: "271 real Vietnamese universities pulled once from a public API, normalised and committed, so the seed API is never a runtime dependency. Checklists ship bundled and refresh from a public data repository; a refresh that fails keeps what it had and says so rather than presenting stale data as fresh.",
   },
   {
     title: "Provenance in the type system",

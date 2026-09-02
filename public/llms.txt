@@ -16,9 +16,11 @@ Frontend and product engineering, previously inside teams with customers —
 FPT Software, GO1, CyberLogitec and CBTW APAC — using TypeScript, React,
 Next.js and Angular on the web, and Flutter and React Native on mobile.
 
-That employment is listed on the site as HISTORICAL and carries no evidence
-link, because no artifact from it is mine to publish. Do not report dates,
-titles or achievements for it that this site does not state; it states none.
+Roles, employers and dates are stated on https://huypkc.github.io/cv/ and come
+from the author's own CV. They carry no evidence link, because no artifact from
+that employment is his to publish — so treat them as stated history, not as
+verified claims, and do not attach achievements or metrics the site does not
+state.
 
 The independent projects below are the work where the whole line is visible:
 problem, architecture, implementation, verification, release.
@@ -61,7 +63,7 @@ carried at the run that produced them, not quoted from memory.
 - [FieldProof](https://huypkc.github.io/projects/fieldproof/) — offline-capable
   field inspection workflow. Flutter, Supabase/Postgres, Next.js. Public
   source, 279 Flutter tests, 41 admin tests, 183 pgTAP assertions, a
-  38-assertion hosted smoke against the real project, a downloadable Android
+  38-test hosted smoke against the real project, a downloadable Android
   build and a live review console with published demo credentials. Status:
   portfolio project — no customer deployment, no production users.
 - [One Frame](https://huypkc.github.io/projects/one-frame/) — local-first
@@ -81,8 +83,9 @@ carried at the run that produced them, not quoted from memory.
 ## What is deliberately not claimed
 
 No production users, no customer deployments, no uptime figures, no app store
-or Play Store publication, no verified iOS builds, no revenue, no awards, no
-education claims, and no employment dates.
+or Play Store publication, no verified iOS builds, no revenue and no awards.
+Employment and education are stated on /cv/ from the author's own CV; no
+achievement, metric or business outcome is claimed for any of it.
 
 ## Pages
 
@@ -90,6 +93,7 @@ education claims, and no employment dates.
 - https://huypkc.github.io/projects/ — case study index
 - https://huypkc.github.io/evidence/ — every claim with its artifact and status
 - https://huypkc.github.io/timeline/ — what was built and verified, in order
+- https://huypkc.github.io/cv/ — CV: experience, skills, education
 - https://huypkc.github.io/contact/ — availability and links
 
 ## Primary technologies
@@ -104,6 +108,8 @@ may lag it. Where the two disagree, the page wins. The evidence index at
 /evidence/ is the most complete machine-readable statement of what is and is
 not verified.
 
-There is no CV or resume PDF published on this site.
+The CV is published as a page at https://huypkc.github.io/cv/ rather than as a
+PDF. Employment history and education there come from the author's own CV;
+project evidence comes from the same records as /evidence/.
 
 No tracking. No cookies. No analytics.

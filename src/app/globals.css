@@ -35,6 +35,53 @@ body {
   font-weight: 400;
 }
 
+/*
+ * Print / "Save as PDF". The CV is a page, so the browser's print dialogue is
+ * how it becomes a document: drop the site chrome, force the light ground
+ * regardless of the reader's settings, and print link targets so a paper copy
+ * still carries its evidence URLs.
+ */
+@media print {
+  @page {
+    margin: 14mm;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  /* Nav, footer and the skip link are navigation, not content. */
+  body > header,
+  body > footer,
+  body > a[href="#main"] {
+    display: none !important;
+  }
+
+  main {
+    font-size: 10.5pt;
+  }
+
+  a {
+    color: #000 !important;
+    text-decoration: none !important;
+  }
+
+  /* Only external evidence links are worth spending paper on. */
+  main a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 8pt;
+    word-break: break-all;
+  }
+
+  h1,
+  h2,
+  h3 {
+    break-after: avoid;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

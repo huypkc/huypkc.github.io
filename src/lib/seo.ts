@@ -118,6 +118,15 @@ export const ROUTES: RouteMeta[] = [
     card: "timeline",
   },
   {
+    path: "/cv",
+    title: "CV",
+    description:
+      "Senior frontend and mobile product engineer in Ho Chi Minh City. Ten years across React, Next.js, TypeScript and Flutter, with every project claim linked to the artifact behind it.",
+    ogLabel: "Curriculum vitae",
+    ogTitle: "Tran Quoc Huy",
+    card: "cv",
+  },
+  {
     path: "/contact",
     title: "Contact",
     description:
