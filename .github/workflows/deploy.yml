@@ -1,0 +1,68 @@
+# Builds the static export and publishes it to GitHub Pages.
+#
+# huypkc.github.io is the user site, so it is served from the domain root and
+# needs no basePath. Pages must be configured with "Source: GitHub Actions"
+# for this workflow to be the thing that deploys.
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Let a running deploy finish rather than cancelling it half-published.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      # The gates, in the order that fails cheapest first.
+      - run: npx tsc --noEmit
+      - run: npm run lint
+      - run: npm run build
+
+      # next.config.ts sets output: "export", so `next build` writes ./out.
+      # .nojekyll is committed in public/ — without it Pages would strip _next/.
+      - name: Fail if the export is missing or unpublishable
+        run: |
+          test -f out/index.html
+          test -f out/.nojekyll
+          for p in projects projects/fieldproof projects/one-frame \
+                   projects/first-week projects/skillr evidence timeline contact; do
+            test -f "out/$p/index.html" || { echo "missing route: $p"; exit 1; }
+          done
+          if grep -rq 'href="#"' out/; then
+            echo 'placeholder href="#" reached the build'; exit 1
+          fi
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

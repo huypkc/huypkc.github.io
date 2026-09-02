@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+/* Palette and type scale carried over from the Figma Make design tokens. */
+@theme {
+  --color-bg: #f8f8f6;
+  --color-fg: #111111;
+  --color-body: #3a3a38;
+  --color-card: #ffffff;
+  --color-muted: #f2f2ef;
+  --color-muted-fg: #6b6b68;
+  --color-line: #e3e3df;
+  --color-dim: #aaaaaa;
+
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-serif: var(--font-instrument-serif), Georgia, serif;
+  --font-mono: var(--font-jetbrains-mono), Menlo, monospace;
+
+  --radius-sm: 2px;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Instrument Serif has no bold cut; keep headings from being synthesised. */
+.font-serif {
+  font-weight: 400;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
