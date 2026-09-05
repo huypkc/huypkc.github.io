@@ -190,7 +190,7 @@ export default function FieldProofPage() {
           <p className="mb-1 font-mono text-[10px] uppercase tracking-widest text-dim">
             Android build ↗
           </p>
-          <p className="text-[14px] text-fg">v0.1.0-demo · sha256 published</p>
+          <p className="text-[14px] text-fg">v0.1.0-demo.2 · sha256 published · same commit as the console</p>
           <p className="mt-1 text-[12px] leading-relaxed text-muted-fg">
             Sideload it. Android will warn about an unknown developer, as it
             does for any self-signed build.

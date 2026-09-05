@@ -29,7 +29,7 @@ export const LINKS = {
     ciRun: `${FP}/actions/runs/33562736235`,
     ciMain: `${FP}/actions/runs/33559885278`,
     smokeRun: `${FP}/actions/runs/33569199420`,
-    release: `${FP}/releases/tag/v0.1.0-demo`,
+    release: `${FP}/releases/tag/v0.1.0-demo.2`,
     demo: "https://upwork-system-thun-viet.vercel.app",
     acceptance: `${FP}/blob/main/docs/ACCEPTANCE.md`,
     demoDoc: `${FP}/blob/main/docs/DEMO.md`,
@@ -211,7 +211,7 @@ export const EVIDENCE: EvidenceRecord[] = [
     kind: "Release",
     claim: "An installable Android build exists and is downloadable",
     detail:
-      "v0.1.0-demo — fieldproof-f12d71d.apk, sha256 published alongside the tag",
+      "v0.1.0-demo.2 — fieldproof-76339db.apk, sha256 published alongside the tag; same commit as the deployed console",
     status: "Verified",
     href: LINKS.fieldproof.release,
   },

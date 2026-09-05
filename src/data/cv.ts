@@ -169,7 +169,7 @@ export const CV_PROJECTS: CvProject[] = [
       { label: "Live console", href: "https://upwork-system-thun-viet.vercel.app" },
       {
         label: "Android build",
-        href: "https://github.com/huyupwork-hub/upwork-system/releases/tag/v0.1.0-demo",
+        href: "https://github.com/huyupwork-hub/upwork-system/releases/tag/v0.1.0-demo.2",
       },
     ],
     evidenceStatus: "Verified",
