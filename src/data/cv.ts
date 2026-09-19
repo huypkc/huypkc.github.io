@@ -26,8 +26,8 @@ export const CV_PERSON = {
   githubLabel: "github.com/huypkc",
   linkedin: "https://www.linkedin.com/in/huypkc",
   linkedinLabel: "linkedin.com/in/huypkc",
-  site: "https://huypkc.github.io",
-  siteLabel: "huypkc.github.io",
+  site: "https://huypkc.com",
+  siteLabel: "huypkc.com",
 } as const
 
 /**
@@ -208,7 +208,7 @@ export const CV_PROJECTS: CvProject[] = [
     links: [
       {
         label: "Test output",
-        href: "https://huypkc.github.io/evidence/runs/one-frame-tests.txt",
+        href: "https://huypkc.com/evidence/runs/one-frame-tests.txt",
       },
       { label: "Privacy policy", href: "https://github.com/thun-viet/one-frame-privacy" },
     ],

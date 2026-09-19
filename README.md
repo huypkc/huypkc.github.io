@@ -5,7 +5,7 @@ carried by a record in [`src/data/portfolio.ts`](src/data/portfolio.ts), and a
 record marked `Verified` must name an inspectable artifact — the type refuses to
 compile otherwise.
 
-**Live:** https://huypkc.github.io
+**Live:** https://huypkc.com (the GitHub user site https://huypkc.github.io redirects here)
 
 ## Stack
 
@@ -46,7 +46,7 @@ Two details that GitHub Pages makes load-bearing:
 
 ## Discovery layer
 
-Canonical origin: `https://huypkc.github.io`. Every indexable route carries a
+Canonical origin: `https://huypkc.com`. Every indexable route carries a
 canonical, a per-route Open Graph and Twitter card, `index, follow`, and JSON-LD
 that only states things visible on the page.
 

@@ -10,7 +10,7 @@ import PageHeader from "@/components/PageHeader"
  */
 export const metadata: Metadata = {
   title: "Page not found",
-  description: "This URL does not exist on huypkc.github.io.",
+  description: "This URL does not exist on huypkc.com.",
   alternates: { canonical: null },
   robots: { index: false, follow: true },
   openGraph: undefined,

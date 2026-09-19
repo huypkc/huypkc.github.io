@@ -12,7 +12,7 @@ import { readFile, stat } from "node:fs/promises"
 import { join } from "node:path"
 
 const OUT = "out"
-const ORIGIN = "https://huypkc.github.io"
+const ORIGIN = "https://huypkc.com"
 
 const ROUTES = [
   "/",

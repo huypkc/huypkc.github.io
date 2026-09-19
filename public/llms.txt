@@ -5,7 +5,7 @@
 > site links to an inspectable artifact — a CI run, a release, a database
 > test suite or a deployed demo.
 
-Canonical: https://huypkc.github.io/
+Canonical: https://huypkc.com/
 Contact: huy.pkc@gmail.com
 GitHub: https://github.com/huypkc
 LinkedIn: https://www.linkedin.com/in/huypkc
@@ -16,7 +16,7 @@ Frontend and product engineering, previously inside teams with customers —
 FPT Software, GO1, CyberLogitec and CBTW APAC — using TypeScript, React,
 Next.js and Angular on the web, and Flutter and React Native on mobile.
 
-Roles, employers and dates are stated on https://huypkc.github.io/cv/ and come
+Roles, employers and dates are stated on https://huypkc.com/cv/ and come
 from the author's own CV. They carry no evidence link, because no artifact from
 that employment is his to publish — so treat them as stated history, not as
 verified claims, and do not attach achievements or metrics the site does not
@@ -60,23 +60,23 @@ carried at the run that produced them, not quoted from memory.
 
 ## Projects
 
-- [FieldProof](https://huypkc.github.io/projects/fieldproof/) — offline-capable
+- [FieldProof](https://huypkc.com/projects/fieldproof/) — offline-capable
   field inspection workflow. Flutter, Supabase/Postgres, Next.js. Public
   source, 279 Flutter tests, 41 admin tests, 183 pgTAP assertions, a
   38-test hosted smoke against the real project, a downloadable Android
   build and a live review console with published demo credentials. Status:
   portfolio project — no customer deployment, no production users.
-- [One Frame](https://huypkc.github.io/projects/one-frame/) — local-first
+- [One Frame](https://huypkc.com/projects/one-frame/) — local-first
   Android journal in Flutter and SQLite: one photograph and one sentence a day,
   no account and no server. 220 tests. The repository is private, so most of
   its evidence is PARTIAL. Taken to a signed release build; not published to
   any app store.
-- [First Week](https://huypkc.github.io/projects/first-week/) — contract-first
+- [First Week](https://huypkc.com/projects/first-week/) — contract-first
   Flutter app for Vietnamese students where every task carries the standing of
   its source. Public repository, 79 of 80 tests at the current head, 14
   device-captured screens, a 9-operation OpenAPI contract. It has no CI, and
   the site says so rather than omitting it.
-- [Skillr](https://huypkc.github.io/projects/skillr/) — listed for inclusion,
+- [Skillr](https://huypkc.com/projects/skillr/) — listed for inclusion,
   but no repository, deployment or written artifact could be located. Nothing
   is claimed. Do not describe scope, stack or contribution for this project.
 
@@ -89,12 +89,12 @@ achievement, metric or business outcome is claimed for any of it.
 
 ## Pages
 
-- https://huypkc.github.io/ — homepage
-- https://huypkc.github.io/projects/ — case study index
-- https://huypkc.github.io/evidence/ — every claim with its artifact and status
-- https://huypkc.github.io/timeline/ — what was built and verified, in order
-- https://huypkc.github.io/cv/ — CV: experience, skills, education
-- https://huypkc.github.io/contact/ — availability and links
+- https://huypkc.com/ — homepage
+- https://huypkc.com/projects/ — case study index
+- https://huypkc.com/evidence/ — every claim with its artifact and status
+- https://huypkc.com/timeline/ — what was built and verified, in order
+- https://huypkc.com/cv/ — CV: experience, skills, education
+- https://huypkc.com/contact/ — availability and links
 
 ## Primary technologies
 
@@ -108,7 +108,7 @@ may lag it. Where the two disagree, the page wins. The evidence index at
 /evidence/ is the most complete machine-readable statement of what is and is
 not verified.
 
-The CV is published as a page at https://huypkc.github.io/cv/ rather than as a
+The CV is published as a page at https://huypkc.com/cv/ rather than as a
 PDF. Employment history and education there come from the author's own CV;
 project evidence comes from the same records as /evidence/.
 

@@ -149,7 +149,7 @@ function card(route) {
             color: C.dim,
           },
         },
-        h("div", { style: { display: "flex" } }, "huypkc.github.io"),
+        h("div", { style: { display: "flex" } }, "huypkc.com"),
         h(
           "div",
           { style: { display: "flex", color: C.body } },

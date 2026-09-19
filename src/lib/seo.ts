@@ -13,7 +13,7 @@
 import type { Metadata } from "next"
 
 export const SITE = {
-  origin: "https://huypkc.github.io",
+  origin: "https://huypkc.com",
   name: "Huy Tran",
   /** Matches the eyebrow above the name on the homepage. */
   jobTitle: "Product Engineer",
